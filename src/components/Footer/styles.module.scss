@@ -1,0 +1,22 @@
+.container {
+  background-color: rgb(21, 21, 26);
+  color: white;
+  padding: 40px;
+  display: flex;
+  justify-content: space-between;
+
+  .logo_container {
+    width: 50px;
+  }
+
+  .nav_footer_list {
+    display: flex;
+
+    li {
+      padding: 5px 32px;
+      a {
+        color: white;
+      }
+    }
+  }
+}
