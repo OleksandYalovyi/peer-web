@@ -48,7 +48,7 @@ env:
 
   # Parameters for building app:
   SOURCE_DIR             : 'build/'
-  NODE_VERSION           : '16.x'
+  NODE_VERSION           : '18.x'
   PATH_DISTRIBUTION      : '/*'
   
   # Parameters for SonarQube:
