@@ -1,4 +1,32 @@
-.container {
-  color: red;
-  padding: 0 40px;
+.content {
+  width: 100%;
+  max-width: 1070px;
+  margin: 0 auto;
+  padding: 300px 0;
+
+  * {
+    color: #202020;
+    text-align: center;
+    margin: 0;
+  }
+
+  h1 {
+    font-family: ACaslonPro-Semibold;
+    font-size: 140px;
+    line-height: 150px;
+    margin-bottom: 543px;
+  }
+
+  h2 {
+    font-size: 100px;
+    line-height: 110px;
+    margin-bottom: 77px;
+    font-family: Graphik-Medium;
+  }
+
+  p {
+    font-size: 35px;
+    font-family: Graphik-Medium;
+    color: #86868b;
+  }
 }
