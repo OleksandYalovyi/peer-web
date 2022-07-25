@@ -1,0 +1,295 @@
+### Deploy to CloudFront & Create backups to B2 & Check code via SonarQube ###
+
+name: Deploy
+
+env:
+
+  # Access to AWS:
+
+  # Dev AWS Account
+  DEV_AWS_ACCESS_KEY_ID      : ${{ secrets.AWS_ACCESS_KEY }}
+  DEV_AWS_SECRET_ACCESS_KEY  : ${{ secrets.AWS_SECRET_KEY }}
+  DEV_AWS_S3_BUCKET          : 'dev-peer.inc-web'
+  DEV_AWS_REGION             : 'us-west-2'
+
+  # Stage AWS Account
+  STAGE_AWS_ACCESS_KEY_ID    : ${{ secrets.AWS_ACCESS_KEY_WEB_STAGE }}
+  STAGE_AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_KEY_WEB_STAGE }}
+  STAGE_AWS_S3_BUCKET        : 'web-stage.peer.inc'
+  STAGE_AWS_REGION           : 'us-west-2'
+
+  # Prod AWS Account
+  PROD_AWS_ACCESS_KEY_ID     : ${{ secrets.AWS_ACCESS_KEY_WEB_PROD }}
+  PROD_AWS_SECRET_ACCESS_KEY : ${{ secrets.AWS_SECRET_KEY_WEB_PROD }}
+  PROD_AWS_S3_BUCKET         : 'peer.inc-web'
+  PROD_AWS_REGION            : 'us-west-2'  
+  
+  # Parameters for AWS CloudFront
+  DEV_DISTRIBUTION_ID        : 'E37Z12LB0NZ5RM'
+  STAGE_DISTRIBUTION_ID      : 'E3R6ABD3SBQ28U'
+  PROD_DISTRIBUTION_ID       : 'ETZF3CI4328NT'
+  
+  
+  # Access to BlackBaze Bucket:
+  BACKBLAZE_APP_ID       : ${{ secrets.B2_APPKEY_ID }}
+  BACKBLAZE_APP_KEY      : ${{ secrets.B2_APPKEY }}
+  
+  # Parameters for B2 bucket.
+  BACKBLAZE_B2BUCKET     : 'b2://peer-web/'
+  BACKBLAZE_B2_BUCKET_ID : '8a179c3bdd970ac371fe0913'
+  
+  # Parameters for making a backup-file:
+  TIME                   : $(date +'%Y-%m-%d')
+#  LABEL                  : '$(echo '${{ github.repository }}' | awk -F '/' '{print $1}')-${GITHUB_REF##*/}'
+  LABEL                  : 'peer-web-${GITHUB_REF##*/}'
+#  STAGE_LABEL            : 'peer.inc-web-stage'
+#  PROD_LABEL             : 'peer.inc-web-main'
+  BACKUP_DIR             : 'backups'
+
+  # Parameters for building app:
+  SOURCE_DIR             : 'build/'
+  NODE_VERSION           : '16.x'
+  PATH_DISTRIBUTION      : '/*'
+  
+  # Parameters for SonarQube:
+  SONAR_TOKEN            : ${{ secrets.SONAR_TOKEN }}
+  #SONAR_HOST_URL         : 'https://sq.peer.inc'
+  SONAR_HOST_URL         : ${{ secrets.SONAR_HOST_URL }}
+  FETCH_DEPT             : '0'
+
+  # Parameters for OpenVPN:
+  OPENVPN_CONFIG         : ${{ secrets.OPENVPN_CONFIG }}
+  OPENVPN_USER           : ${{ secrets.OPENVPN_USER }}
+
+  # Parameters for mail:
+  USER_MAIL              : ${{ secrets.USER_MAIL }}
+  USER_PASSWORD_MAIL     : ${{ secrets.USER_PASSWORD_MAIL }}
+  
+  # Other
+  GITHUB_REPOSITORY      : ${{ github.event.repository.name }}
+  CURRENT_GITHUB_BRANCH  : ${GITHUB_REF##*/}
+
+on:
+  push:
+    branches: 
+      - develop
+      - stage
+      - main
+
+  pull_request:
+    branches:
+      - develop
+      - stage
+      - main
+      
+jobs:
+# Part 1: CI
+  Deploying:   
+    runs-on: ubuntu-latest
+    steps:
+    - name: Git clone repo
+      uses: actions/checkout@v2
+
+#############################        
+# Part 1: Connect to VPN ####       
+#############################        
+        
+# Install OpenVPN
+#    - name: Install OpenVPN
+#      run: sudo apt install openvpn -y
+#    - run: echo "${{ env.OPENVPN_CONFIG }}" > client.ovpn
+#    - run: echo "${{ env.OPENVPN_USER }}" > user.ovpn
+
+
+# Connect to VPN:
+ #   - name: Connect VPN
+ #     run: sudo openvpn --config client.ovpn --auth-user-pass user.ovpn &
+ #   - run: sleep 5 
+ #   - run: curl ifconfig.co/
+ #   - run: ping -c 4 sq.peer.inc
+ 
+################################## 
+# Part 2: Sent code to SonarQube #
+##################################
+ 
+# Sent code to SonarQube for scan
+#    - name: SonarQube Scan
+#      uses: monstar-lab-oss/sonarqube-github-action@v1.0.1
+#      with:
+#        url: ${{ env.SONAR_HOST_URL }}
+#        token: ${{ env.SONAR_TOKEN }}
+
+
+
+
+
+
+#    - name: SonarQube
+#      if: ${{ github.ref == 'refs/heads/develop' }}
+#      id: SonarQube
+#      uses: actions/checkout@v2
+#      with:
+#        fetch-depth: ${{ env.FETCH_DEPT }}
+#    - uses: sonarsource/sonarqube-scan-action@master
+#      env:
+#        SONAR_TOKEN: ${{ env.SONAR_TOKEN }}
+#        SONAR_HOST_URL: ${{ env.SONAR_HOST_URL }}
+
+####################################   
+# Part 3.1: Backups   ##############
+####################################
+# Create archieve of branch
+
+##    - name: Create backup-archive of branch
+#      run: echo "REPOSITORY_NAME=$(echo '${{ github.repository }}' | awk -F '/' '{print $1}')" >> $GITHUB_REPO
+##      run: tar cpzf ${{ env.LABEL }}-${{ env.TIME }}.zip *
+##    - run: mkdir ${{ env.BACKUP_DIR }} 
+##    - run: mv *.zip ${{ env.BACKUP_DIR }}
+##    - run: ls ${{ env.BACKUP_DIR }}/
+
+      
+####################################
+# Part 4: Build App   ##############
+####################################
+
+# Build app
+
+    - name: node
+      if: ${{ github.ref == 'refs/heads/PPPP' }}   
+      uses: actions/setup-node@v1
+      with:
+        node-version: ${{ env.NODE_VERSION }}
+    - run: npm install --force
+    - run: npm run build
+            
+        
+####################################       
+# Part 5: Deploy to Cloudfront #####
+####################################
+
+    - name: Configurate AWS Credentials for dev_account
+      if: ${{ github.ref == 'refs/heads/develop' }} 
+      uses: aws-actions/configure-aws-credentials@v1
+      with:
+        aws-access-key-id    : ${{ env.DEV_AWS_ACCESS_KEY_ID }}
+        aws-secret-access-key: ${{ env.DEV_AWS_SECRET_ACCESS_KEY }}
+        aws-region           : ${{ env.DEV_AWS_REGION }}
+
+    - name: Configurate AWS Credentials for stage_account          
+      if: ${{ github.ref == 'refs/heads/stage' }}
+      uses: aws-actions/configure-aws-credentials@v1
+      with:
+        aws-access-key-id    : ${{ env.STAGE_AWS_ACCESS_KEY_ID }}
+        aws-secret-access-key: ${{ env.STAGE_AWS_SECRET_ACCESS_KEY }}
+        aws-region           : ${{ env.STAGE_AWS_REGION }}
+ 
+    - name: Configurate AWS Credentials for prod_account
+      if: ${{ github.ref == 'refs/heads/main' }}
+      uses: aws-actions/configure-aws-credentials@v1
+      with:
+        aws-access-key-id    : ${{ env.PROD_AWS_ACCESS_KEY_ID }}
+        aws-secret-access-key: ${{ env.PROD_AWS_SECRET_ACCESS_KEY }}
+        aws-region           : ${{ env.PROD_AWS_REGION }}     
+        
+    - name: copy to S3 bucket to dev_account
+      if: ${{ github.ref == 'refs/heads/develop' }}
+      run: aws s3 sync ${{ env.SOURCE_DIR }} s3://${{ env.DEV_AWS_S3_BUCKET }}
+
+    - name: copy to S3 bucket to stage_account        
+      if: ${{ github.ref == 'refs/heads/stage' }}
+      run: aws s3 sync ${{ env.SOURCE_DIR }} s3://${{ env.STAGE_AWS_S3_BUCKET }}
+
+    - name: copy to S3 bucket to prod_account        
+      if: ${{ github.ref == 'refs/heads/main' }}
+      run: aws s3 sync ${{ env.SOURCE_DIR }} s3://${{ env.PROD_AWS_S3_BUCKET }}
+ 
+    - name: Invalidate CloudFront in dev_account
+      if: ${{ github.ref == 'refs/heads/develop' }}
+      uses: chetan/invalidate-cloudfront-action@v2
+      env:
+        DISTRIBUTION: ${{ env.DEV_DISTRIBUTION_ID }}
+        PATHS: ${{ env.PATH_DISTRIBUTION }}
+        AWS_REGION: ${{ env.DEV_AWS_REGION }}
+        AWS_ACCESS_KEY_ID: ${{ env.DEV_AWS_ACCESS_KEY_ID }}
+        AWS_SECRET_ACCESS_KEY: ${{ env.DEV_AWS_SECRET_ACCESS_KEY }}
+
+    - name: Invalidate CloudFront in stage_account          
+      if: ${{ github.ref == 'refs/heads/stage' }}
+      uses: chetan/invalidate-cloudfront-action@v2
+      env:
+        DISTRIBUTION: ${{ env.STAGE_DISTRIBUTION_ID }}
+        PATHS: ${{ env.PATH_DISTRIBUTION }}
+        AWS_REGION: ${{ env.STAGE_AWS_REGION }}
+        AWS_ACCESS_KEY_ID: ${{ env.STAGE_AWS_ACCESS_KEY_ID }}
+        AWS_SECRET_ACCESS_KEY: ${{ env.STAGE_AWS_SECRET_ACCESS_KEY }}
+
+    - name: Invalidate CloudFront in prod_account          
+      if: ${{ github.ref == 'refs/heads/main' }}
+      uses: chetan/invalidate-cloudfront-action@v2
+      env:
+        DISTRIBUTION: ${{ env.PROD_DISTRIBUTION_ID }}
+        PATHS: ${{ env.PATH_DISTRIBUTION }}
+        AWS_REGION: ${{ env.PROD_AWS_REGION }}
+        AWS_ACCESS_KEY_ID: ${{ env.PROD_AWS_ACCESS_KEY_ID }}
+        AWS_SECRET_ACCESS_KEY: ${{ env.PROD_AWS_SECRET_ACCESS_KEY }}
+
+
+##########################################
+# Part 3.2: copy backups to BackBlaze ####  
+##########################################
+
+##    - name: Copy archive to B2
+##      id: backups
+##      uses: PedroGabriel/github-action-backblaze-upload@1.0.0
+##      with:
+##          bucket: ${{ env.BACKBLAZE_B2_BUCKET_ID }}
+##          key_id: ${{ secrets.B2_APPKEY_ID }}
+##          application_key: ${{ secrets.B2_APPKEY }} 
+##          file_input: '${{ env.BACKUP_DIR }}/'
+  #       file_output: '/${{ env.LABEL }}-${{ env.TIME }}.zip'
+          
+
+ 
+###########################################
+# Part 6: Reporting #######################
+###########################################
+
+    - name: Sent report for stage
+      if: ${{ github.ref == 'refs/heads/stage' }}
+      run:  |
+        aws sns publish \
+          --topic-arn "arn:aws:sns:us-west-2:118833598456:CHI_tests" \
+          --subject "Backups was successful: WEB: Frontend: ${{ env.GITHUB_REPOSITORY }}" \
+          --message "Backups was successful: ${{ env.GITHUB_REPOSITORY }} Branch: ${{ env.CURRENT_GITHUB_BRANCH }}"
+        aws sns publish \
+          --topic-arn "arn:aws:sns:us-west-2:770080080051:Deployment" \
+          --subject "Deploy was successful: Stage: WEB: Frontend: ${{ env.GITHUB_REPOSITORY }}" \
+          --message "Deploy was successful: Stage: ${{ env.GITHUB_REPOSITORY }} Branch: ${{ env.CURRENT_GITHUB_BRANCH }}"
+      env:
+        AWS_ACCESS_KEY_ID: ${{ env.PROD_AWS_ACCESS_KEY_ID }}
+        AWS_SECRET_ACCESS_KEY: ${{ env.PROD_AWS_SECRET_ACCESS_KEY }}
+        AWS_DEFAULT_REGION: ${{ env.STAGE_AWS_REGION }}
+
+    - name: Sent report for prod
+      if: ${{ github.ref == 'refs/heads/main' }}
+      run:  |
+        aws sns publish \
+          --topic-arn "arn:aws:sns:us-west-2:118833598456:CHI_tests" \
+          --subject "Backups was successful: WEB: Frontend: ${{ env.GITHUB_REPOSITORY }}" \
+          --message "Backups was successful: ${{ env.GITHUB_REPOSITORY }} Branch: ${{ env.CURRENT_GITHUB_BRANCH }}"
+        aws sns publish \
+          --topic-arn "arn:aws:sns:us-west-2:770080080051:Deployment" \
+          --subject "Deploy was successful: Prod: WEB: Frontend: ${{ env.GITHUB_REPOSITORY }}" \
+          --message "Deploy was successful: Prod: ${{ env.GITHUB_REPOSITORY }} Branch: ${{ env.CURRENT_GITHUB_BRANCH }}"
+      env:
+        AWS_ACCESS_KEY_ID: ${{ env.PROD_AWS_ACCESS_KEY_ID }}
+        AWS_SECRET_ACCESS_KEY: ${{ env.PROD_AWS_SECRET_ACCESS_KEY }}
+        AWS_DEFAULT_REGION: ${{ env.PROD_AWS_REGION }}
+#
+# 
+#
+
+
+
+
+ 
