@@ -402,3 +402,7 @@ template {
 [hidden] {
   display: none;
 }
+
+iframe {
+  display: none;
+}

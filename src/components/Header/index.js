@@ -1,37 +1,38 @@
 import React from 'react'
-import Pic from 'assets/img/pic.png'
-import Plus from 'assets/img/plus.png'
-import Share from 'assets/img/share.png'
-
+import { Link } from 'react-router-dom'
 import PropTypes from 'prop-types'
 import styles from './styles.module.scss'
 
+const NAV_CONTENT = [
+  { name: 'Home', route: '/' },
+  { name: 'About', route: '/about' },
+]
+
 const Header = () => {
-  console.log('%c   qwe   ', 'color: darkgreen; background: palegreen;')
+  const handleNavItemClick = (item) => {
+    console.log('%c   item   ', 'color: darkgreen; background: palegreen;', item)
+  }
+
   return (
     <div className={styles.container}>
-      <div className={styles.items_container}>
-        <div className={styles.options}>
-          <div>
-            <img className={styles.icon} src={Pic} alt="pic" />
-          </div>
-          <div>
-            <img className={styles.icon} src={Share} alt="pic" />
-          </div>
-        </div>
-        <div className={styles.options}>
-          <div>
-            {/* <img className={styles.icon} src={Pic} alt="pic" /> */}
-            <div className={styles.lang}>EN</div>
-          </div>
-          <div>
-            <img className={styles.icon} src={Plus} alt="pic" />
-          </div>
-        </div>
+      <div className={styles.logo_container}>
+        <Link to="/">
+          <img src="" alt="pic" />{' '}
+        </Link>
       </div>
+      <ul className={styles.nav_footer_list}>
+        {NAV_CONTENT.map((item) => (
+          <li key={item.name}>
+            <Link to={item.route} onClick={() => handleNavItemClick(item.name)}>
+              {item.name}
+            </Link>
+          </li>
+        ))}
+      </ul>
     </div>
   )
 }
+
 Header.propTypes = {}
 
 export default Header

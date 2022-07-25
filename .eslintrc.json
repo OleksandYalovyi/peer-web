@@ -1,7 +1,7 @@
 {
   "extends": ["airbnb", "prettier"],
   "parser": "babel-eslint",
-  "plugins": ["prettier"],
+  "plugins": ["prettier", "formatjs"],
   "settings": {
     "import/resolver": {
       "node": {
@@ -14,6 +14,12 @@
     "browser": true
   },
   "rules": {
+    "formatjs/enforce-id": [
+      "error",
+      {
+        "idInterpolationPattern": "[sha512:contenthash:base64:6]"
+      }
+    ],
     "prettier/prettier": [
       "error",
       {

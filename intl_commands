@@ -1,0 +1,4 @@
+
+npm run extract -- "src/**/*.{js,jsx}" --out-file lang/en-US.json --id-interpolation-pattern '[sha512:contenthash:base64:6]' --format smartling
+
+npm run compile -- lang/en-US.json --ast --out-file src/compiled-lang/en-US.json --format smartling
