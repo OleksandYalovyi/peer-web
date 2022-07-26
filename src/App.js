@@ -9,7 +9,7 @@ import styles from './app.module.scss'
 
 function App() {
   return (
-    <div className={styles['main-container']}>
+    <div className={styles.main_container}>
       <main id="main">
         <Header />
         <Switch>
