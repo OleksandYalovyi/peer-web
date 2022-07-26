@@ -8,7 +8,12 @@ function VideoSection() {
     <section className={styles.section}>
       <div className={styles.container}>
         <div className={styles['video-wrapper']}>
-          <ReactPlayer url="https://youtu.be/YzV4gUFyK2w" playing width="100%" height="100%" />
+          <ReactPlayer
+            url="https://www.youtube.com/watch?v=yyrSIOmPfTM"
+            playing
+            width="100%"
+            height="100%"
+          />
         </div>
       </div>
     </section>
