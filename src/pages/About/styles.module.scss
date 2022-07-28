@@ -10,23 +10,40 @@
     margin: 0;
   }
 
-  h1 {
+  .hero_title {
     font-family: ACaslonPro-Semibold;
     font-size: 140px;
-    line-height: 150px;
+    line-height: 1.07;
     margin-bottom: 543px;
+    @media screen and (max-width: 1200px) {
+      font-size: 9vw;
+      letter-spacing: normal;
+    }
+    .mb {
+      margin-bottom: 201px;
+      &_large {
+        margin-bottom: 543px;
+      }
+    }
   }
 
-  h2 {
+  .title {
     font-size: 100px;
-    line-height: 110px;
+    line-height: 1.1;
     margin-bottom: 77px;
     font-family: Graphik-Medium;
+    @media screen and (max-width: 1200px) {
+      font-size: 8vw;
+      letter-spacing: normal;
+    }
   }
 
   p {
     font-size: 35px;
     font-family: Graphik-Medium;
     color: #86868b;
+    @media screen and (max-width: 680px) {
+      font-size: 18px;
+    }
   }
 }
