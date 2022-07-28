@@ -2,6 +2,7 @@ import React from 'react'
 import { Route, Switch, Redirect } from 'react-router-dom'
 import Home from 'pages/Home'
 import About from 'pages/About'
+import Blockchain from 'pages/Blockchain'
 import Header from 'components/Header'
 import Footer from 'components/Footer'
 
@@ -15,6 +16,7 @@ function App() {
         <Switch>
           <Route exact path="/" component={Home} />
           <Route exact path="/about" component={About} />
+          <Route exact path="/blockchain" component={Blockchain} />
           <Redirect exact from="/*" to="/" />
         </Switch>
         <Footer />
