@@ -1,0 +1,62 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  padding-bottom: 55px;
+  margin-bottom: 220px;
+  border-bottom: 1px solid #dde0e3;
+
+  .row {
+    display: flex;
+
+    .timeline {
+      flex: 1;
+      display: flex;
+      align-items: center;
+
+      li {
+        flex: 1;
+        border-left: 1px solid #8f97a1;
+        height: 30px;
+
+        &.active {
+          height: 50px;
+          border-color: black;
+        }
+
+        &:last-child {
+          border-right: 1px solid #8f97a1;
+        }
+      }
+    }
+
+    .col {
+      display: flex;
+      flex-direction: column;
+      gap: 17.5px;
+      flex: 1;
+
+      p {
+        font-family: 'Graphik-Regular';
+        margin: 0;
+        line-height: 1.83;
+        font-size: 15px;
+
+        &.date {
+          text-transform: uppercase;
+          font-size: 20px;
+          line-height: 1.37;
+        }
+      }
+
+      &.active {
+        p {
+          &.date {
+            font-family: 'Graphik-Medium';
+            font-weight: 500;
+          }
+        }
+      }
+    }
+  }
+}

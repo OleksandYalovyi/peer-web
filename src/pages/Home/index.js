@@ -7,6 +7,7 @@ import PropTypes from 'prop-types'
 import AsSeen from './AsSeen/index'
 import Video from './VideoSection'
 import styles from './styles.module.scss'
+import CalendarPlan from './CalendarPlan/index'
 
 const Home = () => {
   const modal = useRef(null)
@@ -29,6 +30,9 @@ const Home = () => {
           <div className={styles.content}>Peer is a metaverse company.</div>
         </Animated>
       </div>
+      <Animated>
+        <CalendarPlan />
+      </Animated>
       <Animated>
         <div className={styles.section_container}>
           <div className={styles.quote_section_wrapper}>
