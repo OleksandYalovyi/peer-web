@@ -1,0 +1,124 @@
+.container {
+  width: 100%;
+  height: 100%;
+  min-height: 90vh;
+  padding-top: 95px;
+  .section {
+    width: 100%;
+    max-width: 1100px;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .subtitle {
+      font-family: Graphik-Regular, sans-serif;
+      font-size: 20px;
+      font-weight: normal;
+      text-align: center;
+      color: #8f97a1;
+      margin-bottom: 37.5px;
+    }
+    .title {
+      font-family: Graphik-Medium, sans-serif;
+      font-size: 50px;
+      font-weight: 500;
+      text-align: center;
+      color: #000;
+      margin-bottom: 86.5px;
+      @media screen and (max-width: 1200px) {
+        font-size: 9vw;
+        letter-spacing: normal;
+      }
+    }
+    .amount {
+      font-family: Graphik-Medium, sans-serif;
+      font-size: 30px;
+      font-weight: 500;
+      color: #070b22;
+      margin-bottom: 70.5px;
+    }
+    .valuation {
+      width: 100%;
+      height: auto;
+      margin-bottom: 82.5px;
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+    .button {
+      text-align: center;
+      font-family: Graphik-Medium, sans-serif;
+      font-size: 20px;
+      font-weight: 500;
+      color: #fff;
+      padding: 14px 31px 14px 39px;
+      border-radius: 24px;
+      background-color: #070c22;
+      margin-bottom: 82.5px;
+      text-decoration: none;
+
+    }
+    .sale {
+      font-family: Graphik-Regular, sans-serif;
+      font-size: 15px;
+      font-weight: normal;
+      color: #8f97a1;
+      margin-bottom: 32px;
+    }
+    .timer_container {
+      display: flex;
+      margin-bottom: 134px;
+      .timer_item {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 83px;
+        height: 97.5PX;
+        margin-right: 4.5px;
+        border-radius: 20px;
+        background-color: #f0f1f4;
+        .legend {
+          font-family: Graphik-Medium, sans-serif;
+          font-size: 14px;
+          font-weight: 500;
+          font-stretch: normal;
+          color: #8f97a1;
+          margin-bottom: 9px;
+        }
+        .time {
+          font-family: Graphik-Medium, sans-serif;
+          font-size: 28px;
+          font-weight: 500;
+          color: #000;
+        }
+      }
+    }
+    .description {
+      width: 100%;
+      max-width: 511px;
+      height: 30px;
+      margin-bottom: 20px;
+      border-radius: 5px;
+      background-color: #fef7e5;
+      display: flex;
+      text-align: center;
+      justify-content: center;
+      align-items: center;
+      font-family: Graphik-Medium, sans-serif;
+      font-size: 12px;
+      font-weight: 500;
+      font-stretch: normal;
+      font-style: normal;
+      color: #000;
+      padding: 3px;
+      img {
+        width: 15px;
+        height: 15px;
+        margin-right: 7px;
+      }
+    }
+  }
+}
