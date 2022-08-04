@@ -65,18 +65,10 @@
   .container {
     justify-content: center;
     flex-direction: row;
-    gap: 12.5px;
+    gap: 25px;
 
     .row:first-child {
-      col {
-        text-align: right;
-      }
-    }
-
-    .row:last-child {
-      col {
-        text-align: left;
-      }
+      text-align: right !important;
     }
 
     .row {
@@ -128,13 +120,32 @@
   }
 }
 
-// @media screen and (max-width: 680px) {
-//   .container {
-//     .row {
-//       .col {
-//         flex: calc(100% / 2 - 50px);
-//         max-width: calc(100% / 2);
-//       }
-//     }
-//   }
-// }
+@media screen and (max-width: 535px) {
+  .container {
+    justify-content: center;
+    flex-direction: row;
+    gap: 15px;
+
+    .row {
+      .timeline {
+        li {
+          width: 15px;
+
+          &.active {
+            width: 25px;
+          }
+        }
+      }
+
+      .col {
+        p {
+          font-size: 10px;
+
+          &.date {
+            font-size: 15px;
+          }
+        }
+      }
+    }
+  }
+}
