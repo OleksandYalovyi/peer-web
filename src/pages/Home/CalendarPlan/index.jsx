@@ -75,7 +75,7 @@ const CalendarPlan = ({ data, currentTask }) => {
   return (
     <div className={styles.container}>
       <div className={styles.row}>
-        <div className={styles.col} />
+        <div className={classNames(styles.col)} />
         {data.map(({ content, date }, i) => (
           <div className={classNames(styles.col, { [styles.active]: i === currentTask })}>
             {i % 2 === 0 ? (
