@@ -13,7 +13,7 @@ const About = () => {
     if (!isScrolled && scrollY > 0) setIsScrolled(true)
   }, [scrollY])
 
-  console.log({ scrollY, isScrolled })
+  // console.log({ scrollY, isScrolled })
 
   return (
     <MainContainer>
