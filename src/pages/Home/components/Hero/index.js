@@ -1,11 +1,9 @@
 import React, { useState, useCallback, useRef } from 'react'
 import { Link } from 'react-router-dom'
-import MainContainer from 'components/MainContainer'
-import Arrow from 'assets/arrow-black.svg'
 import Valuation from 'assets/images/home/valuation.png'
 import Warning from 'assets/images/home/warning.svg'
-import Animated from 'components/Animated'
 import PropTypes from 'prop-types'
+import Progress from '../ProgressBar'
 import styles from './styles.module.scss'
 
 const Hero = () => {
@@ -14,14 +12,13 @@ const Hero = () => {
   const [min, setMin] = useState('57')
   const [sec, setSec] = useState('36')
 
-  console.log('hero section')
-
   return (
     <div className={styles.container}>
       <div className={styles.section}>
         <div className={styles.subtitle}>“The next platform after smartphones.”</div>
         <div className={styles.title}>Peer, the real-world metaverse.</div>
         <div className={styles.amount}>$20.5M</div>
+        {/* <Progress capacity={170000000} softCap={40000000} /> */}
         <div className={styles.valuation}>
           <img src={Valuation} alt="img" />
         </div>

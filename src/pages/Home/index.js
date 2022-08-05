@@ -5,6 +5,7 @@ import Modal from 'components/Modal'
 import Animated from 'components/Animated'
 import Arrow from 'assets/arrow-black.svg'
 import Hero from './components/Hero'
+import Epic from './components/Epic'
 import AsSeen from './AsSeen/index'
 import Quote from './Quote'
 import Video from './VideoSection'
@@ -18,9 +19,14 @@ const Home = () => {
 
   return (
     <MainContainer>
-      <Hero />
+      <Animated>
+        <Hero />
+      </Animated>
       <Animated>
         <CalendarPlan />
+      </Animated>
+      <Animated>
+        <Epic />
       </Animated>
       <Animated>
         <Quote />
