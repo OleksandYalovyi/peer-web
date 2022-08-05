@@ -3,6 +3,7 @@
 import React, { useMemo } from 'react'
 import classNames from 'classnames'
 import PropTypes from 'prop-types'
+import Animated from 'components/Animated/index'
 import styles from './styles.module.scss'
 
 const CalendarPlanContainer = () => {
@@ -74,7 +75,7 @@ const CalendarPlan = ({ data, currentTask }) => {
 
   return (
     <div className={styles.container}>
-      <div className={styles.row}>
+      <Animated containerClassName={styles.row} delay={(data.length + 5) * 100} duration={1}>
         <div className={classNames(styles.col)} />
         {data.map(({ content, date }, i) => (
           <div className={classNames(styles.col, { [styles.active]: i === currentTask })}>
@@ -89,19 +90,27 @@ const CalendarPlan = ({ data, currentTask }) => {
           </div>
         ))}
         <div className={styles.col} />
-      </div>
+      </Animated>
 
       <div className={styles.row}>
         <ul className={styles.timeline}>
-          <li />
+          <Animated delay={100} containerClassName={classNames(styles.li)} />
+
           {data.map((e, i) => (
-            <li className={classNames({ [styles.active]: i === currentTask })} />
+            <Animated
+              delay={(i + 2) * 100}
+              containerClassName={classNames(
+                { [styles.active]: i === currentTask, [styles.tobottom]: i % 2 === 1 },
+                styles.li,
+              )}
+            />
           ))}
-          <li />
+
+          <Animated delay={(data.length + 2) * 100} containerClassName={classNames(styles.li)} />
         </ul>
       </div>
 
-      <div className={styles.row}>
+      <Animated containerClassName={styles.row} delay={(data.length + 5) * 100} duration={1}>
         <div className={styles.col} />
         {data.map(({ content, date }, i) => (
           <div className={classNames(styles.col, { [styles.active]: i === currentTask })}>
@@ -116,7 +125,7 @@ const CalendarPlan = ({ data, currentTask }) => {
           </div>
         ))}
         <div className={styles.col} />
-      </div>
+      </Animated>
     </div>
   )
 }

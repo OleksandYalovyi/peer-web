@@ -4,15 +4,25 @@ import cls from 'classnames'
 import PropTypes from 'prop-types'
 import styles from './styles.module.scss'
 
-const Animated = ({ children }) => {
+const Animated = ({ children, delay = 0, containerClassName = '', duration }) => {
   const [visible, setVisible] = useState(false)
   const text = useRef(null)
   const onScreen = useOnScreen(text)
 
-  if (!visible && onScreen) setVisible(true)
+  if (!visible && onScreen) {
+    setTimeout(() => {
+      setVisible(true)
+    }, delay)
+  }
 
   return (
-    <div ref={text} className={cls(styles.start_state, { [styles.visible]: visible })}>
+    <div
+      ref={text}
+      className={cls(styles.start_state, { [styles.visible]: visible }, containerClassName)}
+      style={{
+        transitionDuration: duration ? `${duration}s` : null,
+      }}
+    >
       {children}
     </div>
   )
@@ -20,6 +30,9 @@ const Animated = ({ children }) => {
 
 Animated.propTypes = {
   children: PropTypes.node,
+  delay: PropTypes.number,
+  containerClassName: PropTypes.string,
+  duration: PropTypes.number,
 }
 
 export default Animated
