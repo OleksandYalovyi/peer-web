@@ -24,11 +24,6 @@ const Epic = () => {
           <img className={styles.arrow} src={Arrow} alt="arrow" />
         </div>
       </Animated>
-      <div className={styles.content_wrapper}>
-        <Animated>
-          <div className={styles.content}>Peer is a metaverse company.</div>
-        </Animated>
-      </div>
       <Modal ref={modal}>
         <Video />
       </Modal>

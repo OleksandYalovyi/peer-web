@@ -1,7 +1,7 @@
 .section_container {
   display: flex;
   justify-content: center;
-  margin-bottom: 200px;
+  margin-bottom: 108px;
   .quote_section_wrapper {
     background-color: #fafafa;
     margin-left: 300px;
@@ -55,6 +55,7 @@
           color: #202020;
           padding: 0 0 68px 50%;
           .name {
+            margin-bottom: 10px;
           }
           .position {
           }
