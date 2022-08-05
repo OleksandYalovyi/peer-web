@@ -8,7 +8,7 @@ import AsSeen from './AsSeen/index'
 import Video from './VideoSection'
 import styles from './styles.module.scss'
 
-const Home = () => {
+const Epic = () => {
   const modal = useRef(null)
 
   const onClick = useCallback(() => modal.current.open(true), [modal.current])
@@ -36,6 +36,6 @@ const Home = () => {
   )
 }
 
-Home.propTypes = {}
+Epic.propTypes = {}
 
-export default Home
+export default Epic
