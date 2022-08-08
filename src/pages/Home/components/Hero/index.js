@@ -1,6 +1,5 @@
 import React, { useState, useCallback, useRef } from 'react'
 import { Link } from 'react-router-dom'
-import Valuation from 'assets/images/home/valuation.png'
 import Warning from 'assets/images/home/warning.svg'
 import PropTypes from 'prop-types'
 import Progress from '../ProgressBar'
@@ -18,10 +17,7 @@ const Hero = () => {
         <div className={styles.subtitle}>“The next platform after smartphones.”</div>
         <div className={styles.title}>Peer, the real-world metaverse.</div>
         <div className={styles.amount}>$20.5M</div>
-        {/* <Progress capacity={170000000} softCap={40000000} /> */}
-        <div className={styles.valuation}>
-          <img src={Valuation} alt="img" />
-        </div>
+        <Progress capacity={170000000} start={40000000} />
         <Link to="/" className={styles.button}>
           Buy Peer (PMC) Coins
         </Link>

@@ -1,52 +1,3 @@
-.title {
-  color: red;
-  padding: 400px 0 40px;
-  font-family: Graphik-Medium;
-  font-size: 120px;
-  font-weight: 500;
-  letter-spacing: -6px;
-  text-align: center;
-  color: #202020;
-  margin-bottom: 80px;
-  @media screen and (max-width: 1200px) {
-    font-size: 9vw;
-    letter-spacing: normal;
-  }
-}
-.video_link {
-  font-family: Graphik-Regular;
-  font-size: 26px;
-  color: #000;
-  text-align: center;
-  &:hover {
-    cursor: pointer;
-  }
-  &:hover > .arrow {
-    left: 20px;
-  }
-  .arrow {
-    margin-left: 12px;
-    position: relative;
-    left: 0;
-    transform: rotate(180deg);
-    vertical-align: middle;
-    width: 24px;
-    transition: left 0.2s;
-  }
-}
-.content_wrapper {
-  height: 1800px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  .content {
-    font-family: Graphik-Light;
-    font-size: 30px;
-    font-weight: 300;
-    text-align: center;
-    color: #000;
-  }
-}
 .section_container {
   display: flex;
   justify-content: center;
@@ -128,4 +79,54 @@
 .video-wrapper {
   width: 1000px;
   height: 500px;
+}
+
+.title {
+  color: red;
+  padding: 400px 0 40px;
+  font-family: Graphik-Medium;
+  font-size: 120px;
+  font-weight: 500;
+  letter-spacing: -6px;
+  text-align: center;
+  color: #202020;
+  margin-bottom: 80px;
+  @media screen and (max-width: 1200px) {
+    font-size: 9vw;
+    letter-spacing: normal;
+  }
+}
+.video_link {
+  font-family: Graphik-Regular;
+  font-size: 26px;
+  color: #000;
+  text-align: center;
+  &:hover {
+    cursor: pointer;
+  }
+  &:hover > .arrow {
+    left: 20px;
+  }
+  .arrow {
+    margin-left: 12px;
+    position: relative;
+    left: 0;
+    transform: rotate(180deg);
+    vertical-align: middle;
+    width: 24px;
+    transition: left 0.2s;
+  }
+}
+.content_wrapper {
+  height: 1800px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .content {
+    font-family: Graphik-Light;
+    font-size: 30px;
+    font-weight: 300;
+    text-align: center;
+    color: #000;
+  }
 }
