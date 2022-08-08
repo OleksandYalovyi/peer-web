@@ -1,53 +1,93 @@
-.progress_container {
+.section {
   width: 100%;
-  height: 50px;
-  background-color: #f0f1f4;
-  margin-bottom: 20px;
-  position: relative;
-  display: flex;
-  align-items: center;
-  border-radius: 25px;
-  padding-left: 2.5px;
-  .progress_bar {
-    width: 18%;
-    height: 45px;
-    border-radius: 25px 4px 4px 25px;
-    background-image: linear-gradient(to right, #eca6d6, #3546c5);
-  }
-  .thumb_soft {
-    position: absolute;
-    width: 2px;
-    height: 54px;
-    background-color: white;
-    top: -4px;
-  }
-}
-.markers_container {
-  width: 100%;
-  height: 50px;
-  display: flex;
-  position: relative;
-  .soft_container {
-    position: absolute;
-  }
-  .hard_container {
-    position: absolute;
-  }
-  .marker_title {
-    font-family: Graphik-Medium;
-    font-size: 15px;
-    font-weight: 500;
-    color: #000;
+  margin-bottom: 85px;
+  
+  .progress_container {
+    width: 100%;
+    height: 50px;
+    background-color: #f0f1f4;
+    margin-bottom: 20px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    border-radius: 25px;
+    padding-left: 2.5px;
+
     @media screen and (max-width: 768px) {
-      font-size: 12px;
+      height: 30px;
+      border-radius: 15px;
+      margin-bottom: 12px;
+    }
+  
+    .progress_bar {
+      width: 18%;
+      height: 45px;
+      border-radius: 25px 4px 4px 25px;
+      background-image: linear-gradient(to right, #eca6d6, #3546c5);
+
+      @media screen and (max-width: 768px) {
+        height: 25px;
+        border-radius: 15px 2px 2px 15px;
+      }
+    }
+    .thumb_soft {
+      position: absolute;
+      width: 2px;
+      height: 50px;
+      background-color: white;
+      top: 0px;
+      z-index: 2;
+
+      @media screen and (max-width: 768px) {
+        height: 30px;
+      }
+    }
+    .thumb_top{
+      position: absolute;
+      width: 2px;
+      height: 60px;
+      background-color: #f0f1f4;
+      top: -5px;
+      z-index: 1;
+      @media screen and (max-width: 768px) {
+        height: 25px;
+      }
     }
   }
-  .marker_value {
-    font-family: Graphik-Regular;
-    font-size: 15px;
-    color: #000;
+  
+  .labels_container {
+    width: 100%;
+    height: 20px;
+    margin-bottom: 15px;
+    position: relative;
     @media screen and (max-width: 768px) {
-      font-size: 12px;
+      margin-bottom: 0px;
+    }
+    
+    .label {
+      position: absolute;
+      transform: translateX(-50%);
+      font-family: Graphik-Medium, sans-serif;
+      font-size: 15px;
+      font-weight: 500;
+      color: #000;
+
+      @media screen and (max-width: 768px) {
+        font-size: 2vw;
+      }
+    }
+    .axis_label {
+      position: absolute;
+      transform: translateX(-14%);
+      font-family: Graphik-Regular, sans-serif;
+      font-size: 15px;
+      font-weight: normal;
+      color: #8f97a1;
+
+      @media screen and (max-width: 768px) {
+        font-size: 2vw;
+      }
     }
   }
 }
+
