@@ -19,7 +19,7 @@ const Home = () => {
 
   return (
     <MainContainer>
-      <Animated>
+      <Animated type="fadein_up">
         <Hero />
       </Animated>
       <Animated>

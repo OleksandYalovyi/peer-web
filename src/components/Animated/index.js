@@ -14,6 +14,9 @@ const Animated = ({ children, delay = 0, containerClassName = '', duration, type
       case 'fadein':
         return styles.fadein
 
+      case 'fadein_up':
+        return styles.fadein_up
+
       default:
         return styles.default
     }
