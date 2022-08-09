@@ -1,3 +1,4 @@
+/* eslint-disable no-underscore-dangle */
 /* eslint-disable react/forbid-prop-types */
 /* eslint-disable no-restricted-syntax */
 import React, { useMemo } from 'react'
@@ -62,7 +63,9 @@ const CalendarPlanContainer = () => {
     return 0
   }, [data])
 
-  return <CalendarPlan data={data} currentTask={currentTask} />
+  const _data = useMemo(() => data.map((d, i) => ({ ...d, delay: (i + 2) * 100 + 500 })), [data])
+
+  return <CalendarPlan data={_data} currentTask={currentTask} />
 }
 
 const CalendarPlan = ({ data, currentTask }) => {
@@ -75,10 +78,15 @@ const CalendarPlan = ({ data, currentTask }) => {
 
   return (
     <div className={styles.container}>
-      <Animated containerClassName={styles.row} delay={(data.length + 5) * 100} duration={1}>
+      <div className={styles.row}>
         <div className={classNames(styles.col)} />
-        {data.map(({ content, date }, i) => (
-          <div className={classNames(styles.col, { [styles.active]: i === currentTask })}>
+        {data.map(({ content, date, delay }, i) => (
+          <Animated
+            containerClassName={classNames(styles.col, { [styles.active]: i === currentTask })}
+            delay={delay}
+            duration={1}
+            type="fadein"
+          >
             {i % 2 === 0 ? (
               <>
                 <p className={styles.date}>{convertDate(date)}</p>
@@ -87,10 +95,10 @@ const CalendarPlan = ({ data, currentTask }) => {
                 ))}
               </>
             ) : null}
-          </div>
+          </Animated>
         ))}
         <div className={styles.col} />
-      </Animated>
+      </div>
 
       <div className={styles.row}>
         <ul className={styles.timeline}>
@@ -110,10 +118,15 @@ const CalendarPlan = ({ data, currentTask }) => {
         </ul>
       </div>
 
-      <Animated containerClassName={styles.row} delay={(data.length + 5) * 100} duration={1}>
+      <div className={styles.row}>
         <div className={styles.col} />
-        {data.map(({ content, date }, i) => (
-          <div className={classNames(styles.col, { [styles.active]: i === currentTask })}>
+        {data.map(({ content, date, delay }, i) => (
+          <Animated
+            containerClassName={classNames(styles.col, { [styles.active]: i === currentTask })}
+            delay={delay}
+            duration={1}
+            type="fadein"
+          >
             {i % 2 === 1 ? (
               <>
                 <p className={styles.date}>{convertDate(date)}</p>
@@ -122,10 +135,10 @@ const CalendarPlan = ({ data, currentTask }) => {
                 ))}
               </>
             ) : null}
-          </div>
+          </Animated>
         ))}
         <div className={styles.col} />
-      </Animated>
+      </div>
     </div>
   )
 }
