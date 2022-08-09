@@ -99,16 +99,18 @@
         gap: 5px;
       }
 
-      li,
+      .li,
       .col {
-        flex: auto;
-        height: 125px;
+        flex: auto !important;
+        height: 125px !important;
+        max-height: 125px !important;
       }
 
       .timeline {
         align-items: center;
 
         .li {
+          top: 0 !important;
           width: 30px;
           border-left: 0 !important;
           border-top: 1px solid #8f97a1;
@@ -120,6 +122,11 @@
           &:nth-last-child(2) {
             border-right: 0 !important;
             border-bottom: 1px solid #8f97a1;
+          }
+
+          &:first-child,
+          &:last-child {
+            display: none;
           }
         }
       }
