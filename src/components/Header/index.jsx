@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from 'react'
 import { NavLink, useHistory } from 'react-router-dom'
 import PropTypes from 'prop-types'
-import classNames from 'classnames'
+import cls from 'classnames'
+import useScroll from 'hooks/useScroll'
+import useCurrentWidth from 'hooks/useCurrentWidth'
 import Logotype from '../../assets/images/header/logo.svg'
 import Menu from './Menu'
 
@@ -19,19 +21,25 @@ const NAV_CONTENT = [
 const Header = () => {
   const history = useHistory()
   const [active, setActive] = useState(false)
-
-  // const handleNavItemClick = (item) => {
-  //   console.log('%c   item   ', 'color: darkgreen; background: palegreen;', item)
-  // }
+  const { scrollDirection } = useScroll()
+  const width = useCurrentWidth()
 
   return (
-    <header>
+    <header
+      className={cls(styles.container, {
+        [styles.hidden]:
+          scrollDirection === 'down' &&
+          scrollDirection !== 'bottom' &&
+          scrollDirection !== 'top' &&
+          width > 920,
+      })}
+    >
       <div className={styles.main_container}>
         <NavLink to="/" className={styles.logotype}>
           <img src={Logotype} alt="logotype" />
         </NavLink>
 
-        <ul className={classNames(styles.nav, { [styles.active]: active })}>
+        <ul className={cls(styles.nav, { [styles.active]: active })}>
           {NAV_CONTENT.map((item) => (
             <li key={item.name}>
               <NavLink
