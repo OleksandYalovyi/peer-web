@@ -26,9 +26,6 @@ const Home = () => {
         <CalendarPlan />
       </Animated>
       <Animated>
-        <Epic />
-      </Animated>
-      <Animated>
         <Quote />
       </Animated>
       <div className={styles.asseen_wrapper}>

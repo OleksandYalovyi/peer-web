@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import MainContainer from 'components/MainContainer'
-import Animated from 'components/Animated'
 import useScroll from 'hooks/useScroll'
+import Animated from 'components/Animated'
+import Epic from './components/Epic'
 
 import styles from './styles.module.scss'
 
@@ -18,22 +19,11 @@ const About = () => {
   return (
     <MainContainer>
       <div className={styles.content}>
-        <div className={styles.hero_title}>
-          <div className={styles.mb}>
-            <Animated>The metaverse has a problem.</Animated>
-          </div>
-          {isScrolled > 0 && (
-            <>
-              <div className={styles.mb_large}>
-                <Animated>It doesn’t exist.</Animated>
-              </div>
+        <Animated>
+          <Epic />
+        </Animated>
+        <div style={{ height: 1500 }} />
 
-              <div className={styles.mb}>
-                <Animated>The good news is we know why.</Animated>
-              </div>
-            </>
-          )}
-        </div>
         {isScrolled && (
           <>
             <div className={styles.title}>
