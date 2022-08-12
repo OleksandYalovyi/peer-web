@@ -1,3 +1,4 @@
+/* eslint-disable react/no-array-index-key */
 /* eslint-disable no-underscore-dangle */
 /* eslint-disable react/forbid-prop-types */
 /* eslint-disable no-restricted-syntax */
@@ -86,6 +87,7 @@ const CalendarPlan = ({ data, currentTask }) => {
             delay={delay}
             duration={1}
             type="fadein"
+            key={i}
           >
             {i % 2 === 0 ? (
               <>
@@ -106,6 +108,7 @@ const CalendarPlan = ({ data, currentTask }) => {
 
           {data.map((e, i) => (
             <Animated
+              key={i}
               delay={(i + 2) * 100}
               containerClassName={classNames(
                 { [styles.active]: i === currentTask, [styles.tobottom]: i % 2 === 1 },
@@ -126,6 +129,7 @@ const CalendarPlan = ({ data, currentTask }) => {
             delay={delay}
             duration={1}
             type="fadein"
+            key={i}
           >
             {i % 2 === 1 ? (
               <>
