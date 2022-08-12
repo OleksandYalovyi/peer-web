@@ -14,8 +14,10 @@ const Hero = () => {
   return (
     <div className={styles.container}>
       <div className={styles.section}>
-        <div className={styles.subtitle}>“The next platform after smartphones.”</div>
-        <div className={styles.title}>Peer, the real-world metaverse.</div>
+        <div className={styles.title}>
+          Building the metaverse for <br />
+          the real world.
+        </div>
         <div className={styles.amount}>$20.5M</div>
         <Progress capacity={170000000} start={40000000} />
         <Link to="/" className={styles.button}>
