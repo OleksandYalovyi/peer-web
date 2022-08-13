@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react'
 import PropTypes from 'prop-types'
-import { SplitColorChannelText } from '../../../../../node_modules/react-text-fun/dist/index'
+import { SplitColorChannelText } from '../../../node_modules/react-text-fun/dist/index'
 
 const ChannelSplitMaterialMouseDetection = ({ text, fontSize, fontWeight, fill }) => {
   const ref = useRef(null)

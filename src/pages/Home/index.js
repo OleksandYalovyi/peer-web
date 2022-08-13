@@ -5,12 +5,12 @@ import Modal from 'components/Modal'
 import Animated from 'components/Animated'
 import Arrow from 'assets/arrow-black.svg'
 import Hero from './components/Hero'
-import Epic from './components/Epic'
 import AsSeen from './AsSeen/index'
 import Quote from './Quote'
 import Video from './VideoSection'
 import styles from './styles.module.scss'
 import CalendarPlan from './CalendarPlan/index'
+import BlotterAnimate from './BlotterAnimate/index'
 
 const Home = () => {
   const modal = useRef(null)
@@ -24,6 +24,9 @@ const Home = () => {
       </Animated>
       <Animated>
         <CalendarPlan />
+      </Animated>
+      <Animated>
+        <BlotterAnimate />
       </Animated>
       <Animated>
         <Quote />
