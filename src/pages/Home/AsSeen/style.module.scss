@@ -21,5 +21,9 @@
 
   .logo_image {
     width: 155px;
+    transition: all .3s;
+    &.hovered {
+      opacity: 60%;
+    }
   }
 }
