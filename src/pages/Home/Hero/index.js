@@ -2,7 +2,7 @@ import React, { useState, useCallback, useRef } from 'react'
 import { Link } from 'react-router-dom'
 import Warning from 'assets/images/home/warning.svg'
 import PropTypes from 'prop-types'
-import Progress from '../ProgressBar'
+import Progress from './components/ProgressBar'
 import styles from './styles.module.scss'
 
 const Hero = () => {
