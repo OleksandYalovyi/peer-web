@@ -1,16 +1,16 @@
 header {
-  position: fixed;
+  // position: fixed;
   top: 0;
   width: 100%;
   z-index: 999;
   padding: 22px;
   backdrop-filter: saturate(180%) blur(20px);
-  background-color: rgba(255, 255, 255, .8);
-  transition: transform .3s ease-in;
+  background-color: rgba(255, 255, 255, 0.8);
+  transition: transform 0.3s ease-in;
 
   &.hidden {
     transform: translateY(-170%);
-    transition: transform .3s ease-in;
+    transition: transform 0.3s ease-in;
   }
 
   .main_container {
