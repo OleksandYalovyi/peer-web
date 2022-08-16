@@ -3,7 +3,6 @@ header {
   top: 0;
   width: 100%;
   z-index: 999;
-  padding: 22px;
   backdrop-filter: saturate(180%) blur(20px);
   background-color: rgba(0, 0, 0, 0.6);
   transition: transform 0.3s ease-in;
@@ -18,8 +17,10 @@ header {
     max-width: 1500px;
     margin: 0 auto;
     display: flex;
+    justify-content: space-between;
+    align-items: center;
     flex-grow: 2;
-    padding-left: 58px;
+    padding: 15px 58px;
 
     @media screen and (max-width: 1540) {
       max-width: calc(100% - 40px);
@@ -27,6 +28,44 @@ header {
     
     @media screen and (max-width: 1160px) {
       padding-left: 0;
+    }
+
+    .logo_text {
+      font-family: Graphik-Regular, sans-serif;
+      font-size: 16px;
+      font-weight: normal;
+      color: #fff;
+      cursor: pointer;
+      text-decoration: none;
+    }
+    .right_section {
+      display: flex;
+      align-items: center;
+
+      .text_link {
+        font-family: Graphik-Regular, sans-serif;
+        font-size: 16px;
+        font-weight: normal;
+        color: #fff;
+        margin-right: 76px;
+        cursor: pointer;
+        text-decoration: none;
+      }
+      .button {
+        width: 170px;
+        height: 50px;
+        border-radius: 25px;
+        background-color: #006fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: Graphik-Semibold, sans-serif;
+        font-size: 16px;
+        font-weight: 500;
+        color: #fff;
+        cursor: pointer;
+        text-decoration: none;
+      }
     }
   }
 }

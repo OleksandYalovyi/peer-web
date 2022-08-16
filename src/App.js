@@ -15,11 +15,9 @@ function App() {
         <Header />
         <Switch>
           <Route exact path="/" component={Home} />
-          <Route exact path="/about" component={About} />
-          <Route exact path="/blockchain" component={Blockchain} />
+          <Route exact path="/white-paper" component={About} />
           <Redirect exact from="/*" to="/" />
         </Switch>
-        <Footer />
       </main>
     </div>
   )
