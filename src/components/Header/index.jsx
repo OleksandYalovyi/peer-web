@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import PropTypes from 'prop-types'
 import cls from 'classnames'
 import useScroll from 'hooks/useScroll'
@@ -26,7 +27,17 @@ const Header = () => {
       })}
     >
       <div className={styles.main_container}>
-        <span className={styles.logo_text}>About Peer</span>
+        <Link to="/" className={styles.logo_text}>
+          About Peer
+        </Link>
+        <div className={styles.right_section}>
+          <Link to="/white-paper" className={styles.text_link}>
+            White paper
+          </Link>
+          <Link to="/" className={styles.button}>
+            Sign in to Peer
+          </Link>
+        </div>
       </div>
     </header>
   )
