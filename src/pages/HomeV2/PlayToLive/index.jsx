@@ -14,7 +14,7 @@ const PlayToLive = () => (
         </h1>
 
         <p className={styles.text}>
-          Come alive with an all-new way to share,
+          Come alive with an all-new way to share, 
           <br />
           create, and experience.
         </p>
