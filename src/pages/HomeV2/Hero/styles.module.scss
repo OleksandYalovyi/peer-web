@@ -1,0 +1,124 @@
+.container {
+  padding: 178px 0 117px;
+  border-bottom: 1px solid #252525;
+  gap: 30.5px;
+  overflow: hidden;
+  margin: 0 auto;
+
+  @media screen and (max-width: 520px) {
+    max-width: calc(100% - 40px);
+  }
+
+  .row {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+    @media screen and (max-width: 1600px) {
+      align-items: center;
+    }
+
+    @media screen and (max-width: 1160px) {
+      flex-direction: column;
+    }
+
+    .col {
+      display: flex;
+      flex-direction: column;
+      padding-left: 58px;
+
+      @media screen and (max-width: 1600px) {
+        min-width: 440px;
+      }
+
+      @media screen and (max-width: 1160px) {
+        padding-left: 0;
+      }
+
+      @media screen and (max-width: 520px) {
+        min-width: 0;
+      }
+
+      .logo {
+        margin-bottom: 50px;
+        // padding-left: 58px;
+        img {
+          width: 62px;
+          height: auto;
+        }
+      }
+
+      .title {
+        font-family: Graphik-Medium, sans-serif;
+        font-weight: 600;
+        font-size: 100px;
+        margin-bottom: 41px;
+        line-height: 1;
+        // padding-left: 58px;
+
+        // @media screen and (max-width: 1160px) {
+        //   padding-left: 0;
+        // }
+
+        @media screen and (max-width: 520px) {
+          font-size: 70px;
+        }
+      }
+
+      .text {
+        font-family: Graphik-Regular, sans-serif;
+        margin-bottom: 52px;
+        line-height: 1.6;
+        font-size: 20px;
+        // padding-left: 58px;
+        max-width: 562px;
+
+        &.mb1 {
+          margin-bottom: 35.5px;
+        }
+
+        // @media screen and (max-width: 1160px) {
+        //   padding-left: 0;
+        // }
+
+        @media screen and (max-width: 520px) {
+          font-size: 16px;
+          margin-bottom: 62px;
+        }
+
+        &:last-child {
+          margin-bottom: 182.5px;
+
+          @media screen and (max-width: 1160px) {
+            margin-bottom: 62px;
+          }
+        }
+      }
+
+      .button_blue {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 280px;
+        height: 55px;
+        margin-bottom: 85.5px;
+        border-radius: 22.5px;
+        background-color: #006fff;
+        font-family: Graphik-Semibold, sans-serif;
+        font-weight: 500;
+        font-size: 18px;
+        color: #fff;
+        text-decoration: none;
+      }
+      .link {
+        text-decoration: none;
+        color: white;
+        margin-bottom: 20px;
+        font-family: Graphik-Medium, sans-serif;
+        font-size: 20px;
+        font-weight: 600;
+        color: #fff;
+      }
+    }
+  }
+}
