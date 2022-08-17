@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import Ripples from 'react-ripples'
 import logo from 'assets/images/home/logo.svg'
 import styles from './styles.module.scss'
 
@@ -20,9 +21,13 @@ const Hero = () => (
           We’re launching Peer, the rewards and utility token for the Peer3, the metaverse for the
           real world.
         </p>
-        <Link className={styles.button_blue} to="">
-          Sign up to buy Peer
-        </Link>
+        <div className={styles.button_wrapper}>
+          <Ripples during="1400" color="rgba(255, 255, 255, .1)">
+            <Link className={styles.button_blue} to="">
+              Sign up to buy Peer
+            </Link>
+          </Ripples>
+        </div>
       </div>
     </div>
 
