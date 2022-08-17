@@ -1,16 +1,12 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import Ripples from 'react-ripples'
 import PropTypes from 'prop-types'
 import cls from 'classnames'
 import useScroll from 'hooks/useScroll'
 import useCurrentWidth from 'hooks/useCurrentWidth'
 
 import styles from './styles.module.scss'
-
-const NAV_CONTENT = [
-  { name: 'Intro', route: '/' },
-  { name: 'About', route: '/about' },
-]
 
 const Header = () => {
   const { scrollDirection } = useScroll()
@@ -34,9 +30,13 @@ const Header = () => {
           <Link to="/white-paper" className={styles.text_link}>
             White paper
           </Link>
-          <Link to="/" className={styles.button}>
-            Sign in to Peer
-          </Link>
+          <div className={styles.button_wrapper}>
+            <Ripples during="1400" color="rgba(255, 255, 255, .1)">
+              <Link to="/" className={styles.button}>
+                Sign in to Peer
+              </Link>
+            </Ripples>
+          </div>
         </div>
       </div>
     </header>

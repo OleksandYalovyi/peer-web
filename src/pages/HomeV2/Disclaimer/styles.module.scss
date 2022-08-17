@@ -32,6 +32,7 @@
     gap: 60px;
     flex-wrap: wrap;
     .sn_wrapper {
+      cursor: pointer;
       &:hover > .name {
         color: #ffffff;
       }
