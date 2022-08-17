@@ -1,12 +1,10 @@
 .container {
-  padding: 80px 35px;
+  padding: 80px 0;
   border-bottom: 1px solid #252525;
-  gap: 30.5px;
   overflow: hidden;
   margin: 0 auto;
-
-  @media screen and (max-width: 520px) {
-    max-width: calc(100% - 40px);
+  @media screen and (max-width: 768px) {
+    max-width: 500px;
   }
 
   .title {
@@ -15,6 +13,9 @@
     text-align: center;
     color: #fff;
     margin-bottom: 53px;
+    @media screen and (max-width: 768px) {
+      font-size: 32px;
+    }
   }
 
   .content {
@@ -24,18 +25,29 @@
     color: #fff;
     max-width: 725px;
     margin: 0 auto 70px;
+    @media screen and (max-width: 768px) {
+      font-size: 10px;
+    }
   }
 
   .icons_container {
     display: flex;
     justify-content: center;
     gap: 60px;
-    flex-wrap: wrap;
+
+    @media screen and (max-width: 768px) {
+      justify-content: space-around;
+      gap: unset;
+    }
+
     .sn_wrapper {
+      min-width: 50px;
       cursor: pointer;
       &:hover > .name {
         color: #ffffff;
+        cursor: pointer;
       }
+
       .icon_border {
         width: 60px;
         height: 70px;
@@ -48,11 +60,23 @@
         &:hover {
           border: 1px solid #ffffff;
         }
+        @media screen and (max-width: 768px) {
+          width: 40px;
+          height: 47px;
+        }
+        img {
+          @media screen and (max-width: 768px) {
+            transform: scale(0.6);
+          }
+        }
       }
       .name {
         font-size: 16px;
         text-align: center;
         color: #545454;
+        @media screen and (max-width: 768px) {
+          font-size: 10px;
+        }
       }
     }
   }
