@@ -1,14 +1,18 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import Ripples from 'react-ripples'
 import cls from 'classnames'
 import useScroll from 'hooks/useScroll'
 import PropTypes from 'prop-types'
+import Modal from 'components/ModalForm'
+import SignIn from 'components/Signin'
 
 import styles from './styles.module.scss'
 
 const Header = () => {
   const { scrollDirection } = useScroll()
+  const [isModalOpen, setIsModalOpen] = useState(false)
+  console.log({ isModalOpen })
 
   return (
     <header
@@ -27,13 +31,16 @@ const Header = () => {
           </Link>
           <div className={styles.button_wrapper}>
             <Ripples during="1400" color="rgba(255, 255, 255, .1)">
-              <Link to="/" className={styles.button}>
+              <Link to="/" className={styles.button} onClick={() => setIsModalOpen(true)}>
                 Sign in to Peer
               </Link>
             </Ripples>
           </div>
         </div>
       </div>
+      <Modal defaultOpened={isModalOpen} handleClose={() => setIsModalOpen(false)}>
+        <SignIn />
+      </Modal>
     </header>
   )
 }
