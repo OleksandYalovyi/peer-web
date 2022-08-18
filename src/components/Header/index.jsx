@@ -1,25 +1,20 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import Ripples from 'react-ripples'
-import PropTypes from 'prop-types'
 import cls from 'classnames'
 import useScroll from 'hooks/useScroll'
-import useCurrentWidth from 'hooks/useCurrentWidth'
+import PropTypes from 'prop-types'
 
 import styles from './styles.module.scss'
 
 const Header = () => {
   const { scrollDirection } = useScroll()
-  const width = useCurrentWidth()
 
   return (
     <header
       className={cls(styles.container, {
         [styles.hidden]:
-          scrollDirection === 'down' &&
-          scrollDirection !== 'bottom' &&
-          scrollDirection !== 'top' &&
-          width > 920,
+          scrollDirection === 'down' && scrollDirection !== 'bottom' && scrollDirection !== 'top',
       })}
     >
       <div className={styles.main_container}>

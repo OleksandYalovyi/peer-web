@@ -1,4 +1,4 @@
-header {
+.container {
   position: fixed;
   top: 0;
   width: 100%;
@@ -22,12 +22,17 @@ header {
     flex-grow: 2;
     padding: 15px 58px;
 
-    @media screen and (max-width: 1540) {
+    @media screen and (max-width: 1540px) {
       max-width: calc(100% - 40px);
     }
     
     @media screen and (max-width: 1160px) {
-      padding-left: 0;
+      // padding-left: 0;
+    }
+
+    @media screen and (max-width: 520px) {
+      padding: 12.5px 8px;
+      padding-right: 0px;
     }
 
     .logo_text {
@@ -37,6 +42,10 @@ header {
       color: #fff;
       cursor: pointer;
       text-decoration: none;
+
+      @media screen and (max-width: 520px) {
+        font-size: 12px;
+      }
     }
     .right_section {
       display: flex;
@@ -50,6 +59,11 @@ header {
         margin-right: 76px;
         cursor: pointer;
         text-decoration: none;
+
+        @media screen and (max-width: 520px) {
+          margin-right: 30px;
+          font-size: 12px;
+        }
       }
       .button_wrapper {
         border-radius: 25px;
@@ -68,6 +82,13 @@ header {
           color: #fff;
           cursor: pointer;
           text-decoration: none;
+
+          @media screen and (max-width: 520px) {
+            font-size: 10px;
+            width: 117px;
+            height: 34px;
+          }
+          
         }
       }
     }

@@ -1,4 +1,5 @@
 import React from 'react'
+import cls from 'classnames'
 import GraphikBall from 'assets/images/home/graphicball.webp'
 import styles from './styles.module.scss'
 import AsSeen from './components/AsSeen'
@@ -18,7 +19,7 @@ const PlayToLive = () => (
           <br />
           create, and experience.
         </p>
-        <p className={styles.text}>The beta for iOS drops Fall 2022.</p>
+        <p className={cls(styles.text, styles.wide)}>Peer app beta for iOS drops Fall 2022.</p>
       </div>
 
       <div className={styles.col}>
