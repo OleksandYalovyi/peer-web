@@ -12,6 +12,7 @@ import styles from './styles.module.scss'
 import PlayToLive from './PlayToLive/index'
 import Hero from './Hero'
 import Disclaimer from './Disclaimer'
+import SignUp from './SignUp/index'
 
 const Home = () => (
   <div className={styles.page_wrapper}>
@@ -48,6 +49,9 @@ const Home = () => (
       </Animated>
       <Animated>
         <PlayToLive />
+      </Animated>
+      <Animated>
+        <SignUp />
       </Animated>
     </div>
   </div>
