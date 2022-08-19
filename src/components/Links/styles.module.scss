@@ -1,0 +1,22 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  gap: 50px;
+  padding: 150px 29px;
+  flex-wrap: wrap;
+  @media screen and (max-width: 1160px) {
+    padding: 150px 0px;
+  }
+  .block {
+    display: flex;
+    gap: 30px;
+    font-size: 14px;
+
+    .link {
+      &:hover {
+        cursor: pointer;
+        color: #ccc;
+      }
+    }
+  }
+}
