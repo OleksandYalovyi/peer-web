@@ -1,5 +1,5 @@
 .container {
-  padding: 279.5px 0 200px 0;
+  padding: 279.5px 0 0 0;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -20,7 +20,7 @@
     max-width: 500.5px;
 
     .field {
-      padding: 14px 18px;
+      padding: 14px 14px;
       font-size: 20px;
       color: white;
       line-height: 1.75;
@@ -48,10 +48,6 @@
         }
       }
 
-      &:hover {
-        border-color: #fff;
-      }
-
       &.field_fill {
       }
     }
@@ -70,11 +66,7 @@
       color: #fff;
       cursor: pointer;
       border: 1px solid #fff;
-      transition: 0.3s;
-
-      &:hover {
-        opacity: 0.3;
-      }
+      width: 100%;
     }
   }
 }

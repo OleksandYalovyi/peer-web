@@ -1,6 +1,9 @@
+/* eslint-disable jsx-a11y/alt-text */
 import React, { useState } from 'react'
 import Select from 'react-select'
 import classNames from 'classnames'
+import Ripples from 'react-ripples'
+import DropdownIndicator from 'assets/images/home/dropdownindicator.svg'
 import styles from './styles.module.scss'
 
 const SignUp = () => {
@@ -40,6 +43,16 @@ const SignUp = () => {
         />
 
         <Select
+          components={{
+            DropdownIndicator: () => (
+              <img
+                style={{
+                  filter: 'invert(1)',
+                }}
+                src={DropdownIndicator}
+              />
+            ),
+          }}
           className={classNames(styles.field__select, { [styles.field_fill]: location })}
           styles={{
             control: (_styles, { data, isFocused }) => ({
@@ -50,11 +63,14 @@ const SignUp = () => {
               boxShadow: 'none',
               transition: '0.3s',
               borderBottom: `1px solid ${isFocused ? '#ffffff' : '#252525'}`,
-              padding: '14px 8px 14px 18px',
+              '&:hover': {
+                borderBottom: `1px solid ${isFocused ? '#ffffff' : '#252525'}`,
+              },
+              padding: '14px 14px 14px 14px',
             }),
             input: (_styles, { data, isFocused }) => ({
               ..._styles,
-              backgroundColor: 'transparent',
+              opacity: 0,
             }),
             singleValue: (_styles, { data, isFocused }) => ({
               ..._styles,
@@ -76,22 +92,41 @@ const SignUp = () => {
               ..._styles,
               padding: 0,
             }),
+            menu: (_styles, { data, isFocused }) => ({
+              ..._styles,
+              backgroundColor: '#1a1a1a',
+            }),
             option: (_styles, { data, isDisabled, isFocused, isSelected }) => ({
               ..._styles,
-              backgroundColor: isFocused ? '#999999' : null,
-              color: '#333333',
+              backgroundColor: isSelected ? 'rgb(255 255 255 / 15%)' : null,
+              color: '#ffffff',
+              '&:hover': {
+                backgroundColor: 'rgb(255 255 255 / 15%)',
+              },
             }),
             indicatorSeparator: () => ({
               display: 'none',
+            }),
+            indicatorsContainer: (_styles, { data, isFocused }) => ({
+              ..._styles,
+              width: 7,
             }),
           }}
           value={location}
           placeholder="Select a location"
           onChange={(v) => setLocation(v)}
-          options={[{ value: 1, label: 1 }]}
+          options={[
+            { value: 1, label: 1 },
+            { value: 2, label: 2 },
+            { value: 3, label: 3 },
+            { value: 4, label: 4 },
+            { value: 5, label: 5 },
+          ]}
         />
 
-        <input type="submit" value="Submit" className={styles.field__submit} />
+        <Ripples during="1400" color="rgba(255, 255, 255, .1)">
+          <input type="submit" value="Submit" className={styles.field__submit} />
+        </Ripples>
       </form>
     </div>
   )
