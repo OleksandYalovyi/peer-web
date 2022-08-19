@@ -11,6 +11,10 @@
     font-weight: 500;
     text-align: center;
     margin: 0 0 51px 0;
+
+    @media screen and (max-width: 550px) {
+      font-size: 17px;
+    }
   }
 
   .form {
@@ -29,10 +33,10 @@
       border: 0;
       border-bottom: 1px solid #252525;
       margin: 0 0 14px 0;
-      transition: 0.3s;
+      border-radius: 0;
 
       &::placeholder {
-        color: rgba($color: #fff, $alpha: 0.3);
+        color: rgba($color: #fff, $alpha: 1);
         font-family: Graphik, sans-serif;
         font-weight: 300;
         font-size: 16px;
@@ -63,10 +67,32 @@
       font-family: Graphik-Semibold, sans-serif;
       font-weight: 600;
       font-size: 20px;
-      color: #fff;
+      color: rgba(255, 255, 255, 0.1);
       cursor: pointer;
-      border: 1px solid #fff;
+      background-color: #060606;
+      border: 1px solid #252525;
       width: 100%;
+      transition: 0.3s;
+
+      &:not(.active) {
+        pointer-events: none;
+      }
+
+      &.active {
+        color: #fff;
+        border-color: #006fff;
+        background-color: #006fff;
+      }
     }
   }
+}
+
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 50px black inset;
+  -webkit-text-fill-color: #ffffff;
+}
+
+input:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0 50px black inset;
+  -webkit-text-fill-color: #ffffff;
 }
