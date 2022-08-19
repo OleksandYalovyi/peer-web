@@ -1,6 +1,7 @@
 import React from 'react'
 import cls from 'classnames'
 import GraphikBall from 'assets/images/home/graphicball.webp'
+import Links from 'components/Links'
 import styles from './styles.module.scss'
 import AsSeen from './components/AsSeen'
 
@@ -30,6 +31,7 @@ const PlayToLive = () => (
     <div className={styles.row}>
       <AsSeen />
     </div>
+    <Links />
   </div>
 )
 
