@@ -30,7 +30,7 @@
       // padding-left: 0;
     }
 
-    @media screen and (max-width: 520px) {
+    @media screen and (max-width: 680px) {
       padding: 12.5px 8px;
       padding-right: 0px;
     }
@@ -43,7 +43,7 @@
       cursor: pointer;
       text-decoration: none;
 
-      @media screen and (max-width: 520px) {
+      @media screen and (max-width: 680px) {
         font-size: 12px;
       }
     }
@@ -60,7 +60,7 @@
         cursor: pointer;
         text-decoration: none;
 
-        @media screen and (max-width: 520px) {
+        @media screen and (max-width: 680px) {
           margin-right: 30px;
           font-size: 12px;
         }
@@ -83,7 +83,7 @@
           cursor: pointer;
           text-decoration: none;
 
-          @media screen and (max-width: 520px) {
+          @media screen and (max-width: 680px) {
             font-size: 10px;
             width: 117px;
             height: 34px;
