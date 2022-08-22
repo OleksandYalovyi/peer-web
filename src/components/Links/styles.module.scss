@@ -4,9 +4,22 @@
   gap: 50px;
   padding: 150px 29px;
   flex-wrap: wrap;
+  padding-left: 58px;
+
   @media screen and (max-width: 1160px) {
     padding: 150px 0px;
   }
+
+  @media screen and (max-width: 680px) {
+    padding-left: 6px;
+  }
+
+  // @media screen and (max-width: 1024px) {
+  //   flex-wrap: wrap;
+  //   gap: 60px 20%;
+  //   justify-content: flex-start;
+  // }
+
   .block {
     display: flex;
     gap: 30px;
