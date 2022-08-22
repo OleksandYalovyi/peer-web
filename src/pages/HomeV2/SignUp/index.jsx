@@ -23,7 +23,7 @@ const SignUp = () => {
         to product releases.
       </h1>
 
-      <form name="signup" onSubmit={onSubmit} className={styles.form}>
+      <form name="signup" onSubmit={onSubmit} className={styles.form} autoComplete="off">
         <input
           className={classNames(styles.field, { [styles.field_fill]: name })}
           type="text"
