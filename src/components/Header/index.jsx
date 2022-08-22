@@ -5,7 +5,7 @@ import cls from 'classnames'
 import useScroll from 'hooks/useScroll'
 import PropTypes from 'prop-types'
 import Modal from 'components/ModalForm'
-import SignIn from 'components/SignIn'
+import SignIn from 'components/Signin'
 
 import styles from './styles.module.scss'
 
