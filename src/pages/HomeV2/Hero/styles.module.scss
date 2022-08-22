@@ -5,7 +5,7 @@
   overflow: hidden;
   margin: 0 auto;
 
-  @media screen and (max-width: 520px) {
+  @media screen and (max-width: 680px) {
     padding: 79px 0;
     // max-width: calc(100% - 70px);
   }
@@ -36,7 +36,7 @@
       //   padding-left: 0;
       // }
 
-      @media screen and (max-width: 520px) {
+      @media screen and (max-width: 680px) {
         padding-left: 7px;
         min-width: 0;
       }
@@ -47,7 +47,7 @@
           width: 62px;
           height: auto;
         }
-        @media screen and (max-width: 520px) {
+        @media screen and (max-width: 680px) {
           margin-bottom: 28px;
           img {
             width: 35px;
@@ -56,7 +56,7 @@
       }
 
       .title {
-        font-family: Graphik-Medium, sans-serif;
+        font-family: Graphik-Semibold, sans-serif;
         font-weight: 600;
         font-size: 60px;
         margin-bottom: 41px;
@@ -66,7 +66,7 @@
           font-size: 50px;
         }
 
-        @media screen and (max-width: 520px) {
+        @media screen and (max-width: 680px) {
           max-width: 210px;
           font-size: 34px;
           margin-bottom: 24px;
@@ -90,7 +90,7 @@
           margin-bottom: 35.5px;
         }
 
-        @media screen and (max-width: 520px) {
+        @media screen and (max-width: 680px) {
           font-size: 14px;
           margin-bottom: 20px;
           max-width: 200px;
@@ -112,7 +112,7 @@
         border-radius: 22.5px;
         overflow: hidden;
         margin-bottom: 85.5px;
-        @media screen and (max-width: 520px) {
+        @media screen and (max-width: 680px) {
           margin-bottom: 74px;
         }
         .button_blue {
@@ -128,23 +128,50 @@
           font-size: 18px;
           color: #fff;
           text-decoration: none;
-          @media screen and (max-width: 520px) {
+          @media screen and (max-width: 680px) {
             width: 190px;
             height: 38px;
             font-size: 12.5px;
           }
+          .arrow {
+            width: 22.5px;
+            height: auto;
+            margin-left: 18.5px;
+            display: flex;
+            align-items: center;
+            img {
+              width: 100%;
+            }
+          }
         }
       }
       .link {
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        font-family: Graphik-Medium, sans-serif;
         text-decoration: none;
         color: white;
         margin-bottom: 20px;
-        font-family: Graphik-Medium, sans-serif;
         font-size: 20px;
         font-weight: 600;
         color: #fff;
-        @media screen and (max-width: 520px) {
+        @media screen and (max-width: 680px) {
           font-size: 15px;
+        }
+        &:hover .chevron {
+          transform: translateX(100%);
+        }
+        .chevron {
+          width: 9px;
+          height: auto;
+          margin-left: 17px;
+          display: flex;
+          align-items: center;
+          transition: all .3s;
+          img {
+            width: 100%;
+          }
         }
       }
     }

@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom'
 import cls from 'classnames'
 import Ripples from 'react-ripples'
 import logo from 'assets/images/home/logo.svg'
+import chevron from 'assets/images/home/chevron.svg'
+import arrow from 'assets/images/home/arrow.svg'
 import styles from './styles.module.scss'
 
 const Hero = () => (
@@ -25,6 +27,9 @@ const Hero = () => (
           <Ripples during="1400" color="rgba(255, 255, 255, .1)">
             <Link className={styles.button_blue} to="">
               Sign up to buy Peer
+              <span className={styles.arrow}>
+                <img src={arrow} alt="" />
+              </span>
             </Link>
           </Ripples>
         </div>
@@ -40,6 +45,9 @@ const Hero = () => (
         </div>
         <Link className={styles.link} to="">
           Learn more
+          <span className={styles.chevron}>
+            <img src={chevron} alt="" />
+          </span>
         </Link>
       </div>
     </div>
