@@ -1,5 +1,4 @@
-import React, { useState, useRef } from 'react'
-import PropTypes from 'prop-types'
+import React, { useRef } from 'react'
 import cls from 'classnames'
 import Terms from 'assets/Peer-TermsandConditions.pdf'
 import Privacy from 'assets/PeerPrivacyPolicy.pdf'
@@ -12,9 +11,10 @@ const Links = () => {
   return (
     <div className={cls(styles.container)}>
       <div className={styles.block}>
-        <div className={styles.logo}>© 2022 Peer Inc.</div>
+        <div className={styles.logo}>© {new Date().getFullYear()} Peer Inc.</div>
         <LangSelector />
       </div>
+
       <div className={styles.block}>
         <a href={Terms} className={styles.link} target="_blank" rel="noreferrer">
           Terms of Service
