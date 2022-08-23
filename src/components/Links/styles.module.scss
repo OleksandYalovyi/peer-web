@@ -11,22 +11,28 @@
   }
 
   @media screen and (max-width: 680px) {
-    padding-left: 6px;
+    padding: 35.66px 0px;
+    gap: 29.66px;
   }
-
-  // @media screen and (max-width: 1024px) {
-  //   flex-wrap: wrap;
-  //   gap: 60px 20%;
-  //   justify-content: flex-start;
-  // }
 
   .block {
     display: flex;
     gap: 30px;
     font-size: 14px;
 
+    @media screen and (max-width: 680px) {
+      width: 100%;
+      font-size: 9.33px;
+      line-height: 2.5;
+
+      &:first-child {
+        justify-content: space-between;
+      }
+    }
+
     .link {
       color: #ccc;
+
       &:hover {
         cursor: pointer;
         color: #ccc;
