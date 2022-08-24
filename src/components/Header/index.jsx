@@ -6,6 +6,7 @@ import useScroll from 'hooks/useScroll'
 import PropTypes from 'prop-types'
 import Modal from 'components/ModalForm'
 import SignIn from 'components/Signin'
+// import SignUp from 'components/SignUp'
 import MobileMenu from './MobileMenu'
 import styles from './styles.module.scss'
 
@@ -44,6 +45,7 @@ const Header = () => {
       </div>
       <Modal defaultOpened={isModalOpen} handleClose={() => setIsModalOpen(false)}>
         <SignIn />
+        {/* <SignUp /> */}
       </Modal>
     </header>
   )
