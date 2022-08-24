@@ -6,19 +6,22 @@ import useScroll from 'hooks/useScroll'
 import PropTypes from 'prop-types'
 import Modal from 'components/ModalForm'
 import SignIn from 'components/Signin'
-
+import MobileMenu from './MobileMenu'
 import styles from './styles.module.scss'
 
 const Header = () => {
   const { scrollDirection } = useScroll()
   const [isModalOpen, setIsModalOpen] = useState(false)
-  console.log({ isModalOpen })
+  const [isMenu, setIsMenuOpen] = useState(false)
 
   return (
     <header
       className={cls(styles.container, {
         [styles.hidden]:
-          scrollDirection === 'down' && scrollDirection !== 'bottom' && scrollDirection !== 'top',
+          scrollDirection === 'down' &&
+          scrollDirection !== 'bottom' &&
+          scrollDirection !== 'top' &&
+          !isMenu,
       })}
     >
       <div className={styles.main_container}>
@@ -37,6 +40,7 @@ const Header = () => {
             </Ripples>
           </div>
         </div>
+        <MobileMenu isMenu={isMenu} setIsMenuOpen={setIsMenuOpen} setIsModalOpen={setIsModalOpen} />
       </div>
       <Modal defaultOpened={isModalOpen} handleClose={() => setIsModalOpen(false)}>
         <SignIn />
