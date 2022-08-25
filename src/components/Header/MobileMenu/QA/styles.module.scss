@@ -1,0 +1,25 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 56px;
+  margin-bottom: 177.66px;
+
+  .article {
+    display: flex;
+    flex-direction: column;
+
+    .title {
+      color: #6b91cc;
+      font-family: Graphik-SemiBold, sans-serif;
+      font-size: 23.33px;
+      font-weight: 600;
+      margin: 0 0 24px 0;
+    }
+
+    .content {
+      font-family: Graphik-Regular;
+      font-size: 17.33px;
+      line-height: 1.54;
+    }
+  }
+}
