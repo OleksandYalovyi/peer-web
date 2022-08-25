@@ -1,15 +1,49 @@
+/* eslint-disable react/prop-types */
+/* eslint-disable react/no-this-in-sfc */
 /* eslint-disable jsx-a11y/alt-text */
-import React, { useState } from 'react'
+
+import React, { useMemo, useState } from 'react'
 import Select from 'react-select'
 import classNames from 'classnames'
 import Ripples from 'react-ripples'
 import DropdownIndicator from 'assets/images/home/dropdownindicator.svg'
+import { countries } from 'country-data'
 import styles from './styles.module.scss'
+
+const SubmitButton = ({ disabled }) =>
+  disabled ? (
+    <input
+      type="submit"
+      value="Submit"
+      className={classNames(styles.field__submit, {
+        [styles.active]: false,
+      })}
+    />
+  ) : (
+    <Ripples during="1400" color="rgba(255, 255, 255, .1)">
+      <input
+        type="submit"
+        value="Submit"
+        className={classNames(styles.field__submit, {
+          [styles.active]: true,
+        })}
+      />
+    </Ripples>
+  )
 
 const SignUp = () => {
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
   const [location, setLocation] = useState(null)
+
+  const selectCountries = useMemo(
+    () =>
+      Object.keys(countries.all).map((c) => ({
+        value: countries.all[c].name,
+        label: countries.all[c].name,
+      })),
+    [countries],
+  )
 
   const onSubmit = (e) => {
     e.preventDefault()
@@ -30,6 +64,10 @@ const SignUp = () => {
           name="name"
           value={name}
           placeholder="Name*"
+          autoComplete="off"
+          aria-invalid="false"
+          aria-haspopup="false"
+          spellCheck="false"
           onChange={(e) => setName(e.currentTarget.value)}
         />
 
@@ -39,6 +77,10 @@ const SignUp = () => {
           name="email"
           value={email}
           placeholder="Email*"
+          autoComplete="off"
+          aria-invalid="false"
+          aria-haspopup="false"
+          spellCheck="false"
           onChange={(e) => setEmail(e.currentTarget.value)}
         />
 
@@ -90,7 +132,7 @@ const SignUp = () => {
             }),
             placeholder: (_styles, { data, isFocused }) => ({
               ..._styles,
-              color: isFocused ? '#ffffff' : 'rgba(255, 255, 255, 0.3)',
+              color: isFocused ? '#ffffff' : 'rgba(255, 255, 255, 1)',
               fontFamily: 'Graphik, sans-serif',
               fontWeight: 300,
               fontSize: 16,
@@ -131,18 +173,10 @@ const SignUp = () => {
           value={location}
           placeholder="Select a location"
           onChange={(v) => setLocation(v)}
-          options={[
-            { value: 1, label: 1 },
-            { value: 2, label: 2 },
-            { value: 3, label: 3 },
-            { value: 4, label: 4 },
-            { value: 5, label: 5 },
-          ]}
+          options={selectCountries}
         />
 
-        <Ripples during="1400" color="rgba(255, 255, 255, .1)">
-          <input type="submit" value="Submit" className={styles.field__submit} />
-        </Ripples>
+        <SubmitButton disabled={!(name && email && location)} />
       </form>
     </div>
   )
