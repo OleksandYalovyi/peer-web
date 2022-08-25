@@ -5,10 +5,10 @@ import styles from './styles.module.scss'
 const SignIn = () => (
   <div className={styles.container}>
     <div className={styles.title}>Sign in to Peer</div>
-    <form>
+    <form autoComplete="off">
       <div className={styles.input_section}>
-        <input type="email" placeholder="Email" />
-        <input type="password" placeholder="Password" />
+        <input className={styles.input} type="email" placeholder="Email" />
+        <input className={styles.input} type="password" placeholder="Password" />
       </div>
       <div className={styles.link_wrapper}>
         <Link className={styles.forgot_pass} to="/">

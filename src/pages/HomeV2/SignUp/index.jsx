@@ -109,6 +109,10 @@ const SignUp = () => {
                 borderBottom: `1px solid ${isFocused ? '#ffffff' : '#252525'}`,
               },
               padding: '14px 14px 14px 14px',
+              '@media only screen and (max-width: 680px)': {
+                ...styles['@media only screen and (max-width: 680px)'],
+                padding: '14.33px 10.66px',
+              },
             }),
             input: (_styles, { data, isFocused }) => ({
               ..._styles,
@@ -121,6 +125,10 @@ const SignUp = () => {
               lineHeight: 1.75,
               fontFamily: 'Graphik-Semibold, sans-serif',
               fontWeight: 500,
+              '@media only screen and (max-width: 680px)': {
+                ...styles['@media only screen and (max-width: 680px)'],
+                fontSize: '14.66px',
+              },
             }),
             placeholder: (_styles, { data, isFocused }) => ({
               ..._styles,
@@ -128,11 +136,19 @@ const SignUp = () => {
               fontFamily: 'Graphik, sans-serif',
               fontWeight: 300,
               fontSize: 16,
-              lineHeight: 2.19,
+              '@media only screen and (max-width: 680px)': {
+                ...styles['@media only screen and (max-width: 680px)'],
+                fontSize: '14.66px',
+              },
             }),
             valueContainer: (_styles, { data, isFocused }) => ({
               ..._styles,
               padding: 0,
+              height: '35px',
+              '@media only screen and (max-width: 680px)': {
+                ...styles['@media only screen and (max-width: 680px)'],
+                height: '23.3px',
+              },
             }),
             menu: (_styles, { data, isFocused }) => ({
               ..._styles,

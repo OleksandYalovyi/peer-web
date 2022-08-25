@@ -3,18 +3,24 @@
   border-bottom: 1px solid #252525;
   overflow: hidden;
   margin: 0 auto;
-  @media screen and (max-width: 768px) {
+
+  @media screen and (max-width: 680px) {
     max-width: 500px;
+    padding: 0 0 60.66px 0;
   }
 
   .title {
+    font-family: Graphik-Semibold, sans-serif;
     font-size: 50px;
     font-weight: 600;
     text-align: center;
     color: #fff;
     margin-bottom: 53px;
-    @media screen and (max-width: 768px) {
-      font-size: 32px;
+
+    @media screen and (max-width: 680px) {
+      line-height: 0.92;
+      font-size: 43.33px;
+      margin-bottom: 46.66px;
     }
   }
 
@@ -25,8 +31,12 @@
     color: #fff;
     max-width: 725px;
     margin: 0 auto 70px;
-    @media screen and (max-width: 768px) {
-      font-size: 10px;
+
+    @media screen and (max-width: 680px) {
+      font-size: 17.33px;
+      line-height: 1.54;
+      margin: 0 auto 57.66px;
+      max-width: 300px;
     }
   }
 
@@ -35,7 +45,7 @@
     justify-content: center;
     gap: 60px;
 
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 680px) {
       justify-content: space-around;
       gap: unset;
     }
@@ -43,6 +53,7 @@
     .sn_wrapper {
       min-width: 50px;
       cursor: pointer;
+
       &:hover > .name {
         color: #ffffff;
         cursor: pointer;
@@ -57,15 +68,18 @@
         justify-content: center;
         align-items: center;
         margin: 0 auto 16px;
+
         &:hover {
           border: 1px solid #ffffff;
         }
-        @media screen and (max-width: 768px) {
+
+        @media screen and (max-width: 680px) {
           width: 40px;
           height: 47px;
         }
+
         img {
-          @media screen and (max-width: 768px) {
+          @media screen and (max-width: 680px) {
             transform: scale(0.6);
           }
         }
@@ -74,8 +88,9 @@
         font-size: 16px;
         text-align: center;
         color: #545454;
-        @media screen and (max-width: 768px) {
-          font-size: 10px;
+
+        @media screen and (max-width: 680px) {
+          font-size: 10.66px;
         }
       }
     }

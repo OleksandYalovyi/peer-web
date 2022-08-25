@@ -12,8 +12,10 @@
   @media screen and (max-width: 960px) {
     padding: 88.5px 0 65px 0;
   }
-  @media screen and (max-width: 520px) {
-    padding: 20px 0 65px 0;
+
+  @media screen and (max-width: 680px) {
+    padding: 97px 0 0 0;
+    border-bottom: 0;
   }
 
   .row {
@@ -40,7 +42,7 @@
       }
 
       .title {
-        font-family: Graphik-Medium, sans-serif;
+        font-family: Graphik-Semibold, sans-serif;
         font-weight: 600;
         font-size: 100px;
         margin: 152.5px 0 62px 0;
@@ -54,10 +56,12 @@
         @media screen and (max-width: 960px) {
           margin: 0 0 62px 0;
         }
-        @media screen and (max-width: 520px) {
-          font-size: 65px;
-          padding-left: 6px;
-          margin-bottom: 27px;
+
+        @media screen and (max-width: 680px) {
+          line-height: 1;
+          font-size: 80px;
+          margin: 0 0 46.33px 0;
+          text-align: center;
         }
       }
 
@@ -68,8 +72,25 @@
         font-size: 20px;
         padding-left: 58px;
 
+        &.wide {
+          margin-bottom: 182.5px;
+
+          @media screen and (max-width: 1160px) {
+            margin-bottom: 62px;
+          }
+
+          @media screen and (max-width: 960px) {
+            margin-bottom: 186px;
+          }
+
+          @media screen and (max-width: 680px) {
+            max-width: 100%;
+            margin-bottom: 109.66px;
+          }
+        }
+
         br {
-          @media screen and (max-width: 580px) {
+          @media screen and (max-width: 680px) {
             display: none;
           }
         }
@@ -82,25 +103,12 @@
           margin: 0 0 97px 0;
         }
 
-        @media screen and (max-width: 520px) {
-          font-size: 14px;
-          max-width: 200px;
-          margin-bottom: 50px;
-          &.wide {
-            max-width: 100%;
-          }
-        }
-
-        &:last-child {
-          margin-bottom: 182.5px;
-
-          @media screen and (max-width: 1160px) {
-            margin-bottom: 62px;
-          }
-
-          @media screen and (max-width: 960px) {
-            margin-bottom: 186px;
-          }
+        @media screen and (max-width: 680px) {
+          font-size: 18.66px;
+          max-width: 280px;
+          margin: 0 auto 62.66px;
+          text-align: center;
+          line-height: 1.79;
         }
       }
 

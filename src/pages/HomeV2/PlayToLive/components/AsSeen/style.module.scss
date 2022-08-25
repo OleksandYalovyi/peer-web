@@ -4,6 +4,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding-left: 58px;
 
   @media screen and (max-width: 1160px) {
     padding: 0;
@@ -15,13 +16,20 @@
     justify-content: flex-start;
   }
 
-  @media screen and (max-width: 485px) {
-    gap: 60px;
+  @media screen and (max-width: 680px) {
+    gap: 39.33px 0;
+    justify-content: center;
+    padding-bottom: 43px;
+    border-bottom: 1px solid #252525;
   }
 
   .link {
-    @media screen and (max-width: 485px) {
-      flex-basis: calc(50% - 30px);
+    @media screen and (max-width: 680px) {
+      transform: scale(0.68);
+
+      &:nth-child(3) {
+        margin-left: 20px;
+      }
     }
 
     .logo_image {
