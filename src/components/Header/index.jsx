@@ -6,6 +6,7 @@ import useScroll from 'hooks/useScroll'
 import PropTypes from 'prop-types'
 import Modal from 'components/ModalForm'
 import SignIn from 'components/Signin'
+import SignUp from 'components/SignUp'
 import MobileMenu from './MobileMenu'
 import styles from './styles.module.scss'
 
@@ -13,6 +14,12 @@ const Header = () => {
   const { scrollDirection } = useScroll()
   const [isModalOpen, setIsModalOpen] = useState(false)
   const [isMenu, setIsMenuOpen] = useState(false)
+  const [isSignIn, setIsSignIn] = useState(true)
+
+  const handleCloseModal = () => {
+    setIsModalOpen(false)
+    setIsSignIn(true)
+  }
 
   return (
     <header
@@ -42,8 +49,11 @@ const Header = () => {
         </div>
         <MobileMenu isMenu={isMenu} setIsMenuOpen={setIsMenuOpen} setIsModalOpen={setIsModalOpen} />
       </div>
-      <Modal defaultOpened={isModalOpen} handleClose={() => setIsModalOpen(false)}>
-        <SignIn />
+      <Modal defaultOpened={isModalOpen} handleClose={handleCloseModal}>
+        <>
+          {isSignIn && <SignIn switchWindow={() => setIsSignIn(false)} />}
+          {!isSignIn && <SignUp switchWindow={() => setIsSignIn(true)} />}
+        </>
       </Modal>
     </header>
   )

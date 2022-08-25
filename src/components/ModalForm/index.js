@@ -1,6 +1,7 @@
 /* eslint-disable jsx-a11y/interactive-supports-focus */
 import React, { useEffect, useImperativeHandle, useState, forwardRef, useCallback } from 'react'
 import { createPortal } from 'react-dom'
+import closeBtn from 'assets/images/x.svg'
 import styles from './styles.module.scss'
 
 const modalElement = document.getElementById('modal-root')
@@ -45,7 +46,12 @@ function Modal({ children, defaultOpened = false, handleClose }, ref) {
         <div className={styles['modal-overlay']} onClick={close} />
         <div className={styles['modal-body']}>
           <div className={styles.tint} />
-          {children}
+          <div className={styles.children}>
+            <div className={styles.close} onClick={() => handleClose()}>
+              <img src={closeBtn} alt="" />
+            </div>
+            {children}
+          </div>
         </div>
       </div>
     ) : null,
