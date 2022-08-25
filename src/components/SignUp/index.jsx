@@ -1,8 +1,9 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import T from 'prop-types'
 import styles from './styles.module.scss'
 
-const SignUp = () => (
+const SignUp = ({ switchWindow }) => (
   <div className={styles.container}>
     <div className={styles.title}>Sign up</div>
     <form autoComplete="off">
@@ -20,9 +21,23 @@ const SignUp = () => (
       <input className={styles.button} type="submit" value="Continue" />
     </form>
     <div className={styles.subtitle}>
-      Already have an account? <Link to="/">Click here</Link> to sign in.
+      Already have an account?{' '}
+      <Link
+        to="/"
+        onClick={(e) => {
+          e.preventDefault()
+          switchWindow()
+        }}
+      >
+        Click here
+      </Link>{' '}
+      to sign in.
     </div>
   </div>
 )
 
 export default SignUp
+
+SignUp.propTypes = {
+  switchWindow: T.func,
+}

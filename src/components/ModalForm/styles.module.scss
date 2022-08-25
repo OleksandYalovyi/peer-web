@@ -90,6 +90,21 @@
     // animation-iteration-count: 1;
     // animation-direction: reverse;
   }
+  .children {
+    position: relative;
+  }
+  .close {
+    position: absolute;
+    z-index: 999999999999999999;
+    top: 28px;
+    right: 32px;
+    padding: 5px;
+    cursor: pointer;
+    img {
+      width: 19px;
+      height: auto;
+    }
+  }
 }
 
 @keyframes fade-in {
