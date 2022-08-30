@@ -10,9 +10,10 @@ import DropdownIndicator from 'assets/images/home/dropdownindicator.svg'
 import { countries } from 'country-data'
 import styles from './styles.module.scss'
 
-const SubmitButton = ({ disabled }) =>
+const SubmitButton = ({ disabled, ...props }) =>
   disabled ? (
     <input
+      {...props}
       type="submit"
       value="Submit"
       className={classNames(styles.field__submit, {
@@ -22,6 +23,7 @@ const SubmitButton = ({ disabled }) =>
   ) : (
     <Ripples during="1400" color="rgba(255, 255, 255, .1)">
       <input
+        {...props}
         type="submit"
         value="Submit"
         className={classNames(styles.field__submit, {
@@ -45,23 +47,31 @@ const SignUp = () => {
     [countries],
   )
 
-  const onSubmit = (e) => {
-    e.preventDefault()
-  }
-
   return (
-    <div className={styles.container}>
+    <div
+      className={classNames(
+        styles.container,
+        'ml-form-embedContainer ml-subscribe-form ml-subscribe-form-1241497',
+      )}
+      id="mlb2-1241497"
+    >
       <h1 className={styles.title}>
         Sign up for exclusive access
         <br />
         to product releases.
       </h1>
 
-      <form name="signup" onSubmit={onSubmit} className={styles.form} autoComplete="off">
+      <form
+        className={classNames(styles.form, 'ml-block-form', 'row-form')}
+        autoComplete="off"
+        action="https://assets.mailerlite.com/jsonp/55950/forms/64430855067534460/subscribe"
+        data-code=""
+        method="post"
+        target="_blank"
+      >
         <input
-          className={classNames(styles.field, { [styles.field_fill]: name })}
+          className={classNames(styles.field, { [styles.field_fill]: name }, 'form-control')}
           type="text"
-          name="name"
           value={name}
           placeholder="Name*"
           autoComplete="off"
@@ -69,12 +79,14 @@ const SignUp = () => {
           aria-haspopup="false"
           spellCheck="false"
           onChange={(e) => setName(e.currentTarget.value)}
+          aria-label="name"
+          data-inputmask=""
+          name="fields[name]"
         />
 
         <input
-          className={classNames(styles.field, { [styles.field_fill]: email })}
+          className={classNames(styles.field, { [styles.field_fill]: email }, 'form-control')}
           type="email"
-          name="email"
           value={email}
           placeholder="Email*"
           autoComplete="off"
@@ -82,6 +94,10 @@ const SignUp = () => {
           aria-haspopup="false"
           spellCheck="false"
           onChange={(e) => setEmail(e.currentTarget.value)}
+          aria-label="email"
+          aria-required="true"
+          data-inputmask=""
+          name="fields[email]"
         />
 
         <Select
@@ -95,7 +111,11 @@ const SignUp = () => {
               />
             ),
           }}
-          className={classNames(styles.field__select, { [styles.field_fill]: location })}
+          className={classNames(
+            styles.field__select,
+            { [styles.field_fill]: location },
+            'custom-select',
+          )}
           styles={{
             control: (_styles, { data, isFocused }) => ({
               ..._styles,
@@ -174,10 +194,33 @@ const SignUp = () => {
           placeholder="Select a location"
           onChange={(v) => setLocation(v)}
           options={selectCountries}
+          name="fields[country]"
+          aria-label="country"
+          aria-required="true"
+          autoComplete="new-location"
         />
 
-        <SubmitButton disabled={!(name && email && location)} />
+        <input type="hidden" name="ml-submit" value="1" />
+
+        <div className="ml-form-embedSubmit">
+          <SubmitButton className="primary" disabled={!(name && email && location)} />
+
+          <button disabled="disabled" style={{ display: 'none' }} type="button" className="loading">
+            <div className="ml-form-embedSubmitLoad" />
+            <span className="sr-only">Loading...</span>
+          </button>
+        </div>
+
+        <input type="hidden" name="anticsrf" value="true" />
       </form>
+
+      <div className="ml-form-successBody row-success" style={{ display: 'none' }}>
+        <div className="ml-form-successContent">
+          <h4>Thank you!</h4>
+
+          <p>You have successfully joined our subscriber list.</p>
+        </div>
+      </div>
     </div>
   )
 }

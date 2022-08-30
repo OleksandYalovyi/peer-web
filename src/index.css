@@ -409,3 +409,11 @@ template {
 body > iframe {
   display: none;
 }
+
+/**
+ * MailerLite.
+*/
+
+.ml-form-embedSubmit .react-ripples {
+  width: 100%;
+}
