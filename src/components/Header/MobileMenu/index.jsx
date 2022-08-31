@@ -1,13 +1,21 @@
-import React from 'react'
+/* eslint-disable react/button-has-type */
+import React, { useRef } from 'react'
 import { Link } from 'react-router-dom'
 import Ripples from 'react-ripples'
 import cls from 'classnames'
 import PropTypes, { bool } from 'prop-types'
+import logo from 'assets/images/home/logo.svg'
+import TopBtn from 'assets/images/header/topbtn.svg'
 
+import SignUp from 'pages/HomeV2/SignUp'
 import burger from 'assets/images/header/burger.svg'
+import QA from './QA/index'
+
 import styles from './styles.module.scss'
 
 const Header = ({ isMenu, setIsMenuOpen, setIsModalOpen }) => {
+  const menuContainerRef = useRef()
+
   const onClick = () => setIsMenuOpen((s) => !s)
 
   const onSignIn = () => {
@@ -22,21 +30,39 @@ const Header = ({ isMenu, setIsMenuOpen, setIsModalOpen }) => {
           <img src={burger} className={styles.burger_img} alt="menu" />
         </div>
       </div>
-      <div className={cls(styles.menu_container, { [styles.opened]: isMenu })}>
+      <div
+        className={cls(styles.menu_container, { [styles.opened]: isMenu })}
+        ref={menuContainerRef}
+      >
         <div className={styles.menu_content}>
-          <Link to="/" className={styles.logo_text} onClick={onClick}>
-            About Peer
+          <Link to="/" className={styles.logo}>
+            <img src={logo} alt="logo" />
           </Link>
-          <div className={styles.right_section}>
-            <div className={styles.button_wrapper}>
-              <Ripples during="1400" color="rgba(255, 255, 255, .1)">
-                <Link to="/" className={styles.button} onClick={onSignIn}>
-                  Sign in to Peer
-                </Link>
-              </Ripples>
-            </div>
-          </div>
+          <Link to="/" className={styles.logo_text} onClick={onClick}>
+            Sign In
+          </Link>
+          <Link to="/" className={styles.logo_text} onClick={onClick}>
+            White paper
+          </Link>
+          <Link to="/" className={styles.logo_text} onClick={onClick}>
+            Updates
+          </Link>
+          <Link to="/" className={styles.logo_text} onClick={onClick}>
+            Contact us
+          </Link>
+          <div className={cls(styles.logo_text, styles.qa)}>Q&A</div>
         </div>
+
+        <QA />
+
+        <SignUp />
+
+        <button
+          className={styles.btn_to_top}
+          onClick={() => menuContainerRef.current.scrollTo({ top: 0, behavior: 'smooth' })}
+        >
+          <img src={TopBtn} alt="Button to top" />
+        </button>
       </div>
     </>
   )

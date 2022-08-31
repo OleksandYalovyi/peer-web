@@ -18,6 +18,7 @@
     }
   }
 }
+
 .menu_container {
   position: fixed;
   width: 100vw;
@@ -26,34 +27,68 @@
   left: 0;
   transition: left 0.3s;
   flex-direction: column;
-  align-items: flex-end;
-  padding: 100px 0 0;
+  align-items: flex-start;
+  padding: 100px 27.33px 75px;
   display: none;
   backdrop-filter: saturate(180%) blur(20px);
   background-color: rgba(0, 0, 0, 0.8);
   opacity: 0;
   transition: opacity 0.3s;
+  overflow-y: scroll;
+
+  .btn_to_top {
+    padding: 0;
+    margin: 222.33px auto 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: 0.3s;
+
+    &:hover {
+      filter: brightness(0.7);
+    }
+
+    img {
+      width: 87.33px;
+      height: 87.33px;
+    }
+  }
+
   .menu_content {
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
-    gap: 30px;
-    padding: 50px 23px;
+    align-items: flex-start;
+    padding: 50px 0 0;
+
+    .logo {
+      margin-bottom: 40px;
+      img {
+        width: 35px;
+      }
+    }
+
     .logo_text {
-      font-family: Graphik-Regular, sans-serif;
-      font-size: 32px;
-      font-weight: normal;
+      font-family: Graphik-Semibold, sans-serif;
+      font-size: 33px;
+      font-weight: 600;
       color: #fff;
       cursor: pointer;
       text-decoration: none;
+      margin-bottom: 50px;
     }
+
+    .qa {
+      margin: 60px 0 35px;
+    }
+
     .right_section {
       display: flex;
       align-items: center;
 
       .text_link {
         font-family: Graphik-Regular, sans-serif;
-        font-size: 32px;
+        font-size: 50px;
         font-weight: normal;
         color: #fff;
         margin-right: 76px;
@@ -65,28 +100,10 @@
           font-size: 12px;
         }
       }
-      .button_wrapper {
-        border-radius: 25px;
-        overflow: hidden;
-        .button {
-          width: 200px;
-          height: 50px;
-          border-radius: 30px;
-          background-color: #006fff;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          font-family: Graphik-Semibold, sans-serif;
-          font-size: 20px;
-          font-weight: 500;
-          color: #fff;
-          cursor: pointer;
-          text-decoration: none;
-        }
-      }
     }
   }
 }
+
 .opened {
   display: none;
   @media screen and (max-width: 680px) {

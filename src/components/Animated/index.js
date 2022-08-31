@@ -5,7 +5,7 @@ import PropTypes from 'prop-types'
 import styles from './styles.module.scss'
 
 const Animated = ({ children, delay = 0, containerClassName = '', duration, type = 'default' }) => {
-  const [visible, setVisible] = useState(false)
+  const [visible, setVisible] = useState(true)
   const text = useRef(null)
   const onScreen = useOnScreen(text)
 
