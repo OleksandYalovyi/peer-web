@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/label-has-associated-control */
 /* eslint-disable react/button-has-type */
 import React, { useRef } from 'react'
 import { Link } from 'react-router-dom'
@@ -13,10 +14,31 @@ import QA from './QA/index'
 
 import styles from './styles.module.scss'
 
+// eslint-disable-next-line react/prop-types
+const Burger = ({ onClick }) => (
+  <div className={styles.burger_container}>
+    <input
+      className={cls(styles['menu-trigger'], styles.hidden)}
+      id="togglenav"
+      type="checkbox"
+      onClick={onClick}
+    />
+    <label className={styles['burger-wrapper']} htmlFor="togglenav">
+      <div className={styles.hamburger} />
+    </label>
+  </div>
+)
+
 const Header = ({ isMenu, setIsMenuOpen, setIsModalOpen }) => {
   const menuContainerRef = useRef()
 
-  const onClick = () => setIsMenuOpen((s) => !s)
+  const onClick = (e) => {
+    e.stopPropagation()
+    if (e.currentTarget.id === 'togglenav') {
+      console.log('%c   click   ', 'color: darkgreen; background: palegreen;', e.target)
+      setIsMenuOpen((s) => !s)
+    }
+  }
 
   const onSignIn = () => {
     setIsMenuOpen((s) => !s)
@@ -27,7 +49,7 @@ const Header = ({ isMenu, setIsMenuOpen, setIsModalOpen }) => {
     <>
       <div className={styles.container}>
         <div className={styles.burger} onClick={onClick}>
-          <img src={burger} className={styles.burger_img} alt="menu" />
+          <Burger onClick={onClick} />
         </div>
       </div>
       <div
