@@ -18,33 +18,62 @@ const Disclaimer = () => (
     </div>
     <div className={styles.icons_container}>
       <div className={styles.sn_wrapper}>
-        <div className={styles.icon_border}>
+        <a
+          href="https://t.me/peerinc"
+          target="_blank"
+          rel="noreferrer"
+          className={styles.icon_border}
+        >
           <img src={Telegram} width="32px" alt="icon" />
-        </div>
+        </a>
         <div className={styles.name}>Telegram</div>
       </div>
+
       <div className={styles.sn_wrapper}>
-        <div className={styles.icon_border}>
+        <a
+          href="https://apps.apple.com/us/app/peer/id1585616081"
+          target="_blank"
+          rel="noreferrer"
+          className={styles.icon_border}
+        >
           <img src={Peer} width="33px" alt="icon" />
-        </div>
+        </a>
         <div className={styles.name}>Peer</div>
       </div>
+
       <div className={styles.sn_wrapper}>
-        <div className={styles.icon_border}>
+        <a
+          href="http://twitter.com/peerpmc"
+          target="_blank"
+          rel="noreferrer"
+          className={styles.icon_border}
+        >
           <img src={Twitter} width="35px" alt="icon" />
-        </div>
+        </a>
         <div className={styles.name}>Twitter</div>
       </div>
+
       <div className={styles.sn_wrapper}>
-        <div className={styles.icon_border}>
+        <a
+          href="https://www.linkedin.com/company/peerinc"
+          target="_blank"
+          rel="noreferrer"
+          className={styles.icon_border}
+        >
           <img src={ln} width="30px" alt="icon" />
-        </div>
+        </a>
         <div className={styles.name}>Linkedin</div>
       </div>
+
       <div className={styles.sn_wrapper}>
-        <div className={styles.icon_border}>
+        <a
+          href="https://www.facebook.com/peerniverse"
+          target="_blank"
+          rel="noreferrer"
+          className={styles.icon_border}
+        >
           <img src={FB} width="19px" alt="icon" />
-        </div>
+        </a>
         <div className={styles.name}>Facebook</div>
       </div>
     </div>
