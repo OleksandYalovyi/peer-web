@@ -35,8 +35,7 @@
   opacity: 0;
   transition: opacity 0.3s;
   overflow-y: scroll;
-
-  .btn_to_top {
+  f .btn_to_top {
     padding: 0;
     margin: 222.33px auto 0 auto;
     display: flex;
@@ -163,7 +162,7 @@ $s: 3px;
   pointer-events: none;
 }
 
-.menu-trigger:checked {
+.menu-trigger-open {
   ~ .burger-wrapper {
     .hamburger {
       background: transparent;
