@@ -15,10 +15,10 @@ import QA from './QA/index'
 import styles from './styles.module.scss'
 
 // eslint-disable-next-line react/prop-types
-const Burger = ({ onClick }) => (
+const Burger = ({ onClick, isMenu }) => (
   <div className={styles.burger_container}>
     <input
-      className={cls(styles['menu-trigger'], styles.hidden)}
+      className={cls(isMenu ? styles['menu-trigger-open'] : styles['menu-trigger'], styles.hidden)}
       id="togglenav"
       type="checkbox"
       onClick={onClick}
@@ -35,9 +35,12 @@ const Header = ({ isMenu, setIsMenuOpen, setIsModalOpen }) => {
   const onClick = (e) => {
     e.stopPropagation()
     if (e.currentTarget.id === 'togglenav') {
-      console.log('%c   click   ', 'color: darkgreen; background: palegreen;', e.target)
       setIsMenuOpen((s) => !s)
     }
+  }
+
+  const onSelect = (e) => {
+    setIsMenuOpen((s) => !s)
   }
 
   const onSignIn = () => {
@@ -48,8 +51,8 @@ const Header = ({ isMenu, setIsMenuOpen, setIsModalOpen }) => {
   return (
     <>
       <div className={styles.container}>
-        <div className={styles.burger} onClick={onClick}>
-          <Burger onClick={onClick} />
+        <div className={styles.burger}>
+          <Burger onClick={onClick} isMenu={isMenu} />
         </div>
       </div>
       <div
@@ -60,16 +63,16 @@ const Header = ({ isMenu, setIsMenuOpen, setIsModalOpen }) => {
           <Link to="/" className={styles.logo}>
             <img src={logo} alt="logo" />
           </Link>
-          <Link to="/" className={styles.logo_text} onClick={onClick}>
+          <Link to="/" className={styles.logo_text} onClick={onSelect}>
             Sign In
           </Link>
-          <Link to="/white-paper" className={styles.logo_text} onClick={onClick}>
+          <Link to="/white-paper" className={styles.logo_text} onClick={onSelect}>
             White paper
           </Link>
-          <Link to="/" className={styles.logo_text} onClick={onClick}>
+          <Link to="/updates" className={styles.logo_text} onClick={onSelect}>
             Updates
           </Link>
-          <Link to="/" className={styles.logo_text} onClick={onClick}>
+          <Link to="/" className={styles.logo_text} onClick={onSelect}>
             Contact us
           </Link>
           <div className={cls(styles.logo_text, styles.qa)}>Q&A</div>
