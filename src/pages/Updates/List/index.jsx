@@ -24,9 +24,6 @@ const List = () => {
     {
       content: 'Peer, Inc. Unveils New Framework for the Metaverse',
     },
-    {
-      content: 'Peer, Inc. Unveils New Framework for the Metaverse',
-    },
   ]
 
   return (
