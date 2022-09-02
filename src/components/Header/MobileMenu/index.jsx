@@ -41,7 +41,7 @@ const Header = ({ isMenu, setIsMenuOpen, setIsModalOpen }) => {
           <Link to="/" className={styles.logo_text} onClick={onClick}>
             Sign In
           </Link>
-          <Link to="/" className={styles.logo_text} onClick={onClick}>
+          <Link to="/white-paper" className={styles.logo_text} onClick={onClick}>
             White paper
           </Link>
           <Link to="/" className={styles.logo_text} onClick={onClick}>

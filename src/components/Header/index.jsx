@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 import Ripples from 'react-ripples'
 import cls from 'classnames'
 import useScroll from 'hooks/useScroll'
@@ -31,18 +31,18 @@ const Header = () => {
       })}
     >
       <div className={styles.main_container}>
-        <Link to="/" className={styles.logo_text}>
+        <NavLink to="/" className={styles.logo_text} activeClassName={styles.active}>
           About Peer
-        </Link>
+        </NavLink>
         <div className={styles.right_section}>
-          <Link to="/white-paper" className={styles.text_link}>
+          <NavLink to="/white-paper" className={styles.text_link} activeClassName={styles.active}>
             White paper
-          </Link>
+          </NavLink>
           <div className={styles.button_wrapper}>
             <Ripples during="1400" color="rgba(255, 255, 255, .1)">
-              <Link to="/" className={styles.button} onClick={() => setIsModalOpen(true)}>
+              <NavLink to="/" className={styles.button} onClick={() => setIsModalOpen(true)}>
                 Sign in to Peer
-              </Link>
+              </NavLink>
             </Ripples>
           </div>
         </div>

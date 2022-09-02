@@ -1,7 +1,7 @@
 import React from 'react'
 import { Route, Switch, Redirect } from 'react-router-dom'
 import Home from 'pages/HomeV2'
-import About from 'pages/About'
+import WhitePaper from 'pages/WhitePaper'
 import Header from 'components/Header'
 
 import styles from './app.module.scss'
@@ -13,7 +13,7 @@ function App() {
         <Header />
         <Switch>
           <Route exact path="/" component={Home} />
-          <Route exact path="/white-paper" component={About} />
+          <Route exact path="/white-paper" component={WhitePaper} />
           <Redirect exact from="/*" to="/" />
         </Switch>
       </main>
