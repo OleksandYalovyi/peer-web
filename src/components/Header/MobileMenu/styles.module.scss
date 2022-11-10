@@ -37,7 +37,7 @@
   overflow-y: scroll;
   .btn_to_top {
     padding: 0;
-    margin: 222.33px auto 0 auto;
+    margin: 222.33px auto 100px auto;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -56,25 +56,47 @@
 
   .menu_content {
     display: flex;
+    width: 100%;
     flex-direction: column;
     align-items: flex-start;
     padding: 0;
+    margin-bottom: 65px;
 
-    .logo {
-      margin-bottom: 40px;
-      img {
-        width: 35px;
+    .logo_section {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: .5px solid #252525;
+      padding: 20px 0;
+      .logo {
+        img {
+          width: 35px;
+          height: 35px;
+        }
+      }
+      .signin_text {
+        font-family: Turbine-Medium, sans-serif;
+        font-size: 19.83px;
+        letter-spacing: 0.5px;
+        color: #fff;
+        cursor: pointer;
+        text-decoration: none;
       }
     }
-
+    
     .logo_text {
-      font-family: Graphik-Semibold, sans-serif;
+      font-family: Turbine-Medium, sans-serif;
       font-size: 33px;
-      font-weight: 600;
+      font-weight: 500;
       color: #fff;
       cursor: pointer;
       text-decoration: none;
-      margin-bottom: 40px;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      padding: 20px 0;
+      border-bottom: .5px solid #252525;
     }
 
     .qa {
@@ -86,7 +108,7 @@
       align-items: center;
 
       .text_link {
-        font-family: Graphik-Regular, sans-serif;
+        font-family: Turbine-Regular, sans-serif;
         font-size: 50px;
         font-weight: normal;
         color: #fff;

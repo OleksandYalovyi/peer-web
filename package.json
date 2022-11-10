@@ -1,38 +1,28 @@
 {
-  "name": "peer-inc",
+  "name": "peer-domains",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@craco/craco": "^6.4.3",
-    "@material-ui/core": "^4.12.3",
-    "@testing-library/jest-dom": "^5.15.1",
-    "@testing-library/react": "^11.2.7",
-    "@testing-library/user-event": "^12.8.3",
-    "babel-eslint": "^10.1.0",
+    "axios": "^0.22.0",
     "classnames": "^2.3.1",
-    "country-data": "0.0.31",
-    "craco-less": "^2.0.0",
-    "history": "^5.0.0",
-    "node-sass": "^7.0.1",
+    "country-flag-icons": "^1.5.5",
+    "date-fns": "^2.28.0",
+    "history": "4.6.3",
+    "node-sass": "^6.0.1",
     "prop-types": "^15.7.2",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "react-hook-form": "^7.34.2",
-    "react-player": "^2.9.0",
-    "react-ripples": "^2.2.1",
-    "react-router": "^5.2.0",
-    "react-router-dom": "^5.2.0",
-    "react-scripts": "^5.0.1",
-    "react-select": "^5.4.0",
-    "react-text-fun": "^1.0.0",
-    "web-vitals": "^1.1.2"
+    "react-query": "3.19.1",
+    "react-router": "^5.2.1",
+    "react-router-dom": "5.2.0",
+    "react-scripts": "4.0.3",
+    "react-transition-group": "^4.4.2"
   },
   "scripts": {
-    "start": "craco start",
-    "build": "CI=false && craco build",
-    "test": "craco test",
-    "extract": "formatjs extract",
-    "compile": "formatjs compile",
+    "start": "react-scripts start",
+    "build": "CI=false && REACT_APP_STAGE=production react-scripts build",
+    "build-dev": "CI=false && REACT_APP_STAGE=development react-scripts build",
+    "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -54,15 +44,17 @@
     ]
   },
   "devDependencies": {
+    "@formatjs/cli": "^4.8.1",
     "eslint": "^7.28.0",
     "eslint-config-airbnb": "^18.2.1",
     "eslint-config-prettier": "^8.3.0",
-    "eslint-plugin-formatjs": "^4.0.2",
+    "eslint-plugin-formatjs": "^2.20.5",
     "eslint-plugin-import": "^2.23.4",
     "eslint-plugin-jsx-a11y": "^6.4.1",
     "eslint-plugin-prettier": "^3.4.0",
     "eslint-plugin-react": "^7.24.0",
     "eslint-plugin-react-hooks": "^4.2.0",
-    "prettier": "^2.3.1"
+    "prettier": "^2.3.1",
+    "prettier-plugin-style-order": "0.2.2"
   }
 }

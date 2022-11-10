@@ -1,0 +1,13 @@
+.container {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  background-color: var(--main-bg);
+  padding: 80px 25px;
+
+  .flex_container {
+    max-width: 1170px;
+    min-height: calc(100vh - 160px);
+    margin: 0 auto;
+  }
+}

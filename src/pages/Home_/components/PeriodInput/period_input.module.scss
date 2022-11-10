@@ -1,0 +1,20 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-width: 147px;
+  font-weight: bold;
+
+  @media screen and (max-width: 600px) {
+    max-width: 300px;
+    margin: 0 auto;
+  }
+
+  .content_container {
+    font-size: 25px;
+  }
+
+  .arrow_container {
+    cursor: pointer;
+  }
+}

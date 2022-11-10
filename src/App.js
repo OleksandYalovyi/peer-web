@@ -1,24 +1,32 @@
 import React from 'react'
-import { Route, Switch, Redirect } from 'react-router-dom'
-import Home from 'pages/HomeV2'
-import WhitePaper from 'pages/WhitePaper'
-import Updates from 'pages/Updates'
+import { TransitionGroup, CSSTransition } from 'react-transition-group'
+import { Route, Switch, Redirect, useLocation } from 'react-router-dom'
+import { useTheme } from 'context/theme'
 import Header from 'components/Header'
-
-import styles from './app.module.scss'
+import Footer from 'components/Footer'
+import Home from 'pages/Home'
+import About from 'pages/About'
+import './App.css'
 
 function App() {
+  const location = useLocation()
+  const { isLight, setIsLight } = useTheme()
+
+  setIsLight(false)
+
   return (
-    <div className={styles.main_container}>
-      <main id="main">
-        <Header />
-        <Switch>
-          <Route exact path="/" component={Home} />
-          <Route exact path="/white-paper" component={WhitePaper} />
-          <Route exact path="/updates" component={Updates} />
-          <Redirect exact from="/*" to="/" />
-        </Switch>
-      </main>
+    <div id="theme" className={isLight ? null : 'dark'}>
+      <Header />
+      <TransitionGroup>
+        <CSSTransition key={location.key} classNames="fade" timeout={900}>
+          <Switch location={location}>
+            <Route path="/about" component={About} />
+            <Route exact path="/" component={Home} />
+            <Redirect exact from="/*" to="/" />
+          </Switch>
+        </CSSTransition>
+      </TransitionGroup>
+      <Footer />
     </div>
   )
 }

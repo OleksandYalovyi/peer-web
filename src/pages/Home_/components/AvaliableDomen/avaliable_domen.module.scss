@@ -1,0 +1,88 @@
+.container {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 30px;
+  padding: 29px 24.5px 29px 50.5px;
+  background-color: var(--avaliableDomenbg);
+  border-radius: 15px;
+
+  @media screen and (max-width: 620px) {
+    flex-direction: column;
+    padding: 10px 20px;
+  }
+
+  .domen_name {
+    text-align: left;
+
+    .name {
+      display: flex;
+      align-items: center;
+      font-size: 30px;
+
+      @media screen and (max-width: 620px) {
+        justify-content: center;
+      }
+
+      .copy_image_wrapper {
+        width: 22.5px;
+        height: 23.5px;
+        margin-left: 17.5px;
+        cursor: pointer;
+
+        :active {
+          filter: invert(1);
+        }
+      }
+    }
+
+    .status {
+      color: var(--avaliable);
+
+      @media screen and (max-width: 620px) {
+        text-align: center;
+      }
+    }
+  }
+
+  .row_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .gray_text {
+    color: #a2a2a2;
+  }
+
+  .price {
+    font-size: 25px;
+  }
+
+  .button {
+    max-width: 250px;
+    padding: 20px 96.5px;
+    color: var(--bg);
+    background-color: var(--font);
+    border-radius: 10px;
+    cursor: pointer;
+
+    @media screen and (max-width: 890px) {
+      margin: 0 auto 10px;
+    }
+  }
+  .disabled_button {
+    cursor: not-allowed;
+  }
+
+  .error {
+    position: absolute;
+    right: 0px;
+    bottom: -26px;
+    color: var(--error);
+    font-size: 14px;
+  }
+}

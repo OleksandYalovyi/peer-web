@@ -1,0 +1,134 @@
+@mixin container_inside {
+  width: 100%;
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 0 25px;
+}
+
+.section {
+  display: flex;
+  min-height: 100vh;
+  background-color: black;
+
+  .main_container {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    padding: 83.5px 0 110.5px;
+    overflow: hidden;
+
+    .main {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      min-height: 70%;
+      margin: 0 0 38px 0;
+      padding: 0 0 137.5px 0;
+      background-image: url('./src/gradientcontour.png');
+      background-size: cover;
+      border-top: 1px solid #1f1f1f;
+      border-bottom: 1px solid #1f1f1f;
+
+      .container {
+        @include container_inside;
+
+        h4,
+        h1 {
+          color: white;
+        }
+
+        h4 {
+          margin: 0 0 26.5px 0;
+          font-size: 25px;
+          font-family: Turbine-Regular, sans-serif;
+        }
+
+        h1 {
+          max-width: 600px;
+          margin: 0 0 59px 0;
+          font-weight: bold;
+          font-size: 50px;
+          font-family: Turbine-Bold, sans-serif;
+        }
+
+        .btns {
+          display: flex;
+          gap: 17px;
+
+          a {
+            display: block;
+            padding: 20px 45px;
+            color: black;
+            font-weight: bold;
+            font-size: 18px;
+            font-family: Turbine-Bold, sans-serif;
+            line-height: 20px;
+            letter-spacing: 1.8px;
+            text-transform: uppercase;
+            text-decoration: none;
+            background-color: #00d3f9;
+            border-radius: 15px;
+            cursor: pointer;
+
+            &.large_btn {
+              padding: 20px 88.5px;
+            }
+          }
+        }
+
+        &:after {
+          position: absolute;
+          top: 100%;
+          left: 0;
+          padding: 11.5px 57.7px;
+          color: #1f1f1f;
+          font-size: 15px;
+          font-family: Turbine-Regular, sans-serif;
+          line-height: 15px;
+          white-space: nowrap;
+          word-spacing: 314.5px;
+
+          content: var(--d) ' ' var(--d) ' ' var(--d);
+
+          --a: '10’12’23';
+          --b: var(--a) ' ' var(--a) ' ' var(--a) ' ' var(--a) ' ' var(--a) ' ' var(--a);
+          --c: var(--b) ' ' var(--b) ' ' var(--b) ' ' var(--b) ' ' var(--b) ' ' var(--b);
+          --d: var(--c) ' ' var(--c) ' ' var(--c) ' ' var(--c) ' ' var(--c) ' ' var(--c);
+        }
+      }
+    }
+
+    .news {
+      flex: 1;
+      padding: 58.5px 0 0 0;
+
+      .container {
+        @include container_inside;
+
+        .news_cld {
+          display: flex;
+          flex-direction: column;
+          gap: 26px;
+
+          .title {
+            margin: 0;
+            color: #747474;
+            font-weight: normal;
+            font-size: 20px;
+            font-family: Turbine-Regular, sans-serif;
+            letter-spacing: 1px;
+          }
+
+          .text {
+            color: #ffffff;
+            font-weight: normal;
+            font-size: 25px;
+            font-family: Turbine-Regular, sans-serif;
+            letter-spacing: 1.25px;
+          }
+        }
+      }
+    }
+  }
+}

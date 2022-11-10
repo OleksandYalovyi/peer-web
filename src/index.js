@@ -1,19 +1,23 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import { BrowserRouter as Router } from 'react-router-dom'
 import { ThemeProvider } from 'context/theme'
-import WithIOSRedirect from 'HOC/WithIOSRedirect'
-
+import { BrowserRouter as Router } from 'react-router-dom'
+// import { setBaseEndpoint } from 'utils/apiClient'
 import App from './App'
+
 import './index.css'
+import './index.scss'
+
+// const url = 'peer.com/api'
+// setBaseEndpoint(url)
 
 ReactDOM.render(
-  <Router>
-    <ThemeProvider>
-      <WithIOSRedirect>
+  <React.StrictMode>
+    <Router>
+      <ThemeProvider>
         <App />
-      </WithIOSRedirect>
-    </ThemeProvider>
-  </Router>,
+      </ThemeProvider>
+    </Router>
+  </React.StrictMode>,
   document.getElementById('root'),
 )

@@ -1,0 +1,64 @@
+.container {
+  width: 100%;
+  padding: 31px 24px 44px 24px;
+  text-align: left;
+  background-color: var(--bg);
+  border-radius: 15px;
+
+  .separator {
+    border-bottom: 1px solid #d7d7d7;
+  }
+
+  .row {
+    margin-bottom: 24px;
+    padding-left: 26px;
+
+    &:last-child {
+      margin-bottom: 0px;
+    }
+
+    .title {
+      margin-bottom: 48px;
+      font-weight: bold;
+      font-size: 20px;
+    }
+    .link {
+      margin-right: 13px;
+      color: var(--link);
+      overflow-wrap: anywhere;
+    }
+
+    .content {
+      display: flex;
+      align-items: center;
+      margin-bottom: 39px;
+    }
+  }
+
+  .copy_image_wrapper {
+    width: 22.5px;
+    height: 23.5px;
+    cursor: pointer;
+
+    :active {
+      filter: invert(1);
+    }
+  }
+
+  .domaine_name_container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 11px;
+    font-weight: bold;
+    font-size: 30px;
+
+    .domaine_name {
+      margin-right: 17px;
+    }
+  }
+
+  .status {
+    margin-bottom: 14px;
+    color: var(--unavaliable);
+  }
+}
