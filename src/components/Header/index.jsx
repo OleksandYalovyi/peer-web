@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import React, { useState } from 'react'
 import { NavLink, useLocation, Link } from 'react-router-dom'
 import cls from 'classnames'
@@ -11,6 +12,21 @@ import ThemeSelector from '../Icons/Theme'
 import MobileMenu from './MobileMenu'
 
 import styles from './header.module.scss'
+
+const NavItems = ({ router, name, links }) => (
+  <div className={styles.nav_item}>
+    {name}
+    <div className={styles.nav_list}>
+      {router
+        ? links.map((l) => <NavLink to={l.to}>{l.name}</NavLink>)
+        : links.map((l) => (
+            <a href={l.to} target="_blank" rel="noreferrer">
+              {l.name}
+            </a>
+          ))}
+    </div>
+  </div>
+)
 
 const LandingHeader = () => {
   const { scrollDirection } = useScroll()
@@ -42,6 +58,70 @@ const LandingHeader = () => {
             <Logo isLight={isLight} />
           </Link>
         </div>
+        <nav className={styles.nav}>
+          <NavItems
+            router
+            name="Community"
+            links={[
+              {
+                name: 'Social',
+                to: '/social',
+              },
+              {
+                name: 'Development',
+                to: '/development',
+              },
+              {
+                name: 'White Papers',
+                to: '/white_papers',
+              },
+            ]}
+          />
+          <NavItems
+            router={false}
+            name="Products"
+            links={[
+              {
+                name: 'Peer Superapp',
+                to: 'peersuperapp',
+              },
+              {
+                name: 'Peer Blockchain',
+                to: 'peerblockchain',
+              },
+              {
+                name: 'Peer Labs',
+                to: 'peerlabs',
+              },
+              {
+                name: 'White Paper',
+                to: 'whitepaper',
+              },
+              {
+                name: 'AR Studios',
+                to: 'arstudios',
+              },
+            ]}
+          />
+          <NavItems
+            router
+            name="About"
+            links={[
+              {
+                name: 'Team',
+                to: '/team',
+              },
+              {
+                name: 'Brand Book',
+                to: '/brandbook',
+              },
+              {
+                name: 'White Papers',
+                to: '/whitepapers',
+              },
+            ]}
+          />
+        </nav>
         <div className={styles.right_container}>
           <NavLink
             to="/"
