@@ -19,7 +19,7 @@
     justify-content: space-between;
     align-items: center;
     flex-grow: 2;
-    padding: 27px 25px;
+    padding: 18px 41px 18px 31.5px;
 
     @media screen and (max-width: 1540px) {
       // max-width: calc(100% - 40px);
@@ -34,17 +34,21 @@
       padding-right: 0px;
       height: 60px;
     }
+
     .left_container {
       display: flex;
       align-items: center;
+
       .logo_container {
         margin-right: 24px;
         display: flex;
       }
+
       .select_container {
         display: flex;
         align-items: center;
         cursor: pointer;
+
         .select_title {
           font-family: Turbine-Semibold, sans-serif;
           font-size: 16.25px;
@@ -138,12 +142,12 @@
     .right_container {
       display: flex;
       align-items: center;
+
       .text_link {
         font-family: Turbine-Regular, sans-serif;
         font-size: 16px;
         font-weight: normal;
         color: var(--main-font);
-        margin-right: 76px;
         cursor: pointer;
         text-decoration: none;
         text-transform: uppercase;
@@ -156,10 +160,12 @@
           background: var(--main-font);
           transition: width .3s;
         }
+
         &:hover::after {
           width: 100%;
         }
       }
+
       .theme_selector {
         width: 32px;
         display: flex;
@@ -168,6 +174,7 @@
         margin-right: 36px;
         cursor: pointer;
       }
+
       .button {
         width: 162.5px;
         height: 42px;
@@ -184,6 +191,7 @@
         cursor: pointer;
         margin-right: 36px;
       }
+
       .flag_button {
         width: 37px;
         height: 37px;
@@ -193,11 +201,13 @@
         align-items: center;
         border: solid .5px #0096ff;
         cursor: pointer;
+
         .flag_icon {
           overflow: hidden;
           width: 27px;
           height: 27px;
           border-radius: 50%;
+          
           .icon {
             width: auto;
             height: 27px;

@@ -14,7 +14,7 @@
     display: flex;
     flex: 1;
     flex-direction: column;
-    padding: 101px 0 104px;
+    padding: 83px 0 110px;
     overflow: hidden;
 
     .main {
@@ -67,12 +67,16 @@
             letter-spacing: 1.8px;
             text-transform: uppercase;
             text-decoration: none;
-            background-color: #00d3f9;
+            background-color: var(--link);
             border-radius: 15px;
             cursor: pointer;
 
             &.large_btn {
               padding: 20px 88.5px;
+            }
+
+            &:hover {
+              color: var(--link-hover);
             }
           }
         }
@@ -121,11 +125,16 @@
           }
 
           .text {
-            color: #ffffff;
+            color: var(--link-hover);
             font-weight: normal;
             font-size: 25px;
             font-family: Turbine-Regular, sans-serif;
             letter-spacing: 1.25px;
+            cursor: pointer;
+
+            &:hover {
+              color: var(--link);
+            }
           }
         }
       }

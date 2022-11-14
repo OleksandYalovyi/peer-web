@@ -6,7 +6,7 @@ import styles from './linkedin.module.scss'
 
 const Linkedin = ({ hovered, width = '87.5', isLight }) => {
   const renderColor = () => {
-    if (hovered) return '#1663be'
+    if (hovered) return '#00d3f9'
     if (isLight) return '#000000'
     return '#ffffff'
   }

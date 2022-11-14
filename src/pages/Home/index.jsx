@@ -23,9 +23,9 @@ const Home = () => (
         <div className={styles.container}>
           <div className={styles.news_cld}>
             <p className={styles.title}>Latest</p>
-            <p className={styles.text}>
+            <a className={styles.text}>
               Peer Inc. Announces Public Sale of Its SEC Compliant Layer-1 Utility Coin
-            </p>
+            </a>
           </div>
         </div>
       </div>
