@@ -4,11 +4,16 @@ import T from 'prop-types'
 import cls from 'classnames'
 import styles from './fb.module.scss'
 
-const Facebook = ({ hovered, width = '87.5', isLight }) => {
+const Facebook = ({ hovered, width = '14', isLight, size }) => {
   const renderColor = () => {
     if (hovered) return '#00d3f9'
     if (isLight) return '#000000'
     return '#ffffff'
+  }
+
+  const renderStyle = () => {
+    if (size === 'sm') return { transform: 'scale(0.7)' }
+    return null
   }
 
   return (
@@ -17,6 +22,7 @@ const Facebook = ({ hovered, width = '87.5', isLight }) => {
       viewBox="24 15 15 34"
       width={width}
       className={cls({ [styles.hovered]: hovered })}
+      style={renderStyle()}
     >
       <path
         fill={renderColor()}
@@ -31,5 +37,6 @@ Facebook.propTypes = {
   hovered: T.bool,
   width: T.string,
   isLight: T.bool,
+  size: T.string,
 }
 export default Facebook

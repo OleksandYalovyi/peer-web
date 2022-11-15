@@ -4,11 +4,16 @@ import T from 'prop-types'
 import cls from 'classnames'
 import styles from './twitter.module.scss'
 
-const Twitter = ({ hovered, width = '87.5', isLight }) => {
+const Twitter = ({ hovered, width = '26', isLight, size }) => {
   const renderColor = () => {
     if (hovered) return '#00d3f9'
     if (isLight) return '#000000'
     return '#ffffff'
+  }
+
+  const renderStyle = () => {
+    if (size === 'sm') return { transform: 'scale(0.7)' }
+    return null
   }
 
   return (
@@ -17,6 +22,7 @@ const Twitter = ({ hovered, width = '87.5', isLight }) => {
       viewBox="0 0 52 42"
       width={width}
       className={cls({ [styles.hovered]: hovered })}
+      style={renderStyle()}
     >
       <path
         fill={renderColor()}
@@ -31,5 +37,6 @@ Twitter.propTypes = {
   hovered: T.bool,
   width: T.string,
   isLight: T.bool,
+  size: T.string,
 }
 export default Twitter
