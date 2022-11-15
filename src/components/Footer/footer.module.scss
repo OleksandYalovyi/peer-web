@@ -5,10 +5,6 @@
   z-index: 999;
   transition: transform 0.3s ease-in;
   backdrop-filter: saturate(180%) blur(20px);
-  &.hidden {
-    transform: translateY(170%);
-    transition: transform 0.3s ease-in;
-  }
   .main_container {
     width: 100%;
     max-width: calc(100vw - 180px);
@@ -24,12 +20,13 @@
     }
 
     @media screen and (max-width: 1160px) {
-      // padding-left: 0;
+      padding: 30px 0px;
     }
 
     @media screen and (max-width: 680px) {
-      padding: 12.5px 29px;
-      height: 60px;
+      flex-direction: column;
+      align-items: start;
+      padding: 12.5px 20px;
       max-width: 100vw;
       width: 100%;
     }
@@ -38,15 +35,15 @@
       display: flex;
       align-items: center;
       @media screen and (max-width: 680px) {
-        position: absolute;
-        top: -60px;
-        left: 0;
-        width: 100%;
-        // backdrop-filter: saturate(180%) blur(20px);
+        transform: translateX(-6px);
+        margin-bottom: 23px;
       }
       .logo_container {
         margin-right: 15px;
         display: flex;
+        @media screen and (max-width: 680px) {
+          margin-right: 12px;
+        }
       }
       .copyright_container {
         display: flex;
@@ -58,15 +55,40 @@
           color: var(--main-font);
           white-space: nowrap;
           margin-right: 6px;
+          @media screen and (max-width: 680px) {
+            font-size: 11px;
+          }
         }
         .link {
           a {
             font-family: Turbine-Medium, sans-serif;
             font-size: 13px;
             color: var(--main-font);
-            text-decoration: underline;
+            text-decoration: none;
+            position: relative;
+
+            &::after{
+              position: absolute;
+              bottom: -2px;
+              left: 0;
+              content: '';
+              display: block;
+              width: 0;
+              height: 2px;
+              background: var(--main-font-hover);
+              transition: width .3s;
+            }
+
+            @media screen and (max-width: 680px) {
+              font-size: 11px;
+            }
             &:first-child {
               margin-right: 18.5px;
+            }
+            &:hover {
+              &::after{
+                width: 100%;
+              }
             }
           }
         }
@@ -75,14 +97,12 @@
     .right_container {
       display: flex;
       align-items: center;
-      .theme_selector {
-        width: 32px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-right: 36px;
-        cursor: pointer;
+      justify-content: end;
+      width: 100%;
+      @media screen and (max-width: 680px) {
+        justify-content: space-between;
       }
+
       .share_container {
         display: flex;
         justify-content: right;
@@ -91,34 +111,37 @@
           margin-right: 35px;
           display: flex;
           align-items: center;
+          @media screen and (max-width: 680px) {
+            margin-right: 22px;
+          }
           &:last-child {
             margin-right: 0;
           }
         }
       }
-    }
-    .flag_button {
-      width: 37px;
-      height: 37px;
-      border-radius: 50%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      border: solid .5px #0096ff;
-      cursor: pointer;
-
-      @media screen and (min-width: 681px) {
-        display: none;
-      }
-      .flag_icon {
-        overflow: hidden;
-        width: 27px;
-        height: 27px;
+      .flag_button {
+        width: 37px;
+        height: 37px;
         border-radius: 50%;
-        .icon {
-          width: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: solid .5px #0096ff;
+        cursor: pointer;
+  
+        @media screen and (min-width: 681px) {
+          display: none;
+        }
+        .flag_icon {
+          overflow: hidden;
+          width: 27px;
           height: 27px;
-          transform: translateX(-15%);
+          border-radius: 50%;
+          .icon {
+            width: auto;
+            height: 27px;
+            transform: translateX(-15%);
+          }
         }
       }
     }

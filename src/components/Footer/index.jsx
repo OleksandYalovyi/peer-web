@@ -4,6 +4,7 @@ import cls from 'classnames'
 import useScroll from 'hooks/useScroll'
 import { US } from 'country-flag-icons/react/3x2'
 import { useTheme } from 'context/theme'
+import useCurrentWidth from 'hooks/useCurrentWidth'
 import Logo from 'components/Icons/LogoMain'
 import Facebook from 'components/Icons/Share/Facebook'
 import Peer from 'components/Icons/Share/Peer'
@@ -46,22 +47,23 @@ const Footer = () => {
   const { scrollDirection } = useScroll()
   const [hovered, setHovered] = useState('')
   const { isLight } = useTheme()
+  const width = useCurrentWidth()
 
   const renderIcon = (name) => {
     if (name.toLowerCase() === 'facebook') {
-      return <Facebook isLight={isLight} hovered={hovered === name} width={14} />
+      return <Facebook isLight={isLight} hovered={hovered === name} size={width <= 680 && 'sm'} />
     }
     if (name.toLowerCase() === 'twitter') {
-      return <Twitter isLight={isLight} hovered={hovered === name} width={26} />
+      return <Twitter isLight={isLight} hovered={hovered === name} size={width <= 680 && 'sm'} />
     }
     if (name.toLowerCase() === 'peer') {
-      return <Peer isLight={isLight} hovered={hovered === name} width={25} />
+      return <Peer isLight={isLight} hovered={hovered === name} size={width <= 680 && 'sm'} />
     }
     if (name.toLowerCase() === 'telegram') {
-      return <Telegram isLight={isLight} hovered={hovered === name} width={23.5} />
+      return <Telegram isLight={isLight} hovered={hovered === name} size={width <= 680 && 'sm'} />
     }
     if (name.toLowerCase() === 'linkedin') {
-      return <Linkedin isLight={isLight} hovered={hovered === name} width={22.5} />
+      return <Linkedin isLight={isLight} hovered={hovered === name} size={width <= 680 && 'sm'} />
     }
     return null
   }
@@ -76,7 +78,7 @@ const Footer = () => {
       <div className={styles.main_container}>
         <div className={styles.left_container}>
           <Link className={styles.logo_container} to="/">
-            <Logo isLight={isLight} width={50} />
+            <Logo isLight={isLight} width={width <= 680 ? 41 : 50} />
           </Link>
           <div className={styles.copyright_container}>
             <span className={styles.copyright}>© 2022 Peer Labs</span>
@@ -106,11 +108,11 @@ const Footer = () => {
               </a>
             ))}
           </div>
-        </div>
-        <div className={styles.flag_button}>
-          <div className={styles.flag_icon}>
-            <US title="United States" className={styles.icon} />
-          </div>
+          {/* <div className={styles.flag_button}>
+            <div className={styles.flag_icon}>
+              <US title="United States" className={styles.icon} />
+            </div>
+          </div> */}
         </div>
       </div>
     </footer>

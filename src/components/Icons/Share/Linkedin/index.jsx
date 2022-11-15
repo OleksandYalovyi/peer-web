@@ -4,11 +4,15 @@ import T from 'prop-types'
 import cls from 'classnames'
 import styles from './linkedin.module.scss'
 
-const Linkedin = ({ hovered, width = '87.5', isLight }) => {
+const Linkedin = ({ hovered, width = '22.5', isLight, size }) => {
   const renderColor = () => {
     if (hovered) return '#00d3f9'
     if (isLight) return '#000000'
     return '#ffffff'
+  }
+  const renderStyle = () => {
+    if (size === 'sm') return { transform: 'scale(0.7)' }
+    return null
   }
 
   return (
@@ -17,6 +21,7 @@ const Linkedin = ({ hovered, width = '87.5', isLight }) => {
       viewBox="0 0 45 45"
       width={width}
       className={cls({ [styles.hovered]: hovered })}
+      style={renderStyle()}
     >
       <path
         fill={renderColor()}
@@ -31,6 +36,7 @@ Linkedin.propTypes = {
   hovered: T.bool,
   width: T.string,
   isLight: T.bool,
+  size: T.string,
 }
 
 export default Linkedin
