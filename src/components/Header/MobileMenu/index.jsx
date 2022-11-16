@@ -2,8 +2,7 @@
 import React, { useEffect, useRef } from 'react'
 import cls from 'classnames'
 import T from 'prop-types'
-// import logo from '../../../assets/images/home/logo.svg'
-// import TopBtn from '../../../assets/images/header/topbtn.svg'
+import Dropdown from './components/accordion/index'
 
 import styles from './styles.module.scss'
 
@@ -40,13 +39,11 @@ const Header = ({ isMenu, setIsMenuOpen }) => {
   })
 
   return (
-    <>
-      <div className={styles.container}>
-        <div className={styles.burger}>
-          <Burger onClick={onClick} isMenu={isMenu} />
-        </div>
+    <Dropdown isShow={isMenu} onClose={() => setIsMenuOpen(false)} burgerRef={menuContainerRef}>
+      <div className={styles.burger} ref={menuContainerRef}>
+        <Burger onClick={onClick} isMenu={isMenu} />
       </div>
-    </>
+    </Dropdown>
   )
 }
 
