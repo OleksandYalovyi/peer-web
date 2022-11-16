@@ -6,7 +6,7 @@ const Home = () => (
   <section className={styles.section}>
     <div className={styles.main_container}>
       <div className={styles.main}>
-        <div className={styles.container}>
+        <div className={styles.mixin}>
           <h4>Peer</h4>
           <h1>We’re building magical web3 products to enable crypto mass adoption.</h1>
 
@@ -20,7 +20,7 @@ const Home = () => (
       </div>
 
       <div className={styles.news}>
-        <div className={styles.container}>
+        <div className={styles.mixin}>
           <div className={styles.news_cld}>
             <p className={styles.title}>Latest</p>
             <a className={styles.text}>

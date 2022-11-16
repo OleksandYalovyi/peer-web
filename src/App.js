@@ -16,7 +16,7 @@ function App() {
   return (
     <div id="theme" className={isLight ? null : 'dark'}>
       <Header />
-      <TransitionGroup>
+      <TransitionGroup className="transition_group">
         <CSSTransition key={location.key} classNames="fade" timeout={900}>
           <Switch location={location}>
             <Route exact path="/" component={Home} />

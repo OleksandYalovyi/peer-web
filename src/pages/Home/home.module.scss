@@ -1,7 +1,7 @@
+@import '../../components/PageContainer/page_container.module.scss';
+
 @mixin container_inside {
-  width: 100%;
-  max-width: 1500px;
-  margin: 0 auto;
+  @include flex_container;
   padding: 0 25px;
 }
 
@@ -16,6 +16,7 @@
     flex-direction: column;
     padding: 83px 0 110px;
     overflow: hidden;
+
     @media screen and (max-width: 680px) {
       padding-bottom: 270px;
     }
@@ -28,12 +29,12 @@
       min-height: 70%;
       margin: 0 0 38px 0;
       padding: 0 0 137.5px 0;
-      background-image: url('./src/gradientcontour.png');
+      background-image: url('../../assets/gradientcontour.png');
       background-size: cover;
       border-top: 1px solid #1f1f1f;
       border-bottom: 1px solid #1f1f1f;
 
-      .container {
+      .mixin {
         @include container_inside;
 
         h4,
@@ -45,6 +46,10 @@
           margin: 0 0 26.5px 0;
           font-size: 25px;
           font-family: Turbine-Regular, sans-serif;
+
+          @media screen and (max-height: 920px) {
+            margin: 26.5px 0;
+          }
         }
 
         h1 {
@@ -113,7 +118,7 @@
       flex: 1;
       padding: 58.5px 0 0 0;
 
-      .container {
+      .mixin {
         @include container_inside;
 
         .news_cld {

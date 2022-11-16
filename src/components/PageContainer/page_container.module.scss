@@ -1,13 +1,18 @@
+@mixin flex_container {
+  width: 100%;
+  max-width: 1170px;
+  margin: 0 auto;
+}
+
 .container {
   position: relative;
   width: 100%;
   min-height: 100vh;
-  background-color: var(--main-bg);
   padding: 80px 25px;
+  background-color: var(--main-bg);
 
   .flex_container {
-    max-width: 1170px;
+    @include flex_container;
     min-height: calc(100vh - 160px);
-    margin: 0 auto;
   }
 }
