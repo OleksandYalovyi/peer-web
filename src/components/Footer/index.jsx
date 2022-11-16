@@ -19,27 +19,27 @@ const ShareData = [
   {
     id: 1,
     name: 'Peer',
-    link: 'https://peer.inc',
+    link: 'https://icx.peer.inc/landing/contacts',
   },
   {
     id: 2,
     name: 'Twitter',
-    link: 'https://twitter.com',
+    link: 'https://twitter.com/peerpmc',
   },
   {
     id: 3,
     name: 'Telegram',
-    link: '#',
+    link: 'https://t.me/peerinc',
   },
   {
     id: 3,
     name: 'Facebook',
-    link: 'https://facebook.com',
+    link: 'https://www.facebook.com/peerniverse',
   },
   {
     id: 4,
     name: 'Linkedin',
-    link: '#',
+    link: 'https://www.linkedin.com/company/peerinc/',
   },
 ]
 
