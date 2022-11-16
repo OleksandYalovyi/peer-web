@@ -25,13 +25,8 @@
       // max-width: calc(100% - 40px);
     }
 
-    @media screen and (max-width: 1160px) {
-      // padding-left: 0;
-    }
-
-    @media screen and (max-width: 680px) {
-      padding: 12.5px 0;
-      padding-right: 0px;
+    @media screen and (max-width: 900px) {
+      padding: 18px 24.33px 18px 12.66px;
       height: 60px;
     }
 
@@ -152,17 +147,25 @@
         text-decoration: none;
         text-transform: uppercase;
 
+        &:hover {
+          color: var(--main-font-hover);
+        }
         &::after {
           content: '';
           display: block;
           width: 0;
           height: 2px;
-          background: var(--main-font);
+          background-color: var(--main-font-hover);
           transition: width .3s;
         }
 
+
         &:hover::after {
           width: 100%;
+        }
+
+        @media screen and (max-width: 900px) {
+          margin-right: 46px;
         }
       }
 
