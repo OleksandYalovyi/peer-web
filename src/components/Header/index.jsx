@@ -6,6 +6,7 @@ import useScroll from 'hooks/useScroll'
 // import ReactCountryFlag from 'react-country-flag'
 import { US } from 'country-flag-icons/react/3x2'
 import { useTheme } from 'context/theme'
+import useCurrentWidth from 'hooks/useCurrentWidth'
 import Logo from '../Icons/Logo'
 import ArrowDown from '../Icons/ArrowDown'
 import ThemeSelector from '../Icons/Theme'
@@ -29,6 +30,7 @@ const NavItems = ({ router, name, links }) => (
 )
 
 const LandingHeader = () => {
+  const width = useCurrentWidth()
   const { scrollDirection } = useScroll()
   const [isMenu, setIsMenuOpen] = useState(false)
   const [hovered, setHovered] = useState('')
@@ -36,6 +38,7 @@ const LandingHeader = () => {
   const { isLight, switchTheme } = useTheme()
   const { pathname } = useLocation()
 
+  const isMobile = width < 900
   return (
     <header
       className={cls(
@@ -55,73 +58,76 @@ const LandingHeader = () => {
       <div className={styles.main_container}>
         <div className={styles.left_container}>
           <Link className={styles.logo_container} to="/">
-            <Logo isLight={isLight} />
+            <Logo isLight={isLight} width={isMobile ? 105.66 : 87.5} />
           </Link>
         </div>
-        <nav className={styles.nav}>
-          <NavItems
-            router
-            name="Community"
-            links={[
-              {
-                name: 'Social',
-                to: '/social',
-              },
-              {
-                name: 'Development',
-                to: '/development',
-              },
-              {
-                name: 'White Papers',
-                to: '/white_papers',
-              },
-            ]}
-          />
-          <NavItems
-            router={false}
-            name="Products"
-            links={[
-              {
-                name: 'Peer Superapp',
-                to: 'peersuperapp',
-              },
-              {
-                name: 'Peer Blockchain',
-                to: 'peerblockchain',
-              },
-              {
-                name: 'Peer Labs',
-                to: 'peerlabs',
-              },
-              {
-                name: 'White Paper',
-                to: 'whitepaper',
-              },
-              {
-                name: 'AR Studios',
-                to: 'arstudios',
-              },
-            ]}
-          />
-          <NavItems
-            router
-            name="About"
-            links={[
-              {
-                name: 'Team',
-                to: '/team',
-              },
-              {
-                name: 'Brand Book',
-                to: '/brandbook',
-              },
-              {
-                name: 'White Papers',
-                to: '/whitepapers',
-              },
-            ]}
-          />
-        </nav>
+
+        {!isMobile && (
+          <nav className={styles.nav}>
+            <NavItems
+              router
+              name="Community"
+              links={[
+                {
+                  name: 'Social',
+                  to: '/social',
+                },
+                {
+                  name: 'Development',
+                  to: '/development',
+                },
+                {
+                  name: 'White Papers',
+                  to: '/white_papers',
+                },
+              ]}
+            />
+            <NavItems
+              router={false}
+              name="Products"
+              links={[
+                {
+                  name: 'Peer Superapp',
+                  to: 'peersuperapp',
+                },
+                {
+                  name: 'Peer Blockchain',
+                  to: 'peerblockchain',
+                },
+                {
+                  name: 'Peer Labs',
+                  to: 'peerlabs',
+                },
+                {
+                  name: 'White Paper',
+                  to: 'whitepaper',
+                },
+                {
+                  name: 'AR Studios',
+                  to: 'arstudios',
+                },
+              ]}
+            />
+            <NavItems
+              router
+              name="About"
+              links={[
+                {
+                  name: 'Team',
+                  to: '/team',
+                },
+                {
+                  name: 'Brand Book',
+                  to: '/brandbook',
+                },
+                {
+                  name: 'White Papers',
+                  to: '/whitepapers',
+                },
+              ]}
+            />
+          </nav>
+        )}
         <div className={styles.right_container}>
           <NavLink
             to="/"
@@ -133,8 +139,8 @@ const LandingHeader = () => {
           >
             Sign In
           </NavLink>
+          <MobileMenu isMenu={isMenu} setIsMenuOpen={setIsMenuOpen} />
         </div>
-        {/* <MobileMenu isMenu={isMenu} setIsMenuOpen={setIsMenuOpen} /> */}
       </div>
     </header>
   )

@@ -1,0 +1,86 @@
+.container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  .dropdown {
+    position: absolute;
+    top: 30px;
+    right: calc(2.5vw - 24.33px);
+    display: none;
+    width: 95vw;
+    // padding: 0 27px 13.33px;
+    color: white;
+    background-color: black;
+    border: 1px solid #2e2e2e;
+    border-radius: 6.66px;
+
+    .accordion {
+      border-bottom: 1px solid #2e2e2e;
+
+      .accordionHeader {
+        // position: relative;
+
+        &:hover {
+          color: var(--main-font-hover);
+
+        }
+      }
+
+      .link {
+        display: block;
+        color: white;
+        text-decoration: none;
+  
+        &:hover {
+          color: var(--main-font-hover);
+        }
+      }
+
+      .details:hover {
+        color: var(--main-font-hover);
+
+      }
+    //   .accordionHeader:after {
+    //     bottom: 0px;
+    //     position: absolute;
+    //     content: "";
+    //     display: block;
+    //     width: 90%;
+    //     background-color: #e1e1e1;
+    //     height: 1px;
+    // }
+    }
+
+    .accordion:first-child {
+      border-radius: 6.66px 6.66px 0 0;
+      .accordionHeader {
+        border-radius: 6.66px 6.66px 0 0;
+      }
+    }
+    .accordion:last-child {
+      border-radius: 0 0 6.66px 6.66px;
+
+      .accordionHeader  {
+        border-radius: 0 0 6.66px 6.66px;
+      }
+
+      .details:last-child {
+        border-radius: 0 0 6.66px 6.66px;
+      }
+    }
+  }
+
+  .openSection {
+    border-radius: 0px;
+  }
+
+  
+
+  &.isShow {
+    .dropdown {
+      display: block;
+    }
+  }
+}
