@@ -78,7 +78,7 @@ const Footer = () => {
       <div className={styles.main_container}>
         <div className={styles.left_container}>
           <Link className={styles.logo_container} to="/">
-            <Logo isLight={isLight} width={width <= 680 ? 41 : 50} />
+            <Logo isLight={isLight} width={width <= 680 ? 41 : 50.5} />
           </Link>
           <div className={styles.copyright_container}>
             <span className={styles.copyright}>© 2022 Peer Labs</span>
