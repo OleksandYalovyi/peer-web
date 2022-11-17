@@ -58,7 +58,7 @@ const LandingHeader = () => {
       <div className={styles.main_container}>
         <div className={styles.left_container}>
           <Link className={styles.logo_container} to="/">
-            <Logo isLight={isLight} width={isMobile ? 105.66 : 87.5} />
+            <Logo isLight={isLight} width={isMobile ? 105.66 : 114} />
           </Link>
         </div>
 

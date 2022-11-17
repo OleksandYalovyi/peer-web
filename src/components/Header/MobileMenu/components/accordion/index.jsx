@@ -41,7 +41,7 @@ const data = [
 
 const Dropdown = ({ list, children, isShow, onClose, burgerRef }) => {
   const listRef = useRef(null)
-  const [expanded, setExpanded] = React.useState('panel1')
+  const [expanded, setExpanded] = useState('')
 
   useEffect(() => {
     function handleClickOutside(event) {
@@ -100,12 +100,12 @@ const Dropdown = ({ list, children, isShow, onClose, burgerRef }) => {
       <div className={cls(styles.dropdown, styles.links)}>
         {data.map(({ title, links }) => (
           <Accordion
+            key={title}
             expanded={expanded === title}
             className={styles.accordion}
             onChange={handleChange(title)}
           >
             <AccordionSummary
-              aria-controls=""
               className={styles.accordionHeader}
               id="Accordionheader"
               expandIcon={
