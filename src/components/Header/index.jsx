@@ -139,7 +139,7 @@ const LandingHeader = () => {
           >
             Sign In
           </NavLink>
-          <MobileMenu isMenu={isMenu} setIsMenuOpen={setIsMenuOpen} />
+          {isMobile && <MobileMenu isMenu={isMenu} setIsMenuOpen={setIsMenuOpen} />}
         </div>
       </div>
     </header>
