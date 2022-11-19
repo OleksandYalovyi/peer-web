@@ -9,15 +9,21 @@
     width: 95vw;
     color: white;
     background-color: black;
-    border: 1px solid #2e2e2e;
+    border: 1px solid #555555;
     border-radius: 6.66px;
 
     .accordion {
       border-bottom: 1px solid #2e2e2e;
 
       .accordionHeader {
+        padding: 0 3px;
         &:hover {
           color: var(--main-font-hover);
+        }
+
+        .mui_typography {
+          font-size: 20px;
+          font-family: Turbine-Regular, sans-serif;
         }
       }
 
@@ -30,8 +36,15 @@
         }
       }
 
-      .details:hover {
-        color: var(--main-font-hover);
+      .details {
+        .mui_details_typography {
+          font-size: 18.66px;
+          font-family: Turbine-Regular, sans-serif;
+        }
+
+        &:hover {
+          color: var(--main-font-hover);
+        }
       }
     }
 
@@ -61,6 +74,7 @@
   &.isShow {
     .dropdown {
       display: block;
+      padding: 0 25px;
     }
   }
 }

@@ -102,13 +102,13 @@
         }
       }
       .flag_button {
-        width: 37px;
-        height: 37px;
+        width: 33px;
+        height: 33px;
         border-radius: 50%;
         display: flex;
         justify-content: center;
         align-items: center;
-        border: solid .5px #0096ff;
+        border: solid .5px #2e2e2e;
         cursor: pointer;
   
         @media screen and (min-width: 681px) {
@@ -124,6 +124,12 @@
             height: 27px;
             transform: translateX(-15%);
           }
+        }
+      }
+
+      .mob {
+        @media screen and (min-width: 681px) {
+          display: none;
         }
       }
     }

@@ -110,18 +110,18 @@ const Dropdown = ({ list, children, isShow, onClose, burgerRef }) => {
               id="Accordionheader"
               expandIcon={
                 expanded === title ? (
-                  <ExpandMoreIcon sx={{ fontSize: '1.2rem', color: 'white' }} />
+                  <ExpandMoreIcon sx={{ fontSize: '1.8rem', color: 'white' }} />
                 ) : (
-                  <ExpandMoreIcon sx={{ fontSize: '1.2rem', color: '#2e2e2e' }} />
+                  <ExpandMoreIcon sx={{ fontSize: '1.8rem', color: '#2e2e2e' }} />
                 )
               }
             >
-              <Typography>{title}</Typography>
+              <Typography className={styles.mui_typography}>{title}</Typography>
             </AccordionSummary>
             {links.map(({ name, to }) => (
               <a href={to} className={styles.link}>
                 <AccordionDetails className={styles.details}>
-                  <Typography>{name}</Typography>
+                  <Typography className={styles.mui_details_typography}>{name}</Typography>
                 </AccordionDetails>
               </a>
             ))}
