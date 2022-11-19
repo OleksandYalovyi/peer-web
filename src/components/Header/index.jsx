@@ -39,7 +39,7 @@ const LandingHeader = () => {
   const { isLight, switchTheme } = useTheme()
   const { pathname } = useLocation()
 
-  const isMobile = width < 680
+  const isMobile = width < 681
   return (
     <header
       className={cls(
@@ -140,7 +140,7 @@ const LandingHeader = () => {
           >
             Sign In
           </NavLink>
-          {/* {!isMobile && (
+          {!isMobile && (
             <Dropdown
               list={{
                 type: 'countries',
@@ -182,7 +182,7 @@ const LandingHeader = () => {
                 </div>
               </div>
             </Dropdown>
-          )} */}
+          )}
           {isMobile && <MobileMenu isMenu={isMenu} setIsMenuOpen={setIsMenuOpen} />}
         </div>
       </div>

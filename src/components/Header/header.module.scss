@@ -65,7 +65,7 @@
       width: 100%;
       max-width: 500px;
       padding: 0 15px;
-      // margin-right: 40px;
+      margin-right: 40px;
     
       .nav_item {
         position: relative;
@@ -149,7 +149,7 @@
         text-decoration: none;
         text-transform: uppercase;
         min-width: 60px;
-        // margin-right: 30px;
+        margin-right: 30px;
 
         &:hover {
           color: var(--main-font-hover);
@@ -171,6 +171,7 @@
         @media screen and (max-width: 679px) {
           margin-right: 46px;
           font-size: 14.66px;
+          min-width: 0;
         }
       }
 
