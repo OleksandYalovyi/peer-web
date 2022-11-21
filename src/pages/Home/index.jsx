@@ -1,43 +1,16 @@
-/* eslint-disable react/forbid-prop-types */
-import React, { useEffect, useMemo, useRef, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { NavLink } from 'react-router-dom'
-import PropTypes from 'prop-types'
 import styles from './home.module.scss'
-
-const Date = ({ position }) => {
-  const ref = useRef()
-
-  const content = useMemo(() => {
-    const x = `0${(`${position.x}` || '00').slice(0, 2)}`.slice(-2)
-    const y = `0${(`${position.y}` || '00').slice(0, 2)}`.slice(-2)
-    const c = `0${(`${Math.abs(position.x - position.y)}` || '00').slice(0, 2)}`.slice(-2)
-
-    return `${x}’${y}’${c}`
-  }, [ref.current, position])
-
-  return <span ref={ref}>{content}</span>
-}
 
 const Home = () => {
   const ref = useRef()
-  const [userPosition, setUserPosition] = useState({
-    x: 0,
-    y: 0,
+  const [lightStyles, setLightStyles] = useState({
+    '--cx': '0px',
   })
-
-  const lightStyles = useMemo(
-    () => ({
-      '--cx': `${userPosition.x}px`,
-    }),
-    [userPosition],
-  )
 
   useEffect(() => {
     const onMouseMove = (e) => {
-      setUserPosition({
-        x: e.clientX,
-        y: e.clientY,
-      })
+      setLightStyles({ '--cx': `${e.clientX}px` })
     }
 
     if (ref.current) {
@@ -67,11 +40,6 @@ const Home = () => {
           <div className={styles.dates}>
             <div className={styles.content}>
               <div className={styles.light} ref={ref} style={lightStyles} />
-              <div className={styles.positions}>
-                {new Array(6).fill(1).map((s) => (
-                  <Date position={userPosition} />
-                ))}
-              </div>
             </div>
           </div>
         </div>
@@ -92,7 +60,3 @@ const Home = () => {
 }
 
 export default React.memo(Home)
-
-Date.propTypes = {
-  position: PropTypes.any,
-}

@@ -127,21 +127,22 @@
             );
           }
 
-          .positions {
+          &:after {
             position: absolute;
-            display: flex;
-            flex-wrap: nowrap;
-            gap: 314.5px;
             padding: 11.5px 57.7px;
+            color: #ffffff;
+            font-size: 15px;
+            font-family: Turbine-Regular, sans-serif;
+            line-height: 15px;
             white-space: nowrap;
+            word-spacing: 314.5px;
 
-            span {
-              width: 62px;
-              color: var(--font);
-              font-size: 15px;
-              font-family: Turbine-Regular, sans-serif;
-              line-height: 15px;
-            }
+            content: var(--d) ' ' var(--d) ' ' var(--d);
+
+            --a: '10’12’23';
+            --b: var(--a) ' ' var(--a) ' ' var(--a) ' ' var(--a) ' ' var(--a) ' ' var(--a);
+            --c: var(--b) ' ' var(--b) ' ' var(--b) ' ' var(--b) ' ' var(--b) ' ' var(--b);
+            --d: var(--c) ' ' var(--c) ' ' var(--c) ' ' var(--c) ' ' var(--c) ' ' var(--c);
           }
         }
       }
