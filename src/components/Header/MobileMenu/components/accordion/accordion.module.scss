@@ -1,8 +1,5 @@
 .container {
   position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   cursor: pointer;
   .dropdown {
     position: absolute;
@@ -10,21 +7,23 @@
     right: calc(2.5vw - 24.33px);
     display: none;
     width: 95vw;
-    // padding: 0 27px 13.33px;
     color: white;
     background-color: black;
-    border: 1px solid #2e2e2e;
+    border: 1px solid #555555;
     border-radius: 6.66px;
 
     .accordion {
       border-bottom: 1px solid #2e2e2e;
 
       .accordionHeader {
-        // position: relative;
-
+        padding: 0 3px;
         &:hover {
           color: var(--main-font-hover);
+        }
 
+        .mui_typography {
+          font-size: 20px;
+          font-family: Turbine-Regular, sans-serif;
         }
       }
 
@@ -32,25 +31,21 @@
         display: block;
         color: white;
         text-decoration: none;
-  
         &:hover {
           color: var(--main-font-hover);
         }
       }
 
-      .details:hover {
-        color: var(--main-font-hover);
+      .details {
+        .mui_details_typography {
+          font-size: 18.66px;
+          font-family: Turbine-Regular, sans-serif;
+        }
 
+        &:hover {
+          color: var(--main-font-hover);
+        }
       }
-    //   .accordionHeader:after {
-    //     bottom: 0px;
-    //     position: absolute;
-    //     content: "";
-    //     display: block;
-    //     width: 90%;
-    //     background-color: #e1e1e1;
-    //     height: 1px;
-    // }
     }
 
     .accordion:first-child {
@@ -62,7 +57,7 @@
     .accordion:last-child {
       border-radius: 0 0 6.66px 6.66px;
 
-      .accordionHeader  {
+      .accordionHeader {
         border-radius: 0 0 6.66px 6.66px;
       }
 
@@ -76,11 +71,10 @@
     border-radius: 0px;
   }
 
-  
-
   &.isShow {
     .dropdown {
       display: block;
+      padding: 0 25px;
     }
   }
 }

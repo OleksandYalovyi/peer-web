@@ -13,6 +13,7 @@ import Telegram from 'components/Icons/Share/Telegram'
 import Linkedin from 'components/Icons/Share/Linkedin'
 import Privacy from 'assets/PeerPrivacyPolicy.pdf'
 import Terms from 'assets/Peer-TermsandConditions.pdf'
+import Dropdown from 'components/Dropdown/index'
 import styles from './footer.module.scss'
 
 const ShareData = [
@@ -78,7 +79,7 @@ const Footer = () => {
       <div className={styles.main_container}>
         <div className={styles.left_container}>
           <Link className={styles.logo_container} to="/">
-            <Logo isLight={isLight} width={width <= 680 ? 41 : 50} />
+            <Logo isLight={isLight} width={width <= 680 ? 41 : 50.5} />
           </Link>
           <div className={styles.copyright_container}>
             <span className={styles.copyright}>© 2022 Peer Labs</span>
@@ -113,6 +114,49 @@ const Footer = () => {
               <US title="United States" className={styles.icon} />
             </div>
           </div> */}
+          <div className={styles.mob}>
+            <Dropdown
+              list={{
+                type: 'countries',
+                data: [
+                  {
+                    text: 'English (US)',
+                    onClick: () => {},
+                  },
+                  {
+                    text: 'Français',
+                    onClick: () => {},
+                  },
+                  {
+                    text: 'Español',
+                    onClick: () => {},
+                  },
+                  {
+                    text: '简体中文',
+                    onClick: () => {},
+                  },
+                  {
+                    text: 'Русский',
+                    onClick: () => {},
+                  },
+                  {
+                    text: '한국인',
+                    onClick: () => {},
+                  },
+                  {
+                    text: 'Tiếng Việt',
+                    onClick: () => {},
+                  },
+                ],
+              }}
+            >
+              <div className={styles.flag_button}>
+                <div className={styles.flag_icon}>
+                  <US title="United States" className={styles.icon} />
+                </div>
+              </div>
+            </Dropdown>
+          </div>
         </div>
       </div>
     </footer>

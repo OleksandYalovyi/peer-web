@@ -14,7 +14,7 @@ function App() {
   setIsLight(false)
 
   return (
-    <div id="theme" className={isLight ? null : 'dark'}>
+    <div id="theme" className={isLight ? 'container' : 'container dark'}>
       <Header />
       <TransitionGroup className="transition_group">
         <CSSTransition key={location.key} classNames="fade" timeout={900}>
