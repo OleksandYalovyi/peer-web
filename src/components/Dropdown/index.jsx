@@ -2,7 +2,6 @@ import React, { useEffect, useRef, useState } from 'react'
 import { US, FR, ES, CN, RU, KR, VN } from 'country-flag-icons/react/3x2'
 import cls from 'classnames'
 import T from 'prop-types'
-import useCurrentWidth from 'hooks/useCurrentWidth'
 import styles from './dropdown.module.scss'
 
 const CountryIcon = ({ name }) => {
@@ -31,11 +30,10 @@ const CountryIcon = ({ name }) => {
 }
 
 const Dropdown = ({ list, children }) => {
-  const { data, type, style } = list
+  const { data, type } = list
 
   const listRef = useRef(null)
   const [isShow, setIsShow] = useState(false)
-  const width = useCurrentWidth()
 
   useEffect(() => {
     function handleClickOutside(event) {
@@ -49,18 +47,18 @@ const Dropdown = ({ list, children }) => {
     }
   }, [listRef])
 
-  const containerBehavior =
-    width < 800
-      ? { onClick: () => setIsShow(!isShow) }
-      : { onMouseEnter: () => setIsShow(true), onMouseLeave: () => setIsShow(false) }
-
   return (
-    <div className={cls(styles.container, { [styles.isShow]: isShow })} {...containerBehavior}>
+    <div
+      className={cls(styles.container)}
+      onClick={(e) => {
+        setIsShow(true)
+      }}
+    >
       {children}
 
-      <div className={cls(styles.dropdown, styles[type])}>
+      {isShow && (
         <ul className={styles.list} ref={listRef}>
-          {data.map(({ text, href, onClick }) => (
+          {data.map(({ text, onClick }) => (
             <li key={text} className={styles.item}>
               {type === 'countries' && (
                 <div
@@ -79,7 +77,7 @@ const Dropdown = ({ list, children }) => {
             </li>
           ))}
         </ul>
-      </div>
+      )}
     </div>
   )
 }

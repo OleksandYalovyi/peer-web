@@ -22,10 +22,11 @@ const data = [
   {
     title: 'Products',
     links: [
-      { name: 'Peer Superapp', to: 'peersuperapp' },
-      { name: 'Peer Blockchain', to: 'peerblockchain' },
+      { name: 'Zen', to: 'peersuperapp' },
+      { name: 'Peer', to: 'peerblockchain' },
+      { name: 'ICX', to: 'https://icx.peer.inc' },
+      { name: 'Peer Blockchain', to: 'https://explorer.peer.inc' },
       { name: 'Peer Labs', to: 'peerlabs' },
-      { name: 'White Paper', to: 'whitepaper' },
     ],
   },
 
@@ -119,7 +120,7 @@ const Dropdown = ({ list, children, isShow, onClose, burgerRef }) => {
               <Typography className={styles.mui_typography}>{title}</Typography>
             </AccordionSummary>
             {links.map(({ name, to }) => (
-              <a href={to} className={styles.link}>
+              <a href={to} target="_blank" className={styles.link} rel="noreferrer">
                 <AccordionDetails className={styles.details}>
                   <Typography className={styles.mui_details_typography}>{name}</Typography>
                 </AccordionDetails>

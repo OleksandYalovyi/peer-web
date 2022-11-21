@@ -3,129 +3,110 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  cursor: pointer;
 
-  .dropdown {
-    &.links {
-      .list {
-        margin: 23.5px 0 0 -24px;
-      }
-    }
-
-    &.countries {
-      .list {
-        margin: 11px 0px 0px -123.5px;
-
-        @media screen and (max-width: 768px) {
-          margin: -497px 0px 0px -123.5px;
-        }
-      }
-    }
-
+  .list {
     position: absolute;
-    top: 100%;
-    left: 0;
-    display: none;
+    top: calc(100% + 11px);
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    min-width: 161.5px;
+    padding: 9.5px 33px 25.5px 33px;
+    background-color: var(--bg);
+    border: 1px solid var(--main-border);
+    border-radius: 10px;
 
-    .list {
-      display: flex;
-      flex-direction: column;
-      width: 161.5px;
-      padding: 5px 16.5px;
-      background-color: black;
-      border-radius: 20px;
-      box-shadow: 0 0 16px 0 rgba(202, 202, 202, 0.59);
+    @media screen and (max-width: 680px) {
+      top: auto;
+      bottom: calc(100% + 11px);
+    }
 
-      .item {
-        position: relative;
-        padding: 18px 6px;
-        color: white;
+    .item {
+      &:hover {
+        cursor: pointer;
 
-        &:hover {
-          color: white;
-          a {
-            color: var(--active);
-          }
-
-          .country {
-            .image {
-              border-color: var(--active);
-            }
-          }
+        a {
+          color: var(--link);
         }
 
         .country {
-          display: flex;
-          gap: 15px;
-          align-items: center;
-          color: black;
-          color: white;
-          font-weight: bold;
-          font-size: 14px;
-          font-family: Turbine-Bold, sans-serif;
-          white-space: nowrap;
-          text-decoration: none;
-
           .image {
-            position: relative;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 25.5px;
-            height: 25.5px;
-            overflow: hidden;
-            background-color: #fff;
-            border: 1px solid white;
-            border-radius: 50%;
-
-            .flag {
-              width: 15px;
-              height: 15px;
-              overflow: hidden;
-              border-radius: 50%;
-
-              svg {
-                width: auto;
-                height: 15px;
-                transform: translateX(-3.5px);
-              }
-            }
+            border-color: var(--link);
           }
-
-          &.active {
-            .image {
-              border-color: var(--active);
-            }
-          }
-        }
-
-        a {
-          color: black;
-          font-weight: bold;
-          font-size: 14px;
-          font-family: Turbine-Bold, sans-serif;
-          text-decoration: none;
-
-          .coming_soon {
-            position: absolute;
-            top: 7px;
-            left: 6px;
-            font-weight: 400;
-            font-size: 8px;
-            font-family: Turbine-Regular, sans-serif;
-          }
-        }
-
-        &:not(:last-child) {
-          border-bottom: 1px solid #ebebeb;
         }
       }
-    }
-  }
 
-  &.isShow {
-    .dropdown {
-      display: block;
+      .country {
+        display: flex;
+        gap: 15px;
+        align-items: center;
+        padding: 22.5px 0 17.5px 0;
+        color: var(--main-font);
+        font-weight: 300;
+        font-size: 16px;
+        font-family: Turbine-Light, sans-serif;
+        line-height: 13px;
+        letter-spacing: 0.8px;
+        white-space: nowrap;
+        text-decoration: none;
+
+        .image {
+          position: relative;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 25.5px;
+          height: 25.5px;
+          overflow: hidden;
+          border: 1px solid transparent;
+          border-radius: 50%;
+          cursor: pointer;
+
+          .flag {
+            width: 15px;
+            height: 15px;
+            overflow: hidden;
+            border-radius: 50%;
+
+            svg {
+              width: auto;
+              height: 15px;
+              transform: translateX(-3.5px);
+            }
+          }
+        }
+
+        &.active {
+          .image {
+            border-color: var(--link);
+          }
+        }
+
+        &:hover {
+          color: var(--link);
+        }
+      }
+
+      a {
+        color: black;
+        font-weight: bold;
+        font-size: 14px;
+        font-family: Turbine-Bold, sans-serif;
+        text-decoration: none;
+
+        .coming_soon {
+          position: absolute;
+          top: 7px;
+          left: 6px;
+          font-weight: 400;
+          font-size: 8px;
+          font-family: Turbine-Regular, sans-serif;
+        }
+      }
+
+      &:not(:last-child) {
+        border-bottom: 1px solid var(--main-border);
+      }
     }
   }
 }

@@ -32,27 +32,17 @@ const Home = () => {
     [userPosition],
   )
 
-  useEffect(() => {
-    const onMouseMove = (e) => {
-      setUserPosition({
-        x: e.clientX,
-        y: e.clientY,
-      })
-    }
-
-    if (ref.current) {
-      document.addEventListener('mousemove', onMouseMove)
-    }
-
-    return () => {
-      document.removeEventListener('mousemove', onMouseMove)
-    }
-  }, [ref])
+  const onMouseMove = (e) => {
+    setUserPosition({
+      x: e.clientX,
+      y: e.clientY,
+    })
+  }
 
   return (
     <section className={styles.section}>
       <div className={styles.main_container}>
-        <div className={styles.main}>
+        <div className={styles.main} onMouseMove={onMouseMove}>
           <div className={styles.mixin}>
             <h4>Peer</h4>
             <h1>We’re building magical web3 products to enable crypto mass adoption.</h1>

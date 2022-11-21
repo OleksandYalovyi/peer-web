@@ -87,26 +87,11 @@ const LandingHeader = () => {
               router={false}
               name="Products"
               links={[
-                {
-                  name: 'Peer Superapp',
-                  to: 'peersuperapp',
-                },
-                {
-                  name: 'Peer Blockchain',
-                  to: 'peerblockchain',
-                },
-                {
-                  name: 'Peer Labs',
-                  to: 'peerlabs',
-                },
-                {
-                  name: 'White Paper',
-                  to: 'whitepaper',
-                },
-                {
-                  name: 'AR Studios',
-                  to: 'arstudios',
-                },
+                { name: 'Zen', to: 'peersuperapp' },
+                { name: 'Peer', to: 'peerblockchain' },
+                { name: 'ICX', to: 'https://icx.peer.inc' },
+                { name: 'Peer Blockchain', to: 'https://explorer.peer.inc' },
+                { name: 'Peer Labs', to: 'peerlabs' },
               ]}
             />
             <NavItems

@@ -108,7 +108,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        border: solid .5px #2e2e2e;
+        border: solid .5px var(--main-border);
         cursor: pointer;
   
         @media screen and (min-width: 681px) {
