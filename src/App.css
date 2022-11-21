@@ -19,13 +19,6 @@
 #theme {
   background-color: var(--bg);
 }
-.container {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-content: space-between;
-  flex: 1;
-}
 
 /* 
 .fadeup-enter {

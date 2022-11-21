@@ -7,7 +7,6 @@ import useScroll from 'hooks/useScroll'
 import { US } from 'country-flag-icons/react/3x2'
 import { useTheme } from 'context/theme'
 import useCurrentWidth from 'hooks/useCurrentWidth'
-import Dropdown from 'components/Dropdown/index'
 import Logo from '../Icons/Logo'
 import ArrowDown from '../Icons/ArrowDown'
 import ThemeSelector from '../Icons/Theme'
@@ -39,7 +38,7 @@ const LandingHeader = () => {
   const { isLight, switchTheme } = useTheme()
   const { pathname } = useLocation()
 
-  const isMobile = width < 681
+  const isMobile = width < 900
   return (
     <header
       className={cls(
@@ -59,7 +58,7 @@ const LandingHeader = () => {
       <div className={styles.main_container}>
         <div className={styles.left_container}>
           <Link className={styles.logo_container} to="/">
-            <Logo isLight={isLight} width={isMobile ? 90.66 : 114} />
+            <Logo isLight={isLight} width={isMobile ? 105.66 : 87.5} />
           </Link>
         </div>
 
@@ -140,50 +139,7 @@ const LandingHeader = () => {
           >
             Sign In
           </NavLink>
-          {!isMobile && (
-            <Dropdown
-              list={{
-                type: 'countries',
-                data: [
-                  {
-                    text: 'English (US)',
-                    onClick: () => {},
-                  },
-                  {
-                    text: 'Français',
-                    onClick: () => {},
-                  },
-                  {
-                    text: 'Español',
-                    onClick: () => {},
-                  },
-                  {
-                    text: '简体中文',
-                    onClick: () => {},
-                  },
-                  {
-                    text: 'Русский',
-                    onClick: () => {},
-                  },
-                  {
-                    text: '한국인',
-                    onClick: () => {},
-                  },
-                  {
-                    text: 'Tiếng Việt',
-                    onClick: () => {},
-                  },
-                ],
-              }}
-            >
-              <div className={styles.flag_button}>
-                <div className={styles.flag_icon}>
-                  <US title="United States" className={styles.icon} />
-                </div>
-              </div>
-            </Dropdown>
-          )}
-          {isMobile && <MobileMenu isMenu={isMenu} setIsMenuOpen={setIsMenuOpen} />}
+          <MobileMenu isMenu={isMenu} setIsMenuOpen={setIsMenuOpen} />
         </div>
       </div>
     </header>
