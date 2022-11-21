@@ -65,6 +65,7 @@
       width: 100%;
       max-width: 500px;
       padding: 0 15px;
+      margin-right: 40px;
     
       .nav_item {
         position: relative;
@@ -137,15 +138,18 @@
     .right_container {
       display: flex;
       align-items: center;
+      justify-content: space-between;
 
       .text_link {
-        font-family: Turbine-Regular, sans-serif;
+        font-family: Turbine-Bold, sans-serif;
         font-size: 16px;
         font-weight: normal;
         color: var(--main-font);
         cursor: pointer;
         text-decoration: none;
         text-transform: uppercase;
+        min-width: 60px;
+        margin-right: 30px;
 
         &:hover {
           color: var(--main-font-hover);
@@ -164,8 +168,10 @@
           width: 100%;
         }
 
-        @media screen and (max-width: 900px) {
+        @media screen and (max-width: 679px) {
           margin-right: 46px;
+          font-size: 14.66px;
+          min-width: 0;
         }
       }
 
@@ -202,7 +208,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        border: solid .5px #0096ff;
+        border: solid .5px #e2e2e2;
         cursor: pointer;
 
         .flag_icon {
