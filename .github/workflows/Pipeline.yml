@@ -1,4 +1,4 @@
-### Deploy to CloudFront & Create backups to B2 & Check code via SonarQube ###
+### Deploy to CloudFront 
 
 name: Deploy
 
@@ -90,68 +90,6 @@ jobs:
     - name: Git clone repo
       uses: actions/checkout@v2
 
-#############################        
-# Part 1: Connect to VPN ####       
-#############################        
-        
-# Install OpenVPN
-#    - name: Install OpenVPN
-#      run: sudo apt install openvpn -y
-#    - run: echo "${{ env.OPENVPN_CONFIG }}" > client.ovpn
-#    - run: echo "${{ env.OPENVPN_USER }}" > user.ovpn
-
-
-# Connect to VPN:
- #   - name: Connect VPN
- #     run: sudo openvpn --config client.ovpn --auth-user-pass user.ovpn &
- #   - run: sleep 5 
- #   - run: curl ifconfig.co/
- #   - run: ping -c 4 sq.peer.inc
- 
-################################## 
-# Part 2: Sent code to SonarQube #
-##################################
- 
-# Sent code to SonarQube for scan
-#    - name: SonarQube Scan
-#      uses: monstar-lab-oss/sonarqube-github-action@v1.0.1
-#      with:
-#        url: ${{ env.SONAR_HOST_URL }}
-#        token: ${{ env.SONAR_TOKEN }}
-
-
-
-
-
-
-#    - name: SonarQube
-#      if: ${{ github.ref == 'refs/heads/develop' }}
-#      id: SonarQube
-#      uses: actions/checkout@v2
-#      with:
-#        fetch-depth: ${{ env.FETCH_DEPT }}
-#    - uses: sonarsource/sonarqube-scan-action@master
-#      env:
-#        SONAR_TOKEN: ${{ env.SONAR_TOKEN }}
-#        SONAR_HOST_URL: ${{ env.SONAR_HOST_URL }}
-
-####################################   
-# Part 3.1: Backups   ##############
-####################################
-# Create archieve of branch
-
-##    - name: Create backup-archive of branch
-#      run: echo "REPOSITORY_NAME=$(echo '${{ github.repository }}' | awk -F '/' '{print $1}')" >> $GITHUB_REPO
-##      run: tar cpzf ${{ env.LABEL }}-${{ env.TIME }}.zip *
-##    - run: mkdir ${{ env.BACKUP_DIR }} 
-##    - run: mv *.zip ${{ env.BACKUP_DIR }}
-##    - run: ls ${{ env.BACKUP_DIR }}/
-
-      
-####################################
-# Part 4: Build App   ##############
-####################################
-
 # Build app
 
     - name: node
@@ -163,9 +101,7 @@ jobs:
     - run: npm run build
             
         
-####################################       
 # Part 5: Deploy to Cloudfront #####
-####################################
 
     - name: Configurate AWS Credentials for dev_account
       if: ${{ github.ref == 'refs/heads/develop' }} 
@@ -234,33 +170,12 @@ jobs:
         AWS_SECRET_ACCESS_KEY: ${{ env.PROD_AWS_SECRET_ACCESS_KEY }}
 
 
-##########################################
-# Part 3.2: copy backups to BackBlaze ####  
-##########################################
 
-##    - name: Copy archive to B2
-##      id: backups
-##      uses: PedroGabriel/github-action-backblaze-upload@1.0.0
-##      with:
-##          bucket: ${{ env.BACKBLAZE_B2_BUCKET_ID }}
-##          key_id: ${{ secrets.B2_APPKEY_ID }}
-##          application_key: ${{ secrets.B2_APPKEY }} 
-##          file_input: '${{ env.BACKUP_DIR }}/'
-  #       file_output: '/${{ env.LABEL }}-${{ env.TIME }}.zip'
-          
-
- 
-###########################################
-# Part 6: Reporting #######################
-###########################################
+# Reporting #######################
 
     - name: Sent report for stage
       if: ${{ github.ref == 'refs/heads/stage' }}
       run:  |
-        aws sns publish \
-          --topic-arn "arn:aws:sns:us-west-2:118833598456:CHI_tests" \
-          --subject "Backups was successful: WEB: Frontend: ${{ env.GITHUB_REPOSITORY }}" \
-          --message "Backups was successful: ${{ env.GITHUB_REPOSITORY }} Branch: ${{ env.CURRENT_GITHUB_BRANCH }}"
         aws sns publish \
           --topic-arn "arn:aws:sns:us-west-2:770080080051:Deployment" \
           --subject "Deploy was successful: Stage: WEB: Frontend: ${{ env.GITHUB_REPOSITORY }}" \
@@ -274,10 +189,6 @@ jobs:
       if: ${{ github.ref == 'refs/heads/main' }}
       run:  |
         aws sns publish \
-          --topic-arn "arn:aws:sns:us-west-2:118833598456:CHI_tests" \
-          --subject "Backups was successful: WEB: Frontend: ${{ env.GITHUB_REPOSITORY }}" \
-          --message "Backups was successful: ${{ env.GITHUB_REPOSITORY }} Branch: ${{ env.CURRENT_GITHUB_BRANCH }}"
-        aws sns publish \
           --topic-arn "arn:aws:sns:us-west-2:770080080051:Deployment" \
           --subject "Deploy was successful: Prod: WEB: Frontend: ${{ env.GITHUB_REPOSITORY }}" \
           --message "Deploy was successful: Prod: ${{ env.GITHUB_REPOSITORY }} Branch: ${{ env.CURRENT_GITHUB_BRANCH }}"
@@ -286,10 +197,7 @@ jobs:
         AWS_SECRET_ACCESS_KEY: ${{ env.PROD_AWS_SECRET_ACCESS_KEY }}
         AWS_DEFAULT_REGION: ${{ env.PROD_AWS_REGION }}
 #
-# 
-#
-#
-#
+
 
 
  
