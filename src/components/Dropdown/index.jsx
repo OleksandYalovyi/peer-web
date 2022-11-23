@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from 'react'
 import { US, FR, ES, CN, RU, KR, VN } from 'country-flag-icons/react/3x2'
 import cls from 'classnames'
 import T from 'prop-types'
+import useCurrentWidth from 'hooks/useCurrentWidth'
 import styles from './dropdown.module.scss'
 
 const CountryIcon = ({ name }) => {
@@ -32,29 +33,41 @@ const CountryIcon = ({ name }) => {
 const Dropdown = ({ list, children }) => {
   const { data, type } = list
 
+  const childrenRef = useRef(null)
   const listRef = useRef(null)
   const [isShow, setIsShow] = useState(false)
+  const width = useCurrentWidth()
+
+  const cloneChildren = React.cloneElement(children, {
+    ref: childrenRef,
+    onClick: () => {
+      setIsShow(!isShow)
+    },
+  })
 
   useEffect(() => {
     function handleClickOutside(event) {
-      if (listRef.current && !listRef.current.contains(event.target)) {
-        setIsShow(false)
+      if (childrenRef.current && !childrenRef.current.contains(event.target)) {
+        if (listRef.current && !listRef.current.contains(event.target)) {
+          setIsShow(false)
+        }
       }
     }
+
     document.addEventListener('mousedown', handleClickOutside)
     return () => {
       document.removeEventListener('mousedown', handleClickOutside)
     }
-  }, [listRef])
+  }, [listRef, childrenRef])
+
+  const containerBehavior =
+    width < 800
+      ? { onClick: () => setIsShow(!isShow) }
+      : { onMouseEnter: () => setIsShow(true), onMouseLeave: () => setIsShow(false) }
 
   return (
-    <div
-      className={cls(styles.container)}
-      onClick={(e) => {
-        setIsShow(true)
-      }}
-    >
-      {children}
+    <div className={cls(styles.container)} {...containerBehavior}>
+      {cloneChildren}
 
       {isShow && (
         <ul className={styles.list} ref={listRef}>

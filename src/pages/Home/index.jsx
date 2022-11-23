@@ -58,7 +58,7 @@ const Home = () => {
             <div className={styles.content}>
               <div className={styles.light} ref={ref} style={lightStyles} />
               <div className={styles.positions}>
-                {new Array(6).fill(1).map((s) => (
+                {new Array(20).fill(1).map((s) => (
                   <Date position={userPosition} />
                 ))}
               </div>
