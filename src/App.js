@@ -5,6 +5,7 @@ import { useTheme } from 'context/theme'
 import Header from 'components/Header'
 import Footer from 'components/Footer'
 import Home from 'pages/Home'
+import HomeProduct from 'pages/HomeProduct'
 import './App.css'
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
         <CSSTransition key={location.key} classNames="fade" timeout={900}>
           <Switch location={location}>
             <Route exact path="/" component={Home} />
+            <Route exact path="/product" component={HomeProduct} />
             <Redirect exact from="/*" to="/" />
           </Switch>
         </CSSTransition>
