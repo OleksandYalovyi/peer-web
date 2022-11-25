@@ -1,0 +1,35 @@
+.container {
+  // width: 50%;
+  width: 692px;
+  max-height: 1070px;
+  overflow: hidden;
+
+  @media screen and (max-width: 1250px) {
+    // width: calc(100vw - 120px);
+  }
+
+  .slider_item {
+    display: flex !important;
+    align-items: center;
+
+    @media screen and (max-width: 1250px) {
+      margin-right: 40px;
+    }
+
+    .mobile_slider_nav {
+      // display: none;
+      padding: 25px 34px;
+      opacity: 0;
+      @media screen and (max-width: 1250px) {
+        display: block;
+        padding: 25px 34px;
+        cursor: pointer;
+        
+      }
+    }
+  }
+  .slick-list {
+    width: 10000px !important;
+  }
+}
+
