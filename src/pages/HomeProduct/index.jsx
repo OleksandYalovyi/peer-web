@@ -13,7 +13,7 @@ import forwardArrow from '../../assets/forwardArrow.svg'
 const HomeProduct = () => {
   const sliderRef = useRef(null)
   const width = useCurrentWidth()
-  const isMobile = width < 1000
+  const isMobile = width < 600
 
   const onNextSlide = () => sliderRef.current.slickNext()
   const onPrevtSlide = () => sliderRef.current.slickPrev()
@@ -25,7 +25,7 @@ const HomeProduct = () => {
           <div className={styles.main}>
             <div className={styles.nav}>
               <div className={styles.zen_logo}>
-                <img src={ZEN} alt="ZEN" width={90} />
+                <img src={ZEN} alt="ZEN" width={isMobile ? 75 : 90} />
               </div>
               <div className={styles.slider_nav}>
                 <div className={styles.arrow_wrapper} onClick={onPrevtSlide}>
@@ -62,18 +62,18 @@ const HomeProduct = () => {
             </div>
           </div>
           <div className={styles.slider_wrapper}>
-            <div className={styles.mobile_slider_nav}>
-              <img src={BackArrow} alt="prev Slide" width={13} />
+            <div className={styles.mobile_slider_nav} onClick={onPrevtSlide}>
+              <img src={BackArrow} alt="prev Slide" width={20} />
             </div>
-            <ZemSlider sliderRef={sliderRef} />
+            <ZemSlider sliderRef={sliderRef} onNextSlide={onNextSlide} />
           </div>
         </div>
-        {/* <div className={styles.additional_container}>
+        <div className={styles.additional_container}>
           <div className={styles.additional_content}>
             “Change how how you see and see how you change.”
             <p className={styles.additional_paragraph}>zen proverb</p>
           </div>
-        </div> */}
+        </div>
       </div>
     </section>
   )
