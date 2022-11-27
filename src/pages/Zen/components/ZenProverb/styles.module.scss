@@ -1,0 +1,29 @@
+.section {
+  width: 100%;
+  .container {
+    display: flex;
+    justify-content: center;
+    max-width: 100%;
+    padding: 400px 0 700px;
+    color: white;
+    font-size: 80px;
+
+    @media screen and (max-width: 1250px) {
+      padding: 150px 75px;
+      font-size: 60px;
+    }
+    @media screen and (max-width: 600px) {
+      font-size: 35px;
+    }
+
+    .content {
+      max-width: 1000px;
+      font-family: Turbine-bold, sans-serif;
+      text-align: center;
+    }
+
+    .paragraph {
+      font-family: Turbine-Regular, sans-serif;
+    }
+  }
+}
