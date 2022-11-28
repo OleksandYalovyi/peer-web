@@ -27,6 +27,39 @@
   flex: 1;
 }
 
+.fadeInOut-appear {
+  opacity: 0;
+  z-index: 1;
+}
+
+.fadeInOut-appear.fadeInOut-appear-active {
+  opacity: 1;
+  transition: opacity 500ms linear;
+}
+
+.fadeInOut-enter {
+  opacity: 0;
+  z-index: 1;
+}
+
+.fadeInOut-enter.fadeInOut-enter-active {
+  opacity: 1;
+  transition: opacity 1000ms linear 1000ms;
+}
+
+.fadeInOut-exit {
+  opacity: 1;
+}
+
+.fadeInOut-exit.fadeInOut-exit-active {
+  opacity: 0;
+  transition: opacity 1000ms linear;
+}
+
+.fadeInOut-exit-done {
+  opacity: 0;
+}
+
 /* 
 .fadeup-enter {
   opacity: 0;

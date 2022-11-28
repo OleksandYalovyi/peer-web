@@ -1,0 +1,92 @@
+.section {
+  width: 100%;
+  padding: 50px 0;
+  margin-bottom: 300px;
+  .container {
+    width: 100%;
+    max-width: 1170px;
+    margin: 0 auto;
+    color: white;
+    display: flex;
+
+    .col_1 {
+      margin-right: 160px;
+      .title_container {
+        padding: 0 23px 0 16px;
+        border-bottom: .5px solid #333;
+        margin-bottom: 50px;
+        .title {
+          display: flex;
+          height: 50px;
+          align-items: flex-end;
+          font-family: Turbine-Medium, sans-serif;
+          font-size: 35px;
+          color: #fff;
+          margin-bottom: 23px;
+        }
+      }
+      .item_wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 90px;
+        border-bottom: .5px solid #333;
+        padding: 0 23px 0 16px;
+        min-width: 290px;
+        transition: all .3s;
+        cursor: pointer;
+        .item_title {
+          font-family: Turbine-Medium, sans-serif;
+          font-size: 25px;
+          color: #373737;
+        }
+        &.active {
+          transition: all .3s;
+          border-bottom: .5px solid #fff;
+          .item_title{
+            color: #fff;
+          }
+        }
+      }
+    }
+    .col_2 {
+      flex: 1;
+      .slide {
+        width: 100%;
+        min-height: 500px;
+        .title {
+          display: flex;
+          height: 50px;
+          font-family: Turbine-Medium, sans-serif;
+          font-size: 50px;
+          color: #fff;
+          margin-bottom: 59px;
+        }
+        .content {
+          font-family: Turbine-Regular, sans-serif;
+          font-size: 30px;
+          line-height: 1.5;
+          text-align: left;
+          color: #939393;
+          margin-bottom: 129px;
+        }
+        .next_btn {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          max-width: 225px;
+          font-family: Turbine-Regular, sans-serif;
+          font-size: 25px;
+          letter-spacing: 1.75px;
+          text-align: left;
+          color: #939393;
+          cursor: pointer;
+          img {
+            width: 27px;
+            height: auto;
+          }
+        }
+      }
+    }
+  }
+}
