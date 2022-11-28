@@ -3,7 +3,7 @@ import useCurrentWidth from 'hooks/useCurrentWidth'
 import ZEN from 'assets/zen.svg'
 import BackArrow from 'assets/backArrow.svg'
 import forwardArrow from 'assets/forwardArrow.svg'
-import ZemSlider from '../ZemSlider'
+import ZenSlider from '../ZenSlider'
 import styles from './styles.module.scss'
 
 const Main = () => {
@@ -60,7 +60,7 @@ const Main = () => {
           <div className={styles.mobile_slider_nav} onClick={onPrevSlide}>
             <img src={BackArrow} alt="prev Slide" width={20} />
           </div>
-          <ZemSlider sliderRef={sliderRef} onNextSlide={onNextSlide} />
+          <ZenSlider sliderRef={sliderRef} onNextSlide={onNextSlide} />
         </div>
       </div>
     </section>

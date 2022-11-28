@@ -16,7 +16,7 @@ import styles from './slider.module.scss'
 // import backArrow from '../../../../assets/backArrow.svg'
 import forwardArrow from '../../../../assets/forwardArrow.svg'
 
-function ZemSlider({ sliderRef, onNextSlide }) {
+function ZenSlider({ sliderRef, onNextSlide }) {
   const displays = [
     {
       id: 1,
@@ -80,9 +80,9 @@ function ZemSlider({ sliderRef, onNextSlide }) {
   )
 }
 
-export default ZemSlider
+export default ZenSlider
 
-ZemSlider.propTypes = {
+ZenSlider.propTypes = {
   sliderRef: T.node,
   onNextSlide: T.func,
 }
