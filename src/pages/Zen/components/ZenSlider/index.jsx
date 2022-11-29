@@ -68,13 +68,13 @@ function ZenSlider({ sliderRef, onNextSlide }) {
               {/* <div className={styles.mobile_slider_nav}>
                 <img src={backArrow} alt="prev Slide" width={30} />
               </div> */}
-              <img src={href} alt="alt" height={isMobile ? width * 1.1 : 1070} />
-              <div className={styles.mobile_slider_nav} onClick={onNextSlide}>
-                <img src={forwardArrow} alt="next Slide" width={20} />
-              </div>
+              <img src={href} alt="alt" height={isMobile ? width * 1.18 : 1070} />
             </div>
           ))}
         </Slider>
+        <div className={styles.mobile_slider_nav} onClick={onNextSlide}>
+          <img src={forwardArrow} alt="next Slide" width={13.66} />
+        </div>
       </div>
     </div>
   )
