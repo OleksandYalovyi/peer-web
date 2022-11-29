@@ -20,7 +20,7 @@ const Main = () => {
         <div className={styles.main}>
           <div className={styles.nav}>
             <div className={styles.zen_logo}>
-              <img src={ZEN} alt="ZEN" width={isMobile ? 75 : 90} />
+              <img src={ZEN} alt="ZEN" width={isMobile ? 50 : 90} />
             </div>
             <div className={styles.slider_nav}>
               <div className={styles.arrow_wrapper} onClick={onPrevSlide}>
@@ -58,7 +58,7 @@ const Main = () => {
         </div>
         <div className={styles.slider_wrapper}>
           <div className={styles.mobile_slider_nav} onClick={onPrevSlide}>
-            <img src={BackArrow} alt="prev Slide" width={20} />
+            <img src={BackArrow} alt="prev Slide" width={13.66} />
           </div>
           <ZenSlider sliderRef={sliderRef} onNextSlide={onNextSlide} />
         </div>
