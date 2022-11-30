@@ -12,7 +12,7 @@ env:
   BACKBLAZE_APP_KEY      : ${{ secrets.B2_APPKEY }}
   
   # Parameters for B2 bucket.
-  BACKBLAZE_B2BUCKET     : 'github-peer-inc-backups'
+  BACKBLAZE_B2BUCKET     : 'b2://peer-github-backup/peer-web'
   BACKBLAZE_B2_BUCKET_ID : '9af77c8b9d371ab3812e0913'
 
   # Parameters for making a backup-file:
@@ -121,15 +121,14 @@ jobs:
     - run: echo $(tar)
 
 # Copy backups to BackBlaze
-    - uses: sylwit/install-b2-cli-action@v1.0.0
+    - name: Copy archive to B2
+      id: backups
+      uses: PEER-Inc/backblaze-b2-custom-action@main
       env:
-        B2_APPLICATION_KEY_ID: ${{ env.BACKBLAZE_APP_ID }}
-        B2_APPLICATION_KEY: ${{ env.BACKBLAZE_APP_KEY }}
-        
-    - name: copy to b2
-#      run: b2 authorize_account ${{ env.BACKBLAZE_APP_ID }} ${{ env.BACKBLAZE_APP_KEY }}
-      run: b2 upload-file ${{ env.BACKBLAZE_B2BUCKET }} $(echo "${{ github.event.repository.name }}-${GITHUB_REF##*/}-$(date +'%Y-%m-%d')" | sed -e 's/\.//g' -e 's/\///g').zip ${{ github.event.repository.name }}/$(echo "${{ github.event.repository.name }}-${GITHUB_REF##*/}-$(date +'%Y-%m-%d')" | sed -e 's/\.//g' -e 's/\///g').zip
-
+          B2_BUCKET: ${{ env.BACKBLAZE_B2BUCKET }}
+          B2_APPKEY_ID: ${{ secrets.B2_APPKEY_ID }}
+          B2_APPKEY: ${{ secrets.B2_APPKEY }}
+          SOURCE_DIR: '${{ env.BACKUP_DIR }}/'
 
 
 ###########################################
