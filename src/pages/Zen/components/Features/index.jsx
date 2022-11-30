@@ -2,13 +2,16 @@ import React, { useState } from 'react'
 import { CSSTransition } from 'react-transition-group'
 import cls from 'classnames'
 import btnArrow from 'assets/btnArrow.svg'
+import zenChevron from 'assets/HomeProduct/zen-chevron.svg'
 import ArrowChevron from 'components/Icons/ArrowChevron'
+import useCurrentWidth from 'hooks/useCurrentWidth'
 import data from './data'
 import styles from './features.module.scss'
 
 const Features = () => {
   const [slide, setSlide] = useState(0)
   const [hovered, setHovered] = useState(null)
+  const width = useCurrentWidth()
 
   const handleSetSlide = (slideNumber) => {
     setSlide(slideNumber)
@@ -27,7 +30,10 @@ const Features = () => {
       <div className={styles.container}>
         <div className={styles.col_1}>
           <div className={styles.title_container}>
-            <div className={styles.title}>Zen Features</div>
+            <div className={styles.title}>
+              <img src={zenChevron} alt="" />
+              Zen Features
+            </div>
           </div>
           {data.map((item, index) => (
             <div
@@ -42,7 +48,7 @@ const Features = () => {
             >
               <div className={styles.item_title}>{item.title}</div>
               <ArrowChevron
-                width={8.5}
+                width={width > 680 ? 8.5 : 6}
                 isHovered={(index === slide && typeof hovered !== 'number') || hovered === index}
               />
             </div>

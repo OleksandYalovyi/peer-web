@@ -21,7 +21,7 @@ function App() {
         <CSSTransition key={location.key} classNames="fade" timeout={900}>
           <Switch location={location}>
             <Route exact path="/" component={Home} />
-            <Route exact path="/product" component={Zen} />
+            <Route exact path="/zen" component={Zen} />
             <Redirect exact from="/*" to="/" />
           </Switch>
         </CSSTransition>

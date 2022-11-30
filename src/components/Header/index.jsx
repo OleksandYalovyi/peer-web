@@ -3,7 +3,6 @@ import React, { useState } from 'react'
 import { NavLink, useLocation, Link } from 'react-router-dom'
 import cls from 'classnames'
 import useScroll from 'hooks/useScroll'
-// import ReactCountryFlag from 'react-country-flag'
 import { US } from 'country-flag-icons/react/3x2'
 import { useTheme } from 'context/theme'
 import useCurrentWidth from 'hooks/useCurrentWidth'
@@ -22,7 +21,7 @@ const NavItems = ({ router, name, links }) => (
       {router
         ? links.map((l) => <NavLink to={l.to}>{l.name}</NavLink>)
         : links.map((l) => (
-            <a href={l.to} target="_blank" rel="noreferrer">
+            <a href={l.to} target={l.withRouter ? '_self' : '_blank'} rel="noreferrer">
               {l.name}
             </a>
           ))}
@@ -84,10 +83,10 @@ const LandingHeader = () => {
               ]}
             />
             <NavItems
-              router={false}
+              router
               name="Products"
               links={[
-                { name: 'Zen', to: 'peersuperapp' },
+                { name: 'Zen', to: '/zen', withRouter: true },
                 { name: 'Peer', to: 'peerblockchain' },
                 { name: 'ICX', to: 'https://icx.peer.inc' },
                 { name: 'Peer Blockchain', to: 'https://explorer.peer.inc' },
