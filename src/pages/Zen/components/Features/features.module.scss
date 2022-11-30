@@ -30,6 +30,7 @@
         border-bottom: .5px solid #333;
         margin-bottom: 50px;
         @media screen and (max-width: 680px) {
+          border-bottom: .33px solid #333;
           margin-bottom: 34px;
         }
 
@@ -72,6 +73,7 @@
         cursor: pointer;
 
         @media screen and (max-width: 680px) {
+          border-bottom: .33px solid #333;
           justify-content: end;
           height: 60px;
           min-width: 45px;
@@ -90,6 +92,9 @@
         &.active {
           transition: all .3s;
           border-bottom: .5px solid #fff;
+          @media screen and (max-width: 680px) {
+            border-bottom: .33px solid #fff;
+          }
           .item_title{
             color: #fff;
           }
