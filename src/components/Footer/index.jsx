@@ -90,6 +90,9 @@ const Footer = () => {
               <a href={Terms} target="_blank" rel="noreferrer">
                 Terms
               </a>
+              <a href="#" target="_blank" rel="noreferrer">
+                Whitepaper
+              </a>
             </span>
           </div>
         </div>

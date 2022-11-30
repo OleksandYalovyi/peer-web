@@ -62,12 +62,13 @@
             color: var(--main-font);
             text-decoration: underline;
             position: relative;
+            margin-right: 18.5px;
 
             @media screen and (max-width: 680px) {
               font-size: 11px;
             }
-            &:first-child {
-              margin-right: 18.5px;
+            &:last-child {
+              margin-right: 0px;
             }
             &:hover {
               color: var(--main-link-hover);
