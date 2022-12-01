@@ -1,25 +1,37 @@
 .container {
   position: relative;
-  display: flex;
-  flex-wrap: nowrap;
-  max-width: 692px;
-  overflow: hidden;
+  width: 100%;
 
   @media screen and (max-width: 1400px) {
     max-width: calc(100vw - 88px);
   }
   @media screen and (max-width: 600px) {
-    max-width: calc(100vw - 58.66px);
+    max-width: calc(100vw - 88.66px);
   }
 
-  .slider_item {
-    display: flex !important;
-    align-items: center;
-    margin-right: 88px;
+  .slider_wrapper {
+    max-width: 3080px;
 
-    @media screen and (max-width: 600px) {
-      margin-right: 58.66px;
+    .slider_item {
+      margin-right: 88px;
+
+      @media screen and (max-width: 600px) {
+        margin-right: 58.66px;
+      }
     }
+  }
+  .desktop_slider_nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 130px;
+    height: 130px;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    cursor: pointer;
+    position: absolute;
+    top: 440px;
+    left: 540px
   }
 
   .mobile_slider_nav {
