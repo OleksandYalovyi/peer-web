@@ -15,7 +15,6 @@ import backArrow from '../../../../assets/backArrow.svg'
 import forwardArrow from '../../../../assets/forwardArrow.svg'
 
 function ZenSlider({ sliderRef, onNextSlide, onPrevSlide }) {
-  const [isLastSlide, setLastSlideStatus] = useState(false)
   const [sliderSide, setSliderSide] = useState('right')
   const displays = [
     {

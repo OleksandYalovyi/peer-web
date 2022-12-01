@@ -2,7 +2,7 @@ import React, { useRef } from 'react'
 import useCurrentWidth from 'hooks/useCurrentWidth'
 import ZEN from 'assets/zenSircle.svg'
 import BackArrow from 'assets/backArrow.svg'
-import forwardArrow from 'assets/forwardArrow.svg'
+import ZENLogo from 'assets/zenLogo.svg'
 import ZenSlider from '../ZenSlider'
 import styles from './styles.module.scss'
 
@@ -20,7 +20,7 @@ const Main = () => {
         <div className={styles.main}>
           <div className={styles.nav}>
             <div className={styles.zen_logo}>
-              <img src={ZEN} alt="ZEN" width={isMobile ? 50 : 90} />
+              <img src={isMobile ? ZENLogo : ZEN} alt="ZEN" width={isMobile ? 50 : 90} />
             </div>
             {/* <div className={styles.slider_nav}>
               <div className={styles.arrow_wrapper} onClick={onPrevSlide}>
