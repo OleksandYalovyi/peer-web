@@ -82,7 +82,7 @@ const Footer = () => {
             <Logo isLight={isLight} width={width <= 680 ? 41 : 50.5} />
           </Link>
           <div className={styles.copyright_container}>
-            <span className={styles.copyright}>© 2022 Peer Labs</span>
+            <span className={styles.copyright}>© 2023 Peer Inc.</span>
             <span className={styles.link}>
               <a href={Privacy} target="_blank" rel="noreferrer">
                 Privacy
