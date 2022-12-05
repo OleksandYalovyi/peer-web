@@ -2,7 +2,7 @@
   width: 100%;
   margin-bottom: 315px;
   display: flex;
-  justify-content: flex-end;
+  padding-left: calc((100vw - 1420px) /2);
 
   @media screen and (max-width: 1000px) {
     margin-bottom: 0px;
@@ -11,15 +11,10 @@
   .top {
     display: flex;
     flex: 1;
-    max-width: 85%;
     padding: 205px 0 0 20px;
     overflow: hidden;
     min-height: 1070px;
 
-    // @media screen and (max-width: 1900px) {
-    //   max-width: 90%;
-    //   min-height: none;
-    // }
     @media screen and (max-width: 1900px) {
       max-width: 100%;
       width: 100%;
