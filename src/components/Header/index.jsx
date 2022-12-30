@@ -14,17 +14,19 @@ import MobileMenu from './MobileMenu'
 
 import styles from './header.module.scss'
 
-const NavItems = ({ router, name, links }) => (
+const NavItems = ({ name, links }) => (
   <div className={styles.nav_item}>
     {name}
     <div className={styles.nav_list}>
-      {router
-        ? links.map((l) => <NavLink to={l.to}>{l.name}</NavLink>)
-        : links.map((l) => (
-            <a href={l.to} target={l.withRouter ? '_self' : '_blank'} rel="noreferrer">
-              {l.name}
-            </a>
-          ))}
+      {links.map((l) =>
+        l.router ? (
+          <NavLink to={l.to}>{l.name}</NavLink>
+        ) : (
+          <a href={l.to} target="_blank" rel="noreferrer">
+            {l.name}
+          </a>
+        ),
+      )}
     </div>
   </div>
 )
@@ -65,7 +67,6 @@ const LandingHeader = () => {
         {!isMobile && (
           <nav className={styles.nav}>
             <NavItems
-              router
               name="Community"
               links={[
                 {
@@ -83,13 +84,11 @@ const LandingHeader = () => {
               ]}
             />
             <NavItems
-              router
               name="Products"
               links={[
-                { name: 'Zen', to: '/zen', withRouter: true },
                 { name: 'Peer', to: 'peerblockchain' },
-                { name: 'ICX', to: 'https://icx.peer.inc' },
-                { name: 'Peer Blockchain', to: 'https://explorer.peer.inc' },
+                { name: 'ICX', to: 'https://icx.peer.inc', router: false },
+                { name: 'Peer Blockchain', to: 'https://explorer.peer.inc', router: false },
                 { name: 'Peer Labs', to: 'peerlabs' },
               ]}
             />
