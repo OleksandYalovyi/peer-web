@@ -115,7 +115,7 @@ const LandingHeader = () => {
         <div className={styles.right_container}>
           {!isMobile && (
             <>
-              <NavLink
+              {/* <NavLink
                 to="/"
                 className={cls(styles.text_link, {
                   // [styles.active]: pathname === '/' && !hovered,
@@ -124,7 +124,7 @@ const LandingHeader = () => {
                 onMouseLeave={() => setHovered('')}
               >
                 Sign In
-              </NavLink>
+              </NavLink> */}
 
               <Dropdown
                 list={{

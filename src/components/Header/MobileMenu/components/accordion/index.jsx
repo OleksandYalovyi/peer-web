@@ -55,6 +55,7 @@ const Dropdown = ({ list, children, isShow, onClose, burgerRef }) => {
         !burgerRef.current.contains(event.target)
       ) {
         onClose()
+        setExpanded('')
       }
     }
     document.addEventListener('mousedown', handleClickOutside)
@@ -97,8 +98,6 @@ const Dropdown = ({ list, children, isShow, onClose, burgerRef }) => {
     setExpanded(newExpanded ? panel : false)
   }
 
-  console.log('---', clickedLink)
-
   return (
     <div className={cls(styles.container, { [styles.isShow]: isShow })} ref={listRef}>
       {children}
@@ -136,7 +135,9 @@ const Dropdown = ({ list, children, isShow, onClose, burgerRef }) => {
                       <div
                         className={cls(styles.link_wrapper, clickedLink === logo && styles.clicked)}
                       >
-                        <MobileMenuLogo type={logo} isHovered={clickedLink === logo} />
+                        {title === 'Products' && (
+                          <MobileMenuLogo type={logo} isHovered={clickedLink === logo} />
+                        )}
                         {name}
                       </div>
                     </Typography>
