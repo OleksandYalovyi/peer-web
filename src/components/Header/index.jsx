@@ -113,58 +113,61 @@ const LandingHeader = () => {
           </nav>
         )}
         <div className={styles.right_container}>
-          <NavLink
-            to="/"
-            className={cls(styles.text_link, {
-              // [styles.active]: pathname === '/' && !hovered,
-            })}
-            onMouseEnter={() => setHovered('signin')}
-            onMouseLeave={() => setHovered('')}
-          >
-            Sign In
-          </NavLink>
           {!isMobile && (
-            <Dropdown
-              list={{
-                type: 'countries',
-                data: [
-                  {
-                    text: 'English (US)',
-                    onClick: () => {},
-                  },
-                  {
-                    text: 'Français',
-                    onClick: () => {},
-                  },
-                  {
-                    text: 'Español',
-                    onClick: () => {},
-                  },
-                  {
-                    text: '简体中文',
-                    onClick: () => {},
-                  },
-                  {
-                    text: 'Русский',
-                    onClick: () => {},
-                  },
-                  {
-                    text: '한국인',
-                    onClick: () => {},
-                  },
-                  {
-                    text: 'Tiếng Việt',
-                    onClick: () => {},
-                  },
-                ],
-              }}
-            >
-              <div className={styles.flag_button}>
-                <div className={styles.flag_icon}>
-                  <US title="United States" className={styles.icon} />
+            <>
+              <NavLink
+                to="/"
+                className={cls(styles.text_link, {
+                  // [styles.active]: pathname === '/' && !hovered,
+                })}
+                onMouseEnter={() => setHovered('signin')}
+                onMouseLeave={() => setHovered('')}
+              >
+                Sign In
+              </NavLink>
+
+              <Dropdown
+                list={{
+                  type: 'countries',
+                  data: [
+                    {
+                      text: 'English (US)',
+                      onClick: () => {},
+                    },
+                    {
+                      text: 'Français',
+                      onClick: () => {},
+                    },
+                    {
+                      text: 'Español',
+                      onClick: () => {},
+                    },
+                    {
+                      text: '简体中文',
+                      onClick: () => {},
+                    },
+                    {
+                      text: 'Русский',
+                      onClick: () => {},
+                    },
+                    {
+                      text: '한국인',
+                      onClick: () => {},
+                    },
+                    {
+                      text: 'Tiếng Việt',
+                      onClick: () => {},
+                    },
+                  ],
+                }}
+              >
+                <div className={styles.flag_button}>
+                  <div className={styles.flag_icon}>
+                    <US title="United States" className={styles.icon} />
+                  </div>
                 </div>
-              </div>
-            </Dropdown>
+              </Dropdown>
+            </>
           )}
           {isMobile && <MobileMenu isMenu={isMenu} setIsMenuOpen={setIsMenuOpen} />}
         </div>
