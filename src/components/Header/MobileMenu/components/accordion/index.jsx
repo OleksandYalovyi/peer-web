@@ -8,6 +8,7 @@ import MuiAccordionDetails from '@mui/material/AccordionDetails'
 import Typography from '@mui/material/Typography'
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore'
 import styles from './accordion.module.scss'
+import MobileMenuLogo from '../../../../Icons/MobileMenuLogo'
 
 const data = [
   {
@@ -22,11 +23,11 @@ const data = [
   {
     title: 'Products',
     links: [
-      { name: 'Zen', to: 'peersuperapp' },
-      { name: 'Peer', to: 'peerblockchain' },
-      { name: 'ICX', to: 'https://icx.peer.inc' },
-      { name: 'Peer Blockchain', to: 'https://explorer.peer.inc' },
-      { name: 'Peer Labs', to: 'peerlabs' },
+      { name: 'Peer', to: 'https://peerclub.com', logo: 'PEER' },
+      { name: 'Zen', to: '/zen', logo: 'ZEN' },
+      { name: 'Omni', to: 'https://peermultichain.com', logo: 'OMNI' },
+      { name: 'Index', to: 'https://indexwetrust.com', logo: 'INDEX' },
+      { name: 'Labs', to: 'https://labs.peer.inc', logo: 'LABS' },
     ],
   },
 
@@ -43,6 +44,7 @@ const data = [
 const Dropdown = ({ list, children, isShow, onClose, burgerRef }) => {
   const listRef = useRef(null)
   const [expanded, setExpanded] = useState('')
+  const [clickedLink, setClickedLink] = useState('')
 
   useEffect(() => {
     function handleClickOutside(event) {
@@ -95,6 +97,8 @@ const Dropdown = ({ list, children, isShow, onClose, burgerRef }) => {
     setExpanded(newExpanded ? panel : false)
   }
 
+  console.log('---', clickedLink)
+
   return (
     <div className={cls(styles.container, { [styles.isShow]: isShow })} ref={listRef}>
       {children}
@@ -119,12 +123,26 @@ const Dropdown = ({ list, children, isShow, onClose, burgerRef }) => {
             >
               <Typography className={styles.mui_typography}>{title}</Typography>
             </AccordionSummary>
-            {links.map(({ name, to }) => (
-              <a href={to} target="_blank" className={styles.link} rel="noreferrer">
-                <AccordionDetails className={styles.details}>
-                  <Typography className={styles.mui_details_typography}>{name}</Typography>
-                </AccordionDetails>
-              </a>
+            {links.map(({ name, to, logo }) => (
+              <div
+                onClick={() => {
+                  setClickedLink(logo)
+                  setTimeout(() => setClickedLink(''), 500)
+                }}
+              >
+                <a href={to} target="_blank" className={styles.link} rel="noreferrer">
+                  <AccordionDetails className={styles.details}>
+                    <Typography className={styles.mui_details_typography}>
+                      <div
+                        className={cls(styles.link_wrapper, clickedLink === logo && styles.clicked)}
+                      >
+                        <MobileMenuLogo type={logo} isHovered={clickedLink === logo} />
+                        {name}
+                      </div>
+                    </Typography>
+                  </AccordionDetails>
+                </a>
+              </div>
             ))}
           </Accordion>
         ))}

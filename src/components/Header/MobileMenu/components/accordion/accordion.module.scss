@@ -34,12 +34,23 @@
         &:hover {
           color: var(--main-font-hover);
         }
+        
+        .clicked {
+          color: #00d3f9;
+        }
       }
+      
 
       .details {
         .mui_details_typography {
           font-size: 18.66px;
           font-family: Turbine-Regular, sans-serif;
+
+          .link_wrapper {
+            display: flex;
+            gap: 18px;
+            align-items: center;
+          }
         }
 
         &:hover {
