@@ -82,25 +82,28 @@
 
           a {
             display: block;
-            padding: 20px 45px;
-            color: black;
+            box-sizing: border-box;
+            padding: 20px 36px;
+            color: var(--bg);
             font-weight: bold;
             font-size: 18px;
             font-family: Turbine-Bold, sans-serif;
-            line-height: 20px;
+            line-height: 14px;
             letter-spacing: 1.8px;
             text-transform: uppercase;
             text-decoration: none;
-            background-color: var(--link);
-            border-radius: 15px;
-            cursor: pointer;
+            background-color: var(--font);
+            border: 3px solid var(--font);
+            border-radius: 30px;
+
+            &:hover {
+              color: var(--font);
+              background-color: transparent;
+              cursor: pointer;
+            }
 
             &.large_btn {
               padding: 20px 88.5px;
-            }
-
-            &:hover {
-              background-color: var(--btn-link-hover);
             }
           }
         }

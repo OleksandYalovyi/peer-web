@@ -44,7 +44,7 @@ const Home = () => {
       <div className={styles.main_container}>
         <div className={styles.main} onMouseMove={onMouseMove}>
           <div className={styles.mixin}>
-            <h4>Peer</h4>
+            <h4>Welcome</h4>
             <h1>We’re building magical web3 products to enable crypto mass adoption.</h1>
 
             <div className={styles.btns}>
