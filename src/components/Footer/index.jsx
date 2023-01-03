@@ -5,7 +5,7 @@ import useScroll from 'hooks/useScroll'
 import { US } from 'country-flag-icons/react/3x2'
 import { useTheme } from 'context/theme'
 import useCurrentWidth from 'hooks/useCurrentWidth'
-import Logo from 'components/Icons/LogoMain'
+import Logo from 'components/Icons/LogoIcon'
 import Facebook from 'components/Icons/Share/Facebook'
 import Peer from 'components/Icons/Share/Peer'
 import Twitter from 'components/Icons/Share/Twitter'
@@ -79,7 +79,7 @@ const Footer = () => {
       <div className={styles.main_container}>
         <div className={styles.left_container}>
           <Link className={styles.logo_container} to="/">
-            <Logo isLight={isLight} width={width <= 680 ? 41 : 50.5} />
+            <Logo isLight={isLight} width={width <= 680 ? 43 : 55} />
           </Link>
           <div className={styles.copyright_container}>
             <span className={styles.copyright}>© 2023 Peer Inc.</span>
