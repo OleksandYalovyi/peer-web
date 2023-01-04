@@ -59,6 +59,10 @@
           @media screen and (max-height: 920px) {
             margin: 26.5px 0;
           }
+
+          @media screen and (max-width: 680px) {
+            font-size: 23.33px;
+          }
         }
 
         h1 {
@@ -71,13 +75,20 @@
           @media screen and (max-width: 920px) {
             font-size: 45px;
           }
+
+          @media screen and (max-width: 680px) {
+            max-width: 380px;
+            font-size: 43.33px;
+          }
         }
 
         .btns {
           display: flex;
           gap: 17px;
+
           @media screen and (max-width: 680px) {
-            display: none;
+            flex-direction: column;
+            max-width: 450px;
           }
 
           a {
@@ -96,6 +107,11 @@
             border: 3px solid var(--font);
             border-radius: 30px;
 
+            @media screen and (max-width: 680px) {
+              padding: 20px 0;
+              text-align: center;
+            }
+
             &:hover {
               color: var(--font);
               background-color: transparent;
@@ -104,6 +120,10 @@
 
             &.large_btn {
               padding: 20px 88.5px;
+
+              @media screen and (max-width: 680px) {
+                padding: 20px 0;
+              }
             }
           }
         }
