@@ -6,6 +6,7 @@ import Header from 'components/Header'
 import Footer from 'components/Footer'
 import Home from 'pages/Home'
 import Zen from 'pages/Zen'
+import Team from 'pages/Team'
 import './App.css'
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
           <Switch location={location}>
             <Route exact path="/" component={Home} />
             <Route exact path="/zen" component={Zen} />
+            <Route exact path="/team" component={Team} />
             <Redirect exact from="/*" to="/" />
           </Switch>
         </CSSTransition>
