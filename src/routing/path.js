@@ -3,6 +3,7 @@ const desktop = {
     home: '/',
     notFound: '/notFound',
     homeProduct: '/product',
+    team: '/team',
   },
   withAuth: {},
 }
