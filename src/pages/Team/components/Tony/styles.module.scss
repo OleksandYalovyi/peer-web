@@ -1,0 +1,72 @@
+.section {
+  width: 100%;
+  max-width: 1270px;
+  padding: 125.5px 0;
+
+  @media screen and (max-width: 1300px) {
+    padding: 80px 20px;
+  }
+
+  .top {
+    display: flex;
+    gap: 71px;
+
+    @media screen and (max-width: 1300px) {
+      flex-direction: column-reverse;
+      align-items: center;
+    }
+
+    .quote {
+      padding: 0 60px;
+      color: #939393;
+      font-size: 16px;
+      line-height: 25px;
+      text-align: center;
+
+      @media screen and (max-width: 1300px) {
+        max-width: 620px;
+        padding: 0px;
+      }
+    }
+
+    .video {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      max-width: 620px;
+      height: 330px;
+      margin-bottom: 74.5px;
+      background-color: var(--font);
+      background-image: url('./tony.png');
+      background-size: cover;
+      border-radius: 20px;
+      cursor: pointer;
+
+      @media screen and (max-width: 1300px) {
+        margin: 0 auto;
+        margin-bottom: 74.5px;
+        background-position: center;
+      }
+    }
+
+    .description {
+      max-width: 575px;
+      .title {
+        margin-bottom: 58px;
+        color: var(--font);
+        font-size: 40px;
+        line-height: 50px;
+      }
+
+      .content {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        color: #939393;
+        font-size: 20px;
+        line-height: 30px;
+      }
+    }
+  }
+}
