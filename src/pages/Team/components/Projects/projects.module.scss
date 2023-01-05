@@ -23,6 +23,7 @@
     display: flex;
     flex-wrap: wrap;
     gap: 36.5px;
+    margin-bottom: 232px;
 
     @media screen and (max-width: 980px) {
       justify-content: center;
@@ -111,6 +112,38 @@
           }
         }
       }
+    }
+  }
+  .join_container {
+    max-width: 490px;
+    margin: 0 auto;
+    margin-bottom: 232px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .title {
+      font-family: Turbine-Regular, sans-serif;
+      font-size: 50px;
+      color: #fff;
+      margin-bottom: 56.5px;
+    }
+
+    .button {
+      font-family: Turbine-Bold, sans-serif;
+      font-size: 18px;
+      letter-spacing: 3.6px;
+      color: #000;
+      text-transform: uppercase;
+      width: 331.5px;
+      height: 60px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 60px;
+      border: solid 1px #000;
+      background-color: #fff;
+      cursor: pointer;
     }
   }
 }
