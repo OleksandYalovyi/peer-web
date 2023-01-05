@@ -34,7 +34,7 @@ const data = [
   {
     title: 'About',
     links: [
-      { name: 'Team', to: '/team' },
+      { name: 'Team', to: '/team', isInternal: true },
       { name: 'Brand Book', to: '/brandbook' },
       { name: 'White Papers', to: '/whitepapers' },
     ],
@@ -122,14 +122,19 @@ const Dropdown = ({ list, children, isShow, onClose, burgerRef }) => {
             >
               <Typography className={styles.mui_typography}>{title}</Typography>
             </AccordionSummary>
-            {links.map(({ name, to, logo }) => (
+            {links.map(({ name, to, logo, isInternal }) => (
               <div
                 onClick={() => {
                   setClickedLink(logo)
                   setTimeout(() => setClickedLink(''), 500)
                 }}
               >
-                <a href={to} target="_blank" className={styles.link} rel="noreferrer">
+                <a
+                  href={to}
+                  target={isInternal ? '_self' : '_blank'}
+                  className={styles.link}
+                  rel="noreferrer"
+                >
                   <AccordionDetails className={styles.details}>
                     <Typography className={styles.mui_details_typography}>
                       <div

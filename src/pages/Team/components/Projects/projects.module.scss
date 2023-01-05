@@ -1,0 +1,128 @@
+.section {
+  width: 100%;
+  padding: 180px 20px;
+  color: #fff;
+
+  .title {
+    margin: 0 auto;
+    max-width: 1320px;
+    text-align: center;
+    font-family: Turbine-Bold, sans-serif;
+    font-size: 60px;
+    color: #fff;
+    margin-bottom: 144px;
+
+    @media screen and (max-width: 680px) {
+    font-size: 40px;
+    }
+    
+  }
+  .cards_container {
+    max-width: 1320px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 36.5px;
+
+    @media screen and (max-width: 980px) {
+      justify-content: center;
+    }
+
+    .item {
+      display: flex;
+      position: relative;
+      justify-content: space-around;
+      text-decoration: none;
+      width: 48%;
+      border: 1px solid #333;
+      border-radius: 35px;
+      padding: 57.5px 55px 55px 40px;
+
+   
+
+      @media screen and (max-width: 980px) {
+        justify-content: center;
+        width: 70%;
+      }
+
+      @media screen and (max-width: 680px) {
+        justify-content: center;
+        width: 100%;
+        padding: 40px 20px;
+      }
+
+      &:hover {
+        animation: noise 1s linear infinite;
+        background: url('../../../../assets/team/noise.png');
+        background-blend-mode: luminosity;
+        background-color: #222;
+
+        // &::after{
+        //   content: "";
+        //   width:  70%;
+        //   height: 98%;;
+        //   position: absolute;
+        //   top:  20px;
+        //   left: 0px;
+        //   margin: 0 auto;
+        //   z-index: -1;
+        //   -webkit-filter: blur(20px);
+        //     filter: blur(20px);
+        //   background-image: linear-gradient( 135deg, #FEC163 10%, #DE4313 100%);
+        // }
+      }
+
+      .content_container {
+        margin-right: 20px;
+        max-width: 335px;
+        .type {
+          font-family: Turbine-Regular, sans-serif;
+          font-size: 20px;
+          margin-bottom: 16px;
+          color: rgba(255, 255, 255, 0.43);
+        }
+        .name {
+          font-family: Turbine-Bold, sans-serif;
+          font-size: 30px;
+          color: #fff;
+          margin-bottom: 34.5px;
+        }
+        .content {
+          font-family: Turbine-Regular, sans-serif;
+          font-size: 18px;
+          color: #939393;
+        }
+      }
+
+      .icon_wrapper {
+        width: 115px;
+        min-width: 115px;
+        
+        @media screen and (max-width: 680px) {
+          width: 90px;
+          min-width: 90px;
+        }
+        img {
+          height: auto;
+          margin: 0 auto;
+          display: block;
+          @media screen and (max-width: 680px) {
+            transform: scale(0.7);
+          }
+        }
+      }
+    }
+  }
+}
+
+@keyframes noise {
+  0% {
+    background-position: 10% 0;
+  }
+  50% {
+    background-position: 91% 100%;
+  }
+  100% {
+    background-position: 10% 0;
+  }
+}

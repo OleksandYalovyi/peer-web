@@ -99,14 +99,17 @@ const LandingHeader = () => {
                 {
                   name: 'Team',
                   to: '/team',
+                  router: true,
                 },
                 {
                   name: 'Brand Book',
                   to: '/brandbook',
+                  router: true,
                 },
                 {
                   name: 'White Papers',
                   to: '/whitepapers',
+                  router: true,
                 },
               ]}
             />
