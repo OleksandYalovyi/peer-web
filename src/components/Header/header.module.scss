@@ -112,6 +112,12 @@
           left: -33px;
           min-width: 255px;
 
+          .link {
+            display: flex;
+            align-items: center;
+            gap: 13px;
+          }
+
           a {
             line-height: 13px;
             font-family: Turbine-Light, sans-serif;

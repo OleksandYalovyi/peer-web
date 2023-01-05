@@ -7,12 +7,17 @@
     padding: 80px 20px;
   }
 
+  @media screen and (max-width: 600px) {
+    padding: 52.66px 20px 73.33px;
+  }
+
   .top {
     display: flex;
     gap: 71px;
 
     @media screen and (max-width: 1300px) {
-      flex-direction: column-reverse;
+      flex-direction: column;
+      gap: 80px;
       align-items: center;
     }
 
@@ -25,7 +30,9 @@
 
       @media screen and (max-width: 1300px) {
         max-width: 620px;
-        padding: 0px;
+        padding: 0 34px;
+        font-size: 10.3px;
+        line-height: 16.66px;
       }
     }
 
@@ -41,12 +48,24 @@
       background-image: url('./tony.png');
       background-size: cover;
       border-radius: 20px;
-      cursor: pointer;
+
+      .play_icon_wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        cursor: pointer;
+      }
 
       @media screen and (max-width: 1300px) {
         margin: 0 auto;
-        margin-bottom: 74.5px;
+        margin-bottom: 33px;
         background-position: center;
+      }
+      @media screen and (max-width: 600px) {
+        max-height: 187.66px;
       }
     }
 
@@ -57,6 +76,14 @@
         color: var(--font);
         font-size: 40px;
         line-height: 50px;
+        @media screen and (max-width: 600px) {
+          margin-bottom: 60.33px;
+          font-size: 26.66px;
+          line-height: 33.33px;
+        }
+      }
+      @media screen and (max-width: 600px) {
+        padding-left: 20px;
       }
 
       .content {
@@ -66,6 +93,11 @@
         color: #939393;
         font-size: 20px;
         line-height: 30px;
+
+        @media screen and (max-width: 600px) {
+          font-size: 16.66px;
+          line-height: 23.33px;
+        }
       }
     }
   }
