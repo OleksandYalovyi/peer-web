@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import React, { useEffect, useRef, useState } from 'react'
 import cls from 'classnames'
 import T from 'prop-types'
@@ -7,6 +8,7 @@ import MuiAccordionSummary from '@mui/material/AccordionSummary'
 import MuiAccordionDetails from '@mui/material/AccordionDetails'
 import Typography from '@mui/material/Typography'
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore'
+import { NavLink } from 'react-router-dom'
 import styles from './accordion.module.scss'
 import MobileMenuLogo from '../../../../Icons/MobileMenuLogo'
 
@@ -16,17 +18,16 @@ const data = [
     links: [
       { name: 'Social', to: '/social' },
       { name: 'Development', to: '/development' },
-      { name: 'Papers', to: '/papers' },
     ],
   },
 
   {
     title: 'Products',
     links: [
-      { name: 'Peer', to: 'https://peerclub.com', logo: 'PEER' },
+      { name: 'Peer', to: '/placeholder', logo: 'PEER', withRouter: true },
       { name: 'Zen', to: '/zen', logo: 'ZEN' },
       { name: 'Omni', to: 'https://peermultichain.com', logo: 'OMNI' },
-      { name: 'Index', to: 'https://indexwetrust.com', logo: 'INDEX' },
+      { name: 'Index', to: '/placeholder', logo: 'INDEX', withRouter: true },
       { name: 'Labs', to: 'https://labs.peer.inc', logo: 'LABS' },
     ],
   },
@@ -63,6 +64,22 @@ const Dropdown = ({ list, children, isShow, onClose, burgerRef }) => {
       document.removeEventListener('mousedown', handleClickOutside)
     }
   }, [listRef])
+
+  const Link = ({ to, withRouter, isInternal, ...linkProps }) =>
+    withRouter ? (
+      <NavLink to={to} onClick={onClose} className={styles.link}>
+        {linkProps.children}
+      </NavLink>
+    ) : (
+      <a
+        href={to}
+        target={isInternal ? '_self' : '_blank'}
+        className={styles.link}
+        rel="noreferrer"
+      >
+        {linkProps.children}
+      </a>
+    )
 
   const Accordion = styled((props) => (
     <MuiAccordion disableGutters elevation={0} square {...props} />
@@ -122,19 +139,14 @@ const Dropdown = ({ list, children, isShow, onClose, burgerRef }) => {
             >
               <Typography className={styles.mui_typography}>{title}</Typography>
             </AccordionSummary>
-            {links.map(({ name, to, logo, isInternal }) => (
+            {links.map(({ name, to, logo, withRouter, isInternal }) => (
               <div
                 onClick={() => {
                   setClickedLink(logo)
                   setTimeout(() => setClickedLink(''), 500)
                 }}
               >
-                <a
-                  href={to}
-                  target={isInternal ? '_self' : '_blank'}
-                  className={styles.link}
-                  rel="noreferrer"
-                >
+                <Link to={to} withRouter={withRouter} isInternal={isInternal}>
                   <AccordionDetails className={styles.details}>
                     <Typography className={styles.mui_details_typography}>
                       <div
@@ -147,7 +159,7 @@ const Dropdown = ({ list, children, isShow, onClose, burgerRef }) => {
                       </div>
                     </Typography>
                   </AccordionDetails>
-                </a>
+                </Link>
               </div>
             ))}
           </Accordion>

@@ -7,6 +7,7 @@ import Footer from 'components/Footer'
 import Home from 'pages/Home'
 import Zen from 'pages/Zen'
 import Team from 'pages/Team'
+import Placeholder from 'pages/Placeholder'
 import './App.css'
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
             <Route exact path="/" component={Home} />
             <Route exact path="/zen" component={Zen} />
             <Route exact path="/team" component={Team} />
+            <Route exact path="/placeholder" component={Placeholder} />
             <Redirect exact from="/*" to="/" />
           </Switch>
         </CSSTransition>

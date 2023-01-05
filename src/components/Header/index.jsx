@@ -77,10 +77,6 @@ const LandingHeader = () => {
                   name: 'Development',
                   to: '/development',
                 },
-                {
-                  name: 'White Papers',
-                  to: '/white_papers',
-                },
               ]}
             />
             <NavItems
