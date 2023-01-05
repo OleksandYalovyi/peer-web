@@ -116,9 +116,9 @@ const LandingHeader = () => {
           </nav>
         )}
         <div className={styles.right_container}>
-          {!isMobile && (
+          {/* {!isMobile && (
             <>
-              {/* <NavLink
+              <NavLink
                 to="/"
                 className={cls(styles.text_link, {
                   // [styles.active]: pathname === '/' && !hovered,
@@ -127,7 +127,7 @@ const LandingHeader = () => {
                 onMouseLeave={() => setHovered('')}
               >
                 Sign In
-              </NavLink> */}
+              </NavLink>
 
               <Dropdown
                 list={{
@@ -171,7 +171,7 @@ const LandingHeader = () => {
                 </div>
               </Dropdown>
             </>
-          )}
+          )} */}
           {isMobile && <MobileMenu isMenu={isMenu} setIsMenuOpen={setIsMenuOpen} />}
         </div>
       </div>
