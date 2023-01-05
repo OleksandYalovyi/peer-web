@@ -7,6 +7,7 @@ import { US } from 'country-flag-icons/react/3x2'
 import { useTheme } from 'context/theme'
 import useCurrentWidth from 'hooks/useCurrentWidth'
 import Dropdown from 'components/Dropdown/index'
+import MobileMenuLogo from 'components/Icons/MobileMenuLogo/index'
 import Logo from '../Icons/Logo'
 import ArrowDown from '../Icons/ArrowDown'
 import ThemeSelector from '../Icons/Theme'
@@ -14,28 +15,53 @@ import MobileMenu from './MobileMenu'
 
 import styles from './header.module.scss'
 
-const NavItems = ({ name, links }) => (
-  <div className={styles.nav_item}>
-    {name}
-    <div className={styles.nav_list}>
-      {links.map((l) =>
-        l.router ? (
-          <NavLink to={l.to}>{l.name}</NavLink>
-        ) : (
-          <a href={l.to} target="_blank" rel="noreferrer">
-            {l.name}
-          </a>
-        ),
-      )}
+const NavItems = ({ name, links }) => {
+  const [hovered, setHovered] = useState('')
+
+  return (
+    <div className={styles.nav_item}>
+      {name}
+      <div className={styles.nav_list}>
+        {links.map((l) => (
+          <>
+            {l.withRouter ? (
+              <NavLink
+                to={l.to}
+                className={styles.link}
+                onMouseEnter={() => setHovered(l.logo)}
+                onMouseLeave={() => setHovered('')}
+              >
+                {name === 'Products' && (
+                  <MobileMenuLogo type={l.logo} isHovered={hovered === l.logo} />
+                )}
+                {l.name}
+              </NavLink>
+            ) : (
+              <a
+                href={l.to}
+                target="_blank"
+                rel="noreferrer"
+                className={styles.link}
+                onMouseEnter={() => setHovered(l.logo)}
+                onMouseLeave={() => setHovered('')}
+              >
+                {name === 'Products' && (
+                  <MobileMenuLogo type={l.logo} isHovered={hovered === l.logo} />
+                )}
+                {l.name}
+              </a>
+            )}
+          </>
+        ))}
+      </div>
     </div>
-  </div>
-)
+  )
+}
 
 const LandingHeader = () => {
   const width = useCurrentWidth()
   const { scrollDirection } = useScroll()
   const [isMenu, setIsMenuOpen] = useState(false)
-  const [hovered, setHovered] = useState('')
 
   const { isLight, switchTheme } = useTheme()
   const { pathname } = useLocation()
@@ -82,10 +108,11 @@ const LandingHeader = () => {
             <NavItems
               name="Products"
               links={[
-                { name: 'Peer', to: 'peerblockchain' },
-                { name: 'ICX', to: 'https://icx.peer.inc', router: false },
-                { name: 'Peer Blockchain', to: 'https://explorer.peer.inc', router: false },
-                { name: 'Peer Labs', to: 'peerlabs' },
+                { name: 'Peer', to: '/placeholder', logo: 'PEER', withRouter: true },
+                { name: 'Zen', to: '/zen', logo: 'ZEN' },
+                { name: 'Omni', to: 'https://peermultichain.com', logo: 'OMNI' },
+                { name: 'Index', to: '/placeholder', logo: 'INDEX', withRouter: true },
+                { name: 'Labs', to: 'https://labs.peer.inc', logo: 'LABS' },
               ]}
             />
             <NavItems

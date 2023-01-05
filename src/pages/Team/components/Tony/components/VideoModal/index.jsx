@@ -31,10 +31,16 @@ const VideoModal = ({ isOpen, onClose }) => {
     }
   }, [videoRef])
 
+  const isMobile = width < 1170
+
   return (
     <div className={cls(isOpen && styles.scroll, styles.wrapper)}>
       <div className={styles.modal} ref={videoRef}>
-        <YouTube videoId="yyrSIOmPfTM" opts={videoOptions} />;
+        <div
+          className={cls(styles.close, isMobile && styles.mobile_close)}
+          onClick={() => onClose()}
+        />
+        <YouTube videoId="yyrSIOmPfTM" opts={videoOptions} />
       </div>
     </div>
   )

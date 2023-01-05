@@ -11,20 +11,22 @@ const Tony = () => {
       {isOpen && <VideoModal onClose={() => setOpen(false)} />}
       <div className={styles.top}>
         <div>
-          <div className={styles.video} onClick={() => setOpen(true)}>
-            <img
-              src={Play}
-              title="Metaverse Rising, featuring Tony Tran"
-              alt="Metaverse Rising, featuring Tony Tran"
-              width={30}
-              height={29}
-              className={styles.play_button}
-            />
+          <div className={styles.video}>
+            <div className={styles.play_icon_wrapper} onClick={() => setOpen(true)}>
+              <img
+                src={Play}
+                title="Metaverse Rising, featuring Tony Tran"
+                alt="Metaverse Rising, featuring Tony Tran"
+                width={30}
+                height={29}
+                className={styles.play_button}
+              />
+            </div>
           </div>
           <div className={styles.quote}>
-            “For 3 decades, we’ve made information available at the tip of anyone’s fingertips. The
-            next revolution is making information available at first sight. That’s what we’re all
-            about.”
+            “We’re essentially creating Tron, except we won’t have to digitize our matter. It’s the
+            other way around—we need to analogize the digital world and bring it here. This is
+            entirely possible today.”
             <p>Tony Tran, Founder & CEO</p>
           </div>
         </div>
