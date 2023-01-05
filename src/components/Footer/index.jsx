@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { NavLink, useLocation, Link } from 'react-router-dom'
 import cls from 'classnames'
 import useScroll from 'hooks/useScroll'
-import { US } from 'country-flag-icons/react/3x2'
+// import { US } from 'country-flag-icons/react/3x2'
 import { useTheme } from 'context/theme'
 import useCurrentWidth from 'hooks/useCurrentWidth'
 import Logo from 'components/Icons/LogoIcon'
@@ -13,7 +13,7 @@ import Telegram from 'components/Icons/Share/Telegram'
 import Linkedin from 'components/Icons/Share/Linkedin'
 import Privacy from 'assets/PeerPrivacyPolicy.pdf'
 import Terms from 'assets/Peer-TermsandConditions.pdf'
-import Dropdown from 'components/Dropdown/index'
+// import Dropdown from 'components/Dropdown/index'
 import styles from './footer.module.scss'
 
 const ShareData = [
@@ -117,7 +117,7 @@ const Footer = () => {
               <US title="United States" className={styles.icon} />
             </div>
           </div> */}
-          <div className={styles.mob}>
+          {/* <div className={styles.mob}>
             <Dropdown
               list={{
                 type: 'countries',
@@ -159,7 +159,7 @@ const Footer = () => {
                 </div>
               </div>
             </Dropdown>
-          </div>
+          </div> */}
         </div>
       </div>
     </footer>

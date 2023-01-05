@@ -99,23 +99,26 @@ const LandingHeader = () => {
                 {
                   name: 'Team',
                   to: '/team',
+                  router: true,
                 },
                 {
                   name: 'Brand Book',
                   to: '/brandbook',
+                  router: true,
                 },
                 {
                   name: 'White Papers',
                   to: '/whitepapers',
+                  router: true,
                 },
               ]}
             />
           </nav>
         )}
         <div className={styles.right_container}>
-          {!isMobile && (
+          {/* {!isMobile && (
             <>
-              {/* <NavLink
+              <NavLink
                 to="/"
                 className={cls(styles.text_link, {
                   // [styles.active]: pathname === '/' && !hovered,
@@ -124,7 +127,7 @@ const LandingHeader = () => {
                 onMouseLeave={() => setHovered('')}
               >
                 Sign In
-              </NavLink> */}
+              </NavLink>
 
               <Dropdown
                 list={{
@@ -168,7 +171,7 @@ const LandingHeader = () => {
                 </div>
               </Dropdown>
             </>
-          )}
+          )} */}
           {isMobile && <MobileMenu isMenu={isMenu} setIsMenuOpen={setIsMenuOpen} />}
         </div>
       </div>

@@ -4,7 +4,11 @@ import styles from './main.module.scss'
 const Main = () => {
   const [state, setState] = useState(null)
 
-  return <section className={styles.section}>Team page</section>
+  return (
+    <section className={styles.section}>
+      <></>
+    </section>
+  )
 }
 
 export default React.memo(Main)

@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react'
-import { NavLink } from 'react-router-dom'
 import PropTypes from 'prop-types'
 import Main from './components/Main'
 import Tony from './components/Tony/index'
-import Creators from './components/Creators/index'
+import Creators from './components/Creators'
+import Projects from './components/Projects'
 import styles from './team.module.scss'
 
 const Team = () => (
@@ -13,6 +13,8 @@ const Team = () => (
     <Tony />
     <div className={styles.separator} />
     <Creators />
+    <div className={styles.separator} />
+    <Projects />
     <div className={styles.separator} />
   </section>
 )
