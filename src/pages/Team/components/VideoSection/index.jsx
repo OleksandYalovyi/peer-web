@@ -41,7 +41,7 @@ const VideoSection = () => {
               enhances and enriches our daily lives.
             </p>
             <p>
-              o achieve this, Peer is developing a range of innovative products that use
+              To achieve this, Peer is developing a range of innovative products that use
               cutting-edge technologies like augmented reality and computer vision to allow people
               to see, share, and interact with the web in the real world. By using the physical
               world as a starting point, he believes we can create a new world of boundless
