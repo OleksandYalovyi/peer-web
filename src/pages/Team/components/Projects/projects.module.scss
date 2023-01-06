@@ -94,10 +94,12 @@
           font-family: Turbine-Regular, sans-serif;
           font-size: 18px;
           color: #939393;
+          line-height: 1.39;
 
           @media screen and (max-width: 680px) {
-            font-size: 8px;
+            font-size: 10.7px;
             margin-bottom: 18.3px;
+            line-height: 1.25;
           }
         }
       }

@@ -1,5 +1,6 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
+import T from 'prop-types'
 import peer from 'assets/team/peer.svg'
 import index from 'assets/team/index.svg'
 import pmc from 'assets/team/pmc.svg'
@@ -17,6 +18,9 @@ const data = [
       src: peer,
       width: 101.5,
     },
+    link: '/placeholder',
+    withRouter: true,
+    isInternal: true,
   },
   {
     type: 'Wallet',
@@ -27,6 +31,9 @@ const data = [
       src: zen,
       width: 105.5,
     },
+    link: '/placeholder',
+    withRouter: true,
+    isInternal: true,
   },
   {
     type: 'Blockchain',
@@ -37,6 +44,10 @@ const data = [
       src: pmc,
       width: 108,
     },
+    // link: 'https://peermultichain.com',
+    link: '/placeholder',
+    withRouter: true,
+    isInternal: true,
   },
   {
     type: 'Exchange',
@@ -47,15 +58,29 @@ const data = [
       src: index,
       width: 110.5,
     },
+    link: '/placeholder',
+    withRouter: true,
+    isInternal: true,
   },
 ]
+
+const Link = ({ to, withRouter, isInternal, ...linkProps }) =>
+  withRouter ? (
+    <NavLink to={to} className={styles.item}>
+      {linkProps.children}
+    </NavLink>
+  ) : (
+    <a href={to} target={isInternal ? '_self' : '_blank'} className={styles.item} rel="noreferrer">
+      {linkProps.children}
+    </a>
+  )
 
 const Projects = () => (
   <section className={styles.section}>
     <div className={styles.title}>What we’re building</div>
     <div className={styles.cards_container}>
-      {data.map(({ type, name, content, icon }) => (
-        <a className={styles.item} href="#" target="_blank">
+      {data.map(({ type, name, content, icon, link, withRouter, isInternal }) => (
+        <Link to={link} withRouter={withRouter} isInternal={isInternal}>
           <div className={styles.content_container}>
             <div className={styles.type}>{type}</div>
             <div className={styles.name}>{name}</div>
@@ -69,7 +94,7 @@ const Projects = () => (
               alt=""
             />
           </div>
-        </a>
+        </Link>
       ))}
     </div>
     <div className={styles.join_container}>
@@ -82,3 +107,9 @@ const Projects = () => (
 )
 
 export default React.memo(Projects)
+
+Link.propTypes = {
+  to: T.string,
+  withRouter: T.bool,
+  isInternal: T.bool,
+}
