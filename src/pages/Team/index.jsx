@@ -5,12 +5,9 @@ import VideoSection from './components/VideoSection'
 import Creators from './components/Creators'
 import Projects from './components/Projects'
 import styles from './team.module.scss'
-import The from './components/The/index'
 
 const Team = () => (
   <section className={styles.page_container}>
-    <The />
-    <div className={styles.separator} />
     <Main />
     <div className={styles.separator} />
     <VideoSection />
@@ -18,7 +15,6 @@ const Team = () => (
     <Creators />
     <div className={styles.separator} />
     <Projects />
-    <div className={styles.separator} />
   </section>
 )
 

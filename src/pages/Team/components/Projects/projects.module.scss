@@ -2,6 +2,10 @@
   width: 100%;
   padding: 180px 20px;
   color: #fff;
+  
+  @media screen and (max-width: 680px) {
+    padding: 77.3px 20px;
+  }
 
   .title {
     margin: 0 auto;
@@ -11,9 +15,10 @@
     font-size: 60px;
     color: #fff;
     margin-bottom: 144px;
-
+    
     @media screen and (max-width: 680px) {
-    font-size: 40px;
+      font-size: 30px;
+      margin-bottom: 51px;
     }
     
   }
@@ -24,9 +29,10 @@
     flex-wrap: wrap;
     gap: 36.5px;
     margin-bottom: 232px;
-
+    
     @media screen and (max-width: 980px) {
       justify-content: center;
+      margin-bottom: 128.7px;
     }
 
     .item {
@@ -49,7 +55,7 @@
       @media screen and (max-width: 680px) {
         justify-content: center;
         width: 100%;
-        padding: 40px 20px;
+        padding: 22.6px 20.7px;
       }
 
       &:hover {
@@ -57,20 +63,6 @@
         background: url('../../../../assets/team/noise.png');
         background-blend-mode: luminosity;
         background-color: #222;
-
-        // &::after{
-        //   content: "";
-        //   width:  70%;
-        //   height: 98%;;
-        //   position: absolute;
-        //   top:  20px;
-        //   left: 0px;
-        //   margin: 0 auto;
-        //   z-index: -1;
-        //   -webkit-filter: blur(20px);
-        //     filter: blur(20px);
-        //   background-image: linear-gradient( 135deg, #FEC163 10%, #DE4313 100%);
-        // }
       }
 
       .content_container {
@@ -81,17 +73,32 @@
           font-size: 20px;
           margin-bottom: 16px;
           color: rgba(255, 255, 255, 0.43);
+          
+          @media screen and (max-width: 680px) {
+            font-size: 10.7px;
+            margin-bottom: 8.3px;
+          }
         }
         .name {
           font-family: Turbine-Bold, sans-serif;
           font-size: 30px;
           color: #fff;
           margin-bottom: 34.5px;
+
+          @media screen and (max-width: 680px) {
+            font-size: 16px;
+            margin-bottom: 18.3px;
+          }
         }
         .content {
           font-family: Turbine-Regular, sans-serif;
           font-size: 18px;
           color: #939393;
+
+          @media screen and (max-width: 680px) {
+            font-size: 8px;
+            margin-bottom: 18.3px;
+          }
         }
       }
 
@@ -108,7 +115,7 @@
           margin: 0 auto;
           display: block;
           @media screen and (max-width: 680px) {
-            transform: scale(0.7);
+            transform: scale(0.6);
           }
         }
       }
@@ -127,6 +134,11 @@
       font-size: 50px;
       color: #fff;
       margin-bottom: 56.5px;
+      
+      @media screen and (max-width: 680px) {
+        font-size: 30px;
+        margin-bottom: 38.3px;
+      }
     }
 
     .button {
@@ -144,6 +156,13 @@
       border: solid 1px #000;
       background-color: #fff;
       cursor: pointer;
+      
+      @media screen and (max-width: 680px) {
+        width: 221px;
+        height: 40px;
+        font-size: 12px;
+        letter-spacing: 1.2px
+      }
     }
   }
 }
