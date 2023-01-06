@@ -24,7 +24,7 @@ const NavItems = ({ name, links }) => {
       <div className={styles.nav_list}>
         {links.map((l) => (
           <>
-            {l.withRouter ? (
+            {l.router ? (
               <NavLink
                 to={l.to}
                 className={styles.link}
@@ -95,23 +95,17 @@ const LandingHeader = () => {
             <NavItems
               name="Community"
               links={[
-                {
-                  name: 'Social',
-                  to: '/social',
-                },
-                {
-                  name: 'Development',
-                  to: '/development',
-                },
+                { name: 'Peer Community', to: '/' },
+                { name: 'Docs', to: '/' },
               ]}
             />
             <NavItems
               name="Products"
               links={[
-                { name: 'Peer', to: '/placeholder', logo: 'PEER', withRouter: true },
-                { name: 'Zen', to: '/zen', logo: 'ZEN' },
+                { name: 'Peer', to: '/placeholder', logo: 'PEER', router: true },
+                { name: 'Zen', to: '/zen', logo: 'ZEN', router: true },
                 { name: 'Omni', to: 'https://peermultichain.com', logo: 'OMNI' },
-                { name: 'Index', to: '/placeholder', logo: 'INDEX', withRouter: true },
+                { name: 'Index', to: '/placeholder', logo: 'INDEX', router: true },
                 { name: 'Labs', to: 'https://labs.peer.inc', logo: 'LABS' },
               ]}
             />

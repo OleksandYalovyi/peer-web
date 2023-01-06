@@ -3,7 +3,7 @@ import VideoModal from './components/VideoModal/index'
 import Play from '../../../../assets/play.svg'
 import styles from './styles.module.scss'
 
-const Tony = () => {
+const VideoSection = () => {
   const [isOpen, setOpen] = useState(false)
 
   return (
@@ -54,4 +54,4 @@ const Tony = () => {
   )
 }
 
-export default React.memo(Tony)
+export default React.memo(VideoSection)
