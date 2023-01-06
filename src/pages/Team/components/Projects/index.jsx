@@ -1,4 +1,5 @@
 import React from 'react'
+import { NavLink } from 'react-router-dom'
 import peer from 'assets/team/peer.svg'
 import index from 'assets/team/index.svg'
 import pmc from 'assets/team/pmc.svg'
@@ -73,7 +74,9 @@ const Projects = () => (
     </div>
     <div className={styles.join_container}>
       <div className={styles.title}>Want to get involved?</div>
-      <div className={styles.button}>Join the community</div>
+      <NavLink to="/" className={styles.btn}>
+        Join the community
+      </NavLink>
     </div>
   </section>
 )

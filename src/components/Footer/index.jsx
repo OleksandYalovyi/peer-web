@@ -25,7 +25,7 @@ const ShareData = [
   {
     id: 2,
     name: 'Twitter',
-    link: 'https://twitter.com/peerpmc',
+    link: 'https://twitter.com/peerglobal',
   },
   {
     id: 3,
