@@ -16,8 +16,8 @@ const data = [
   {
     title: 'Community',
     links: [
-      { name: 'Social', to: '/social' },
-      { name: 'Development', to: '/development' },
+      { name: 'Peer Community', to: '/' },
+      { name: 'Docs', to: '/' },
     ],
   },
 
