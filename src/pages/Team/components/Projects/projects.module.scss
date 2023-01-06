@@ -141,27 +141,31 @@
       }
     }
 
-    .button {
+    .btn {
+      display: block;
+      box-sizing: border-box;
+      padding: 16px 34.5px;
+      color: var(--bg);
+      font-weight: bold;
       font-family: Turbine-Bold, sans-serif;
       font-size: 18px;
       letter-spacing: 3.6px;
-      color: #000;
       text-transform: uppercase;
-      width: 331.5px;
-      height: 60px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      text-decoration: none;
+      background-color: var(--font);
+      border: 3px solid var(--font);
       border-radius: 60px;
-      border: solid 1px #000;
-      background-color: #fff;
-      cursor: pointer;
-      
+
       @media screen and (max-width: 680px) {
-        width: 221px;
-        height: 40px;
         font-size: 12px;
-        letter-spacing: 1.2px
+        letter-spacing: 1.2px;
+        padding: 9.5px 33px;
+      }
+
+      &:hover {
+        color: var(--font);
+        background-color: transparent;
+        cursor: pointer;
       }
     }
   }
