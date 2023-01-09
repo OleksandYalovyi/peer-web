@@ -22,6 +22,7 @@
     }
 
     .quote {
+      max-width: 620px;
       padding: 0 60px;
       color: #939393;
       font-size: 16px;
@@ -29,7 +30,6 @@
       text-align: center;
 
       @media screen and (max-width: 1320px) {
-        max-width: 620px;
         padding: 0 34px;
         font-size: 10.3px;
         line-height: 16.66px;
@@ -45,7 +45,7 @@
       height: 330px;
       margin-bottom: 74.5px;
       background-color: var(--font);
-      background-image: url('./tony.png');
+      background-image: url('./video-preview.png');
       background-size: cover;
       border-radius: 20px;
 
