@@ -4,7 +4,7 @@ import T from 'prop-types'
 import cls from 'classnames'
 import styles from './forbes.module.scss'
 
-function Forbes({ hovered, width = '150', isLight, size }) {
+function Forbes({ hovered, width = '130', isLight, size }) {
   const renderColor = () => {
     if (hovered) return '#ffffff'
     if (isLight) return '#000000'

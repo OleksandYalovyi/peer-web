@@ -30,7 +30,7 @@ const Contacts = () => {
       </div>
       <div className={styles.item}>
         <div className={styles.icon}>
-          <img src={Pressroll} width="63.5" alt="" />
+          <img src={Pressroll} height="63.5" alt="" />
         </div>
         <div className={styles.content}>
           <div className={styles.info}>Press kit & media assets</div>
