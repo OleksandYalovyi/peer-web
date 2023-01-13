@@ -1,0 +1,15 @@
+.hovered {
+  cursor: pointer;
+  &:hover > .bw_circle {
+    fill: var(--bg);
+  }
+  &:hover > .bw_stars {
+    fill: var(--font);
+  }
+  &:hover > circle {
+    fill: var(--white);
+  }
+  &:hover > .stars {
+    fill: var(--blue);
+  }
+}

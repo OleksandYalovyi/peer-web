@@ -1,0 +1,25 @@
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1268px;
+  margin-bottom: 158px;
+  color: var(--font);
+
+  @media screen and (max-width: 1200px) {
+    flex-direction: column;
+    gap: 60px;
+    align-items: center;
+  }
+
+  .title {
+    font-size: 60px;
+    font-family: Turbine-Bold, 'san-serif';
+  }
+
+  .content {
+    max-width: 590px;
+    color: #939393;
+    font-size: 20px;
+  }
+}
