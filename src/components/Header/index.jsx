@@ -95,8 +95,8 @@ const LandingHeader = () => {
             <NavItems
               name="Community"
               links={[
-                { name: 'Peer Community', to: '/' },
-                { name: 'Docs', to: '/' },
+                { name: 'Peer Community', to: 'placeholder', router: true },
+                { name: 'Docs', to: 'placeholder', router: true },
               ]}
             />
             <NavItems

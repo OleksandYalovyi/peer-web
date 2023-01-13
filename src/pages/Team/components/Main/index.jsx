@@ -87,27 +87,27 @@ const Main = () => (
         </p>
       </div>
     </div>
-
     <div className={styles.row}>
       <div className={styles.col}>
         <h2>We’re from</h2>
         <p>
           Meta, Microsoft, Google, T-Mobile, Zenly, Magic Leap, Intel, Industrial Light and Magic,
-          CafePress, Snap.
+          CafePress, and Snap.
           <br />
           <br />
-          Most of us worked on
+          Our core team has developed the
           <a
             href="https://techcrunch.com/2022/05/18/social-maps-app-zenly-rolls-out-its-own-maps/"
             target="_blank"
             rel="noreferrer"
           >
-            Zenly’s social 3D maps ecosystem
-          </a>
-          leading to 160M downloads worldwide and 45M daily active users. Some have worked on
-          globally known hardware products such as the
+            Zenly's 3D map
+          </a>{' '}
+          , which has been downloaded 160 million times worldwide and boasts 45 million daily active
+          users. In addition, some of us have worked on globally recognized hardware products such
+          as the
           <a href="https://youtu.be/xNqs_S-zEBY?t=99" target="_blank" rel="noreferrer">
-            Leap Motion Controller
+            Leap Motion Controller and
           </a>
           and
           <a href="https://youtu.be/y6SKWBX2GKM?t=13" target="_blank" rel="noreferrer">

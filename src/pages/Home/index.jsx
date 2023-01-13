@@ -45,11 +45,11 @@ const Home = () => {
         <div className={styles.main} onMouseMove={onMouseMove}>
           <div className={styles.mixin}>
             <h4>Welcome</h4>
-            <h1>We’re building magical web3 products to enable crypto mass adoption.</h1>
+            <h1>We’re building a planet-scale AR environment to enable AI mass adoption.</h1>
 
             <div className={styles.btns}>
-              <NavLink to="/">Our team</NavLink>
-              <NavLink to="/" className={styles.large_btn}>
+              <NavLink to="team">Our team</NavLink>
+              <NavLink to="placeholder" className={styles.large_btn}>
                 White paper
               </NavLink>
             </div>
@@ -73,6 +73,9 @@ const Home = () => {
               <a className={styles.text}>
                 Peer Inc. Announces Public Sale of Its SEC Compliant Layer-1 Utility Coin
               </a>
+              <NavLink to="news" className={styles.link}>
+                More News
+              </NavLink>
             </div>
           </div>
         </div>
