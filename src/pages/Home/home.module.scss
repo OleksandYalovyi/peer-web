@@ -104,7 +104,7 @@
             text-transform: uppercase;
             text-decoration: none;
             background-color: var(--font);
-            border: 3px solid var(--font);
+            border: 2px solid var(--font);
             border-radius: 30px;
 
             @media screen and (max-width: 680px) {
@@ -189,7 +189,7 @@
         @include container_inside;
 
         .news_cld {
-          display: flex;
+          display: inline-flex;
           flex-direction: column;
           gap: 26px;
 
@@ -209,7 +209,22 @@
             font-family: Turbine-Regular, sans-serif;
             letter-spacing: 1.25px;
             cursor: pointer;
+            margin-bottom: 45px;
 
+            &:hover {
+              color: var(--link);
+            }
+          }
+
+          .link {
+            margin: 0;
+            color: #747474;
+            font-weight: normal;
+            font-size: 20px;
+            font-family: Turbine-Regular, sans-serif;
+            letter-spacing: 1px;
+            cursor: pointer;
+            // text-decoration: none;
             &:hover {
               color: var(--link);
             }
