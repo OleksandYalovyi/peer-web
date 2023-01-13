@@ -103,7 +103,7 @@ const LandingHeader = () => {
               name="Products"
               links={[
                 { name: 'Peer', to: '/placeholder', logo: 'PEER', router: true },
-                { name: 'Zen', to: '/zen', logo: 'ZEN', router: true },
+                { name: 'Zen', to: '/placeholder', logo: 'ZEN', router: true },
                 { name: 'Omni', to: 'https://peermultichain.com', logo: 'OMNI' },
                 { name: 'Index', to: '/placeholder', logo: 'INDEX', router: true },
                 { name: 'Labs', to: 'https://labs.peer.inc', logo: 'LABS' },

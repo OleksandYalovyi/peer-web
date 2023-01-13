@@ -31,7 +31,8 @@
       "error",
       {
         "code": 120,
-        "tabWidth": 4
+        "tabWidth": 4,
+        "ignoreUrls": true
       }
     ],
     "no-unused-vars": "warn",

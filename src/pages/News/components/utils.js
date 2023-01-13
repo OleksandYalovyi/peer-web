@@ -9,7 +9,7 @@ import Techcrunch from 'components/Icons/Partners/Techcrunch'
 const partners = [
   {
     title: 'geekwire',
-    to: '#',
+    to: 'https://www.geekwire.com/2022/seattle-startup-raises-14m-to-fuel-ambitious-plan-for-a-social-network-built-on-the-blockchain/',
     element: ({ hovered, width, isLight, size }) => (
       <Geekwire width={width} isLight={isLight} size={size} hovered={hovered} />
     ),
@@ -37,7 +37,7 @@ const partners = [
   },
   {
     title: 'decrypt',
-    to: '/#',
+    to: 'https://decrypt.co/101251/before-building-the-metaverse-blockchain-needs-an-operating-system',
     element: ({ hovered, width, isLight, size }) => (
       <Decrypt width={width} isLight={isLight} size={size} hovered={hovered} />
     ),
