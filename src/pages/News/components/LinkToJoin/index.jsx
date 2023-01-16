@@ -1,13 +1,14 @@
 import React from 'react'
+import { NavLink } from 'react-router-dom'
 
 import styles from './styles.module.scss'
 
 const LinkToJoin = () => (
-  <div className={styles.wrapper}>
+  <div className={styles.join_container}>
     <div className={styles.title}>Want to get involved?</div>
-    <a href="/" target="_blank" rel="noreferrer" className={styles.button}>
+    <NavLink to="/placeholder" className={styles.btn}>
       Join the community
-    </a>
+    </NavLink>
   </div>
 )
 
