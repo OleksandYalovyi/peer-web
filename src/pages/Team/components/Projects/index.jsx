@@ -117,7 +117,7 @@ const Projects = () => (
     </div>
     <div className={styles.join_container}>
       <div className={styles.title}>Want to get involved?</div>
-      <NavLink to="/" className={styles.btn}>
+      <NavLink to="/placeholder" className={styles.btn}>
         Join the community
       </NavLink>
     </div>
