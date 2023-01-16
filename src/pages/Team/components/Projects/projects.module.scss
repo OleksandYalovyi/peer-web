@@ -14,10 +14,25 @@
     font-family: Turbine-Bold, sans-serif;
     font-size: 60px;
     color: #fff;
-    margin-bottom: 144px;
+    margin-bottom: 55px;
     
     @media screen and (max-width: 680px) {
       font-size: 30px;
+      margin-bottom: 17px;
+    }
+    
+  }
+  .subtitle {
+    margin: 0 auto;
+    max-width: 1320px;
+    text-align: center;
+    font-family: Turbine-Regular, sans-serif;
+    font-size: 25px;
+    color: #939393;
+    margin-bottom: 202.5px;
+    
+    @media screen and (max-width: 680px) {
+      font-size: 16px;
       margin-bottom: 51px;
     }
     
@@ -27,7 +42,7 @@
     margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
-    gap: 36.5px;
+    gap: 6.5px;
     margin-bottom: 232px;
     
     @media screen and (max-width: 980px) {
@@ -35,89 +50,111 @@
       margin-bottom: 128.7px;
     }
 
-    .item {
+    .divider {
+      background-color: #1f1f1f;
+
+      @media screen and (max-width: 680px) {
+        display: none;
+      }
+      &.horizontal {
+        width: 100%;
+        height: 1px;
+        margin-bottom: 156px;
+      }
+      &.vertical {
+        width: 1px;
+        height: 200px;
+      }
+    }
+
+    .card_container {
       display: flex;
-      position: relative;
-      justify-content: space-around;
+      flex-direction: column;
+      align-items: center;
       text-decoration: none;
       width: 48%;
-      border: 1px solid #333;
       border-radius: 35px;
-      padding: 57.5px 55px 55px 40px;
-
-   
+      padding: 0px 55px;
+      margin-bottom: 150px;
 
       @media screen and (max-width: 980px) {
-        justify-content: center;
-        width: 70%;
+   
       }
 
       @media screen and (max-width: 680px) {
-        justify-content: center;
         width: 100%;
-        padding: 22.6px 20.7px;
+        margin-bottom: 87px;
       }
 
-      &:hover {
-        animation: noise 1s linear infinite;
-        background: url('../../../../assets/team/noise.png');
-        background-blend-mode: luminosity;
-        background-color: #222;
-      }
+      .content {
+        font-family: Turbine-Regular, sans-serif;
+        font-size: 18px;
+        font-weight: normal;
+        text-align: center;
+        color: #939393;
+        margin-bottom: 39px;
+        max-width: 360px;
 
-      .content_container {
-        margin-right: 20px;
-        max-width: 335px;
-        .type {
-          font-family: Turbine-Regular, sans-serif;
-          font-size: 20px;
-          margin-bottom: 16px;
-          color: rgba(255, 255, 255, 0.43);
-          
-          @media screen and (max-width: 680px) {
-            font-size: 10.7px;
-            margin-bottom: 8.3px;
-          }
+        @media screen and (max-width: 680px) {
+          font-size: 12px;
+          margin-bottom: 26px;
+          line-height: 1.25;
         }
-        .name {
-          font-family: Turbine-Bold, sans-serif;
-          font-size: 30px;
+      }
+
+      .item_link {
+        display: block;
+        text-decoration: none;
+        width: 100%;
+        max-width: 353px;
+        height: 70px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+        border-radius: 35px;
+        border: solid 2px #333;
+        background-color: #000;
+        font-family: Turbine-Regular, sans-serif;
+        font-size: 30px;
+        font-weight: normal;
+        text-align: center;
+        color: #939393;
+
+        &:hover {
+          animation: noise 1s linear infinite;
+          background: url('../../../../assets/team/noise.png');
+          background-blend-mode: luminosity;
+          background-color: #222;
           color: #fff;
-          margin-bottom: 34.5px;
-
-          @media screen and (max-width: 680px) {
-            font-size: 16px;
-            margin-bottom: 18.3px;
-          }
         }
-        .content {
-          font-family: Turbine-Regular, sans-serif;
-          font-size: 18px;
-          color: #939393;
-          line-height: 1.39;
 
-          @media screen and (max-width: 680px) {
-            font-size: 10.7px;
-            margin-bottom: 18.3px;
-            line-height: 1.25;
-          }
+        @media screen and (max-width: 680px) {
+          max-width: 235px;
+          height: 47px;
+          font-size: 20px;
+          border: solid 1.33px #333;
         }
       }
+
 
       .icon_wrapper {
         width: 115px;
+        height: 55px;
         min-width: 115px;
+        margin-bottom: 31px;
         
         @media screen and (max-width: 680px) {
           width: 90px;
           min-width: 90px;
+          margin-bottom: 0px;
         }
         img {
           height: auto;
           margin: 0 auto;
           display: block;
           @media screen and (max-width: 680px) {
-            transform: scale(0.6);
+            transform: scale(0.9);
           }
         }
       }
