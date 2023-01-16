@@ -19,7 +19,7 @@ const News = () => {
       <LatestNews />
       <div className={styles.separator} />
       <PartnerLinks />
-      {isMobile && <LinkToJoin />}
+      {/* {isMobile && <LinkToJoin />} */}
     </section>
   )
 }
