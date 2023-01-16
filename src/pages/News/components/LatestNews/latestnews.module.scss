@@ -10,10 +10,19 @@
     margin-bottom: 82px;
     padding: 170.5px 0 0 0;
 
+    @media screen and (max-width: 480px) {
+      margin-bottom: 73.66px;
+      padding-top: 46.33px;
+    }
+
     .news_cld {
       display: flex;
       flex-direction: column;
       gap: 26px;
+
+      @media screen and (max-width: 480px) {
+        gap: 17.33px;
+      }
 
       .title {
         margin: 0;
@@ -22,6 +31,10 @@
         font-size: 20px;
         font-family: Turbine-Regular, sans-serif;
         letter-spacing: 1px;
+
+        @media screen and (max-width: 480px) {
+          font-size: 13.33px;
+        }
       }
 
       .text {
@@ -31,6 +44,10 @@
         font-family: Turbine-Regular, sans-serif;
         letter-spacing: 1.25px;
         cursor: pointer;
+
+        @media screen and (max-width: 480px) {
+          font-size: 16.66px;
+        }
 
         &:hover {
           color: var(--link);

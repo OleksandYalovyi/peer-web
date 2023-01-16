@@ -1,7 +1,12 @@
 import React, { useState } from 'react'
+import useCurrentWidth from 'hooks/useCurrentWidth'
 import T from 'prop-types'
 
+import styles from './styles.module.scss'
+
 function PartnerLink({ link }) {
+  const width = useCurrentWidth()
+  const isMobile = width < 480
   const [hovered, setHovered] = useState('')
 
   return (
@@ -11,8 +16,9 @@ function PartnerLink({ link }) {
       rel="noreferrer"
       onMouseEnter={() => setHovered(link.title)}
       onMouseLeave={() => setHovered('')}
+      className={styles.link}
     >
-      {link.element({ hovered })}
+      {link.element({ hovered, size: isMobile && 'sm' })}
     </a>
   )
 }

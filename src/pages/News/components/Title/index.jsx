@@ -4,7 +4,7 @@ import styles from './title.module.scss'
 
 const Title = () => (
   <div className={styles.wrapper}>
-    <div className={styles.title}>News & Media</div>
+    <div className={styles.title}>News, Media, and Insights</div>
     <div className={styles.content}>
       This section includes articles, blog posts, and other media that highlight the innovative
       features and benefits of all that we ship. Stay informed about the latest developments at Peer

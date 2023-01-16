@@ -24,15 +24,13 @@ const VideoSection = () => {
             </div>
           </div>
           <div className={styles.quote}>
-            “We’re essentially creating Tron, except we won’t have to digitize our matter. It’s the
-            other way around—we need to analogize the digital world and bring it here. This is
-            entirely possible today.”
+            “The future of the web is information at first sight.”
             <p>Tony Tran, Founder & CEO</p>
           </div>
         </div>
         <div className={styles.description}>
           <div className={styles.title}>
-            Tony Tran is on a mission to transform the way people experience the digital world.{' '}
+            Peer is on a mission to transform the way people experience the digital world.
           </div>
           <div className={styles.content}>
             <p>
@@ -41,11 +39,11 @@ const VideoSection = () => {
               enhances and enriches our daily lives.
             </p>
             <p>
-              To achieve this, Peer is developing a range of innovative products that use
-              cutting-edge technologies like augmented reality and computer vision to allow people
-              to see, share, and interact with the web in the real world. By using the physical
-              world as a starting point, he believes we can create a new world of boundless
-              innovation and limitless possibilities.
+              Peer is developing a range of innovative products that use cutting-edge technologies
+              like augmented reality and computer vision to allow people to see, share, and interact
+              with the web in the real world. By using the physical world as a starting point, he
+              believes we can create a new world of boundless innovation and limitless
+              possibilities.
             </p>
           </div>
         </div>

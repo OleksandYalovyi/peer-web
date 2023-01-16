@@ -9,7 +9,7 @@ const data = [
   { name: 'Santiago Moriv', position: 'Sr. Art Director' },
   { name: 'Matt Amos', position: 'Maps Architect' },
   { name: 'Igor Yusov', position: 'CTO' },
-  { name: 'Nate Brooling', position: 'Head of Strategy' },
+  { name: 'Huy Le', position: 'Director, VN Regional' },
   { name: 'Long Le', position: 'Corporate Vice President' },
   { name: 'Milan Bulat', position: 'Head of Maps' },
   { name: 'Noah Zerkin', position: 'AR Lead' },

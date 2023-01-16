@@ -10,12 +10,19 @@
 
   @media screen and (max-width: 1200px) {
     flex-direction: column;
-    gap: 60px;
-    align-items: center;
+    gap: 78.33px;
+  }
+
+  @media screen and (max-width: 480px) {
+    padding-top: 57.33px;
   }
 
   .title {
     font-size: 25px;
+
+    @media screen and (max-width: 480px) {
+      font-size: 16.66px;
+    }
   }
 
   .links_wrppaer {
@@ -28,7 +35,8 @@
     padding-left: 20px;
 
     @media screen and (max-width: 1200px) {
-      flex-direction: column;
+      padding: 0px;
+      flex-wrap: wrap;
       gap: 10px;
       align-items: center;
     }

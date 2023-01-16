@@ -1,0 +1,27 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 38.33px;
+  margin-bottom: 100px;
+
+  .title {
+    color: var(--font);
+    font-size: 30px;
+    line-height: 30px;
+  }
+
+  .button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 221px;
+    height: 40px;
+    margin: 0 auto;
+    color: var(--bg);
+    font-family: Turbine-Bold, 'san-serif';
+    text-decoration: none;
+    background-color: var(--font);
+    border-radius: 20px;
+  }
+}
