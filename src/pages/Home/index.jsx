@@ -1,6 +1,7 @@
 /* eslint-disable react/forbid-prop-types */
 import React, { useEffect, useMemo, useRef, useState } from 'react'
 import { NavLink } from 'react-router-dom'
+import LittleChevron from 'components/Icons/LittleChevron/index'
 import PropTypes from 'prop-types'
 import styles from './home.module.scss'
 
@@ -24,6 +25,8 @@ const Home = () => {
     x: 0,
     y: 0,
   })
+
+  const [isNewsLinkHovered, setNewsLinkHovered] = useState(false)
 
   const lightStyles = useMemo(
     () => ({
@@ -73,8 +76,14 @@ const Home = () => {
               <a className={styles.text}>
                 Peer Inc. Announces Public Sale of Its SEC Compliant Layer-1 Utility Coin
               </a>
-              <NavLink to="news" className={styles.link}>
+              <NavLink
+                to="news"
+                className={styles.link}
+                onMouseEnter={() => setNewsLinkHovered(true)}
+                onMouseLeave={() => setNewsLinkHovered(false)}
+              >
                 More News
+                <LittleChevron hovered={isNewsLinkHovered} />
               </NavLink>
             </div>
           </div>

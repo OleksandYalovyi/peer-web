@@ -2,6 +2,7 @@
 /* eslint-disable import/no-dynamic-require */
 
 import React from 'react'
+import cls from 'classnames'
 
 import styles from './main.module.scss'
 
@@ -83,7 +84,7 @@ const Main = () => (
           <br />
           Much of the Peer team is credited with developing the technical innovations behind of
           hardware, software and services at some of the world’s largest and most future forward
-          companies such as Microsoft, Meta, Google, Magic Leap, and Zenly.
+          companies.
         </p>
       </div>
     </div>
@@ -95,7 +96,7 @@ const Main = () => (
           CafePress, and Snap.
           <br />
           <br />
-          Our core team has developed the
+          Our core team built{' '}
           <a
             href="https://techcrunch.com/2022/05/18/social-maps-app-zenly-rolls-out-its-own-maps/"
             target="_blank"
@@ -105,11 +106,11 @@ const Main = () => (
           </a>{' '}
           , which has been downloaded 160 million times worldwide and boasts 45 million daily active
           users. In addition, some of us have worked on globally recognized hardware products such
-          as the
+          as the{' '}
           <a href="https://youtu.be/xNqs_S-zEBY?t=99" target="_blank" rel="noreferrer">
-            Leap Motion Controller and
-          </a>
-          and
+            Leap Motion Controller
+          </a>{' '}
+          and{' '}
           <a href="https://youtu.be/y6SKWBX2GKM?t=13" target="_blank" rel="noreferrer">
             Density People Counter
           </a>

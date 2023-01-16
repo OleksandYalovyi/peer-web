@@ -34,7 +34,7 @@
           font-size: 40px;
         }
       }
-      
+
       h2 {
         margin: 0 0 17px 0;
         color: #ffffff;
@@ -45,7 +45,7 @@
           font-size: 20px;
         }
       }
-      
+
       p {
         margin: 0;
         color: #939393;
@@ -56,10 +56,6 @@
         a {
           color: #939393;
           text-decoration: underline;
-          padding: 0 10px;
-          &:last-child {
-            padding: 0 0 0 10px;
-          }
           &:hover {
             color: #4994ec;
           }
@@ -80,24 +76,24 @@
         @media screen and (max-width: 680px) {
           justify-content: start;
         }
-        
+
         .item {
           display: flex;
           align-items: center;
           justify-content: center;
           width: 70px;
           height: 70px;
-          border-radius: 15px;
           border: solid 1px #161616;
-          
+          border-radius: 15px;
+
           @media screen and (max-width: 680px) {
             width: 47px;
             height: 47px;
           }
           img {
-            height: auto; 
+            height: auto;
             @media screen and (max-width: 680px) {
-              scale: 0.9
+              scale: 0.9;
             }
           }
         }

@@ -4,12 +4,11 @@ import T from 'prop-types'
 import cls from 'classnames'
 import styles from './longarrow.module.scss'
 
-const Logo = ({ hovered, width = '38', height = '16.5', isLight }) => (
+const Logo = ({ hovered, width = '38', isLight }) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width={width}
-    height={height}
-    viewBox="0 0 100 30"
+    viewBox="0 0 140 40"
     className={cls({ [styles.hovered]: hovered })}
   >
     <path
@@ -24,7 +23,6 @@ const Logo = ({ hovered, width = '38', height = '16.5', isLight }) => (
 Logo.propTypes = {
   hovered: T.bool,
   width: T.string,
-  height: T.string,
   isLight: T.bool,
 }
 

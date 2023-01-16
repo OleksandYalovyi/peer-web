@@ -40,7 +40,7 @@
       border-bottom: 1px solid #1f1f1f;
 
       @media screen and (max-width: 900px) {
-        padding-top: 108px;
+        padding-top: 38.5px;
       }
 
       .mixin {
@@ -203,13 +203,13 @@
           }
 
           .text {
+            margin-bottom: 45px;
             color: var(--link-hover);
             font-weight: normal;
             font-size: 25px;
             font-family: Turbine-Regular, sans-serif;
             letter-spacing: 1.25px;
             cursor: pointer;
-            margin-bottom: 45px;
 
             &:hover {
               color: var(--link);
@@ -217,14 +217,26 @@
           }
 
           .link {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+            max-width: 150px;
             margin: 0;
             color: #747474;
             font-weight: normal;
             font-size: 20px;
             font-family: Turbine-Regular, sans-serif;
             letter-spacing: 1px;
+            text-decoration: none;
             cursor: pointer;
-            // text-decoration: none;
+
+            svg {
+              transition: margin-left 0.5s;
+            }
+            &:hover svg {
+              margin-left: 7px;
+            }
+
             &:hover {
               color: var(--link);
             }

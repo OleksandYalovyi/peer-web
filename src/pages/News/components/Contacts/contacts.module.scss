@@ -15,10 +15,19 @@
     padding: 0;
   }
 
+  @media screen and (max-width: 480px) {
+    width: 100%;
+    margin-bottom: 66.33px;
+  }
+
   .item {
     display: flex;
     gap: 50px;
     align-items: center;
+
+    @media screen and (max-width: 480px) {
+      gap: 33.33px;
+    }
 
     .content {
       .info {
@@ -26,6 +35,11 @@
         color: #939393;
         font-size: 15px;
         letter-spacing: 0.75px;
+
+        @media screen and (max-width: 480px) {
+          margin-bottom: 8px;
+          font-size: 10px;
+        }
       }
 
       .link {
@@ -36,6 +50,11 @@
         font-size: 20px;
         font-family: Turbine-Bold, 'san-serif';
         text-decoration: none;
+
+        @media screen and (max-width: 480px) {
+          gap: 22.66px;
+          font-size: 13.33px;
+        }
 
         &:hover {
           color: var(--main-link-hover);

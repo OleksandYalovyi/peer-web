@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-// import LongArrow from '../../../../assets/longarrow.svg'
+import useCurrentWidth from 'hooks/useCurrentWidth'
 import LongArrow from '../../../../components/Icons/LongArrow'
 import Pressinquir from '../../../../assets/pressinquir.svg'
 import Pressroll from '../../../../assets/pressroll.svg'
@@ -8,12 +8,14 @@ import styles from './contacts.module.scss'
 
 const Contacts = () => {
   const [isHovered, setHovered] = useState('')
+  const width = useCurrentWidth()
+  const isMobile = width < 480
 
   return (
     <div className={styles.wrapper}>
       <div className={styles.item}>
         <div className={styles.icon}>
-          <img src={Pressinquir} height="100" alt="" />
+          <img src={Pressinquir} height={isMobile ? '67' : '100'} alt="" />
         </div>
         <div className={styles.content}>
           <div className={styles.info}>For press inquiries, please contact</div>
@@ -24,13 +26,13 @@ const Contacts = () => {
             onMouseLeave={() => setHovered('')}
           >
             press@peer.inc
-            <LongArrow hovered={isHovered === 'mail'} />
+            <LongArrow width={isMobile ? '25.33' : '38'} hovered={isHovered === 'mail'} />
           </a>
         </div>
       </div>
       <div className={styles.item}>
         <div className={styles.icon}>
-          <img src={Pressroll} height="63.5" alt="" />
+          <img src={Pressroll} height={isMobile ? '42.33' : '63.5'} alt="" />
         </div>
         <div className={styles.content}>
           <div className={styles.info}>Press kit & media assets</div>
@@ -41,7 +43,7 @@ const Contacts = () => {
             onMouseLeave={() => setHovered('')}
           >
             Available Here
-            <LongArrow hovered={isHovered === 'link'} />
+            <LongArrow width={isMobile ? '25.33' : '38'} hovered={isHovered === 'link'} />
           </a>
         </div>
       </div>
