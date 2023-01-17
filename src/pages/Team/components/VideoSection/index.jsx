@@ -10,7 +10,7 @@ const VideoSection = () => {
     <section className={styles.section}>
       {isOpen && <VideoModal onClose={() => setOpen(false)} />}
       <div className={styles.top}>
-        <div>
+        <div className={styles.video_wrapper}>
           <div className={styles.video}>
             <div className={styles.play_icon_wrapper} onClick={() => setOpen(true)}>
               <img
