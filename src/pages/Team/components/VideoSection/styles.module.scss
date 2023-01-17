@@ -74,6 +74,9 @@
           max-height: 250px;
           width: 100%;
         }
+        @media screen and (max-width: 500px) {
+          max-height: 187.66px;
+        }
       }
     }
 
