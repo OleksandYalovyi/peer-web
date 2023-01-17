@@ -13,7 +13,8 @@
 
   .top {
     display: flex;
-    gap: 131px;
+    // gap: 131px;
+    justify-content: space-between;
 
     @media screen and (max-width: 1320px) {
       flex-direction: column;
@@ -30,47 +31,55 @@
       text-align: center;
 
       @media screen and (max-width: 1320px) {
+        margin: 0 auto;
         padding: 0 34px;
         font-size: 10.3px;
         line-height: 16.66px;
       }
     }
 
-    .video {
-      display: flex;
-      align-items: center;
-      justify-content: center;
+    .video_wrapper {
       width: 100%;
-      max-width: 620px;
-      height: 330px;
-      margin-bottom: 74.5px;
-      background-color: var(--font);
-      background-image: url('./video-preview.png');
-      background-size: cover;
-      border-radius: 20px;
-
-      .play_icon_wrapper {
+      @media screen and (max-width: 1320px) {
+      }
+      .video {
         display: flex;
         align-items: center;
         justify-content: center;
-        width: 100px;
-        height: 100px;
-        border-radius: 50%;
-        cursor: pointer;
-      }
+        width: 100%;
+        max-width: 620px;
+        height: 330px;
+        margin-bottom: 74.5px;
+        background-color: var(--font);
+        background-image: url('./video-preview.png');
+        background-size: cover;
+        border-radius: 20px;
 
-      @media screen and (max-width: 1320px) {
-        margin: 0 auto;
-        margin-bottom: 33px;
-        background-position: center;
-      }
-      @media screen and (max-width: 600px) {
-        max-height: 187.66px;
+        .play_icon_wrapper {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 100px;
+          height: 100px;
+          border-radius: 50%;
+          cursor: pointer;
+        }
+
+        @media screen and (max-width: 1320px) {
+          margin: 0 auto;
+          margin-bottom: 33px;
+          background-position: center;
+        }
+        @media screen and (max-width: 600px) {
+          max-height: 250px;
+          width: 100%;
+        }
       }
     }
 
     .description {
       max-width: 575px;
+      width: 100%;
       .title {
         margin-bottom: 58px;
         color: var(--font);
