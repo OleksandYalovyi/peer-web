@@ -2,6 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import { ThemeProvider } from 'context/theme'
 import { BrowserRouter as Router } from 'react-router-dom'
+import UseScrollToTop from 'hooks/useScrollToTop'
 // import { setBaseEndpoint } from 'utils/apiClient'
 import App from './App'
 
@@ -14,9 +15,11 @@ import './index.scss'
 ReactDOM.render(
   <React.StrictMode>
     <Router>
-      <ThemeProvider>
-        <App />
-      </ThemeProvider>
+      <UseScrollToTop>
+        <ThemeProvider>
+          <App />
+        </ThemeProvider>
+      </UseScrollToTop>
     </Router>
   </React.StrictMode>,
   document.getElementById('root'),
