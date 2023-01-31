@@ -74,7 +74,7 @@ const Home = () => {
             <div className={styles.news_cld}>
               <p className={styles.title}>Latest</p>
               <a className={styles.text}>
-                Peer Inc. Announces Public Sale of Its SEC Compliant Layer-1 Utility Coin
+                Peer Acquires Elite Team of Engineers Behind Zenly’s Popular 3D Maps
               </a>
               <NavLink
                 to="news"

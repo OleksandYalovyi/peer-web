@@ -9,7 +9,7 @@ const LatestNews = () => (
         <div className={styles.news_cld}>
           <p className={styles.title}>2023</p>
           <a className={styles.text}>
-            Peer Inc. Announces Public Sale of Its SEC Compliant Layer-1 Utility Coin
+            Peer Acquires Elite Team of Engineers Behind Zenly’s Popular 3D Maps
           </a>
         </div>
       </div>
