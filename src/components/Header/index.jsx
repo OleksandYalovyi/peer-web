@@ -102,7 +102,7 @@ const LandingHeader = () => {
             <NavItems
               name="Products"
               links={[
-                { name: 'Peer', to: '/placeholder', logo: 'PEER', router: true },
+                { name: 'Peer', to: 'https://peerclub.com', logo: 'PEER' },
                 { name: 'Zen', to: '/placeholder', logo: 'ZEN', router: true },
                 { name: 'Omni', to: 'https://peermultichain.com', logo: 'OMNI' },
                 { name: 'Index', to: '/placeholder', logo: 'INDEX', router: true },

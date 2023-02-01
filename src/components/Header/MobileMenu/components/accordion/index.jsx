@@ -24,7 +24,7 @@ const data = [
   {
     title: 'Products',
     links: [
-      { name: 'Peer', to: '/placeholder', logo: 'PEER', withRouter: true },
+      { name: 'Peer', to: 'https://peerclub.com', logo: 'PEER' },
       { name: 'Zen', to: '/placeholder', logo: 'ZEN', withRouter: true },
       { name: 'Omni', to: 'https://peermultichain.com', logo: 'OMNI' },
       { name: 'Index', to: '/placeholder', logo: 'INDEX', withRouter: true },
