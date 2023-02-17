@@ -1,4 +1,6 @@
 import React, { useState } from 'react'
+import { format } from 'date-fns'
+import compareAsc from 'date-fns/compareAsc'
 import VideoModal from './components/VideoModal/index'
 import Play from '../../../../assets/play.svg'
 import styles from './styles.module.scss'

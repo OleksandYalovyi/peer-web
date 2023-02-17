@@ -7,7 +7,6 @@ const data = [
   { name: 'Kishan Verma', position: 'Blockchain Architect' },
   { name: 'Heath Abbate', position: 'COO' },
   { name: 'Santiago Moriv', position: 'Sr. Art Director' },
-  { name: 'Matt Amos', position: 'Maps Architect' },
   { name: 'Igor Yusov', position: 'CTO' },
   { name: 'Huy Le', position: 'Director, VN Regional' },
   { name: 'Long Le', position: 'Corporate Vice President' },
