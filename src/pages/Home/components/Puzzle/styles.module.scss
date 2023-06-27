@@ -1,0 +1,97 @@
+.building {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 285px;
+
+  .title {
+    margin: 0;
+    padding-bottom: 59.5px;
+    color: #fff;
+    font-size: 50px;
+    font-family: IBMPlexMono-Regular, sans-serif;
+    line-height: 38px;
+  }
+
+  .text {
+    max-width: 800px;
+    margin: -4px 0;
+    padding-bottom: 117px;
+    color: #939393;
+    font-size: 20px;
+    font-family: IBMPlexMono-Regular, sans-serif;
+    line-height: 1;
+    text-align: center;
+    text-transform: uppercase;
+  }
+}
+
+.puzzle {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+  max-width: 1237px;
+  margin: 0 auto;
+
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .col {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .card {
+    position: relative;
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    min-height: 180px;
+    color: #000;
+    font-size: 25px;
+    font-family: IBMPlexMono-SemiBold, sans-serif;
+    text-transform: uppercase;
+    background-color: #e2e2e2;
+    border: 1px solid transparent;
+    border-radius: 25px;
+
+    &.medium {
+      min-height: 370px;
+    }
+
+    &:hover {
+      color: #fff;
+      text-decoration: none;
+      background-color: black;
+      border-color: #fff;
+      cursor: pointer;
+    }
+
+    .img {
+      position: absolute;
+      top: 21px;
+      right: 21px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 25px;
+      height: 25px;
+
+      img {
+        width: auto;
+        max-width: 100%;
+        height: auto;
+        max-height: 100%;
+      }
+    }
+  }
+}

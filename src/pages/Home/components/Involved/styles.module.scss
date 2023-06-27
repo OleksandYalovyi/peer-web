@@ -1,0 +1,41 @@
+.involved {
+  display: flex;
+  flex-direction: column;
+  gap: 55.5px;
+  align-items: center;
+  justify-content: center;
+  padding: 507.5px 0;
+
+  .title {
+    margin: 0;
+    color: #fff;
+    font-size: 50px;
+    font-family: Gilroy-Regular;
+    line-height: 48px;
+  }
+
+  .link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 331.5px;
+    height: 60px;
+    color: #000;
+    font-size: 18px;
+    font-family: IBMPlexMono-SemiBold;
+    letter-spacing: 1.8px;
+    text-transform: uppercase;
+    background-color: #fff;
+    border: solid 1px #000;
+    border-radius: 5px;
+
+    &:hover {
+      color: #fff;
+      text-decoration: none;
+      background-color: black;
+      border-color: #fff;
+      cursor: pointer;
+    }
+  }
+}

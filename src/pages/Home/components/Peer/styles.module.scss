@@ -1,0 +1,44 @@
+.peer {
+  padding-top: 288.5px;
+
+  .title {
+    margin: 0 -6px;
+    color: #fff;
+    font-size: 80px;
+    font-family: Gilroy-Medium, sans-serif;
+    line-height: 1;
+  }
+
+  .links {
+    display: flex;
+    gap: 23px;
+    padding-top: 132.5px;
+
+    .link {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 195px;
+      height: 60px;
+      color: black;
+      font-size: 18px;
+      font-family: Gilroy-Bold, sans-serif;
+      letter-spacing: 1.8px;
+      background-color: #fff;
+      border: solid 1px #000;
+      border-radius: 5px;
+
+      &.large {
+        width: 317px;
+      }
+
+      &:hover {
+        color: #fff;
+        text-decoration: none;
+        background-color: black;
+        border-color: #fff;
+        cursor: pointer;
+      }
+    }
+  }
+}

@@ -1,0 +1,46 @@
+.news {
+  padding-top: 212px;
+  color: #fff;
+
+  .latest {
+    .title {
+      margin: 0;
+      padding-bottom: 25.5px;
+      color: #747474;
+      font-weight: 500;
+      font-size: 20px;
+      font-family: IBMPlexMono-Medium, sans-serif;
+      line-height: 14px;
+    }
+
+    .text {
+      margin: 0;
+      padding-bottom: 70px;
+      color: #fff;
+      font-weight: normal;
+      font-size: 25px;
+      font-family: Gilroy-Regular, sans-serif;
+      line-height: 18px;
+      letter-spacing: 1.25px;
+    }
+  }
+
+  .more {
+    display: flex;
+    gap: 18px;
+    align-items: center;
+    height: 14px;
+    color: #747474;
+    font-size: 20px;
+    font-family: IBMPlexMono-Medium, sans-serif;
+
+    &:hover {
+      text-decoration: none;
+    }
+
+    img {
+      width: 8px;
+      margin: 4px 0 0 0;
+    }
+  }
+}
