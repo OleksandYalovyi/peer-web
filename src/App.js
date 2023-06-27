@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useMemo } from 'react'
 import { TransitionGroup, CSSTransition } from 'react-transition-group'
 import { Route, Switch, Redirect, useLocation } from 'react-router-dom'
 import { useTheme } from 'context/theme'
@@ -17,6 +17,8 @@ function App() {
 
   setIsLight(false)
 
+  const footerStatus = useMemo(() => location.pathname === '/', [location])
+
   return (
     <div id="theme" className={isLight ? 'container' : 'container dark'}>
       <Header />
@@ -32,7 +34,7 @@ function App() {
           </Switch>
         </CSSTransition>
       </TransitionGroup>
-      <Footer />
+      {!footerStatus && <Footer />}
     </div>
   )
 }
