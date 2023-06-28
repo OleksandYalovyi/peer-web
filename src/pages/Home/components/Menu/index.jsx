@@ -4,10 +4,18 @@ import styles from './styles.module.scss'
 
 const Menu = () => (
   <section className={styles.menu}>
-    <NavLink to="/">Home</NavLink>
-    <NavLink to="/">About</NavLink>
-    <NavLink to="/">Products</NavLink>
-    <NavLink to="/">Press</NavLink>
+    <div className={styles.item}>
+      <NavLink to="/">Home</NavLink>
+    </div>
+    <div className={styles.item}>
+      <NavLink to="/">About</NavLink>
+    </div>
+    <div className={styles.item}>
+      <NavLink to="/">Products</NavLink>
+    </div>
+    <div className={styles.item}>
+      <NavLink to="/">Press</NavLink>
+    </div>
   </section>
 )
 

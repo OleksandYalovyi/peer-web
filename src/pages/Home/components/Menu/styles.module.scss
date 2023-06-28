@@ -1,30 +1,33 @@
 .menu {
-  position: relative;
   display: flex;
   flex-direction: column;
   gap: 45.5px;
   margin-top: 370px;
 
-  &:after {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 67px;
-    height: 3px;
-    background-color: #fff;
-    content: '';
-  }
+  .item {
+    position: relative;
 
-  a {
-    color: #fff;
-    font-weight: normal;
-    font-size: 120px;
-    font-family: IBMPlexMono-Regular, sans-serif;
-    line-height: 88px;
-    text-transform: uppercase;
+    a {
+      color: #fff;
+      font-weight: normal;
+      font-size: 120px;
+      font-family: IBMPlexMono-Regular, sans-serif;
+      line-height: 88px;
+      text-transform: uppercase;
 
-    &:hover {
-      text-decoration: none;
+      &:hover {
+        text-decoration: none;
+
+        &:after {
+          position: absolute;
+          top: 0;
+          right: 0;
+          width: 67px;
+          height: 3px;
+          background-color: #fff;
+          content: '';
+        }
+      }
     }
   }
 }
