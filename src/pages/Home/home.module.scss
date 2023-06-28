@@ -3,6 +3,7 @@
 .wrapper {
   min-height: calc(100vh - 71px);
   padding: 71px 0;
+  overflow: hidden;
 
   @media screen and (max-width: 900px) {
     padding-top: 60px;
