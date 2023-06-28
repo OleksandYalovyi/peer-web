@@ -1,6 +1,5 @@
 import React from 'react'
-import { NavLink } from 'react-router-dom'
-import classNames from 'classnames'
+
 import PeerApp from 'assets/Home/Puzzle/peerapp.svg'
 import Market from 'assets/Home/Puzzle/market.png'
 import BlockChain from 'assets/Home/Puzzle/blockchain.svg'
@@ -9,6 +8,8 @@ import Zen from 'assets/Home/Puzzle/zen.svg'
 import Omni from 'assets/Home/Puzzle/omni.svg'
 import Solar from 'assets/Home/Puzzle/solar.svg'
 import styles from './styles.module.scss'
+
+import Card from '../Card'
 
 const Puzzle = () => (
   <>
@@ -25,62 +26,41 @@ const Puzzle = () => (
     <section className={styles.puzzle}>
       <div className={styles.row}>
         <div className={styles.col}>
-          <NavLink to="/" className={styles.card}>
-            UI
-            <div className={styles.img}>
-              <img src={PeerApp} alt="PeerApp" className={styles.peerapp} />
-            </div>
-          </NavLink>
+          <Card to="/" name="UI">
+            <img src={PeerApp} alt="PeerApp" className={styles.peerapp} />
+          </Card>
         </div>
 
         <div className={styles.col}>
-          <NavLink to="/" className={classNames(styles.card, styles.medium)}>
-            marketplace
-            <div className={styles.img}>
-              <img src={Market} alt="Market" className={styles.market} />
-            </div>
-          </NavLink>
+          <Card to="/" name="marketplace" size="medium">
+            <img src={Market} alt="Market" className={styles.market} />
+          </Card>
 
-          <NavLink to="/" className={classNames(styles.card, styles.medium)}>
-            blockchain
-            <div className={styles.img}>
-              <img src={BlockChain} alt="BlockChain" className={styles.blockchain} />
-            </div>
-          </NavLink>
+          <Card to="/" name="blockchain" size="medium">
+            <img src={BlockChain} alt="BlockChain" className={styles.blockchain} />
+          </Card>
         </div>
 
         <div className={styles.col}>
-          <NavLink to="/" className={classNames(styles.card, styles.medium)}>
-            coin
-            <div className={styles.img}>
-              <img src={Peer} alt="Coin" className={styles.coin} />
-            </div>
-          </NavLink>
+          <Card to="/" name="coin" size="medium">
+            <img src={Peer} alt="Coin" className={styles.coin} />
+          </Card>
 
-          <NavLink to="/" className={styles.card}>
-            wallet
-            <div className={styles.img}>
-              <img src={Zen} alt="Wallet" className={styles.wallet} />
-            </div>
-          </NavLink>
+          <Card to="/" name="wallet">
+            <img src={Zen} alt="Wallet" className={styles.wallet} />
+          </Card>
 
-          <NavLink to="/" className={styles.card}>
-            explorer
-            <div className={styles.img}>
-              <img src={Omni} alt="Omni" className={styles.omni} />
-            </div>
-          </NavLink>
+          <Card to="/" name="explorer">
+            <img src={Omni} alt="Omni" className={styles.omni} />
+          </Card>
         </div>
       </div>
 
       <div className={styles.row}>
         <div className={styles.col}>
-          <NavLink to="/" className={styles.card}>
-            future
-            <div className={styles.img}>
-              <img src={Solar} alt="Solar" className={styles.solar} />
-            </div>
-          </NavLink>
+          <Card to="/" name="future">
+            <img src={Solar} alt="Solar" className={styles.solar} />
+          </Card>
         </div>
       </div>
     </section>

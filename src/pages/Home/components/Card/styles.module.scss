@@ -1,0 +1,46 @@
+.card {
+  position: relative;
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  min-height: 180px;
+  color: #000;
+  font-size: 25px;
+  font-family: IBMPlexMono-SemiBold, sans-serif;
+  text-transform: uppercase;
+  background-color: #e2e2e2;
+  border: 1px solid transparent;
+  border-radius: 25px;
+
+  &.medium {
+    min-height: 370px;
+  }
+
+  &:hover {
+    color: #fff;
+    text-decoration: none;
+    background-color: black;
+    border-color: #fff;
+    cursor: pointer;
+  }
+
+  .img {
+    position: absolute;
+    top: 21px;
+    right: 21px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 25px;
+    height: 25px;
+
+    img {
+      width: auto;
+      max-width: 100%;
+      height: auto;
+      max-height: 100%;
+    }
+  }
+}
