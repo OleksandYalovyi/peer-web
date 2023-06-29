@@ -6,13 +6,10 @@
   justify-content: center;
   box-sizing: border-box;
   min-height: 180px;
-  color: #000;
-  font-size: 25px;
-  font-family: IBMPlexMono-SemiBold, sans-serif;
-  text-transform: uppercase;
   background-color: #e2e2e2;
   border: 1px solid transparent;
   border-radius: 25px;
+  transition: 0.3s;
 
   &.medium {
     min-height: 370px;
@@ -24,6 +21,92 @@
     background-color: black;
     border-color: #fff;
     cursor: pointer;
+
+    .name {
+      color: #fff;
+    }
+
+    .animation {
+      .bg {
+        &:after {
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  .name {
+    position: relative;
+    z-index: 2;
+    color: #000;
+    font-size: 25px;
+    font-family: IBMPlexMono-SemiBold, sans-serif;
+    text-transform: uppercase;
+    transition: 0.3s;
+    pointer-events: none;
+  }
+
+  .animation {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    width: 100%;
+    height: 100%;
+
+    .bg {
+      position: relative;
+      display: grid;
+      flex: 1;
+      overflow: hidden;
+      border-radius: 1.6rem;
+      aspect-ratio: 1;
+      place-items: center;
+      --x: 0px;
+      --y: 0px;
+
+      .deco {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        width: calc(100% - 20px);
+        height: calc(100% - 20px);
+        color: #fff;
+        font-size: 0.85rem;
+        font-family: 'input-mono', monospace;
+        line-height: 1.15;
+        word-wrap: break-word;
+        border-radius: 25px;
+        opacity: 0;
+
+        -webkit-mask-image: radial-gradient(
+          300px circle at var(--x) var(--y),
+          black 20%,
+          rgba(0, 0, 0, 0.25),
+          transparent
+        );
+        mask-image: radial-gradient(
+          300px circle at var(--x) var(--y),
+          black 20%,
+          rgba(0, 0, 0, 0.25),
+          transparent
+        );
+      }
+
+      &:after {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: radial-gradient(circle at center, #000000 40%, #6633ee 50%, #8e64ff, #ff0a62);
+        border-radius: 25px;
+        opacity: 0;
+        mix-blend-mode: darken;
+        transition: 0.3s;
+        content: '';
+      }
+    }
   }
 
   .img {
