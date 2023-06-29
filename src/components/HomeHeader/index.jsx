@@ -35,7 +35,7 @@ const HomeHeader = () => {
       <div className={styles.main_container}>
         <div className={styles.left_container}>
           <Link className={styles.logo_container} to="/">
-            <img src={Plus} width={isMobile ? 20 : 25} />
+            <img src={Plus} alt="plus" width={isMobile ? 20 : 25} />
           </Link>
         </div>
         <div className={styles.right_container}>
