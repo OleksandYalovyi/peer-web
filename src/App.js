@@ -5,6 +5,7 @@ import { useTheme } from 'context/theme'
 import Header from 'components/Header'
 import Footer from 'components/Footer'
 import Home from 'pages/Home'
+import HomeHeader from 'components/HomeHeader/index'
 import Zen from 'pages/Zen'
 import Team from 'pages/Team'
 import Placeholder from 'pages/Placeholder'
@@ -14,14 +15,14 @@ import './App.css'
 function App() {
   const location = useLocation()
   const { isLight, setIsLight } = useTheme()
-
+  const isHome = location.pathname === '/'
   setIsLight(false)
 
   const footerStatus = useMemo(() => location.pathname === '/', [location])
 
   return (
     <div id="theme" className={isLight ? 'container' : 'container dark'}>
-      <Header />
+      {isHome ? <HomeHeader /> : <Header />}
       <TransitionGroup className="transition_group">
         <CSSTransition key={location.key} classNames="fade" timeout={900}>
           <Switch location={location}>
