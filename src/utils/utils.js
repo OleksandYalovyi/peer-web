@@ -16,4 +16,13 @@ const getRandomString = (length) => {
   return result
 }
 
-export { lerp, getMousePos, getRandomString }
+const getRandomChar = () => {
+  const possible =
+    '!"#$%&\'()*+,-./:;<=>?@[\\]^_`{|}~' +
+    '0123456789' +
+    'ABCDEFGHIJKLMNOPQRSTUVWXYZ' +
+    'abcdefghijklmnopqrstuvwxyz'
+  return possible.charAt(Math.floor(Math.random() * possible.length))
+}
+
+export { lerp, getMousePos, getRandomString, getRandomChar }
