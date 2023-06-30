@@ -2,6 +2,7 @@
 /* eslint-disable no-plusplus */
 
 import React, { useEffect, useState } from 'react'
+import { useInView } from 'react-intersection-observer'
 import PropTypes from 'prop-types'
 import { getRandomChar } from 'utils/utils'
 
@@ -19,12 +20,14 @@ const mask = (chars, progress) => {
 }
 
 const TextShuffleAnimation = ({ text = '' }) => {
+  const { ref, inView } = useInView()
+
   const [shuffleText, setShuffleText] = useState('')
 
   useEffect(() => {
-    if (text) {
-      let progress = 0
+    let progress = inView ? 0 : 1
 
+    if (text) {
       const animationInterval = setInterval(() => {
         progress += 0.01
         setShuffleText(mask(text.split(''), progress))
@@ -34,9 +37,9 @@ const TextShuffleAnimation = ({ text = '' }) => {
         }
       }, 10)
     }
-  }, [text])
+  }, [text, inView])
 
-  return <>{shuffleText}</>
+  return <div ref={ref}>{shuffleText}</div>
 }
 
 TextShuffleAnimation.propTypes = {
