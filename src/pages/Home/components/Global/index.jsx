@@ -26,8 +26,9 @@ const Global = () => {
             className="next-particle"
             data-width={width}
             data-height="800"
-            data-min-width="400"
-            data-min-height="400"
+            data-particle-gap="1"
+            data-min-width="450"
+            data-min-height="450"
           />
         </div>
       </NavLink>
