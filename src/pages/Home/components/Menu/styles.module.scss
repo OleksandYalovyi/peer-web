@@ -15,17 +15,25 @@
       line-height: 88px;
       text-transform: uppercase;
 
+      &:after {
+        position: absolute;
+        top: 0;
+        right: -67px;
+        width: 0;
+        height: 3px;
+        background-color: hsl(0, 0%, 100%);
+        opacity: 0;
+        transition: 0.3s ease-in;
+        content: '';
+      }
+
       &:hover {
         text-decoration: none;
 
         &:after {
-          position: absolute;
-          top: 0;
           right: 0;
           width: 67px;
-          height: 3px;
-          background-color: #fff;
-          content: '';
+          opacity: 1;
         }
       }
     }
