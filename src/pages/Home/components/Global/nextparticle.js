@@ -331,23 +331,23 @@ export default function animatedImage(exports) {
 
     _webglSetAttributes() {
       if (this.renderer === 'webgl') {
-        var fieldOfView = 1
-        var aspectRatio = this.canvas.width / this.canvas.height
-        var nearPlane = 10
-        var farPlane = 100
-        var top = nearPlane * Math.tan((fieldOfView * Math.PI) / 360.0)
-        var bottom = -top
-        var right = top * aspectRatio
-        var left = -right
-        var a = (right + left) / (right - left)
-        var b = (top + bottom) / (top - bottom)
-        var c = (farPlane + nearPlane) / (farPlane - nearPlane)
-        var d = (2 * farPlane * nearPlane) / (farPlane - nearPlane)
-        var x = (2 * nearPlane) / (right - left)
-        var y = (2 * nearPlane) / (top - bottom)
+        const fieldOfView = 1
+        const aspectRatio = this.canvas.width / this.canvas.height
+        const nearPlane = 10
+        const farPlane = 100
+        const top = nearPlane * Math.tan((fieldOfView * Math.PI) / 360.0)
+        const bottom = -top
+        const right = top * aspectRatio
+        const left = -right
+        const a = (right + left) / (right - left)
+        const b = (top + bottom) / (top - bottom)
+        const c = (farPlane + nearPlane) / (farPlane - nearPlane)
+        const d = (2 * farPlane * nearPlane) / (farPlane - nearPlane)
+        const x = (2 * nearPlane) / (right - left)
+        const y = (2 * nearPlane) / (top - bottom)
 
-        var perspectiveMatrix = [x, 0, a, 0, 0, y, b, 0, 0, 0, c, d, 0, 0, -1, 0]
-        var modelViewMatrix = [1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1]
+        const perspectiveMatrix = [x, 0, a, 0, 0, y, b, 0, 0, 0, c, d, 0, 0, -1, 0]
+        const modelViewMatrix = [1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1]
         this.context.viewport(0, 0, this.width, this.height)
         this.context.uniformMatrix4fv(
           this.uModelViewMatrix,
@@ -372,7 +372,7 @@ export default function animatedImage(exports) {
       const b = Math.sin(rotationX)
       const c = Math.cos(rotationY)
       const d = Math.sin(rotationY)
-      var rotationMatrix = [c, 0, d, 0, 0, a, -b, 0, -c, b, a, 0, 0, 0, 0, 1]
+      const rotationMatrix = [c, 0, d, 0, 0, a, -b, 0, -c, b, a, 0, 0, 0, 0, 1]
       this.context.uniformMatrix4fv(this.uRotationMatrix, false, new Float32Array(rotationMatrix))
     }
 
