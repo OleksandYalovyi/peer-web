@@ -7,8 +7,6 @@ import useScroll from 'hooks/useScroll'
 import useCurrentWidth from 'hooks/useCurrentWidth'
 import Plus from 'assets/Home/plus.svg'
 
-// import MobileMenu from '../Header/MobileMenu'
-
 import styles from './header.module.scss'
 
 const NavItems = ({ name, links, link, openedMenu, clickHandler }) => {
@@ -154,8 +152,6 @@ const HomeHeader = () => {
                 to: 'https://market.peerclub.com',
                 logo: 'COIN',
               },
-              // { name: 'Index', to: '/placeholder', logo: 'INDEX', router: true },
-              // { name: 'Labs', to: 'https://labs.peer.inc', logo: 'LABS' },
             ]}
             openedMenu={openedMenu}
             clickHandler={clickHandler}
@@ -163,10 +159,6 @@ const HomeHeader = () => {
 
           <NavItems name="PRESS" link="/" openedMenu={openedMenu} clickHandler={clickHandler} />
         </nav>
-
-        {/* <div className={styles.right_container}> */}
-        {/* {isMobile && <MobileMenu isMenu={isMenu} setIsMenuOpen={setIsMenuOpen} />} */}
-        {/* </div> */}
       </div>
     </header>
   )
