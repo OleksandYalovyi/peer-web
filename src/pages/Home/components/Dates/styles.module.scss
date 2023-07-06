@@ -6,6 +6,11 @@
   margin-top: 76px;
   border-top: 1px solid #202020;
 
+  @media screen and (max-width: 768px) {
+    height: 23.66px;
+    margin-top: 84px;
+  }
+
   .content {
     position: relative;
     flex: 1;
@@ -29,6 +34,16 @@
       padding: 11px 57.7px 0;
       white-space: nowrap;
 
+      @media screen and (max-width: 1100px) {
+        gap: 23%;
+        justify-content: center;
+      }
+
+      @media screen and (max-width: 768px) {
+        justify-content: flex-start;
+        padding: 7.33px 25px 0;
+      }
+
       span {
         min-width: 62px;
         color: #fff;
@@ -36,11 +51,11 @@
         font-family: IBMPlexMono-Regular, sans-serif;
         line-height: 12px;
         letter-spacing: 1.5px;
-      }
 
-      @media screen and (max-width: 1100px) {
-        gap: 23%;
-        justify-content: center;
+        @media screen and (max-width: 768px) {
+          font-size: 10px;
+          letter-spacing: 0.5px;
+        }
       }
     }
   }

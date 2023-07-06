@@ -5,6 +5,10 @@
   justify-content: center;
   padding-top: 285px;
 
+  @media screen and (max-width: 768px) {
+    padding-top: 142.16px;
+  }
+
   .title {
     margin: 0;
     padding-bottom: 59.5px;
@@ -12,6 +16,12 @@
     font-size: 50px;
     font-family: IBMPlexMono-Regular, sans-serif;
     line-height: 38px;
+
+    @media screen and (max-width: 768px) {
+      padding-bottom: 36.33px;
+      font-size: 26.66px;
+      line-height: 20px;
+    }
   }
 
   .text {
@@ -24,6 +34,13 @@
     line-height: 1.5;
     text-align: center;
     text-transform: uppercase;
+
+    @media screen and (max-width: 768px) {
+      max-width: 350px;
+      margin: -2px 0;
+      padding-bottom: 52.33px;
+      font-size: 13.33px;
+    }
   }
 }
 
@@ -35,10 +52,18 @@
   max-width: 1237px;
   margin: 0 auto;
 
+  @media screen and (max-width: 768px) {
+    gap: 3.33px;
+  }
+
   .row {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
+
+    @media screen and (max-width: 768px) {
+      gap: 3.33px;
+    }
   }
 
   .col {
@@ -46,5 +71,9 @@
     flex: 1;
     flex-direction: column;
     gap: 10px;
+
+    @media screen and (max-width: 768px) {
+      gap: 3.33px;
+    }
   }
 }

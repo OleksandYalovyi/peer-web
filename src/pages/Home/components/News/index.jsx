@@ -9,7 +9,7 @@ const News = () => (
       <h4 className={styles.title}>Latest</h4>
 
       <p className={styles.text}>
-        Peer Acquires Elite Team of Engineers Behind Zenly’s Popular 3D Maps
+        Peer Tackles the Metaverse with the Beta Launch of Its Open World Social App
       </p>
     </div>
 

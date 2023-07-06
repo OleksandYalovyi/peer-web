@@ -4,6 +4,11 @@
   align-items: center;
   padding-top: 313px;
 
+  @media screen and (max-width: 768px) {
+    align-items: flex-start;
+    padding-top: 74.33px;
+  }
+
   .header {
     margin: 0;
     padding-bottom: 110.5px;
@@ -11,22 +16,41 @@
     font-size: 30px;
     font-family: IBMPlexMono-Regular, sans-serif;
     line-height: 22px;
+    text-transform: uppercase;
     opacity: 0.9;
+
+    @media screen and (max-width: 768px) {
+      padding-bottom: 32.33px;
+      font-size: 20px;
+      line-height: 14px;
+    }
   }
 
   .title {
     margin: 0;
-    padding-bottom: 74px;
+    padding-bottom: 94px;
     color: #fff;
     font-size: 200px;
     font-family: Gilroy-SemiBold, sans-serif;
     line-height: 175px;
+
+    @media screen and (max-width: 768px) {
+      max-width: 320px;
+      padding-bottom: 78px;
+      font-size: 80px;
+      line-height: 1;
+    }
   }
 
   .links {
     display: flex;
     gap: 23px;
-    padding-top: 132.5px;
+
+    @media screen and (max-width: 768px) {
+      flex-direction: column;
+      gap: 14.66px;
+      width: 100%;
+    }
 
     .link {
       display: flex;
@@ -42,8 +66,22 @@
       border: solid 1px #000;
       border-radius: 5px;
 
+      @media screen and (max-width: 768px) {
+        width: 100%;
+        max-width: 218px;
+        height: 40px;
+        font-size: 12px;
+        letter-spacing: 1.2px;
+        border-radius: 3.33px;
+      }
+
       &.large {
         width: 317px;
+
+        @media screen and (max-width: 768px) {
+          width: 100%;
+          max-width: 218px;
+        }
       }
 
       &:hover {
