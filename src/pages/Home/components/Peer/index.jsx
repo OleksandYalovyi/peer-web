@@ -5,12 +5,9 @@ import styles from './styles.module.scss'
 
 const Peer = () => (
   <section className={styles.peer}>
-    <h2 className={styles.title}>
-      peer is building towards
-      <br />
-      and accelerating an
-      <br /> ai-infused spatial future
-    </h2>
+    <p className={styles.header}>our vision</p>
+
+    <h2 className={styles.title}>ai for daily life</h2>
 
     <div className={styles.links}>
       <NavLink to="/" className={styles.link}>

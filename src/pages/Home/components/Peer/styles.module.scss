@@ -1,12 +1,26 @@
 .peer {
-  padding-top: 288.5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 313px;
+
+  .header {
+    margin: 0;
+    padding-bottom: 110.5px;
+    color: rgba(150, 150, 150, 0.9);
+    font-size: 30px;
+    font-family: IBMPlexMono-Regular, sans-serif;
+    line-height: 22px;
+    opacity: 0.9;
+  }
 
   .title {
-    margin: 0 -6px;
+    margin: 0;
+    padding-bottom: 74px;
     color: #fff;
-    font-size: 80px;
-    font-family: Gilroy-Medium, sans-serif;
-    line-height: 1;
+    font-size: 200px;
+    font-family: Gilroy-SemiBold, sans-serif;
+    line-height: 175px;
   }
 
   .links {

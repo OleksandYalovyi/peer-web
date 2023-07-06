@@ -14,12 +14,11 @@ import Card from '../Card'
 const Puzzle = () => (
   <>
     <section className={styles.building}>
-      <h2 className={styles.title}>WHAT WE’RE BUILDING</h2>
+      <h2 className={styles.title}>OUR ROADMAP</h2>
 
       <p className={styles.text}>
-        peer:THE SOCIAL NETWORK // peer market:digital assets marketplace // pl0:peer layer 0
-        blockchain // peer dollar:pl0 native crypto // omni:pl0 block explorer // zen:self-custody
-        wallet // solar:ai observer // g:ar glasses
+        an end-to-end ecosystem TO empower communities and support A<br />
+        next-level social economy
       </p>
     </section>
 
