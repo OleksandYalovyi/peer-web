@@ -28,7 +28,11 @@ const Home = () => {
     <div className={styles.wrapper} onMouseMove={onMouseMove}>
       <div className={styles.container}>
         <Global />
-        <Menu />
+      </div>
+
+      <Menu />
+
+      <div className={styles.container}>
         <News />
       </div>
 
