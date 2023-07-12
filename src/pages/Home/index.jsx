@@ -32,9 +32,7 @@ const Home = () => {
 
       <Menu />
 
-      <div className={styles.container}>
-        <News />
-      </div>
+      <News />
 
       <Dates userPosition={userPosition} />
 
