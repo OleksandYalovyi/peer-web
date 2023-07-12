@@ -24,7 +24,8 @@
     "react-slick": "^0.29.0",
     "react-transition-group": "^4.4.2",
     "react-youtube": "^10.1.0",
-    "slick-carousel": "^1.8.1"
+    "slick-carousel": "^1.8.1",
+    "splitting": "^1.0.6"
   },
   "scripts": {
     "start": "react-scripts start",

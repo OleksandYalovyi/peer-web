@@ -10,16 +10,17 @@ import Solar from 'assets/Home/Puzzle/solar.svg'
 import styles from './styles.module.scss'
 
 import Card from '../Card'
+import TextShuffleAnimation from '../TextShuffleAnimation'
 
 const Puzzle = () => (
   <>
     <section className={styles.building}>
       <h2 className={styles.title}>OUR ROADMAP</h2>
 
-      <p className={styles.text}>
-        an end-to-end ecosystem TO empower communities and support A<br />
-        next-level social economy
-      </p>
+      <TextShuffleAnimation
+        className={styles.text}
+        text="an end-to-end ecosystem TO empower communities and support A next-level social economy"
+      />
     </section>
 
     <section className={styles.puzzle}>

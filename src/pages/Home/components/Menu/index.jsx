@@ -1,29 +1,20 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
 import styles from './styles.module.scss'
-import TextShuffleAnimation from '../TextShuffleAnimation/index'
 
 const Menu = () => (
   <section className={styles.menu}>
     <div className={styles.item}>
-      <NavLink to="/">
-        <TextShuffleAnimation text="Home" />
-      </NavLink>
+      <NavLink to="/">Home</NavLink>
     </div>
     <div className={styles.item}>
-      <NavLink to="/">
-        <TextShuffleAnimation text="About" />
-      </NavLink>
+      <NavLink to="/">About</NavLink>
     </div>
     <div className={styles.item}>
-      <NavLink to="/">
-        <TextShuffleAnimation text="Products" />
-      </NavLink>
+      <NavLink to="/">Products</NavLink>
     </div>
     <div className={styles.item}>
-      <NavLink to="/">
-        <TextShuffleAnimation text="Press" />
-      </NavLink>
+      <NavLink to="/">Press</NavLink>
     </div>
   </section>
 )
