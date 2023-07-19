@@ -21,7 +21,7 @@ const Global = () => {
           alt="Peer"
           className="next-particle"
           data-width={width}
-          data-height={isMobile ? 400 : 1200}
+          data-height={width < 1600 ? (isMobile ? 400 : 800) : 1200}
           data-color="#ffffff"
           data-particle-gap="2"
           data-gravity="0.1"
