@@ -5,7 +5,7 @@ import cls from 'classnames'
 import MobileMenuLogo from 'components/Icons/MobileMenuLogo/index'
 import useScroll from 'hooks/useScroll'
 import useCurrentWidth from 'hooks/useCurrentWidth'
-import Plus from 'assets/Home/plus.svg'
+import Logo from 'assets/Home/peerlogo.png'
 
 import styles from './header.module.scss'
 
@@ -101,10 +101,10 @@ const HomeHeader = () => {
       ref={ref}
     >
       <div className={styles.main_container}>
-        {!isMobile && (
+        {width > 1000 && (
           <div className={styles.left_container}>
             <Link className={styles.logo_container} to="/">
-              <img src={Plus} alt="Plus" width={25} />
+              <img src={Logo} alt="Plus" width={122} />
             </Link>
           </div>
         )}

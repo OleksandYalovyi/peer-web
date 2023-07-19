@@ -11579,6 +11579,11 @@
   dependencies:
     "extend-shallow" "^3.0.0"
 
+"splitting@^1.0.6":
+  "integrity" "sha512-2hYicS/hTy1MgjTi4ST6B298uoLSx854VfTf0FeMmCeE6OiZjEixTOGPLqnNzSaM/y3jwoEYj5pmDzYFwRInPw=="
+  "resolved" "https://registry.npmjs.org/splitting/-/splitting-1.0.6.tgz"
+  "version" "1.0.6"
+
 "sprintf-js@~1.0.2":
   "integrity" "sha512-D9cPgkvLlV3t3IzL0D0YLvGA9Ahk4PcvVwUbN0dSGr1aP0Nrt4AEnTUbuGvquEC0mA64Gqt1fzirlRs5ibXx8g=="
   "resolved" "https://registry.npmjs.org/sprintf-js/-/sprintf-js-1.0.3.tgz"

@@ -7,7 +7,7 @@ import styles from './styles.module.scss'
 
 const Global = () => {
   const width = useCurrentWidth()
-  const isMobile = width < 900
+  const isMobile = width < 768
 
   useEffect(() => {
     animatedImage(window)
@@ -21,12 +21,13 @@ const Global = () => {
           alt="Peer"
           className="next-particle"
           data-width={width}
-          data-height={isMobile ? 400 : 800}
+          data-height={isMobile ? 400 : 1200}
           data-color="#ffffff"
           data-particle-gap="2"
           data-gravity="0.1"
-          data-min-width={isMobile ? 250 : 450}
-          data-min-height={isMobile ? 250 : 450}
+          data-mouse-force={isMobile ? 20 : 120}
+          data-min-width={isMobile ? 166 : 540}
+          data-min-height={isMobile ? 166 : 540}
         />
       </div>
     </section>
