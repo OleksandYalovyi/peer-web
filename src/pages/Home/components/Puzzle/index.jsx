@@ -26,7 +26,7 @@ const Puzzle = () => (
     <section className={styles.puzzle}>
       <div className={styles.row}>
         <div className={styles.col}>
-          <Card to="/" name="UI">
+          <Card to="https://peerclub.com/" name="UI">
             <img src={PeerApp} alt="PeerApp" className={styles.peerapp} />
           </Card>
         </div>
@@ -36,13 +36,13 @@ const Puzzle = () => (
             <img src={Market} alt="Market" className={styles.market} />
           </Card>
 
-          <Card to="/" name="blockchain" size="medium">
+          <Card to="https://explorer.peer.inc/" name="blockchain" size="medium">
             <img src={BlockChain} alt="BlockChain" className={styles.blockchain} />
           </Card>
         </div>
 
         <div className={styles.col}>
-          <Card to="/" name="coin" size="medium">
+          <Card to="https://dev-market.peerclub.com/profile/trade" name="coin" size="medium">
             <img src={Peer} alt="Coin" className={styles.coin} />
           </Card>
 
@@ -50,7 +50,7 @@ const Puzzle = () => (
             <img src={Zen} alt="Wallet" className={styles.wallet} />
           </Card>
 
-          <Card to="/" name="explorer">
+          <Card to="https://explorer.peer.inc/" name="explorer">
             <img src={Omni} alt="Omni" className={styles.omni} />
           </Card>
         </div>

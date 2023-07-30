@@ -93,6 +93,10 @@ const Card = ({ to, name, children, size }) => {
     }
   }, [bgRef, decoRef, mousePos, renderedStyles, scrollVal])
 
+  const onRoute = useCallback(() => {
+    window.open(to, '_blank')
+  }, [to])
+
   useEffect(() => {
     if (bgRef.current) {
       bgRef.current.addEventListener('mouseenter', handleMouseEnter)
@@ -115,6 +119,7 @@ const Card = ({ to, name, children, size }) => {
       className={classNames(styles.card, {
         [styles.medium]: size === 'medium',
       })}
+      onClick={onRoute}
     >
       <div className={styles.animation}>
         <div className={styles.bg} ref={bgRef}>

@@ -225,7 +225,7 @@ class TypeShuffle {
   }
 }
 
-const TextShuffleAnimation = ({ className = null, text = '' }) => {
+const TextShuffleAnimation = ({ className = null, text = '', onMouseEnterStatus = true }) => {
   const contentRef = useRef()
   const { ref, inView } = useInView()
   const [ts, setTs] = useState(undefined)
@@ -241,10 +241,10 @@ const TextShuffleAnimation = ({ className = null, text = '' }) => {
   }, [ts, inView])
 
   const onMouseEnterRef = useCallback(() => {
-    if (ts) {
+    if (ts && onMouseEnterStatus) {
       ts.trigger()
     }
-  }, [ts])
+  }, [ts, onMouseEnterStatus])
 
   return (
     <div ref={ref}>
@@ -260,6 +260,7 @@ const TextShuffleAnimation = ({ className = null, text = '' }) => {
 TextShuffleAnimation.propTypes = {
   className: PropTypes.string,
   text: PropTypes.string.isRequired,
+  onMouseEnterStatus: PropTypes.bool,
 }
 
 export default TextShuffleAnimation
