@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { NavLink, useLocation, Link } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import cls from 'classnames'
 import useScroll from 'hooks/useScroll'
 // import { US } from 'country-flag-icons/react/3x2'
@@ -12,16 +12,16 @@ import Twitter from 'components/Icons/Share/Twitter'
 import Telegram from 'components/Icons/Share/Telegram'
 import Linkedin from 'components/Icons/Share/Linkedin'
 import Privacy from 'assets/PeerPrivacyPolicy.pdf'
-import Terms from 'assets/Peer-TermsandConditions.pdf'
+import Terms from 'assets/Peer-TermsandConditions.c660affe.pdf'
 // import Dropdown from 'components/Dropdown/index'
 import styles from './footer.module.scss'
 
 const ShareData = [
-  {
-    id: 1,
-    name: 'Peer',
-    link: 'https://icx.peer.inc/landing/contacts',
-  },
+  // {
+  //   id: 1,
+  //   name: 'Peer',
+  //   link: 'https://icx.peer.inc/landing/contacts',
+  // },
   {
     id: 2,
     name: 'Twitter',
@@ -90,9 +90,9 @@ const Footer = () => {
               <a href={Terms} target="_blank" rel="noreferrer">
                 Terms
               </a>
-              <a href="#" target="_blank" rel="noreferrer">
+              {/* <a href="#" target="_blank" rel="noreferrer">
                 Whitepaper
-              </a>
+              </a> */}
             </span>
           </div>
         </div>

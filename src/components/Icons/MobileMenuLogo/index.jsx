@@ -18,6 +18,12 @@ const MobileMenuLogo = ({ isHovered = false, type }) => {
   if (type === 'LABS') {
     return <LABS isHovered={isHovered} />
   }
+  if (type === 'PM') {
+    return <PM isHovered={isHovered} />
+  }
+  if (type === 'COIN') {
+    return <COIN isHovered={isHovered} />
+  }
 
   return <PEER isHovered={isHovered} />
 }
@@ -72,7 +78,32 @@ const INDEX = ({ isHovered }) => (
     />
   </svg>
 )
+const PM = ({ isHovered }) => (
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 30" width="25">
+    <path
+      fill={isHovered ? '#00d3f9' : '#ffffff'}
+      fillRule="evenodd"
+      d="M44.1 19.197c0 1.39-.451 2.663-2.655 3.319-2.22.699-13.378 4.222-15.355 4.824-2.245.71-4.902.718-7.109 0L3.554 22.516C1.35 21.86 0 20.587 0 19.197V9.55c0-1.39 1.35-2.663 3.554-3.358h.071c2.284-.717 13.329-4.18 15.356-4.824 2.204-.694 4.905-.694 7.109 0l15.355 4.824C43.649 6.886 44.1 8.16 44.1 9.55v9.647z"
+    />
+  </svg>
+)
 
+const COIN = ({ isHovered }) => (
+  <svg xmlns="http://www.w3.org/2000/svg" width="23.66" viewBox="0 0 52 52">
+    <path
+      fillRule="evenodd"
+      fill={isHovered ? '#00d3f9' : '#ffffff'}
+      d="M22.5 0C10.074 0 0 10.074 0 22.5s10.074 21.6 22.5 21.6 21.6-9.174 21.6-21.6C44.1 10.074 34.926 0 22.5 0zm14.813 24.183-6.331 3.076a8.102 8.102 0 0 0-3.724 3.72l-3.08 6.336c-.684 1.393-2.672 1.393-3.356 0l-3.08-6.336a8.102 8.102 0 0 0-3.724-3.72l-6.331-3.076c-1.395-.684-1.395-2.669 0-3.352l6.331-3.076a8.008 8.008 0 0 0 3.724-3.734l3.08-6.335c.684-1.394 2.672-1.394 3.356 0l3.711 7.637a3.896 3.896 0 0 0 1.791 1.8l7.633 3.708c1.395.683 1.395 2.668 0 3.352z"
+    />
+  </svg>
+)
+
+COIN.propTypes = {
+  isHovered: T.bool,
+}
+PM.propTypes = {
+  isHovered: T.bool,
+}
 PEER.propTypes = {
   isHovered: T.bool,
 }

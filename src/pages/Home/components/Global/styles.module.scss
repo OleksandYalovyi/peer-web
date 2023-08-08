@@ -1,0 +1,33 @@
+.global {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding-top: 42.5px;
+  position: absolute;
+  top: -71px;
+  padding-top: 0;
+  left: 0;
+  right: 0;
+
+  @media screen and (max-width: 900px) {
+    // padding-top: 253.5px;
+  }
+
+  .link {
+    width: 100%;
+    // max-width: 400px;
+    height: 100%;
+    // max-height: 800px;
+    display: flex;
+    justify-content: center;
+
+
+    img {
+      width: auto;
+      max-width: 100%;
+      height: auto;
+      max-height: 100%;
+    }
+  }
+}
