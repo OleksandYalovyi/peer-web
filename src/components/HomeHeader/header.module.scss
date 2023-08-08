@@ -61,9 +61,9 @@
     .nav {
       display: flex;
       justify-content: space-between;
-      gap: 150px;
+      gap: 20px;
       width: 100%;
-      max-width: 700px;
+      max-width: 465px;
       padding: 0 15px;
       margin-right: 40px;
     
@@ -77,7 +77,7 @@
       .nav_item {
         position: relative;
         font-family: BallingerMono-Light, sans-serif;
-        font-size: 18px;
+        font-size: 14px;
         font-weight: 500;
         letter-spacing: 0.9px;
         color: var(--main-font);
@@ -85,6 +85,7 @@
         transition: .3s;
         line-height: 45px;
         cursor: pointer;
+        letter-spacing: 2.8px;
 
         @media screen and (max-width: 679px) {
           font-size: 10.66px;
