@@ -22,14 +22,14 @@ export const isEnvProd =
 
 const getPeerClubUrl = () => {
   if (isEnvDev || isDev) {
-    return envUrls.dev
+    return envUrlsPeerClub.dev
   }
 
   if (isEnvStage) {
-    return envUrls.stage
+    return envUrlsPeerClub.stage
   }
 
-  return envUrls.prod
+  return envUrlsPeerClub.prod
 }
 
 export const peerClubUrl = getPeerClubUrl()
