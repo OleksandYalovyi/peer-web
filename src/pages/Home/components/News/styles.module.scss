@@ -1,7 +1,11 @@
 .news {
   padding: 0 110.5px;
-  padding-top: 212px;
+  padding-top: 440px;
   color: #fff;
+
+  @media screen and (max-width: 1400px) {
+    padding-top: 220px;
+  }
 
   @media screen and (max-width: 768px) {
     padding: 0 18.66px;
@@ -13,18 +17,17 @@
       width: fit-content;
       width: -moz-fit-content;
       margin: 0;
-      padding-bottom: 25.5px;
+      padding-bottom: 67.5px;
       color: #747474;
       font-weight: 500;
-      font-size: 20px;
-      font-family: IBMPlexMono-Medium, sans-serif;
-      line-height: 14px;
+      font-size: 30px;
+      font-family: Gilroy-Regular, sans-serif;
+      line-height: 1.17;
       text-transform: uppercase;
 
       @media screen and (max-width: 768px) {
         padding-bottom: 26.33px;
-        font-size: 16.66px;
-        line-height: 12px;
+        font-size: 20px;
       }
     }
 
@@ -55,12 +58,14 @@
 
   .more {
     display: flex;
-    gap: 18px;
+    gap: 7px;
     align-items: center;
     height: 14px;
     color: #747474;
     font-size: 20px;
-    font-family: IBMPlexMono-Medium, sans-serif;
+    font-family: IBMPlexMono-regular, sans-serif;
+    line-height: 1.75;
+    letter-spacing: 2px;
     text-transform: uppercase;
     transition: 0.3s;
 
@@ -75,7 +80,6 @@
     }
 
     @media screen and (max-width: 768px) {
-      gap: 20px;
       height: 12px;
       font-size: 16.66px;
     }

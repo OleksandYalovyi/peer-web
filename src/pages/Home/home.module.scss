@@ -3,10 +3,12 @@
 .wrapper {
   min-height: calc(100vh - 71px);
   padding: 71px 0;
+  padding-bottom: 150px;
   overflow: hidden;
 
-  @media screen and (max-width: 900px) {
+  @media screen and (max-width: 1200px) {
     padding-top: 60px;
+    padding-bottom: 60px;
   }
 
   .container {

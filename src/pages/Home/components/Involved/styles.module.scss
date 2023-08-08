@@ -4,7 +4,11 @@
   gap: 55.5px;
   align-items: center;
   justify-content: center;
-  padding: 507.5px 0;
+  padding: 427.5px 0;
+
+  @media screen and (max-width: 1200px) {
+    padding: 200px 0;
+  }
 
   @media screen and (max-width: 768px) {
     gap: 38.33px;

@@ -1,4 +1,5 @@
 import React from 'react'
+import links from 'constants/links'
 
 import PeerApp from 'assets/Home/Puzzle/peerapp.svg'
 import Market from 'assets/Home/Puzzle/market.png'
@@ -26,7 +27,7 @@ const Puzzle = () => (
     <section className={styles.puzzle}>
       <div className={styles.row}>
         <div className={styles.col}>
-          <Card to="https://peerclub.com/" name="UI">
+          <Card to={links.peerClub} name="UI">
             <img src={PeerApp} alt="PeerApp" className={styles.peerapp} />
           </Card>
         </div>
@@ -42,7 +43,7 @@ const Puzzle = () => (
         </div>
 
         <div className={styles.col}>
-          <Card to="https://dev-market.peerclub.com/profile/trade" name="coin" size="medium">
+          <Card to={links.peerClubProfileTrade} name="coin" size="medium">
             <img src={Peer} alt="Coin" className={styles.coin} />
           </Card>
 
