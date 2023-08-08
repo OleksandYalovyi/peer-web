@@ -23,12 +23,31 @@ const data = [
 
   {
     title: 'Products',
+    // links: [
+    //   { name: 'Peer', to: 'https://peerclub.com', logo: 'PEER' },
+    //   { name: 'Zen', to: '/placeholder', logo: 'ZEN', withRouter: true },
+    //   { name: 'Omni', to: 'https://peermultichain.com', logo: 'OMNI' },
+    //   { name: 'Index', to: '/placeholder', logo: 'INDEX', withRouter: true },
+    //   { name: 'Labs', to: 'https://labs.peer.inc', logo: 'LABS' },
+    // ],
     links: [
-      { name: 'Peer', to: 'https://peerclub.com', logo: 'PEER' },
-      { name: 'Zen', to: '/placeholder', logo: 'ZEN', withRouter: true },
-      { name: 'Omni', to: 'https://peermultichain.com', logo: 'OMNI' },
-      { name: 'Index', to: '/placeholder', logo: 'INDEX', withRouter: true },
-      { name: 'Labs', to: 'https://labs.peer.inc', logo: 'LABS' },
+      { name: 'PEER', desc: 'OPEN WORLD', to: 'https://peerclub.com', logo: 'PEER' },
+      { name: 'ZEN', desc: 'WALLET', to: '/placeholder', logo: 'ZEN', withRouter: true },
+      { name: 'OMNI', desc: 'EXPLORER', to: '/placeholder', logo: 'OMNI', withRouter: true },
+      {
+        name: 'PM',
+        desc: 'MARKETPLACE',
+        to: '/placeholder',
+        logo: 'PM',
+        withRouter: true,
+      },
+      {
+        name: 'PEER DOLLAR',
+        desc: 'COIN',
+        to: '/placeholder',
+        logo: 'COIN',
+        withRouter: true,
+      },
     ],
   },
 
@@ -36,8 +55,8 @@ const data = [
     title: 'About',
     links: [
       { name: 'Team', to: '/team', isInternal: true },
-      { name: 'Brand Book', to: '/brandbook' },
-      { name: 'White Papers', to: '/whitepapers' },
+      { name: 'Brand Book', to: '/brandbook', isInternal: true },
+      { name: 'White Papers', to: '/whitepapers', isInternal: true },
     ],
   },
 ]

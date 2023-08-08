@@ -102,12 +102,31 @@ const LandingHeader = () => {
             <NavItems
               name="Products"
               links={[
-                { name: 'Peer', to: 'https://peerclub.com', logo: 'PEER' },
-                { name: 'Zen', to: '/placeholder', logo: 'ZEN', router: true },
-                { name: 'Omni', to: 'https://peermultichain.com', logo: 'OMNI' },
-                { name: 'Index', to: '/placeholder', logo: 'INDEX', router: true },
-                { name: 'Labs', to: 'https://labs.peer.inc', logo: 'LABS' },
+                { name: 'PEER', desc: 'OPEN WORLD', to: 'https://peerclub.com', logo: 'PEER' },
+                { name: 'ZEN', desc: 'WALLET', to: '/placeholder', logo: 'ZEN', router: true },
+                { name: 'OMNI', desc: 'EXPLORER', to: '/placeholder', logo: 'OMNI', router: true },
+                {
+                  name: 'PM',
+                  desc: 'MARKETPLACE',
+                  to: '/placeholder',
+                  logo: 'PM',
+                  router: true,
+                },
+                {
+                  name: 'PEER DOLLAR',
+                  desc: 'COIN',
+                  to: '/placeholder',
+                  logo: 'COIN',
+                  router: true,
+                },
               ]}
+              // links={[
+              //   { name: 'Peer', to: 'https://peerclub.com', logo: 'PEER' },
+              //   { name: 'Zen', to: '/placeholder', logo: 'ZEN', router: true },
+              //   { name: 'Omni', to: 'https://peermultichain.com', logo: 'OMNI' },
+              //   { name: 'Index', to: '/placeholder', logo: 'INDEX', router: true },
+              //   { name: 'Labs', to: 'https://labs.peer.inc', logo: 'LABS' },
+              // ]}
             />
             <NavItems
               router

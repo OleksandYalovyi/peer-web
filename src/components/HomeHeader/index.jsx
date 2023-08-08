@@ -139,18 +139,20 @@ const HomeHeader = () => {
             links={[
               { name: 'PEER', desc: 'OPEN WORLD', to: 'https://peerclub.com', logo: 'PEER' },
               { name: 'ZEN', desc: 'WALLET', to: '/placeholder', logo: 'ZEN', router: true },
-              { name: 'OMNI', desc: 'EXPLORER', to: 'https://peermultichain.com', logo: 'OMNI' },
+              { name: 'OMNI', desc: 'EXPLORER', to: '/placeholder', logo: 'OMNI', router: true },
               {
                 name: 'PM',
                 desc: 'MARKETPLACE',
-                to: 'https://market.peerclub.com',
+                to: '/placeholder',
                 logo: 'PM',
+                router: true,
               },
               {
                 name: 'PEER DOLLAR',
                 desc: 'COIN',
-                to: 'https://market.peerclub.com',
+                to: '/placeholder',
                 logo: 'COIN',
+                router: true,
               },
             ]}
             openedMenu={openedMenu}
