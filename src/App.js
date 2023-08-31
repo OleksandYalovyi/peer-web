@@ -11,6 +11,7 @@ import Team from 'pages/Team'
 import Placeholder from 'pages/Placeholder'
 import News from 'pages/News'
 import './App.css'
+import HomeFooter from 'components/HomeFooter/index'
 
 function App() {
   const location = useLocation()
@@ -33,7 +34,7 @@ function App() {
           </Switch>
         </CSSTransition>
       </TransitionGroup>
-      <Footer />
+      {isHome ? <HomeFooter /> : <Footer />}
     </div>
   )
 }

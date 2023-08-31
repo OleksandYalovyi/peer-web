@@ -5,8 +5,11 @@ const Vision = () => (
   <section className={styles.section}>
     <p className={styles.sub_title}>our vision</p>
     <h2 className={styles.title}>
-      a <span>gamified</span> social <br /> ecosystem
+      a social network at the intersection of the real and digital world
     </h2>
+    <a href="#" className={styles.link}>
+      Meet our team
+    </a>
   </section>
 )
 

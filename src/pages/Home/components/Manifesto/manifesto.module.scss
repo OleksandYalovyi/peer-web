@@ -1,0 +1,56 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 150px;
+    margin-top: 255px;
+
+    @media screen and (max-width: 768px) {
+        gap: 42px;
+    }
+
+    .title {
+        font-family: IBMPlexMono-Regular, sans-serif;
+        font-size: 25px;
+        line-height: 2.8;
+        color: rgba(255, 255, 255, 0.9);
+
+        @media screen and (max-width: 768px) {
+            font-size: 16px;
+        }
+    }
+
+    .descriptionItems {
+        display: grid;
+        grid-template-columns: auto auto;
+        column-gap: 64px;
+        max-width: 1078px;
+
+        @media screen and (max-width: 768px) {
+            grid-template-columns: auto;
+            max-width: 100%;
+        }
+
+        .descriptionItem {
+            text-transform: uppercase;
+            width: 100%;
+            font-family: IBMPlexMono-Regular, sans-serif;
+            font-size: 16px;
+            line-height: 1.25;
+            text-align: justify;
+            color: #939393;
+            margin-bottom: 40px;
+
+            .descriptionTitle {
+                color: #fff;
+                margin-bottom: 20px;
+            }
+
+        }
+
+        .descriptionItem:first-child {
+            color: #f65a5a;
+        }
+    }
+}
