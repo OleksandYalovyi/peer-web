@@ -13,6 +13,30 @@
   }
 
   .latest {
+    .dash {
+      width: 40px;
+      height: 2.5px;
+      background-color: #747474;
+    }
+
+    .spoiler {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      color: #747474;
+      font-size: 20px;
+      font-family: IBMPlexMono-Medium, sans-serif;
+      line-height: 1.75;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      padding-bottom: 37px;
+      text-decoration: none;
+
+      @media screen and (max-width: 768px) {
+        padding-bottom: 24px;
+        font-size: 13px;
+      }
+    }
     .title {
       width: fit-content;
       width: -moz-fit-content;

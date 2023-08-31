@@ -11,6 +11,7 @@ import MetaEarth from './components/MetaEarh'
 import Involved from './components/Involved'
 import Dates from './components/Dates'
 import Vision from './components/Vision/index'
+import Manifesto from './components/Manifesto/index'
 
 const Home = () => {
   const [userPosition, setUserPosition] = useState({
@@ -46,6 +47,7 @@ const Home = () => {
       <div className={styles.container}>
         {/* <Puzzle /> */}
         <Vision />
+        <Manifesto />
         <Involved />
       </div>
     </div>
