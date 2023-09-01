@@ -48,6 +48,14 @@
       font-family: Gilroy-Regular, sans-serif;
       line-height: 1.17;
       text-transform: uppercase;
+      display: inline-block;
+      text-decoration: none;
+      transition: all 0.15s ease;
+
+      &:hover {
+        transform: scale(1.1);
+        font-family: Gilroy-SemiBold, sans-serif;
+      }
 
       @media screen and (max-width: 768px) {
         padding-bottom: 26.33px;

@@ -7,7 +7,7 @@ import constants from './constants'
 
 function HomeFooter() {
   const width = useCurrentWidth()
-  const isSmallDevice = width < 768
+  const isSmallDevice = width < 821
   const [expandedItemTitle, setexpandedItemTitle] = useState('')
 
   const expandListHandler = (title) => {
