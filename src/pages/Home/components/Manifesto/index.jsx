@@ -16,7 +16,6 @@ function Manifesto() {
     }
   }, [isAnimatedVisible, animatedTextRef.current])
   function onActiveSensor(isVisible) {
-    console.log(isVisible)
     if (isVisible) {
       setVisible(true)
       setActiveSensore(false)
