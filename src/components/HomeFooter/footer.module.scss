@@ -6,7 +6,7 @@
   width: fit-content;
   padding: 25px 45.5px 185px 33.5px;
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 821px) {
     padding: 25px 45.5px 60px 33.5px;
     margin: 0;
     width: 100%;
@@ -15,19 +15,21 @@
 
   .topRow {
     display: flex;
-    gap: 100px;
+    // justify-content: space-between;
     align-items: flex-start;
     max-width: 1080px;
+    width: 100%;
+    gap: 50px;
 
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 821px) {
       gap: 0;
       flex-direction: column;
       max-width: 100%;
       width: 100%;
     }
-  
 
     .listItem {
+      width: 180px;
       display: flex;
       flex-direction: column;
       font-family: Gilroy-Medium, sans-serif;
@@ -35,10 +37,9 @@
       line-height: 1.33;
       color: #a1a2a3;
 
-      @media screen and (max-width: 768px) {
+      @media screen and (max-width: 821px) {
         width: 100%;
       }
-
 
       .title {
         font-family: Gilroy-Bold, sans-serif;
@@ -56,7 +57,7 @@
         max-height: 1000px;
         overflow: hidden;
         transition: all 0.5s;
-        @media screen and (max-width: 768px) {
+        @media screen and (max-width: 821px) {
           max-height: 0;
           margin-bottom: 20px;
           padding-left: 0;
@@ -65,8 +66,17 @@
 
       li {
         cursor: pointer;
+        white-space: nowrap;
+        transition: all 0.15s ease;
+        width: 100%;
 
-        @media screen and (max-width: 768px) {
+        &:hover {
+          transform: scale(1.01);
+          font-family: Gilroy-SemiBold, sans-serif;
+          color: var(--link);
+        }  
+
+        @media screen and (max-width: 821px) {
           margin-bottom: 20px;
         }
       }
@@ -86,14 +96,23 @@
     font-size: 13px;
     line-height: 1.54;
     color: #a1a2a3;
+    transition: all 0.15s ease; 
+    max-width: 1080px;
+    width: 100%;
 
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 821px) {
       gap: 21px;
       flex-direction: column;
     }
 
     span {
+      padding: 0 5px;
       cursor: pointer;
+      &:hover {
+        transform: scale(1.01);
+        font-family: Gilroy-SemiBold, sans-serif;
+        color: var(--link);
+      } 
     }
   }
 }
