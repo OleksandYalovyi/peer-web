@@ -6,7 +6,7 @@ import { TypeShuffle } from '../TextShuffleAnimation/index'
 
 function Manifesto() {
   const [isAnimatedVisible, setVisible] = useState(false)
-  const [isActiveSensor, setActiveSensore] = useState(true)
+  const isActiveSensor = !sessionStorage.getItem('activeSensorDisabled')
   const animatedTextRef = useRef()
 
   useEffect(() => {
@@ -18,10 +18,9 @@ function Manifesto() {
   function onActiveSensor(isVisible) {
     if (isVisible) {
       setVisible(true)
-      setActiveSensore(false)
+      sessionStorage.setItem('activeSensorDisabled', true)
     }
   }
-
   return (
     <VisibilitySensor
       partialVisibility
