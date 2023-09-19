@@ -11,9 +11,8 @@ import Peer from 'components/Icons/Share/Peer'
 import Twitter from 'components/Icons/Share/Twitter'
 import Telegram from 'components/Icons/Share/Telegram'
 import Linkedin from 'components/Icons/Share/Linkedin'
-import Privacy from 'assets/PeerPrivacyPolicy.pdf'
-import Terms from 'assets/Peer-TermsandConditions.c660affe.pdf'
 // import Dropdown from 'components/Dropdown/index'
+import links from 'constants/links'
 import styles from './footer.module.scss'
 
 const ShareData = [
@@ -84,10 +83,10 @@ const Footer = () => {
           <div className={styles.copyright_container}>
             <span className={styles.copyright}>© 2023 Peer Inc.</span>
             <span className={styles.link}>
-              <a href={Privacy} target="_blank" rel="noreferrer">
+              <a href={links.privacyPolicy} target="_blank" rel="noreferrer">
                 Privacy
               </a>
-              <a href={Terms} target="_blank" rel="noreferrer">
+              <a href={links.termsService} target="_blank" rel="noreferrer">
                 Terms
               </a>
               {/* <a href="#" target="_blank" rel="noreferrer">

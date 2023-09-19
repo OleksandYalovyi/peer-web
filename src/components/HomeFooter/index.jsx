@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import cls from 'classnames'
 import useCurrentWidth from 'hooks/useCurrentWidth'
 import { ExpandMore, ExpandLess } from '@mui/icons-material/index'
+import links from 'constants/links'
 import styles from './footer.module.scss'
 import constants from './constants'
 
@@ -43,8 +44,12 @@ function HomeFooter() {
         <div className={styles.bottomRow}>
           <span>© 2023 Peer Inc.</span>
           <span>Cookies</span>
-          <span>Privacy</span>
-          <span>Terms and conditions</span>
+          <a href={links.privacyPolicy} target="_blank" rel="noreferrer">
+            Privacy
+          </a>
+          <a href={links.termsService} target="_blank" rel="noreferrer">
+            Terms and conditions
+          </a>
         </div>
       </div>
     </footer>

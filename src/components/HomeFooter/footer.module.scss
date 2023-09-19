@@ -105,8 +105,9 @@
       flex-direction: column;
     }
 
-    span {
+    span, a{
       padding: 0 5px;
+    color: #a1a2a3;
       cursor: pointer;
       &:hover {
         transform: scale(1.01);
