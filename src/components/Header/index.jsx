@@ -18,8 +18,6 @@ import styles from './header.module.scss'
 const NavItems = ({ name, links }) => {
   const [hovered, setHovered] = useState('')
 
-  console.log('links', links)
-
   return (
     <div className={styles.nav_item}>
       {name}
