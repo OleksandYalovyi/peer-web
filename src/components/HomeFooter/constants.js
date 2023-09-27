@@ -123,7 +123,12 @@ export const FOOTER_LIST_ITEMS = [
         router: true,
       },
       {
-        title: 'Forums Communities',
+        title: 'Forums',
+        to: '/placeholder',
+        router: true,
+      },
+      {
+        title: 'Communities',
         to: '/placeholder',
         router: true,
       },
