@@ -139,12 +139,12 @@ const LandingHeader = () => {
                 },
                 {
                   name: 'Brand Book',
-                  to: '/brandbook',
+                  to: '/placeholder',
                   router: true,
                 },
                 {
                   name: 'White Papers',
-                  to: '/whitepapers',
+                  to: '/placeholder',
                   router: true,
                 },
               ]}

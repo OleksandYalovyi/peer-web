@@ -1,5 +1,6 @@
 const DESCRIPTION_ITEMS = [
   {
+    id: 0,
     title: '',
     content: `At Peer, we are united by an unwavering belief: the metaverse 
     is not a distant dream but an imminent reality. Our company is driven by a resolute mission – 
@@ -8,13 +9,15 @@ const DESCRIPTION_ITEMS = [
     `,
   },
   {
+    id: 1,
     title: 'Ethics and Responsibility',
     content: `As architects of the metaverse, we shoulder the responsibility of shaping its ethical foundation.
-     We are committed to designing technologies that prioritize privacy, security, and inclusivity. 
-     Our vision encompasses a metaverse that respects diversity, champions authenticity, and safeguards the rights
+    We are committed to designing technologies that prioritize privacy, security, and inclusivity. 
+    Our vision encompasses a metaverse that respects diversity, champions authenticity, and safeguards the rights
       of all participants.`,
   },
   {
+    id: 2,
     title: 'Pioneering the Inevitable',
     content: `In a Rapidly evolving WORLD, the metaverse represents the natural evolution of human connection 
     and experience. We are committed to pioneering this inevitable transformation, forging new paths that 
@@ -22,12 +25,14 @@ const DESCRIPTION_ITEMS = [
     metaverse is poised to reshape how we perceive reality, socialize, collaborate, and create.`,
   },
   {
+    id: 3,
     title: 'A Journey of Discovery',
     content: `The path to the metaverse is a journey of discovery, innovation, and adaptation. We embrace 
     the evolution of technology, understanding that challenges are but stepping stones toward progress. 
     With every obstacle we overcome, we inch closer to realizing a metaverse that enriches lives and expands horizons.`,
   },
   {
+    id: 4,
     title: 'Seeding Ideas, Cultivating Realities',
     content: `On our journey, we recognize that the seeds of innovation may appear small, even inconspicuous,
     at first. Yet, these ideas have the potential to flourish into immersive experiences that blur the lines
@@ -35,6 +40,7 @@ const DESCRIPTION_ITEMS = [
     persistence and collective effort, we can cultivate metaverse realities that empower individuals and societies.`,
   },
   {
+    id: 5,
     title: 'Join Us in Shaping Tomorrow, Today',
     content: `We invite you to join us in this epochal journey. As we build bridges between the physical and
     digital, we invite dreamers, thinkers, creators, and pioneers to collaborate. Together, we will usher in
@@ -44,6 +50,7 @@ const DESCRIPTION_ITEMS = [
     transcends our boldest imaginations.`,
   },
   {
+    id: 6,
     title: 'Empowering Connection and Collaboration',
     content: `At Peer, we envision a metaverse that transcends boundaries and fosters a sense of interconnectedness.
     Our technology is more than lines of code – it&apos;s a conduit for collaboration, creativity, and shared

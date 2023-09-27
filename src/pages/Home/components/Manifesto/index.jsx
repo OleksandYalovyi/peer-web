@@ -34,7 +34,7 @@ function Manifesto() {
         <h4 className={styles.title}>OUR MANIFESTO: EMBRACING THE METAVERSE</h4>
         <div className={styles.descriptionItems}>
           {constants.DESCRIPTION_ITEMS.map((i) => (
-            <div className={styles.descriptionItem}>
+            <div className={styles.descriptionItem} key={i.id}>
               {i.title && <h5 className={styles.descriptionTitle}>{i.title}</h5>}
               {i.content}
             </div>

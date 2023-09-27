@@ -55,13 +55,13 @@ const data = [
     title: 'About',
     links: [
       { name: 'Team', to: '/team', isInternal: true },
-      { name: 'Brand Book', to: '/brandbook', isInternal: true },
-      { name: 'White Papers', to: '/whitepapers', isInternal: true },
+      { name: 'Brand Book', to: '/placeholder', isInternal: true },
+      { name: 'White Papers', to: '/placeholder', isInternal: true },
     ],
   },
 ]
 
-const Dropdown = ({ list, children, isShow, onClose, burgerRef }) => {
+const Dropdown = ({ children, isShow, onClose, burgerRef }) => {
   const listRef = useRef(null)
   const [expanded, setExpanded] = useState('')
   const [clickedLink, setClickedLink] = useState('')
