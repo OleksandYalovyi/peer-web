@@ -7,7 +7,7 @@ const Vision = () => (
     <h2 className={styles.title}>
       a social network at the intersection of the real and digital world
     </h2>
-    <a href="#" className={styles.link}>
+    <a href="/team" className={styles.link}>
       Meet our team
     </a>
   </section>
