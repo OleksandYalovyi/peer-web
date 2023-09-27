@@ -64,7 +64,9 @@
         }
       }
 
-      li {
+      .link {
+        text-decoration: none;
+        color: var(--main-font);;
         cursor: pointer;
         white-space: nowrap;
         transition: all 0.15s ease;
@@ -106,8 +108,9 @@
     }
 
     span, a{
+      text-decoration: none;
       padding: 0 5px;
-    color: #a1a2a3;
+      color: #a1a2a3;
       cursor: pointer;
       &:hover {
         transform: scale(1.01);

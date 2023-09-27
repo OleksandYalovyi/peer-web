@@ -1,10 +1,25 @@
+/* eslint-disable react/prop-types */
 import React, { useState } from 'react'
+import { NavLink } from 'react-router-dom'
 import cls from 'classnames'
 import useCurrentWidth from 'hooks/useCurrentWidth'
 import { ExpandMore, ExpandLess } from '@mui/icons-material/index'
-import links from 'constants/links'
+import { FOOTER_LIST_ITEMS, BOTTOM_LINKS } from './constants'
 import styles from './footer.module.scss'
-import constants from './constants'
+
+const NavItems = ({ name, to, router }) => (
+  <>
+    {router ? (
+      <NavLink to={to} className={styles.link}>
+        {name}
+      </NavLink>
+    ) : (
+      <a href={to} target="_blank" rel="noreferrer" className={styles.link}>
+        {name}
+      </a>
+    )}
+  </>
+)
 
 function HomeFooter() {
   const width = useCurrentWidth()
@@ -25,7 +40,7 @@ function HomeFooter() {
     <footer>
       <div className={styles.container}>
         <div className={styles.topRow}>
-          {constants.FOOTER_LIST_ITEMS.map((i) => (
+          {FOOTER_LIST_ITEMS.map((i) => (
             <div className={styles.listItem}>
               <h5 className={styles.title} onClick={() => expandListHandler(i.title)}>
                 {i.title}
@@ -34,7 +49,9 @@ function HomeFooter() {
               </h5>
               <ul className={cls({ [styles.active]: i.title === expandedItemTitle })}>
                 {i.content.map((li) => (
-                  <li>{li}</li>
+                  <li>
+                    <NavItems name={li.title} to={li.to} router={li.router} />
+                  </li>
                 ))}
               </ul>
             </div>
@@ -43,13 +60,9 @@ function HomeFooter() {
 
         <div className={styles.bottomRow}>
           <span>© 2023 Peer Inc.</span>
-          <span>Cookies</span>
-          <a href={links.privacyPolicy} target="_blank" rel="noreferrer">
-            Privacy
-          </a>
-          <a href={links.termsService} target="_blank" rel="noreferrer">
-            Terms and conditions
-          </a>
+          {BOTTOM_LINKS.map((link) => (
+            <NavItems name={link.title} to={link.to} router={link.router} />
+          ))}
         </div>
       </div>
     </footer>
