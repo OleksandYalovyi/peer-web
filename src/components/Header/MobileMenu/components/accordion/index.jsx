@@ -61,7 +61,7 @@ const data = [
   },
 ]
 
-const Dropdown = ({ list, children, isShow, onClose, burgerRef }) => {
+const Dropdown = ({ children, isShow, onClose, burgerRef }) => {
   const listRef = useRef(null)
   const [expanded, setExpanded] = useState('')
   const [clickedLink, setClickedLink] = useState('')

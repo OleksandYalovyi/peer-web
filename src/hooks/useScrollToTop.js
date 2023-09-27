@@ -20,5 +20,5 @@ const locationShape = {
 
 ScrollToTop.propTypes = {
   children: PropTypes.node,
-  location: PropTypes.objectOf(PropTypes.shape(locationShape)),
+  location: PropTypes.shape(locationShape),
 }

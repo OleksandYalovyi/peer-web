@@ -29,7 +29,7 @@ const MobileMenuLogo = ({ isHovered = false, type }) => {
 }
 MobileMenuLogo.propTypes = {
   isHovered: T.bool,
-  type: T.bool,
+  type: T.string,
 }
 
 const PEER = ({ isHovered }) => (

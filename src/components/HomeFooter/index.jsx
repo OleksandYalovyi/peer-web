@@ -41,7 +41,7 @@ function HomeFooter() {
       <div className={styles.container}>
         <div className={styles.topRow}>
           {FOOTER_LIST_ITEMS.map((i) => (
-            <div className={styles.listItem}>
+            <div className={styles.listItem} key={i.title}>
               <h5 className={styles.title} onClick={() => expandListHandler(i.title)}>
                 {i.title}
                 {isSmallDevice && i.title === expandedItemTitle && <ExpandLess />}
@@ -49,7 +49,7 @@ function HomeFooter() {
               </h5>
               <ul className={cls({ [styles.active]: i.title === expandedItemTitle })}>
                 {i.content.map((li) => (
-                  <li>
+                  <li key={li.title}>
                     <NavItems name={li.title} to={li.to} router={li.router} />
                   </li>
                 ))}
@@ -61,7 +61,7 @@ function HomeFooter() {
         <div className={styles.bottomRow}>
           <span>© 2023 Peer Inc.</span>
           {BOTTOM_LINKS.map((link) => (
-            <NavItems name={link.title} to={link.to} router={link.router} />
+            <NavItems name={link.title} to={link.to} router={link.router} key={link.title} />
           ))}
         </div>
       </div>
