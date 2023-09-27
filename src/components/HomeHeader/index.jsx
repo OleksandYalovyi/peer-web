@@ -111,24 +111,30 @@ const HomeHeader = () => {
         </div>
         {!isMobile ? (
           <nav className={styles.nav}>
-            <NavItems router name="TEAM" openedMenu={openedMenu} clickHandler={clickHandler} />
+            <NavItems
+              router
+              name="TEAM"
+              link="/team"
+              openedMenu={openedMenu}
+              clickHandler={clickHandler}
+            />
             <NavItems
               router
               name="ABOUT"
               links={[
-                // {
-                //   name: 'Team',
-                //   to: '/team',
-                //   router: true,
-                // },
+                {
+                  name: 'Team',
+                  to: '/team',
+                  router: true,
+                },
                 {
                   name: 'Brand Book',
-                  to: '/brandbook',
+                  to: '/placeholder',
                   router: true,
                 },
                 {
                   name: 'White Papers',
-                  to: '/whitepapers',
+                  to: '/placeholder',
                   router: true,
                 },
               ]}
@@ -145,9 +151,8 @@ const HomeHeader = () => {
                 {
                   name: 'PM',
                   desc: 'MARKETPLACE',
-                  to: '/placeholder',
+                  to: 'https://market.peerclub.com',
                   logo: 'PM',
-                  router: true,
                 },
                 {
                   name: 'PEER DOLLAR',
@@ -161,7 +166,12 @@ const HomeHeader = () => {
               clickHandler={clickHandler}
             />
 
-            <NavItems name="PRESS" link="/" openedMenu={openedMenu} clickHandler={clickHandler} />
+            <NavItems
+              name="PRESS"
+              link="/placeholder"
+              openedMenu={openedMenu}
+              clickHandler={clickHandler}
+            />
           </nav>
         ) : (
           <MobileMenu isMenu={isMenu} setIsMenuOpen={setIsMenuOpen} />
