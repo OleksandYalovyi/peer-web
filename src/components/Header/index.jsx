@@ -18,6 +18,8 @@ import styles from './header.module.scss'
 const NavItems = ({ name, links }) => {
   const [hovered, setHovered] = useState('')
 
+  console.log('links', links)
+
   return (
     <div className={styles.nav_item}>
       {name}
@@ -139,12 +141,12 @@ const LandingHeader = () => {
                 },
                 {
                   name: 'Brand Book',
-                  to: '/brandbook',
+                  to: '/placeholder',
                   router: true,
                 },
                 {
                   name: 'White Papers',
-                  to: '/whitepapers',
+                  to: '/placeholder',
                   router: true,
                 },
               ]}
