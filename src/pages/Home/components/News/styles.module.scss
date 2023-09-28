@@ -38,6 +38,7 @@
       }
     }
     .title {
+      position: relative;
       width: fit-content;
       width: -moz-fit-content;
       margin: 0;
@@ -54,6 +55,27 @@
       @media screen and (max-width: 768px) {
         padding-bottom: 26.33px;
         font-size: 20px;
+      }
+
+      &::after {
+        content: '';
+        display: block;
+        width: 0;
+        height: 2px;
+        background: var(--link-hover);
+        transition: width .3s;
+      }
+
+      &:hover {
+
+        .nav_list {
+          display: flex;
+          letter-spacing: 1;
+        }
+
+        &:after {
+          width: 100%;
+        }
       }
     }
 
