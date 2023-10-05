@@ -23,15 +23,33 @@ class Line {
 }
 
 class Cell {
-  constructor({ el, position = -1, previousCellPosition = -1 }) {
-    this.DOM = {
-      el,
-    }
+  DOM = {
+    el: null,
+  }
 
+  position = -1
+
+  previousCellPosition = -1
+
+  original
+
+  state
+
+  color
+
+  originalColor
+
+  cache
+
+  constructor(DOMel, { position, previousCellPosition } = {}) {
+    this.DOM.el = DOMel
+    this.original = this.DOM.el.innerHTML
+    this.state = this.original
+    this.color = this.originalColor = getComputedStyle(document.documentElement).getPropertyValue(
+      '--color-text',
+    )
     this.position = position
     this.previousCellPosition = previousCellPosition
-    this.state = this.DOM.el.innerHTML
-    this.color = getComputedStyle(document.documentElement).getPropertyValue('--color-text')
   }
 
   set(value) {
@@ -46,8 +64,6 @@ export class TypeShuffle {
   }
 
   lines = []
-
-  isAnimating = false
 
   lettersAndSymbols = [
     'A',
@@ -110,27 +126,29 @@ export class TypeShuffle {
     '9',
   ]
 
-  static MAX_CELL_ITERATIONS = 45
+  effects = {
+    fx1: () => this.fx1(),
+  }
+
+  totalChars = 0
 
   constructor(DOMel) {
     this.DOM.el = DOMel
-    this.totalChars = 0
 
     const results = Splitting({
       target: this.DOM.el,
       by: 'lines',
     })
-
     results.forEach((s) => Splitting({ target: s.words }))
 
-    results[0].lines.forEach((lineArr, linePosition) => {
+    // for every line
+    for (const [linePosition, lineArr] of results[0].lines.entries()) {
       const line = new Line(linePosition)
       const cells = []
       let charCount = 0
 
-      lineArr.forEach((word) => {
-        const chars = [...word.querySelectorAll('.char')]
-        chars.forEach((char) => {
+      for (const word of lineArr) {
+        for (const char of [...word.querySelectorAll('.char')]) {
           cells.push(
             new Cell(char, {
               position: charCount,
@@ -138,21 +156,20 @@ export class TypeShuffle {
             }),
           )
           ++charCount
-        })
-      })
-
+        }
+      }
       line.cells = cells
       this.lines.push(line)
       this.totalChars += charCount
-    })
+    }
   }
 
   clearCells() {
-    this.lines.forEach((line) => {
-      line.cells.forEach((cell) => {
+    for (const line of this.lines) {
+      for (const cell of line.cells) {
         cell.set('&nbsp;')
-      })
-    })
+      }
+    }
   }
 
   getRandomChar() {
@@ -160,13 +177,16 @@ export class TypeShuffle {
   }
 
   fx1() {
-    this.clearCells()
+    const MAX_CELL_ITERATIONS = 45
+
     let finished = 0
+
+    this.clearCells()
 
     const loop = (line, cell, iteration = 0) => {
       cell.cache = cell.state
 
-      if (iteration === TypeShuffle.MAX_CELL_ITERATIONS - 1) {
+      if (iteration === MAX_CELL_ITERATIONS - 1) {
         cell.set(cell.original)
         ++finished
         if (finished === this.totalChars) {
@@ -182,45 +202,43 @@ export class TypeShuffle {
         cell.set(line.cells[cell.previousCellPosition].cache)
       }
 
-      if (cell.cache !== '&nbsp;') {
+      if (cell.cache != '&nbsp;') {
         ++iteration
       }
 
-      if (iteration < TypeShuffle.MAX_CELL_ITERATIONS) {
+      if (iteration < MAX_CELL_ITERATIONS) {
         setTimeout(() => loop(line, cell, iteration), 15)
       }
     }
 
-    this.lines.forEach((line) => {
-      line.cells.forEach((cell) => {
+    for (const line of this.lines) {
+      for (const cell of line.cells) {
         setTimeout(() => loop(line, cell), (line.position + 1) * 200)
-      })
-    })
+      }
+    }
   }
 
   trigger() {
     if (this.isAnimating) return
     this.isAnimating = true
-    this.fx1()
+    this.effects.fx1()
   }
 }
 
 const TextShuffleAnimation = ({ className = null, text = '', onMouseEnterStatus = true }) => {
-  const contentRef = useRef(null)
+  const contentRef = useRef()
   const { ref, inView } = useInView()
-  const [ts, setTs] = useState(null)
+  const [ts, setTs] = useState(undefined)
 
   useEffect(() => {
-    if (contentRef.current && !ts) {
-      setTs(new TypeShuffle(contentRef.current))
-    }
-  }, [contentRef, ts])
+    if (contentRef.current) setTs(new TypeShuffle(contentRef.current))
+  }, [contentRef])
 
   useEffect(() => {
-    if (inView && ts) {
-      ts.trigger()
+    if (inView) {
+      if (ts) ts.trigger()
     }
-  }, [inView, ts])
+  }, [ts, inView])
 
   const onMouseEnterRef = useCallback(() => {
     if (ts && onMouseEnterStatus) {
