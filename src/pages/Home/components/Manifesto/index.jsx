@@ -30,8 +30,10 @@ function Manifesto() {
       }}
       active={isActiveSensor}
     >
-      <div className={styles.container} ref={animatedTextRef}>
-        <h4 className={styles.title}>OUR MANIFESTO: EMBRACING THE METAVERSE</h4>
+      <div className={styles.container}>
+        <h4 className={styles.title} ref={animatedTextRef}>
+          OUR MANIFESTO: EMBRACING THE METAVERSE
+        </h4>
         <div className={styles.descriptionItems}>
           {constants.DESCRIPTION_ITEMS.map((i) => (
             <div className={styles.descriptionItem} key={i.id}>
