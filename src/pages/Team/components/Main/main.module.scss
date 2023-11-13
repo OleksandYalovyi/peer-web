@@ -1,10 +1,10 @@
 .wrapper {
   display: flex;
   flex-direction: column;
-  gap: 210px;
+  gap: 52px;
   width: 100%;
-  max-width: 1270px;
-  padding: 300px 20px 200px;
+  max-width: 1300px;
+  padding: 144px 20px 91px;
 
   @media screen and (max-width: 680px) {
     gap: 70px;
@@ -14,6 +14,8 @@
   .row {
     display: flex;
     gap: 45px;
+    justify-content: space-between;
+
     @media screen and (max-width: 680px) {
       flex-direction: column;
     }
@@ -23,12 +25,17 @@
       flex: 1;
       flex-direction: column;
 
+      &.fixed {
+        max-width: 550px;
+      }
+
       h1 {
         margin: 0;
         color: #ffffff;
-        font-size: 60px;
-        font-family: Turbine-Bold, sans-serif;
-        line-height: 1.17;
+        font-weight: 700;
+        font-size: 76px;
+        font-family: MonumentExtended-Bold, sans-serif;
+        line-height: 76px;
 
         @media screen and (max-width: 680px) {
           font-size: 40px;
@@ -36,26 +43,54 @@
       }
 
       h2 {
-        margin: 0 0 17px 0;
+        margin: 0;
+        padding-bottom: 17px;
         color: #ffffff;
-        font-size: 30px;
-        font-family: Turbine-Medium, sans-serif;
+        font-weight: 700;
+        font-size: 28.125px;
+        font-family: Gilroy-Bold, sans-serif;
+        font-style: normal;
+        line-height: 36px; /* 128% */
 
         @media screen and (max-width: 680px) {
           font-size: 20px;
         }
       }
 
+      h3 {
+        margin: 0;
+        padding-bottom: 24px;
+        color: #ffffff;
+        font-weight: 400;
+        font-size: 32px;
+        font-family: Gilroy-Regular, sans-serif;
+        line-height: 38px; /* 118.75% */
+        letter-spacing: -0.64px;
+      }
+
+      h4 {
+        margin: 0;
+        color: #b2b2b2;
+        font-weight: 400;
+        font-size: 20px;
+        font-family: Gilroy-Regular, sans-serif;
+        line-height: 24px; /* 120% */
+      }
+
       p {
+        max-width: 560px;
         margin: 0;
         color: #939393;
-        font-size: 20px;
-        font-family: Turbine-Regular, sans-serif;
-        line-height: 1.5;
+        font-weight: 400;
+        font-size: 18.438px;
+        font-family: Gilroy-Regular, sans-serif;
+        font-style: normal;
+        line-height: 30px;
 
         a {
           color: #939393;
           text-decoration: underline;
+
           &:hover {
             color: #4994ec;
           }
@@ -70,8 +105,9 @@
         display: flex;
         flex-wrap: wrap;
         gap: 24px 36px;
-        justify-content: center;
-        padding: 38px 20px 0;
+        width: 100%;
+        margin-left: -15px;
+        padding: 36px 0;
 
         @media screen and (max-width: 680px) {
           justify-content: start;

@@ -1,7 +1,12 @@
 .section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   width: 100%;
-  max-width: 1320px;
-  padding: 125.5px 0;
+  max-width: 1300px;
+  padding: 0 20px 88px;
+  padding-bottom: 88px;
 
   @media screen and (max-width: 1320px) {
     padding: 80px 20px;
@@ -11,10 +16,29 @@
     padding: 52.66px 20px 73.33px;
   }
 
-  .top {
+  .title {
+    max-width: 633px;
+    margin: 0;
+    padding-bottom: 51px;
+    color: #ffffff;
+    font-weight: 400;
+    font-size: 34px;
+    font-family: Gilroy-Regular, sans-serif;
+    font-style: normal;
+    line-height: 42px; /* 123.529% */
+    text-align: center;
+
+    @media screen and (max-width: 600px) {
+      margin-bottom: 60.33px;
+      font-size: 26.66px;
+      line-height: 33.33px;
+    }
+  }
+
+  .content {
     display: flex;
-    // gap: 131px;
     justify-content: space-between;
+    width: 100%;
 
     @media screen and (max-width: 1320px) {
       flex-direction: column;
@@ -22,26 +46,9 @@
       align-items: center;
     }
 
-    .quote {
-      max-width: 620px;
-      padding: 0 60px;
-      color: #939393;
-      font-size: 16px;
-      line-height: 25px;
-      text-align: center;
-
-      @media screen and (max-width: 1320px) {
-        margin: 0 auto;
-        padding: 0 34px;
-        font-size: 10.3px;
-        line-height: 16.66px;
-      }
-    }
-
     .video_wrapper {
       width: 100%;
-      @media screen and (max-width: 1320px) {
-      }
+
       .video {
         display: flex;
         align-items: center;
@@ -49,7 +56,8 @@
         width: 100%;
         max-width: 620px;
         height: 330px;
-        margin-bottom: 74.5px;
+        margin-bottom: 23px;
+        margin-left: 36.5px;
         background-color: var(--font);
         background-image: url('./video-preview.png');
         background-size: cover;
@@ -70,47 +78,66 @@
           margin-bottom: 33px;
           background-position: center;
         }
+
         @media screen and (max-width: 600px) {
-          max-height: 250px;
           width: 100%;
+          max-height: 250px;
         }
+
         @media screen and (max-width: 500px) {
           max-height: 187.66px;
+        }
+      }
+
+      .quote {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        p {
+          margin: 0;
+          color: #939393;
+          font-weight: 400;
+          font-size: 16px;
+          font-family: Gilroy-Regular, sans-serif;
+          font-style: normal;
+          line-height: 25px; /* 156.25% */
+        }
+
+        @media screen and (max-width: 1320px) {
+          p {
+            font-size: 10.3px;
+            line-height: 16.66px;
+          }
         }
       }
     }
 
     .description {
-      max-width: 575px;
+      display: flex;
+      flex-direction: column;
+      gap: 34px;
       width: 100%;
-      .title {
-        margin-bottom: 58px;
-        color: var(--font);
-        font-size: 40px;
-        line-height: 50px;
-        @media screen and (max-width: 600px) {
-          margin-bottom: 60.33px;
-          font-size: 26.66px;
-          line-height: 33.33px;
-        }
-      }
-      @media screen and (max-width: 600px) {
-        padding-left: 20px;
-      }
+      max-width: 550px;
 
-      .content {
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
+      p {
+        max-width: 515px;
+        margin: 0;
         color: #939393;
-        font-size: 20px;
-        line-height: 30px;
-        line-height: 1.5;
+        font-weight: 400;
+        font-size: 18px;
+        font-family: Gilroy-Regular, sans-serif;
+        font-style: normal;
+        line-height: 26px; /* 144.444% */
 
-        @media screen and (max-width: 600px) {
-          font-size: 16.66px;
-          line-height: 23.33px;
-          line-height: 1.4;
+        &.gradient {
+          background: var(
+            --2,
+            linear-gradient(262deg, #ffbaf3 11.2%, #fff1d4 50.33%, #8bf3fc 90.29%)
+          );
+          -webkit-background-clip: text;
+          background-clip: text;
+          -webkit-text-fill-color: transparent;
         }
       }
     }

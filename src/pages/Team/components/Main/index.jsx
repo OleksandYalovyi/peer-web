@@ -1,9 +1,7 @@
 /* eslint-disable global-require */
 /* eslint-disable import/no-dynamic-require */
-
 import React from 'react'
-import cls from 'classnames'
-
+import classNames from 'classnames'
 import styles from './main.module.scss'
 
 const Links = () => {
@@ -75,22 +73,26 @@ const Main = () => (
           the magic
         </h1>
       </div>
-      <div className={styles.col}>
-        <p>
+
+      <div className={classNames(styles.col, styles.fixed)}>
+        <h3>
           The Peer team comprises a highly-accomplished group of engineers, researchers,
           strategists, designers, and builders—all committed to building and democratizing access to
           the next generation of innovation for billions of people.
-          <br />
-          <br />
+        </h3>
+
+        <h4>
           Much of the Peer team is credited with developing the technical innovations behind of
           hardware, software and services at some of the world’s largest and most future forward
           companies.
-        </p>
+        </h4>
       </div>
     </div>
+
     <div className={styles.row}>
       <div className={styles.col}>
         <h2>We’re from</h2>
+
         <p>
           Meta, Microsoft, Google, T-Mobile, Zenly, Magic Leap, Intel, Industrial Light and Magic,
           CafePress, and Snap.
@@ -117,7 +119,8 @@ const Main = () => (
           .
         </p>
       </div>
-      <div className={styles.col}>
+
+      <div className={classNames(styles.col, styles.fixed)}>
         <Links />
       </div>
     </div>

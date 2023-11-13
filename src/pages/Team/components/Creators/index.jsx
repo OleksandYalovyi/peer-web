@@ -7,12 +7,13 @@ const data = [
   { name: 'Kishan Verma', position: 'Blockchain Architect' },
   { name: 'Heath Abbate', position: 'COO' },
   { name: 'Santiago Moriv', position: 'Sr. Art Director' },
-  { name: 'Egor Yusov', position: 'CTO' },
+  { name: 'Rachid Saadi', position: 'CTO' },
   { name: 'Huy Le', position: 'Director, VN Regional' },
   { name: 'Long Le', position: 'Corporate Vice President' },
   { name: 'Milan Bulat', position: 'Head of Maps' },
   { name: 'Noah Zerkin', position: 'AR Lead' },
   { name: 'Stacey Tran', position: 'Program Director' },
+  { name: 'Egor Yusov', position: 'Chief Architect' },
 ]
 
 const Creators = () => (
