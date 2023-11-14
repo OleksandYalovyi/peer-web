@@ -21,7 +21,7 @@ const News = () => (
       </a>
     </div>
 
-    <NavLink to="/news" className={styles.more}>
+    <NavLink to="/press" className={styles.more}>
       More News <img src={LittleChevron} alt="Chevron" />
     </NavLink>
   </section>

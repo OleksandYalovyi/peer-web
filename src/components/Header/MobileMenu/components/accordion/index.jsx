@@ -54,7 +54,7 @@ const data = [
   {
     title: 'About',
     links: [
-      { name: 'Team', to: '/team', isInternal: true },
+      { name: 'About', to: '/about', isInternal: true },
       { name: 'Brand Book', to: '/placeholder', isInternal: true },
       { name: 'White Papers', to: '/placeholder', isInternal: true },
     ],

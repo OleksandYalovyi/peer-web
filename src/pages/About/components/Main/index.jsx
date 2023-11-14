@@ -53,7 +53,7 @@ const Links = () => {
       {links.map((l) => (
         <div href="/" key={l?.name} className={styles.item}>
           <img
-            src={require(`../../../../assets/team/links/${l?.name}.png`).default}
+            src={require(`../../../../assets/about/links/${l?.name}.png`).default}
             alt=""
             style={{ width: `${l?.width}px` }}
           />

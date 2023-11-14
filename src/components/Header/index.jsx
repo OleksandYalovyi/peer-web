@@ -133,8 +133,8 @@ const LandingHeader = () => {
               name="About"
               links={[
                 {
-                  name: 'Team',
-                  to: '/team',
+                  name: 'About',
+                  to: '/about',
                   router: true,
                 },
                 {

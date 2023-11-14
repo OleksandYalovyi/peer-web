@@ -7,11 +7,12 @@ import Footer from 'components/Footer'
 import Home from 'pages/Home'
 import HomeHeader from 'components/HomeHeader/index'
 import Zen from 'pages/Zen'
-import Team from 'pages/Team'
+import About from 'pages/About'
 import Placeholder from 'pages/Placeholder'
-import News from 'pages/News'
+import HomeFooter from 'components/HomeFooter'
+import Press from 'pages/Press'
+
 import './App.css'
-import HomeFooter from 'components/HomeFooter/index'
 
 function App() {
   const location = useLocation()
@@ -27,9 +28,9 @@ function App() {
           <Switch location={location}>
             <Route exact path="/" component={Home} />
             <Route exact path="/zen" component={Zen} />
-            <Route exact path="/team" component={Team} />
+            <Route exact path="/about" component={About} />
             <Route exact path="/placeholder" component={Placeholder} />
-            <Route exact path="/news" component={News} />
+            <Route exact path="/press" component={Press} />
             <Redirect exact from="/*" to="/" />
           </Switch>
         </CSSTransition>

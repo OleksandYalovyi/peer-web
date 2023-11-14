@@ -113,8 +113,8 @@ const HomeHeader = () => {
           <nav className={styles.nav}>
             <NavItems
               router
-              name="TEAM"
-              link="/team"
+              name="ABOUT"
+              link="/about"
               openedMenu={openedMenu}
               clickHandler={clickHandler}
             />
@@ -123,8 +123,8 @@ const HomeHeader = () => {
               name="ABOUT"
               links={[
                 {
-                  name: 'Team',
-                  to: '/team',
+                  name: 'About',
+                  to: '/about',
                   router: true,
                 },
                 {
