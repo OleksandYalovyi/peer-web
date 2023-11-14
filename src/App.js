@@ -22,7 +22,7 @@ function App() {
 
   return (
     <div id="theme" className={isLight ? 'container' : 'container dark'}>
-      {isHome ? <HomeHeader /> : <Header />}
+      <HomeHeader />
       <TransitionGroup className="transition_group">
         <CSSTransition key={location.key} classNames="fade" timeout={900}>
           <Switch location={location}>
@@ -35,7 +35,7 @@ function App() {
           </Switch>
         </CSSTransition>
       </TransitionGroup>
-      {isHome ? <HomeFooter /> : <Footer />}
+      <Footer />
     </div>
   )
 }
