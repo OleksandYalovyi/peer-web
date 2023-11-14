@@ -8,12 +8,9 @@
   padding: 0 20px 88px;
   padding-bottom: 88px;
 
-  @media screen and (max-width: 1320px) {
-    padding: 80px 20px;
-  }
-
-  @media screen and (max-width: 600px) {
-    padding: 52.66px 20px 73.33px;
+  @media screen and (max-width: 768px) {
+    align-items: flex-start;
+    padding: 0 21px 57.76px;
   }
 
   .title {
@@ -28,10 +25,16 @@
     line-height: 42px; /* 123.529% */
     text-align: center;
 
-    @media screen and (max-width: 600px) {
-      margin-bottom: 60.33px;
-      font-size: 26.66px;
-      line-height: 33.33px;
+    @media screen and (max-width: 768px) {
+      max-width: 310px;
+      padding-bottom: 37px;
+      font-size: 34px;
+      line-height: 42px; /* 123.529% */
+      text-align: left;
+
+      br {
+        display: none;
+      }
     }
   }
 
@@ -40,9 +43,9 @@
     justify-content: space-between;
     width: 100%;
 
-    @media screen and (max-width: 1320px) {
+    @media screen and (max-width: 768px) {
       flex-direction: column;
-      gap: 80px;
+      gap: 37px;
       align-items: center;
     }
 
@@ -63,6 +66,13 @@
         background-size: cover;
         border-radius: 20px;
 
+        @media screen and (max-width: 768px) {
+          height: 177.242px;
+          margin-bottom: 24px;
+          margin-left: 0;
+          background-position: center;
+        }
+
         .play_icon_wrapper {
           display: flex;
           align-items: center;
@@ -71,21 +81,10 @@
           height: 100px;
           border-radius: 50%;
           cursor: pointer;
-        }
 
-        @media screen and (max-width: 1320px) {
-          margin: 0 auto;
-          margin-bottom: 33px;
-          background-position: center;
-        }
-
-        @media screen and (max-width: 600px) {
-          width: 100%;
-          max-height: 250px;
-        }
-
-        @media screen and (max-width: 500px) {
-          max-height: 187.66px;
+          @media screen and (max-width: 768px) {
+            transform: scale(0.6);
+          }
         }
       }
 
@@ -102,12 +101,16 @@
           font-family: Gilroy-Regular, sans-serif;
           font-style: normal;
           line-height: 25px; /* 156.25% */
-        }
+          text-align: center;
 
-        @media screen and (max-width: 1320px) {
-          p {
-            font-size: 10.3px;
-            line-height: 16.66px;
+          @media screen and (max-width: 768px) {
+            max-width: 285px;
+            font-size: 16px;
+            line-height: 24px; /* 150% */
+
+            br {
+              display: none;
+            }
           }
         }
       }
@@ -130,6 +133,12 @@
         font-style: normal;
         line-height: 26px; /* 144.444% */
 
+        @media screen and (max-width: 768px) {
+          font-size: 18px;
+
+          line-height: 24px; /* 133.333% */
+        }
+
         &.gradient {
           background: var(
             --2,
@@ -138,6 +147,12 @@
           -webkit-background-clip: text;
           background-clip: text;
           -webkit-text-fill-color: transparent;
+
+          @media screen and (max-width: 768px) {
+            font-weight: 600;
+            font-size: 20px;
+            font-family: Gilroy-SemiBold, sans-serif;
+          }
         }
       }
     }

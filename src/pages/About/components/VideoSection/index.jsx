@@ -11,8 +11,7 @@ const VideoSection = () => {
       {isOpen && <VideoModal onClose={() => setOpen(false)} />}
 
       <h1 className={styles.title}>
-        Peer is on a mission to transform the
-        <br />
+        Peer is on a mission to transform the <br />
         way people experience the digital world.
       </h1>
 
@@ -32,8 +31,10 @@ const VideoSection = () => {
           </div>
 
           <div className={styles.quote}>
-            <p>“The future of the web is information at first sight.”</p>
-            <p>Tony Tran, Founder & CEO</p>
+            <p>
+              “The future of the web is information at first sight.” <br />
+              Tony Tran, Founder & CEO
+            </p>
           </div>
         </div>
 

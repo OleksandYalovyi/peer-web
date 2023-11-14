@@ -6,9 +6,9 @@
   max-width: 1300px;
   padding: 144px 20px 91px;
 
-  @media screen and (max-width: 680px) {
-    gap: 70px;
-    padding: 136px 20px 70px;
+  @media screen and (max-width: 768px) {
+    gap: 42px;
+    padding: 158px 30px 35px 21px;
   }
 
   .row {
@@ -16,8 +16,9 @@
     gap: 45px;
     justify-content: space-between;
 
-    @media screen and (max-width: 680px) {
+    @media screen and (max-width: 768px) {
       flex-direction: column;
+      gap: 34px;
     }
 
     .col {
@@ -27,6 +28,10 @@
 
       &.fixed {
         max-width: 550px;
+
+        @media screen and (max-width: 768px) {
+          max-width: 100%;
+        }
       }
 
       h1 {
@@ -37,8 +42,10 @@
         font-family: MonumentExtended-Bold, sans-serif;
         line-height: 76px;
 
-        @media screen and (max-width: 680px) {
-          font-size: 40px;
+        @media screen and (max-width: 768px) {
+          max-width: 324px;
+          font-size: 44px;
+          line-height: 52px; /* 118.182% */
         }
       }
 
@@ -51,10 +58,6 @@
         font-family: Gilroy-Bold, sans-serif;
         font-style: normal;
         line-height: 36px; /* 128% */
-
-        @media screen and (max-width: 680px) {
-          font-size: 20px;
-        }
       }
 
       h3 {
@@ -66,6 +69,12 @@
         font-family: Gilroy-Regular, sans-serif;
         line-height: 38px; /* 118.75% */
         letter-spacing: -0.64px;
+
+        @media screen and (max-width: 768px) {
+          font-size: 24px;
+          line-height: 30px; /* 125% */
+          letter-spacing: -0.48px;
+        }
       }
 
       h4 {
@@ -95,10 +104,6 @@
             color: #4994ec;
           }
         }
-
-        @media screen and (max-width: 680px) {
-          font-size: 16.7px;
-        }
       }
 
       .links {
@@ -109,8 +114,12 @@
         margin-left: -15px;
         padding: 36px 0;
 
-        @media screen and (max-width: 680px) {
+        @media screen and (max-width: 768px) {
+          flex-wrap: wrap;
+          gap: 24px;
           justify-content: start;
+          margin-left: 0;
+          padding: 0;
         }
 
         .item {
@@ -122,15 +131,14 @@
           border: solid 1px #161616;
           border-radius: 15px;
 
-          @media screen and (max-width: 680px) {
-            width: 47px;
-            height: 47px;
+          @media screen and (max-width: 768px) {
+            width: 100%;
+            max-width: calc(100% / 3 - 16px);
+            height: 70px;
           }
+
           img {
             height: auto;
-            @media screen and (max-width: 680px) {
-              scale: 0.9;
-            }
           }
         }
       }

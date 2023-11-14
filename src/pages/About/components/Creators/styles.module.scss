@@ -7,15 +7,11 @@
   max-width: 1300px;
   padding: 0 20px 88px 56.5px;
 
-  @media screen and (max-width: 1320px) {
-    gap: 30px;
-    padding: 80px 40px;
-    overflow-x: auto;
-    overflow-y: scroll;
-  }
-
-  @media screen and (max-width: 100px) {
-    max-width: 1000px;
+  @media screen and (max-width: 768px) {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    padding: 0 21px 100px 21px;
   }
 
   .item {
@@ -27,9 +23,9 @@
     font-style: normal;
     line-height: 40px; /* 133.333% */
 
-    @media screen and (max-width: 1320px) {
-      font-size: 20px;
-      line-height: 26.66px;
+    @media screen and (max-width: 768px) {
+      font-size: 24px;
+      line-height: 32px; /* 133.333% */
     }
   }
 }
