@@ -4,16 +4,10 @@ import T from 'prop-types'
 import cls from 'classnames'
 import styles from './techcrunch.module.scss'
 
-function Techcrunch({ hovered, width = '159.087', isLight, size }) {
+function Techcrunch({ hovered, isMobile }) {
   const renderColor = () => {
     if (hovered) return '#ffffff'
-    if (isLight) return '#000000'
     return '#4d4d4d'
-  }
-
-  const renderStyle = () => {
-    if (size === 'sm') return { transform: 'scale(0.6)' }
-    return null
   }
 
   const fillPreset = {
@@ -23,9 +17,8 @@ function Techcrunch({ hovered, width = '159.087', isLight, size }) {
 
   return (
     <svg
-      width={width}
+      width={isMobile ? '170' : '159.087'}
       className={cls({ [styles.hovered]: hovered })}
-      style={renderStyle()}
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 160 24"
       fill="none"
@@ -82,8 +75,6 @@ function Techcrunch({ hovered, width = '159.087', isLight, size }) {
 
 Techcrunch.propTypes = {
   hovered: T.bool,
-  width: T.string,
-  isLight: T.bool,
-  size: T.string,
+  isMobile: T.bool,
 }
 export default Techcrunch

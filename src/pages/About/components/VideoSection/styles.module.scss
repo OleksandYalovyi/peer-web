@@ -46,7 +46,7 @@
     @media screen and (max-width: 768px) {
       flex-direction: column;
       gap: 37px;
-      align-items: center;
+      align-items: flex-start;
     }
 
     .video_wrapper {
@@ -66,7 +66,12 @@
         background-size: cover;
         border-radius: 20px;
 
+        @media screen and (max-width: 1300px) {
+          max-width: calc(100% - 73px);
+        }
+
         @media screen and (max-width: 768px) {
+          max-width: 100%;
           height: 177.242px;
           margin-bottom: 24px;
           margin-left: 0;

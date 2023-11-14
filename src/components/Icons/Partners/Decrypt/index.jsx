@@ -4,16 +4,10 @@ import T from 'prop-types'
 import cls from 'classnames'
 import styles from './decrypt.module.scss'
 
-function Decrypt({ hovered, width = '128.078', isLight, size }) {
+function Decrypt({ hovered, isMobile }) {
   const renderColor = () => {
     if (hovered) return '#ffffff'
-    if (isLight) return '#000000'
     return '#4d4d4d'
-  }
-
-  const renderStyle = () => {
-    if (size === 'sm') return { transform: 'scale(0.6)' }
-    return null
   }
 
   const fillPreset = {
@@ -23,9 +17,8 @@ function Decrypt({ hovered, width = '128.078', isLight, size }) {
 
   return (
     <svg
-      width={width}
+      width={isMobile ? '147' : '128.078'}
       className={cls({ [styles.hovered]: hovered })}
-      style={renderStyle()}
       viewBox="0 0 129 44"
       fill="none"
     >
@@ -39,8 +32,6 @@ function Decrypt({ hovered, width = '128.078', isLight, size }) {
 
 Decrypt.propTypes = {
   hovered: T.bool,
-  width: T.string,
-  isLight: T.bool,
-  size: T.string,
+  isMobile: T.bool,
 }
 export default Decrypt

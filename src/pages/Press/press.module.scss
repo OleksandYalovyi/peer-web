@@ -6,13 +6,17 @@
   min-height: calc(100vh - 100px);
   padding: 144px 0 0 0;
 
-  @media screen and (max-width: 1200px) {
-    padding-top: 136.33px;
+  @media screen and (max-width: 768px) {
+    padding: 158px 0 0 0;
   }
 
   .separator {
     width: 100%;
     height: 2px;
     background-color: #141414;
+
+    @media screen and (max-width: 768px) {
+      display: none;
+    }
   }
 }

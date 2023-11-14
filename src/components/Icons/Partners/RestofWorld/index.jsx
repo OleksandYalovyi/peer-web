@@ -4,16 +4,10 @@ import T from 'prop-types'
 import cls from 'classnames'
 import styles from './restofworld.module.scss'
 
-function RestofWorld({ hovered, width = '159.113', isLight, size }) {
+function RestofWorld({ hovered, isMobile }) {
   const renderColor = () => {
     if (hovered) return '#ffffff'
-    if (isLight) return '#000000'
     return '#4d4d4d'
-  }
-
-  const renderStyle = () => {
-    if (size === 'sm') return { transform: 'scale(0.6)' }
-    return null
   }
 
   const fillPreset = {
@@ -23,9 +17,8 @@ function RestofWorld({ hovered, width = '159.113', isLight, size }) {
 
   return (
     <svg
-      width={width}
+      width={isMobile ? '159.744' : '159.113'}
       className={cls({ [styles.hovered]: hovered })}
-      style={renderStyle()}
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 160 34"
       fill="none"
@@ -44,8 +37,6 @@ function RestofWorld({ hovered, width = '159.113', isLight, size }) {
 
 RestofWorld.propTypes = {
   hovered: T.bool,
-  width: T.string,
-  isLight: T.bool,
-  size: T.string,
+  isMobile: T.bool,
 }
 export default RestofWorld
