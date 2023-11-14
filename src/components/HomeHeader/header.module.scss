@@ -42,6 +42,10 @@
         text-decoration: none;
       }
 
+      .peerLogo {
+        width: 159px;
+      }
+
       .select_container {
         display: flex;
         align-items: center;
@@ -91,8 +95,8 @@
     .nav_item {
       position: relative;
       font-family: BallingerMono-Light, sans-serif;
-      font-size: 14px;
-      font-weight: 500;
+      font-size: 20px;
+      font-weight: 700;
       letter-spacing: 0.9px;
       color: var(--main-font);
       text-decoration: none;

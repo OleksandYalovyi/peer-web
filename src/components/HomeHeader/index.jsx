@@ -10,6 +10,7 @@ import Logo from 'assets/Home/peerlogo.png'
 import PEERStarLogo from 'components/Icons/PEERStarLogo/index'
 import MobileMenu from 'components/Header/MobileMenu/index'
 import styles from './header.module.scss'
+import peerLogo from 'assets/Home/peerlogo.png'
 
 const NavItems = ({ name, links, link, openedMenu, clickHandler }) => {
   const [hovered, setHovered] = useState('')
@@ -105,12 +106,18 @@ const HomeHeader = () => {
       <div className={styles.main_container}>
         <div className={styles.left_container}>
           <Link className={styles.logo_container} to="/">
-            <PEERStarLogo />
-            <NavItems name="ABOUT" link="/" openedMenu={openedMenu} clickHandler={clickHandler} />
+          <img src={peerLogo} alt="peer logo" className={styles.peerLogo}/>
           </Link>
         </div>
         {!isMobile ? (
           <nav className={styles.nav}>
+            <NavItems
+              router
+              name="HOME"
+              link="/home"
+              openedMenu={openedMenu}
+              clickHandler={clickHandler}
+            />
             <NavItems
               router
               name="ABOUT"
@@ -120,55 +127,15 @@ const HomeHeader = () => {
             />
             <NavItems
               router
-              name="ABOUT"
-              links={[
-                {
-                  name: 'About',
-                  to: '/about',
-                  router: true,
-                },
-                {
-                  name: 'Brand Book',
-                  to: '/placeholder',
-                  router: true,
-                },
-                {
-                  name: 'White Papers',
-                  to: '/placeholder',
-                  router: true,
-                },
-              ]}
+              name="CAREERS"
+              link="/careers"
               openedMenu={openedMenu}
               clickHandler={clickHandler}
             />
-
             <NavItems
-              name="PRODUCTS"
-              links={[
-                { name: 'PEER', desc: 'OPEN WORLD', to: 'https://peerclub.com', logo: 'PEER' },
-                { name: 'ZEN', desc: 'WALLET', to: '/placeholder', logo: 'ZEN', router: true },
-                { name: 'OMNI', desc: 'EXPLORER', to: '/placeholder', logo: 'OMNI', router: true },
-                {
-                  name: 'PM',
-                  desc: 'MARKETPLACE',
-                  to: 'https://market.peerclub.com',
-                  logo: 'PM',
-                },
-                {
-                  name: 'PEER DOLLAR',
-                  desc: 'COIN',
-                  to: '/placeholder',
-                  logo: 'COIN',
-                  router: true,
-                },
-              ]}
-              openedMenu={openedMenu}
-              clickHandler={clickHandler}
-            />
-
-            <NavItems
+              router
               name="PRESS"
-              link="/placeholder"
+              link="/press"
               openedMenu={openedMenu}
               clickHandler={clickHandler}
             />
