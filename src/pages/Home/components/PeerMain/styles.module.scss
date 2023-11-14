@@ -1,0 +1,14 @@
+.section {
+  width: 100%;
+  padding-top: 35px;
+  min-height: 700px;
+  position: relative;
+  margin-bottom: 10px;
+
+  .container {
+    text-align: center;
+    background-color: black;
+    display: grid;
+    grid-template-columns: 30% 1fr;
+  }
+}
