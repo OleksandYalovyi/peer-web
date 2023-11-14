@@ -2,32 +2,25 @@ import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import cls from 'classnames'
 import useScroll from 'hooks/useScroll'
-// import { US } from 'country-flag-icons/react/3x2'
 import { useTheme } from 'context/theme'
 import useCurrentWidth from 'hooks/useCurrentWidth'
 import Logo from 'components/Icons/LogoIcon'
 import Facebook from 'components/Icons/Share/Facebook'
 import Peer from 'components/Icons/Share/Peer'
-import Twitter from 'components/Icons/Share/Twitter'
+import XSocial from 'components/Icons/Share/XSocial'
 import Telegram from 'components/Icons/Share/Telegram'
 import Linkedin from 'components/Icons/Share/Linkedin'
-// import Dropdown from 'components/Dropdown/index'
 import links from 'constants/links'
 import styles from './footer.module.scss'
 
 const ShareData = [
-  // {
-  //   id: 1,
-  //   name: 'Peer',
-  //   link: 'https://icx.peer.inc/landing/contacts',
-  // },
   {
-    id: 2,
-    name: 'Twitter',
+    id: 1,
+    name: 'XSocial',
     link: 'https://twitter.com/peerglobal',
   },
   {
-    id: 3,
+    id: 2,
     name: 'Telegram',
     link: 'https://t.me/peerinc',
   },
@@ -39,7 +32,7 @@ const ShareData = [
   {
     id: 4,
     name: 'Linkedin',
-    link: 'https://www.linkedin.com/company/peerinc/',
+    link: 'https://www.linkedin.com/company/peerinc/mycompany/verification/',
   },
 ]
 
@@ -53,8 +46,8 @@ const Footer = () => {
     if (name.toLowerCase() === 'facebook') {
       return <Facebook isLight={isLight} hovered={hovered === name} size={width <= 680 && 'sm'} />
     }
-    if (name.toLowerCase() === 'twitter') {
-      return <Twitter isLight={isLight} hovered={hovered === name} size={width <= 680 && 'sm'} />
+    if (name.toLowerCase() === 'xsocial') {
+      return <XSocial isLight={isLight} hovered={hovered === name} size={width <= 680 && 'sm'} />
     }
     if (name.toLowerCase() === 'peer') {
       return <Peer isLight={isLight} hovered={hovered === name} size={width <= 680 && 'sm'} />
@@ -89,9 +82,6 @@ const Footer = () => {
               <a href={links.termsService} target="_blank" rel="noreferrer">
                 Terms
               </a>
-              {/* <a href="#" target="_blank" rel="noreferrer">
-                Whitepaper
-              </a> */}
             </span>
           </div>
         </div>
@@ -111,54 +101,6 @@ const Footer = () => {
               </a>
             ))}
           </div>
-          {/* <div className={styles.flag_button}>
-            <div className={styles.flag_icon}>
-              <US title="United States" className={styles.icon} />
-            </div>
-          </div> */}
-          {/* <div className={styles.mob}>
-            <Dropdown
-              list={{
-                type: 'countries',
-                data: [
-                  {
-                    text: 'English (US)',
-                    onClick: () => {},
-                  },
-                  {
-                    text: 'Français',
-                    onClick: () => {},
-                  },
-                  {
-                    text: 'Español',
-                    onClick: () => {},
-                  },
-                  {
-                    text: '简体中文',
-                    onClick: () => {},
-                  },
-                  {
-                    text: 'Русский',
-                    onClick: () => {},
-                  },
-                  {
-                    text: '한국인',
-                    onClick: () => {},
-                  },
-                  {
-                    text: 'Tiếng Việt',
-                    onClick: () => {},
-                  },
-                ],
-              }}
-            >
-              <div className={styles.flag_button}>
-                <div className={styles.flag_icon}>
-                  <US title="United States" className={styles.icon} />
-                </div>
-              </div>
-            </Dropdown>
-          </div> */}
         </div>
       </div>
     </footer>
