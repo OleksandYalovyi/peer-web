@@ -11,26 +11,26 @@ const FooterMobile = () => {
 
   const items = [
     {
-      id: 1, 
-      icon: <XSocial width='23' hovered={hovered === 'XSocial'} isGrey/>,
+      id: 1,
+      icon: <XSocial width="23" hovered={hovered === 'XSocial'} isGrey />,
       link: 'https://twitter.com/peerglobal',
       type: 'XSocial',
     },
     {
       id: 2,
-      icon: <Telegram width="23.5" hovered={hovered === 'Telegram'} isGrey/>,
+      icon: <Telegram width="23.5" hovered={hovered === 'Telegram'} isGrey />,
       link: 'https://t.me/peerinc',
       type: 'Telegram',
     },
     {
-      id: 3, 
-      icon: <Facebook width='11' hovered={hovered === 'Facebook'} isGrey/>,
+      id: 3,
+      icon: <Facebook width="11" hovered={hovered === 'Facebook'} isGrey />,
       link: 'https://www.facebook.com/peerniverse',
       type: 'Facebook',
     },
     {
       id: 4,
-      icon: <Linkedin hovered={hovered === 'Linkedin'} isGrey/>,
+      icon: <Linkedin hovered={hovered === 'Linkedin'} isGrey />,
       link: 'https://www.linkedin.com/company/peerinc/mycompany/verification/',
       type: 'Linkedin',
     },

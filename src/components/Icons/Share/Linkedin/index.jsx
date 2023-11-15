@@ -38,6 +38,7 @@ Linkedin.propTypes = {
   width: T.string,
   isLight: T.bool,
   size: T.string,
+  isGrey: T.bool,
 }
 
 export default Linkedin
