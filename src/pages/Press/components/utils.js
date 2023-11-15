@@ -10,44 +10,32 @@ const partners = [
   {
     title: 'geekwire',
     to: 'https://www.geekwire.com/2022/seattle-startup-raises-14m-to-fuel-ambitious-plan-for-a-social-network-built-on-the-blockchain/',
-    element: ({ hovered, width, isLight, size }) => (
-      <Geekwire width={width} isLight={isLight} size={size} hovered={hovered} />
-    ),
+    element: ({ hovered, isMobile }) => <Geekwire isMobile={isMobile} hovered={hovered} />,
   },
   {
     title: 'coindesk',
     to: '/#',
-    element: ({ hovered, width, isLight, size }) => (
-      <Coindesc width={width} isLight={isLight} size={size} hovered={hovered} />
-    ),
+    element: ({ hovered, isMobile }) => <Coindesc isMobile={isMobile} hovered={hovered} />,
   },
   {
     title: 'techcrunch',
     to: '/#',
-    element: ({ hovered, width, isLight, size }) => (
-      <Techcrunch width={width} isLight={isLight} size={size} hovered={hovered} />
-    ),
+    element: ({ hovered, isMobile }) => <Techcrunch isMobile={isMobile} hovered={hovered} />,
   },
   {
     title: 'forbes',
     to: '/#',
-    element: ({ hovered, width, isLight, size }) => (
-      <Forbes width={width} isLight={isLight} size={size} hovered={hovered} />
-    ),
+    element: ({ hovered, isMobile }) => <Forbes isMobile={isMobile} hovered={hovered} />,
   },
   {
     title: 'decrypt',
     to: 'https://decrypt.co/101251/before-building-the-metaverse-blockchain-needs-an-operating-system',
-    element: ({ hovered, width, isLight, size }) => (
-      <Decrypt width={width} isLight={isLight} size={size} hovered={hovered} />
-    ),
+    element: ({ hovered, isMobile }) => <Decrypt isMobile={isMobile} hovered={hovered} />,
   },
   {
     title: 'restofworld',
     to: '/#',
-    element: ({ hovered, width, isLight, size }) => (
-      <RestofWorld width={width} isLight={isLight} size={size} hovered={hovered} />
-    ),
+    element: ({ hovered, isMobile }) => <RestofWorld isMobile={isMobile} hovered={hovered} />,
   },
 ]
 

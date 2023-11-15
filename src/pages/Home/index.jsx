@@ -1,12 +1,12 @@
 /* eslint-disable react/prop-types */
 import React, { useCallback, useState } from 'react'
 
+import HomeHeader from 'components/HomeHeader/index'
+import useCurrentWidth from 'hooks/useCurrentWidth'
 import styles from './home.module.scss'
 import PeerMain from './components/PeerMain/index'
-import HomeHeader from 'components/HomeHeader/index'
 import PeerServices from './components/PeerServices/index'
 import HomePageMobile from './components/HomePageMobile/index'
-import useCurrentWidth from 'hooks/useCurrentWidth'
 
 const Home = () => {
   const width = useCurrentWidth()
@@ -15,8 +15,8 @@ const Home = () => {
   return (
     <div className={styles.wrapper}>
       {!isMobile ? (
-        <>  
-          <HomeHeader /> 
+        <>
+          <HomeHeader />
           <PeerMain />
           <PeerServices />
         </>

@@ -108,7 +108,7 @@ const Footer = () => {
             </div>
           </>
         ) : (
-          <FooterMobile/>
+          <FooterMobile />
         )}
       </div>
     </footer>

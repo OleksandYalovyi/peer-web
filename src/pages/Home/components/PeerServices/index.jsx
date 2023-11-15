@@ -6,17 +6,15 @@ import Zen from 'components/Icons/PeerServices/Zen'
 
 import styles from './peerservices.module.scss'
 
-const PeerServices = () => {
-  return (
-    <section className={styles.section}>
-      <div className={styles.container}>
-        <Peer />
-        <Playa />
-        <Vine />
-        <Zen />
-      </div>
-    </section>
-  )
-}
+const PeerServices = () => (
+  <section className={styles.section}>
+    <div className={styles.container}>
+      <Peer />
+      <Playa />
+      <Vine />
+      <Zen />
+    </div>
+  </section>
+)
 
 export default PeerServices

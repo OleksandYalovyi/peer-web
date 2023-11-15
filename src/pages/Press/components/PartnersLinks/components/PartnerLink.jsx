@@ -6,7 +6,7 @@ import styles from './styles.module.scss'
 
 function PartnerLink({ link }) {
   const width = useCurrentWidth()
-  const isMobile = width < 480
+  const isMobile = width < 768
   const [hovered, setHovered] = useState('')
 
   return (
@@ -18,7 +18,7 @@ function PartnerLink({ link }) {
       onMouseLeave={() => setHovered('')}
       className={styles.link}
     >
-      {link.element({ hovered, size: isMobile && 'sm' })}
+      {link.element({ hovered, isMobile })}
     </a>
   )
 }

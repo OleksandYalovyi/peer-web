@@ -4,16 +4,10 @@ import T from 'prop-types'
 import cls from 'classnames'
 import styles from './geekwire.module.scss'
 
-function Geekwire({ hovered, width = '172.608', isLight, size }) {
+function Geekwire({ hovered, isMobile }) {
   const renderColor = () => {
     if (hovered) return '#ffffff'
-    if (isLight) return '#000000'
     return '#4d4d4d'
-  }
-
-  const renderStyle = () => {
-    if (size === 'sm') return { transform: 'scale(0.6)' }
-    return null
   }
 
   const fillPreset = {
@@ -26,9 +20,8 @@ function Geekwire({ hovered, width = '172.608', isLight, size }) {
       viewBox="0 0 174 33"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
-      width={width}
+      width={isMobile ? '160.068' : '172.608'}
       className={cls({ [styles.hovered]: hovered })}
-      style={renderStyle()}
     >
       <g>
         <path
@@ -74,8 +67,6 @@ function Geekwire({ hovered, width = '172.608', isLight, size }) {
 
 Geekwire.propTypes = {
   hovered: T.bool,
-  width: T.string,
-  isLight: T.bool,
-  size: T.string,
+  isMobile: T.bool,
 }
 export default Geekwire

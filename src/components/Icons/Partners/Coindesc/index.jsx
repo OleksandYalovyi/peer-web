@@ -4,16 +4,10 @@ import T from 'prop-types'
 import cls from 'classnames'
 import styles from './coindesc.module.scss'
 
-function Coindesc({ hovered, width = '159.246', isLight, size }) {
+function Coindesc({ hovered, isMobile }) {
   const renderColor = () => {
     if (hovered) return '#ffffff'
-    if (isLight) return '#000000'
     return '#4d4d4d'
-  }
-
-  const renderStyle = () => {
-    if (size === 'sm') return { transform: 'scale(0.6)' }
-    return null
   }
 
   const fillPreset = {
@@ -23,9 +17,8 @@ function Coindesc({ hovered, width = '159.246', isLight, size }) {
 
   return (
     <svg
-      width={width}
+      width={isMobile ? '147.676' : '159.246'}
       className={cls({ [styles.hovered]: hovered })}
-      style={renderStyle()}
       viewBox="0 0 160 32"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
@@ -87,8 +80,6 @@ function Coindesc({ hovered, width = '159.246', isLight, size }) {
 
 Coindesc.propTypes = {
   hovered: T.bool,
-  width: T.string,
-  isLight: T.bool,
-  size: T.string,
+  isMobile: T.bool,
 }
 export default Coindesc
