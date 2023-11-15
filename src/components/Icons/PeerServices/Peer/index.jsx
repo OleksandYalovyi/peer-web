@@ -15,7 +15,12 @@ const Peer = ({ width = '150', height = '43' }) => (
     </g>
     <defs>
     <clipPath id="clip0_21_11173">
-    <rect width="148.986" height="43" fill="white" transform="translate(0.511963 0.000976562)"/>
+    <rect 
+      width="148.986"
+      height="43"
+      fill="white"
+      transform="translate(0.511963 0.000976562)"
+    />
     </clipPath>
     </defs>
   </svg>
