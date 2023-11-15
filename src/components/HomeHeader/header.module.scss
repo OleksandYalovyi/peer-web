@@ -27,7 +27,8 @@
 
     @media screen and (max-width: 900px) {
       padding: 18px 12.66px 18px 12.66px;
-      height: 60px;
+      height: 90px;
+      flex-direction: column;
     }
 
     .left_container {
@@ -40,6 +41,14 @@
         align-items: center;
         gap: 33px;
         text-decoration: none;
+      }
+
+      .peerLogo {
+        width: 159px;
+
+        @media screen and (max-width: 680px) {
+          width: 100px;
+        }
       }
 
       .select_container {
@@ -91,8 +100,8 @@
     .nav_item {
       position: relative;
       font-family: BallingerMono-Light, sans-serif;
-      font-size: 14px;
-      font-weight: 500;
+      font-size: 20px;
+      font-weight: 700;
       letter-spacing: 0.9px;
       color: var(--main-font);
       text-decoration: none;
@@ -101,8 +110,10 @@
       cursor: pointer;
       letter-spacing: 2.8px;
 
-      @media screen and (max-width: 679px) {
-        font-size: 10.66px;
+      @media screen and (max-width: 680px) {
+        font-size: 13.5;
+        letter-spacing: 1.892px;
+        font-weight: 700;
       }
 
       a {

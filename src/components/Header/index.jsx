@@ -11,7 +11,7 @@ import MobileMenuLogo from 'components/Icons/MobileMenuLogo/index'
 import Logo from '../Icons/PEERStarLogo'
 import ArrowDown from '../Icons/ArrowDown'
 import ThemeSelector from '../Icons/Theme'
-import MobileMenu from './MobileMenu'
+// import MobileMenu from './MobileMenu'
 
 import styles from './header.module.scss'
 
@@ -208,7 +208,7 @@ const LandingHeader = () => {
               </Dropdown>
             </>
           )} */}
-          {isMobile && <MobileMenu isMenu={isMenu} setIsMenuOpen={setIsMenuOpen} />}
+          {/* {isMobile && <MobileMenu isMenu={isMenu} setIsMenuOpen={setIsMenuOpen} />} */}
         </div>
       </div>
     </header>

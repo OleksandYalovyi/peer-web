@@ -1,14 +1,19 @@
 @import '../../components/PageContainer/page_container.module.scss';
 
 .wrapper {
-  min-height: calc(100vh - 71px);
+  min-height: calc(100vh - 117px);
   padding: 71px 0;
   padding-bottom: 150px;
   overflow: hidden;
+  padding-bottom: 0;
 
   @media screen and (max-width: 1200px) {
-    padding-top: 60px;
+    padding-top: 80px;
     padding-bottom: 60px;
+  }
+
+  @media screen and (max-width: 680px) {
+    padding-bottom: 5px;
   }
 
   .container {
