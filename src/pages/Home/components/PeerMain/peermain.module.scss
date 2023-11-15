@@ -1,14 +1,18 @@
 .section {
   width: 100%;
-  padding-top: 35px;
-  min-height: 700px;
+  padding-top: 20px;
   position: relative;
   margin-bottom: 10px;
 
   .container {
     text-align: center;
     background-color: black;
+
     display: grid;
-    grid-template-columns: 30% 1fr;
+    grid-template-columns:30% 1fr;
+
+    @media screen and (max-width: 1600px) {
+      grid-template-columns: 26% 66%;
+    }
   }
 }
