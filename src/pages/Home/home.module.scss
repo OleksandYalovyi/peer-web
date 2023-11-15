@@ -8,8 +8,12 @@
   padding-bottom: 0;
 
   @media screen and (max-width: 1200px) {
-    padding-top: 60px;
+    padding-top: 80px;
     padding-bottom: 60px;
+  }
+
+  @media screen and (max-width: 680px) {
+    padding-bottom: 5px;
   }
 
   .container {
