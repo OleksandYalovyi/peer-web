@@ -136,7 +136,6 @@ const HomeHeader = () => {
           <img src={peerLogo} alt="peer logo" className={styles.peerLogo}/>
           </Link>
         </div>
-        {!isMobile ? (
           <nav className={styles.nav}>
             {links.map(({ id, router, name, to}) => (
               <NavItems
@@ -148,9 +147,6 @@ const HomeHeader = () => {
             />
             ))}
           </nav>
-        ) : (
-          <MobileMenu isMenu={isMenu} setIsMenuOpen={setIsMenuOpen} />
-        )}
       </div>
     </header>
   )
