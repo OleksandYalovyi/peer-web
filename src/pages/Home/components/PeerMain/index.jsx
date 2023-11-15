@@ -2,7 +2,7 @@ import React from 'react'
 // import MainBg from 'assets/Home/Main-min.png'
 import PeerPhone from 'assets/Home/peerPhone.png'
 import BlurredBg from 'assets/Home/blurredBg.png'
-import styles from './styles.module.scss'
+import styles from './peermain.module.scss'
 
 const PeerMain = () => (
   <section className={styles.section}>

@@ -4,7 +4,7 @@ import Playa from 'components/Icons/PeerServices/Playa'
 import Vine from 'components/Icons/PeerServices/Vine'
 import Zen from 'components/Icons/PeerServices/Zen'
 
-import styles from './styles.module.scss'
+import styles from './peerservices.module.scss'
 
 const PeerServices = () => {
   return (
