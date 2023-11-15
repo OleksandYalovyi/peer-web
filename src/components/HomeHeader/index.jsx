@@ -12,6 +12,33 @@ import MobileMenu from 'components/Header/MobileMenu/index'
 import styles from './header.module.scss'
 import peerLogo from 'assets/Home/peerlogo.png'
 
+const links = [
+  {
+    id: 1,
+    router: true,
+    name: 'HOME',
+    to: '/home',
+  },
+  {
+    id: 2,
+    router: true,
+    name: 'ABOUT',
+    to: '/about',
+  },
+  {
+    id: 3,
+    router: true,
+    name: 'CAREERS',
+    to: '/careers',
+  },
+  {
+    id: 4,
+    router: true,
+    name: 'PRESS',
+    to: '/press',
+  },
+]
+
 const NavItems = ({ name, links, link, openedMenu, clickHandler }) => {
   const [hovered, setHovered] = useState('')
 
@@ -111,34 +138,15 @@ const HomeHeader = () => {
         </div>
         {!isMobile ? (
           <nav className={styles.nav}>
-            <NavItems
-              router
-              name="HOME"
-              link="/home"
+            {links.map(({ id, router, name, to}) => (
+              <NavItems
+              router={router}
+              name={name}
+              link={to}
               openedMenu={openedMenu}
               clickHandler={clickHandler}
             />
-            <NavItems
-              router
-              name="ABOUT"
-              link="/about"
-              openedMenu={openedMenu}
-              clickHandler={clickHandler}
-            />
-            <NavItems
-              router
-              name="CAREERS"
-              link="/careers"
-              openedMenu={openedMenu}
-              clickHandler={clickHandler}
-            />
-            <NavItems
-              router
-              name="PRESS"
-              link="/press"
-              openedMenu={openedMenu}
-              clickHandler={clickHandler}
-            />
+            ))}
           </nav>
         ) : (
           <MobileMenu isMenu={isMenu} setIsMenuOpen={setIsMenuOpen} />
