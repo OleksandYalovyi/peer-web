@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import React, { useRef, useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import T from 'prop-types'
 
 import Slider from 'react-slick'
@@ -82,8 +82,8 @@ function ZenSlider({ sliderRef, onNextSlide, onPrevSlide }) {
           ref={sliderRef}
           beforeChange={(slick, current) => checkArrow(slick, current)}
         >
-          {displays.map(({ id, href }, index) => (
-            <div className={styles.slider_item}>
+          {displays.map(({ id, href }) => (
+            <div className={styles.slider_item} key={id}>
               <img src={href} alt="alt" height={isMobile ? width * 1.18 : 1070} />
             </div>
           ))}

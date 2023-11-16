@@ -4,8 +4,9 @@ import T from 'prop-types'
 import cls from 'classnames'
 import styles from './fb.module.scss'
 
-const Facebook = ({ hovered, width = '14', isLight, size }) => {
+const Facebook = ({ hovered, width = '14', isLight, size, isGrey }) => {
   const renderColor = () => {
+    if (isGrey) return '#4D4D4D'
     if (hovered) return '#00d3f9'
     if (isLight) return '#000000'
     return '#ffffff'
@@ -38,5 +39,6 @@ Facebook.propTypes = {
   width: T.string,
   isLight: T.bool,
   size: T.string,
+  isGrey: T.bool,
 }
 export default Facebook

@@ -27,19 +27,43 @@
 
     @media screen and (max-width: 900px) {
       padding: 18px 12.66px 18px 12.66px;
-      height: 60px;
+      height: 90px;
+      flex-direction: column;
+    }
+
+    @media screen and (max-width: 375px) {
+      padding-top: 12px;
     }
 
     .left_container {
       display: flex;
       align-items: center;
 
+      @media screen and (max-width: 900px) {
+        margin-bottom: 15px;
+      }
+      @media screen and (max-width: 680px) {
+        margin-bottom: 15px;
+      }
+
+      @media screen and (max-width: 375px) {
+        margin-bottom: 10px;
+      }
+    
       .logo_container {
         margin-right: 24px;
         display: flex;
         align-items: center;
         gap: 33px;
         text-decoration: none;
+      }
+
+      .peerLogo {
+        width: 159px;
+
+        @media screen and (max-width: 680px) {
+          width: 100px;
+        }
       }
 
       .select_container {
@@ -91,8 +115,8 @@
     .nav_item {
       position: relative;
       font-family: BallingerMono-Light, sans-serif;
-      font-size: 14px;
-      font-weight: 500;
+      font-size: 20px;
+      font-weight: 700;
       letter-spacing: 0.9px;
       color: var(--main-font);
       text-decoration: none;
@@ -101,8 +125,16 @@
       cursor: pointer;
       letter-spacing: 2.8px;
 
-      @media screen and (max-width: 679px) {
-        font-size: 10.66px;
+      @media screen and (max-width: 680px) {
+        font-size: 13.5px;
+        line-height: 20px;
+        letter-spacing: 1.892px;
+        font-weight: 700;
+      }
+
+      @media screen and (max-width: 360px) {
+        font-size: 12px;
+        line-height: 16px;
       }
 
       a {

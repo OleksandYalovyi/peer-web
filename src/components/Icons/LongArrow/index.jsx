@@ -4,25 +4,28 @@ import T from 'prop-types'
 import cls from 'classnames'
 import styles from './longarrow.module.scss'
 
-const Logo = ({ hovered, width = '38', isLight }) => (
+const Logo = ({ hovered, isLight }) => (
   <svg
+    width="27"
+    height="14"
+    viewBox="0 0 27 14"
+    fill="none"
     xmlns="http://www.w3.org/2000/svg"
-    width={width}
-    viewBox="0 0 140 40"
     className={cls({ [styles.hovered]: hovered })}
   >
     <path
       className={styles.arrow}
+      id="Vector"
       fillRule="evenodd"
+      clipRule="evenodd"
+      d="M26.1939 7.15563L26.3885 7.35786L20.4038 13.5739L19.4464 12.5794L24.1674 7.67595H0.0153809V6.28843H23.8332L19.4464 1.73181L20.4038 0.737305L26.3885 6.95339L26.1939 7.15563Z"
       fill={isLight ? '#000000' : '#ffffff'}
-      d="m75.442 18.5.561.583-17.247 17.92-2.759-2.867L69.602 20H0v-4h68.639L55.997 2.864l2.759-2.867 17.247 17.92-.561.583z"
     />
   </svg>
 )
 
 Logo.propTypes = {
   hovered: T.bool,
-  width: T.string,
   isLight: T.bool,
 }
 

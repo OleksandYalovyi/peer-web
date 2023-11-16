@@ -1,17 +1,12 @@
 /* eslint-disable react/prop-types */
 import React, { useState } from 'react'
-import { NavLink, useLocation, Link } from 'react-router-dom'
+import { NavLink, Link } from 'react-router-dom'
 import cls from 'classnames'
 import useScroll from 'hooks/useScroll'
-import { US } from 'country-flag-icons/react/3x2'
 import { useTheme } from 'context/theme'
 import useCurrentWidth from 'hooks/useCurrentWidth'
-import Dropdown from 'components/Dropdown/index'
 import MobileMenuLogo from 'components/Icons/MobileMenuLogo/index'
 import Logo from '../Icons/PEERStarLogo'
-import ArrowDown from '../Icons/ArrowDown'
-import ThemeSelector from '../Icons/Theme'
-import MobileMenu from './MobileMenu'
 
 import styles from './header.module.scss'
 
@@ -61,10 +56,10 @@ const NavItems = ({ name, links }) => {
 const LandingHeader = () => {
   const width = useCurrentWidth()
   const { scrollDirection } = useScroll()
-  const [isMenu, setIsMenuOpen] = useState(false)
+  // const [isMenu, setIsMenuOpen] = useState(false)
 
   const { isLight, switchTheme } = useTheme()
-  const { pathname } = useLocation()
+  // const { pathname } = useLocation()
 
   const isMobile = width < 681
   return (
@@ -73,10 +68,7 @@ const LandingHeader = () => {
         styles.container,
         {
           [styles.hidden]:
-            scrollDirection === 'down' &&
-            scrollDirection !== 'bottom' &&
-            scrollDirection !== 'top' &&
-            !isMenu,
+            scrollDirection === 'down' && scrollDirection !== 'bottom' && scrollDirection !== 'top',
         },
         {
           [styles.bg]: scrollDirection === 'up' || scrollDirection === 'bottom',
@@ -133,8 +125,8 @@ const LandingHeader = () => {
               name="About"
               links={[
                 {
-                  name: 'Team',
-                  to: '/team',
+                  name: 'About',
+                  to: '/about',
                   router: true,
                 },
                 {
@@ -208,7 +200,7 @@ const LandingHeader = () => {
               </Dropdown>
             </>
           )} */}
-          {isMobile && <MobileMenu isMenu={isMenu} setIsMenuOpen={setIsMenuOpen} />}
+          {/* {isMobile && <MobileMenu isMenu={isMenu} setIsMenuOpen={setIsMenuOpen} />} */}
         </div>
       </div>
     </header>

@@ -44,7 +44,7 @@ export const FOOTER_LIST_ITEMS = [
       },
       {
         title: 'Company news',
-        to: '/news',
+        to: '/press',
         router: true,
       },
       {

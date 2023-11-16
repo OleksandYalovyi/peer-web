@@ -1,0 +1,79 @@
+.section {
+  padding-top: 10px;
+  padding-bottom: 10px;
+
+  @media screen and (max-width: 680px) {
+    padding-bottom: 0px;
+  }
+}
+
+.container {
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+.imgGroup {
+  display: flex;
+  flex-direction: column;
+}
+
+.imgWrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .imgItem {
+    position: relative;
+  }
+
+  .peer {
+    position: relative;
+    left: 25px;
+    z-index: 1;
+  }
+
+  .peer_icon {
+    position: absolute;
+    bottom: 20px;
+    left: 62px;
+    z-index: 2;
+  }
+
+  .playa {
+    position: relative;
+    top: 1px;
+    right: 17px;
+  }
+
+  .playa_icon {
+    position: absolute;
+    right: 77px;
+    bottom: 24px;
+  }
+
+  .vine {
+    position: relative;
+    left: 12px;
+  }
+
+  .vine_icon {
+    position: absolute;
+    bottom: 27px;
+    left: 72px;
+    z-index: 2;
+  }
+
+  .zen {
+    position: relative;
+    right: 20px;
+  }
+
+  .zen_icon {
+    position: absolute;
+    right: 77px;
+    bottom: 20px;
+  }
+}
