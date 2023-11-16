@@ -5,7 +5,7 @@
 /* eslint-disable no-use-before-define */
 /* eslint-disable no-plusplus */
 
-import React, { useEffect, useMemo, useRef, useState, useCallback } from 'react'
+import React, { useEffect, useRef, useState, useCallback } from 'react'
 import { useInView } from 'react-intersection-observer'
 import PropTypes from 'prop-types'
 import Splitting from 'splitting'

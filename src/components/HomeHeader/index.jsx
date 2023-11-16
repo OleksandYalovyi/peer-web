@@ -4,9 +4,6 @@ import { NavLink, Link } from 'react-router-dom'
 import cls from 'classnames'
 import MobileMenuLogo from 'components/Icons/MobileMenuLogo/index'
 import useScroll from 'hooks/useScroll'
-import useCurrentWidth from 'hooks/useCurrentWidth'
-import PEERStarLogo from 'components/Icons/PEERStarLogo/index'
-import MobileMenu from 'components/Header/MobileMenu/index'
 import peerLogo from 'assets/Home/peerlogo.png'
 import styles from './header.module.scss'
 
@@ -46,7 +43,7 @@ const NavItems = ({ name, link, openedMenu, clickHandler }) => {
       onClick={() => clickHandler(name)}
     >
       {link ? <NavLink to={link}>{name}</NavLink> : name}
-      {links && (
+      {/* {links && (
         <div className={styles.nav_list}>
           {links.map((l) => (
             <>
@@ -82,19 +79,19 @@ const NavItems = ({ name, link, openedMenu, clickHandler }) => {
             </>
           ))}
         </div>
-      )}
+      )} */}
     </div>
   )
 }
 
 const HomeHeader = () => {
-  const width = useCurrentWidth()
   const { scrollDirection } = useScroll()
-  const [isMenu, setIsMenuOpen] = useState(false)
+  // const [isMenu, setIsMenuOpen] = useState(false)
   const [openedMenu, setIsOpen] = useState('')
   const ref = useRef('')
 
   const handleClick = (e) => {
+    console.log('Here', e)
     if (ref.current && !ref.current.contains(e.target)) {
       setIsOpen('')
     }
@@ -110,17 +107,13 @@ const HomeHeader = () => {
 
   const clickHandler = (itemName) => (openedMenu === itemName ? setIsOpen('') : setIsOpen(itemName))
 
-  const isMobile = width < 681
   return (
     <header
       className={cls(
         styles.container,
         {
           [styles.hidden]:
-            scrollDirection === 'down' &&
-            scrollDirection !== 'bottom' &&
-            scrollDirection !== 'top' &&
-            !isMenu,
+            scrollDirection === 'down' && scrollDirection !== 'bottom' && scrollDirection !== 'top',
         },
         {
           [styles.bg]: scrollDirection === 'up' || scrollDirection === 'bottom',
@@ -135,7 +128,7 @@ const HomeHeader = () => {
           </Link>
         </div>
         <nav className={styles.nav}>
-          {links.map(({ id, router, name, to }) => (
+          {links.map(({ router, name, to }) => (
             <NavItems
               router={router}
               name={name}

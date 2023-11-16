@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import React, { useCallback, useState } from 'react'
+import React from 'react'
 
 import HomeHeader from 'components/HomeHeader/index'
 import useCurrentWidth from 'hooks/useCurrentWidth'

@@ -31,9 +31,26 @@ const data = [
     //   { name: 'Labs', to: 'https://labs.peer.inc', logo: 'LABS' },
     // ],
     links: [
-      { name: 'PEER', desc: 'OPEN WORLD', to: 'https://peerclub.com', logo: 'PEER' },
-      { name: 'ZEN', desc: 'WALLET', to: '/placeholder', logo: 'ZEN', withRouter: true },
-      { name: 'OMNI', desc: 'EXPLORER', to: '/placeholder', logo: 'OMNI', withRouter: true },
+      {
+        name: 'PEER',
+        desc: 'OPEN WORLD',
+        to: 'https://peerclub.com',
+        logo: 'PEER',
+      },
+      {
+        name: 'ZEN',
+        desc: 'WALLET',
+        to: '/placeholder',
+        logo: 'ZEN',
+        withRouter: true,
+      },
+      {
+        name: 'OMNI',
+        desc: 'EXPLORER',
+        to: '/placeholder',
+        logo: 'OMNI',
+        withRouter: true,
+      },
       {
         name: 'PM',
         desc: 'MARKETPLACE',

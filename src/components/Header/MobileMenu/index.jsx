@@ -30,10 +30,6 @@ const Header = ({ isMenu, setIsMenuOpen }) => {
     }
   }
 
-  const onSelect = (e) => {
-    setIsMenuOpen((s) => !s)
-  }
-
   useEffect(() => {
     // menuContainerRef.current.scrollTo({ top: 0 })
   })

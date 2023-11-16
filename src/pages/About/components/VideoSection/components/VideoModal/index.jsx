@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from 'react'
+import React, { useRef, useEffect } from 'react'
 import T from 'prop-types'
 import cls from 'classnames'
 import YouTube from 'react-youtube'

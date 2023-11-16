@@ -9,7 +9,14 @@ import styles from './peerservices.module.scss'
 const PeerServices = () => (
   <section className={styles.section}>
     <div className={styles.container}>
-      <Peer />
+      <a
+        href="https://apps.apple.com/us/app/peer/id1669571704"
+        target="_blank"
+        rel="noreferrer"
+        className={styles.logo_link}
+      >
+        <Peer />
+      </a>
       <Playa />
       <Vine />
       <Zen />
