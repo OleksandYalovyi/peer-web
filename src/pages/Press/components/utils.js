@@ -14,17 +14,17 @@ const partners = [
   },
   {
     title: 'coindesk',
-    to: '/#',
+    to: 'https://www.coindesk.com/',
     element: ({ hovered, isMobile }) => <Coindesc isMobile={isMobile} hovered={hovered} />,
   },
   {
     title: 'techcrunch',
-    to: '/#',
+    to: 'https://techcrunch.com/',
     element: ({ hovered, isMobile }) => <Techcrunch isMobile={isMobile} hovered={hovered} />,
   },
   {
     title: 'forbes',
-    to: '/#',
+    to: 'https://www.forbes.com/sites/kenrapoza/2022/12/08/the-defi-winter-is-it-time-for-investors-to-move-on/',
     element: ({ hovered, isMobile }) => <Forbes isMobile={isMobile} hovered={hovered} />,
   },
   {
@@ -34,7 +34,7 @@ const partners = [
   },
   {
     title: 'restofworld',
-    to: '/#',
+    to: 'https://peer.inc/news',
     element: ({ hovered, isMobile }) => <RestofWorld isMobile={isMobile} hovered={hovered} />,
   },
 ]
