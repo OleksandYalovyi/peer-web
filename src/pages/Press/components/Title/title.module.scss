@@ -7,7 +7,7 @@
   padding: 0 39px;
   border-bottom: 1px solid #333;
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 1120px) {
     flex-direction: column;
     margin-bottom: 34px;
     padding: 0 30px 0 21px;
@@ -24,7 +24,7 @@
     font-style: normal;
     line-height: 76px; /* 100% */
 
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 1120px) {
       max-width: 270px;
       padding-bottom: 34px;
       font-size: 44px;
@@ -37,9 +37,12 @@
     max-width: 547px;
     margin-right: -119px;
 
-    @media screen and (max-width: 768px) {
-      max-width: 100%;
+    @media screen and (max-width: 1480px) {
       margin-right: 0;
+    }
+
+    @media screen and (max-width: 1120px) {
+      max-width: 100%;
     }
 
     h2 {
@@ -53,7 +56,7 @@
       line-height: 38px; /* 118.75% */
       letter-spacing: -0.64px;
 
-      @media screen and (max-width: 768px) {
+      @media screen and (max-width: 1120px) {
         font-size: 24px;
         line-height: 30px; /* 125% */
         letter-spacing: -0.48px;
@@ -70,7 +73,7 @@
       font-style: normal;
       line-height: 24px; /* 120% */
 
-      @media screen and (max-width: 768px) {
+      @media screen and (max-width: 1120px) {
         padding: 0;
         font-size: 20px;
         line-height: 24px; /* 120% */
