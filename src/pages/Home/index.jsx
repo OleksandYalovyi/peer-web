@@ -10,7 +10,7 @@ import HomePageMobile from './components/HomePageMobile/index'
 
 const Home = () => {
   const width = useCurrentWidth()
-  const isMobile = width < 821
+  const isMobile = width < 900
 
   return (
     <div className={styles.wrapper}>
