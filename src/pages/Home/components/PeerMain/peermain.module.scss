@@ -1,18 +1,29 @@
 .section {
-  width: 100%;
-  padding-top: 20px;
   position: relative;
+  width: 100%;
   margin-bottom: 10px;
+  padding-top: 20px;
+  overflow: hidden;
 
   .container {
+    display: grid;
+    grid-template-columns: 30% 1fr;
+    justify-content: center;
+    width: 100%;
+    max-width: 2000px;
+    margin: auto;
     text-align: center;
     background-color: black;
 
-    display: grid;
-    grid-template-columns:30% 1fr;
-
     @media screen and (max-width: 1600px) {
       grid-template-columns: 26% 66%;
+    }
+
+    .peerPhone {
+      transition: all 0.15s ease;
+      &:hover {
+        transform: scale(1.2);
+      }
     }
   }
 }

@@ -43,7 +43,7 @@ const NavItems = ({ name, link, openedMenu, clickHandler }) => {
       onClick={() => clickHandler(name)}
     >
       {link ? <NavLink to={link}>{name}</NavLink> : name}
-      {links && (
+      {/* {links && (
         <div className={styles.nav_list}>
           {links.map((l) => (
             <>
@@ -79,7 +79,7 @@ const NavItems = ({ name, link, openedMenu, clickHandler }) => {
             </>
           ))}
         </div>
-      )}
+      )} */}
     </div>
   )
 }
@@ -91,6 +91,7 @@ const HomeHeader = () => {
   const ref = useRef('')
 
   const handleClick = (e) => {
+    console.log('Here', e)
     if (ref.current && !ref.current.contains(e.target)) {
       setIsOpen('')
     }
