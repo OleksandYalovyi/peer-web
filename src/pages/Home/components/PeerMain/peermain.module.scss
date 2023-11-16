@@ -31,11 +31,12 @@
     .peerPhone {
       position: absolute;
       bottom: 0;
-      left: 150px;
+      left: 145px;
+      width: 37%;
       transition: all 0.15s ease;
 
       @media screen and (max-width: 1920px) {
-        left: 100px;
+        left: 150px;
       }
 
       @media screen and (max-width: 1900px) {
