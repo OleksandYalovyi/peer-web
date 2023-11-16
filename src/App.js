@@ -10,8 +10,10 @@ import Zen from 'pages/Zen'
 import Team from 'pages/Team'
 import Placeholder from 'pages/Placeholder'
 import News from 'pages/News'
-import './App.css'
+import Careers from 'pages/Careers'
 import HomeFooter from 'components/HomeFooter/index'
+import routing from './routing/path'
+import './App.css'
 
 function App() {
   const location = useLocation()
@@ -30,6 +32,7 @@ function App() {
             <Route exact path="/team" component={Team} />
             <Route exact path="/placeholder" component={Placeholder} />
             <Route exact path="/news" component={News} />
+            <Route exact path={routing.withoutAuth.careers} component={Careers} />
             <Redirect exact from="/*" to="/" />
           </Switch>
         </CSSTransition>
