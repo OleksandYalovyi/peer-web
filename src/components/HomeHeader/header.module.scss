@@ -93,12 +93,6 @@
       max-width: 465px;
       padding: 0 15px;
       margin-right: 40px;
-    
-      @media screen  and (max-width: 1000px) {
-        max-width: 100%;
-        gap: 0;
-        margin-right: 0px;        
-      }
 
       .open {
         .nav_list {

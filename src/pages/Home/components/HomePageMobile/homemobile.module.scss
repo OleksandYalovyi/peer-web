@@ -14,66 +14,167 @@
   padding-left: 10px;
 }
 
-.imgGroup {
+.col {
   display: flex;
   flex-direction: column;
 }
 
-.imgWrapper {
+.imgGroup {
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 100%;
 
   .imgItem {
     position: relative;
+    width: 50%;
+    text-align: center;
   }
 
   .peer {
     position: relative;
-    left: 25px;
+    left: 94px;
     z-index: 1;
+    width: 268px;
+
+    @media screen and (max-width: 620px) {
+      left: 61px;
+      width: 238px;
+    }
+
+    @media screen and (max-width: 520px) {
+      left: 49px;
+      width: 218px;
+    }
+
+    @media screen and (max-width: 460px) {
+      left: 35px;
+      width: 198px;
+    }
+
+    @media screen and (max-width: 375px) {
+      left: 44px;
+    }
   }
 
   .peer_icon {
     position: absolute;
     bottom: 20px;
-    left: 62px;
+    left: 54%;
     z-index: 2;
+    width: 23%;
   }
 
   .playa {
     position: relative;
-    top: 1px;
-    right: 17px;
+    top: 12px;
+    right: 97px;
+    width: 280px;
+
+    @media screen and (max-width: 620px) {
+      top: 8px;
+      right: 68px;
+      width: 250px;
+    }
+
+    @media screen and (max-width: 520px) {
+      top: 14px;
+      right: 41px;
+      width: 220px;
+    }
+
+    @media screen and (max-width: 460px) {
+      right: 34px;
+      width: 200px;
+    }
   }
 
   .playa_icon {
     position: absolute;
-    right: 77px;
+    right: 60%;
     bottom: 24px;
+    width: 28%;
+
+    @media screen and (max-width: 460px) {
+      bottom: 18px;
+    }
+
+    @media screen and (max-width: 375px) {
+      bottom: 15px;
+    }
   }
 
   .vine {
     position: relative;
-    left: 12px;
+    left: 63px;
+    width: 268px;
+
+    @media screen and (max-width: 620px) {
+      left: 28px;
+      width: 238px;
+    }
+
+    @media screen and (max-width: 520px) {
+      left: 20px;
+      width: 218px;
+    }
+
+    @media screen and (max-width: 460px) {
+      left: 15px;
+      width: 198px;
+    }
+
+    @media screen and (max-width: 375px) {
+      left: 24px;
+    }
   }
 
   .vine_icon {
     position: absolute;
     bottom: 27px;
-    left: 72px;
+    left: 57%;
     z-index: 2;
+    width: 20%;
+
+    @media screen and (max-width: 520px) {
+      left: 48%;
+    }
   }
 
   .zen {
     position: relative;
-    right: 20px;
+    right: 85px;
+    width: 258px;
+
+    @media screen and (max-width: 620px) {
+      right: 59px;
+      width: 228px;
+    }
+
+    @media screen and (max-width: 520px) {
+      right: 35px;
+      width: 208px;
+    }
+
+    @media screen and (max-width: 460px) {
+      right: 29px;
+      width: 190px;
+    }
+
+    @media screen and (max-width: 375px) {
+      right: 33px;
+    }
   }
 
   .zen_icon {
     position: absolute;
-    right: 77px;
+    right: 62%;
     bottom: 20px;
+    width: 26%;
+
+    @media screen and (max-width: 375px) {
+      bottom: 27px;
+    }
   }
 }
