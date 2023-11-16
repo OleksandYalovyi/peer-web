@@ -6,21 +6,47 @@
   overflow: hidden;
 
   .container {
+    position: relative;
     display: grid;
     grid-template-columns: 30% 1fr;
     justify-content: center;
     width: 100%;
-    max-width: 2000px;
+    max-width: 1920px;
     margin: auto;
     text-align: center;
     background-color: black;
 
+    @media screen and (max-width: 1920px) {
+      grid-template-columns: 29% 1fr;
+    }
+
     @media screen and (max-width: 1600px) {
-      grid-template-columns: 26% 66%;
+      grid-template-columns: 30% 1fr;
+    }
+
+    @media screen and (max-width: 1200px) {
+      grid-template-columns: 32% 1fr;
     }
 
     .peerPhone {
+      position: absolute;
+      bottom: 0;
+      left: 150px;
       transition: all 0.15s ease;
+
+      @media screen and (max-width: 1920px) {
+        left: 100px;
+      }
+
+      @media screen and (max-width: 1900px) {
+        left: 130px;
+      }
+
+      @media screen and (max-width: 1600px) {
+        left: 115px;
+        width: 36%;
+      }
+
       &:hover {
         transform: scale(1.2);
       }
