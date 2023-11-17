@@ -5,7 +5,7 @@ import cls from 'classnames'
 import MobileMenuLogo from 'components/Icons/MobileMenuLogo/index'
 import useScroll from 'hooks/useScroll'
 import peerLogo from 'assets/Home/peerlogo.png'
-import { isDev } from 'constants/index'
+import { isEnvDev } from 'constants/index'
 import styles from './header.module.scss'
 
 const links = [
@@ -129,7 +129,7 @@ const HomeHeader = () => {
         </div>
         <nav className={styles.nav}>
           {links.map(({ router, name, to, id }) =>
-            (name === 'CAREERS' && isDev) || name !== 'CAREERS' ? (
+            (name === 'CAREERS' && isEnvDev) || name !== 'CAREERS' ? (
               <NavItems
                 key={id}
                 router={router}
