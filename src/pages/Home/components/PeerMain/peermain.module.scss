@@ -21,6 +21,11 @@
     width: 31%;
     transition: all 0.15s ease;
 
+    @media screen and (max-width: 1900px) {
+      top: 90px;
+      width: 30%;
+    }
+
     &:hover {
       transform: scale(1.1);
     }
