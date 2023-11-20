@@ -2,7 +2,7 @@
 import React from 'react'
 import T from 'prop-types'
 
-const Peer = ({ width = '150', height = '43' }) => (
+const Peer = ({ width = '150', height = '60' }) => (
   <svg
     width={width}
     height={height}

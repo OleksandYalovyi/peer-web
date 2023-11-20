@@ -2,7 +2,7 @@
 import React from 'react'
 import T from 'prop-types'
 
-const Vine = ({ width = '144', height = '36' }) => (
+const Vine = ({ width = '144', height = '46' }) => (
   <svg
     width={width}
     height={height}

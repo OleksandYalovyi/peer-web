@@ -2,7 +2,7 @@
 import React from 'react'
 import T from 'prop-types'
 
-const Playa = ({ width = '216', height = '49' }) => (
+const Playa = ({ width = '216', height = '60' }) => (
   <svg
     width={width}
     height={height}
