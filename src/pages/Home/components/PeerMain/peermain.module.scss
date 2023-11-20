@@ -1,56 +1,18 @@
 .section {
-  position: relative;
-  width: 100%;
-  margin-bottom: 10px;
-  padding-top: 20px;
-  overflow: hidden;
+  .peerPhone {
+    position: absolute;
+    top: 75px;
+    left: 0;
+    width: 31%;
+    transition: all 0.15s ease;
 
-  .container {
-    position: relative;
-    display: grid;
-    grid-template-columns: 30% 1fr;
-    justify-content: center;
-    width: 100%;
-    max-width: 1900px;
-    margin: auto;
-    text-align: center;
-    background-color: black;
-
-    @media screen and (max-width: 1920px) {
-      grid-template-columns: 29% 1fr;
+    @media screen and (max-width: 1900px) {
+      top: 90px;
+      width: 30%;
     }
 
-    @media screen and (max-width: 1600px) {
-      grid-template-columns: 30% 1fr;
-    }
-
-    @media screen and (max-width: 1200px) {
-      grid-template-columns: 32% 1fr;
-    }
-
-    .peerPhone {
-      position: absolute;
-      bottom: 0;
-      left: 145px;
-      width: 37%;
-      transition: all 0.15s ease;
-
-      @media screen and (max-width: 1920px) {
-        left: 150px;
-      }
-
-      @media screen and (max-width: 1900px) {
-        left: 130px;
-      }
-
-      @media screen and (max-width: 1600px) {
-        left: 115px;
-        width: 36%;
-      }
-
-      &:hover {
-        transform: scale(1.2);
-      }
+    &:hover {
+      transform: scale(1.1);
     }
   }
 }

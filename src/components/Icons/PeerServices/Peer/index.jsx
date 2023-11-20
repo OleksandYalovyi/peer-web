@@ -2,10 +2,9 @@
 import React from 'react'
 import T from 'prop-types'
 
-const Peer = ({ width = '150', height = '43' }) => (
+const Peer = ({ isSmallScreen }) => (
   <svg
-    width={width}
-    height={height}
+    width={isSmallScreen ? 140 : 180}
     viewBox="0 0 150 43"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
@@ -33,8 +32,7 @@ const Peer = ({ width = '150', height = '43' }) => (
 )
 
 Peer.propTypes = {
-  width: T.string,
-  height: T.string,
+  isSmallScreen: T.bool,
 }
 
 export default Peer

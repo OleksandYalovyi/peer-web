@@ -9,7 +9,7 @@ import styles from './peerservices.module.scss'
 
 const PeerServices = () => {
   const width = useCurrentWidth()
-  const isSmallScreen = width < 1160
+  const isSmallScreen = width < 1500
 
   return (
     <section className={styles.section}>
@@ -20,11 +20,11 @@ const PeerServices = () => {
           rel="noreferrer"
           className={styles.logo_link}
         >
-          <Peer width={isSmallScreen ? '120' : null} />
+          <Peer isSmallScreen={isSmallScreen} />
         </a>
-        <Playa width={isSmallScreen ? '150' : null} />
-        <Vine width={isSmallScreen ? '100' : null} />
-        <Zen width={isSmallScreen ? '140' : null} />
+        <Playa isSmallScreen={isSmallScreen} />
+        <Vine isSmallScreen={isSmallScreen} />
+        <Zen isSmallScreen={isSmallScreen} />
       </div>
     </section>
   )
