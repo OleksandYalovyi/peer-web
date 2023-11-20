@@ -2,10 +2,9 @@
 import React from 'react'
 import T from 'prop-types'
 
-const Playa = ({ width = '216', height = '60' }) => (
+const Playa = ({ isSmallScreen }) => (
   <svg
-    width={width}
-    height={height}
+    width={isSmallScreen ? 180 : 230}
     viewBox="0 0 216 49"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
@@ -52,8 +51,7 @@ const Playa = ({ width = '216', height = '60' }) => (
 )
 
 Playa.propTypes = {
-  width: T.string,
-  height: T.string,
+  isSmallScreen: T.bool,
 }
 
 export default Playa

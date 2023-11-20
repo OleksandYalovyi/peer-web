@@ -2,10 +2,9 @@
 import React from 'react'
 import T from 'prop-types'
 
-const Vine = ({ width = '144', height = '46' }) => (
+const Vine = ({ isSmallScreen }) => (
   <svg
-    width={width}
-    height={height}
+    width={isSmallScreen ? 120 : 170}
     viewBox="0 0 144 36"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
@@ -43,8 +42,7 @@ const Vine = ({ width = '144', height = '46' }) => (
 )
 
 Vine.propTypes = {
-  width: T.string,
-  height: T.string,
+  isSmallScreen: T.bool,
 }
 
 export default Vine
