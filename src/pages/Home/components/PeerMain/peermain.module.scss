@@ -1,56 +1,28 @@
 .section {
-  position: relative;
-  width: 100%;
-  margin-bottom: 10px;
-  padding-top: 20px;
-  overflow: hidden;
-
-  .container {
+  .hero-image {
     position: relative;
-    display: grid;
-    grid-template-columns: 30% 1fr;
-    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+  }
+
+  .hero-image img {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    max-width: 1900px;
-    margin: auto;
-    text-align: center;
-    background-color: black;
+    height: 100%;
+    object-fit: cover;
+  }
 
-    @media screen and (max-width: 1920px) {
-      grid-template-columns: 29% 1fr;
-    }
+  .peerPhone {
+    position: absolute;
+    top: 75px;
+    left: 0;
+    width: 31%;
+    transition: all 0.15s ease;
 
-    @media screen and (max-width: 1600px) {
-      grid-template-columns: 30% 1fr;
-    }
-
-    @media screen and (max-width: 1200px) {
-      grid-template-columns: 32% 1fr;
-    }
-
-    .peerPhone {
-      position: absolute;
-      bottom: 0;
-      left: 145px;
-      width: 37%;
-      transition: all 0.15s ease;
-
-      @media screen and (max-width: 1920px) {
-        left: 150px;
-      }
-
-      @media screen and (max-width: 1900px) {
-        left: 130px;
-      }
-
-      @media screen and (max-width: 1600px) {
-        left: 115px;
-        width: 36%;
-      }
-
-      &:hover {
-        transform: scale(1.2);
-      }
+    &:hover {
+      transform: scale(1.1);
     }
   }
 }
