@@ -5,7 +5,7 @@ import styles from './peermain.module.scss'
 
 const PeerMain = () => (
   <section className={styles.section}>
-    <div className="hero-image">
+    <div className={styles.heroImage}>
       <img src={BlurredBgGroup} alt="Hero" />
       <a href="https://apps.apple.com/us/app/peer/id1669571704" target="_blank" rel="noreferrer">
         <img src={PeerPhone} className={styles.peerPhone} alt="peer phone" />

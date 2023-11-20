@@ -1,180 +1,75 @@
 .section {
   padding-top: 10px;
   padding-bottom: 10px;
-
-  @media screen and (max-width: 680px) {
-    padding-bottom: 0px;
-  }
 }
 
 .container {
   margin-right: auto;
   margin-left: auto;
-  padding-right: 10px;
-  padding-left: 10px;
+  padding-right: 15px;
+  padding-left: 15px;
 }
 
 .col {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .imgGroup {
   position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
+  max-width: 460px;
 
-  .imgItem {
-    position: relative;
-    width: 50%;
-    text-align: center;
+  &:first-child {
+    margin-bottom: 5px;
   }
 
-  .peer {
-    position: relative;
-    left: 94px;
-    z-index: 1;
-    width: 268px;
-
-    @media screen and (max-width: 620px) {
-      left: 61px;
-      width: 238px;
-    }
-
-    @media screen and (max-width: 520px) {
-      left: 49px;
-      width: 218px;
-    }
-
-    @media screen and (max-width: 460px) {
-      left: 35px;
-      width: 198px;
-    }
-
-    @media screen and (max-width: 375px) {
-      left: 44px;
-    }
+  @media screen and (max-width: 430px) {
+    max-width: 380px;
   }
 
-  .peer_icon {
-    position: absolute;
-    bottom: 20px;
-    left: 54%;
-    z-index: 2;
-    width: 23%;
+  @media screen and (max-width: 414px) {
+    max-width: 330px;
   }
 
-  .playa {
-    position: relative;
-    top: 12px;
-    right: 97px;
-    width: 280px;
-
-    @media screen and (max-width: 620px) {
-      top: 8px;
-      right: 68px;
-      width: 250px;
-    }
-
-    @media screen and (max-width: 520px) {
-      top: 14px;
-      right: 41px;
-      width: 220px;
-    }
-
-    @media screen and (max-width: 460px) {
-      right: 34px;
-      width: 200px;
-    }
+  @media screen and (max-width: 375px) {
+    max-width: 255px;
   }
+}
+.peerPhone {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 57%;
+}
 
-  .playa_icon {
-    position: absolute;
-    right: 60%;
-    bottom: 24px;
-    width: 28%;
+.peer_icon {
+  position: absolute;
+  bottom: 10px;
+  left: 12%;
+  z-index: 2;
+  width: 23%;
+}
 
-    @media screen and (max-width: 460px) {
-      bottom: 18px;
-    }
+.playa_icon {
+  position: absolute;
+  right: 14%;
+  bottom: 12px;
+  width: 28%;
+}
 
-    @media screen and (max-width: 375px) {
-      bottom: 15px;
-    }
-  }
+.vine_icon {
+  position: absolute;
+  bottom: 17px;
+  left: 15%;
+  z-index: 2;
+  width: 20%;
+}
 
-  .vine {
-    position: relative;
-    left: 63px;
-    width: 268px;
-
-    @media screen and (max-width: 620px) {
-      left: 28px;
-      width: 238px;
-    }
-
-    @media screen and (max-width: 520px) {
-      left: 20px;
-      width: 218px;
-    }
-
-    @media screen and (max-width: 460px) {
-      left: 15px;
-      width: 198px;
-    }
-
-    @media screen and (max-width: 375px) {
-      left: 24px;
-    }
-  }
-
-  .vine_icon {
-    position: absolute;
-    bottom: 27px;
-    left: 57%;
-    z-index: 2;
-    width: 20%;
-
-    @media screen and (max-width: 520px) {
-      left: 48%;
-    }
-  }
-
-  .zen {
-    position: relative;
-    right: 85px;
-    width: 258px;
-
-    @media screen and (max-width: 620px) {
-      right: 59px;
-      width: 228px;
-    }
-
-    @media screen and (max-width: 520px) {
-      right: 35px;
-      width: 208px;
-    }
-
-    @media screen and (max-width: 460px) {
-      right: 29px;
-      width: 190px;
-    }
-
-    @media screen and (max-width: 375px) {
-      right: 33px;
-    }
-  }
-
-  .zen_icon {
-    position: absolute;
-    right: 62%;
-    bottom: 20px;
-    width: 26%;
-
-    @media screen and (max-width: 375px) {
-      bottom: 27px;
-    }
-  }
+.zen_icon {
+  position: absolute;
+  right: 13%;
+  bottom: 10px;
+  width: 26%;
 }
