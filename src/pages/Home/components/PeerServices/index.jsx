@@ -20,7 +20,7 @@ const PeerServices = () => {
           rel="noreferrer"
           className={styles.logo_link}
         >
-          <Peer width={isSmallScreen ? '120' : null} />
+          <Peer width={isSmallScreen ? '150' : null} />
         </a>
         <Playa width={isSmallScreen ? '150' : null} />
         <Vine width={isSmallScreen ? '100' : null} />
