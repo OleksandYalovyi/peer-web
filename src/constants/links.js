@@ -4,6 +4,6 @@ export default {
   peerClub: peerClubUrl,
   peerClubSingUP: `${peerClubUrl}/signup`,
   peerClubProfileTrade: `${peerClubUrl}/profile/trade`,
-  privacyPolicy: 'https://peer.inc/static/media/PeerPrivacyPolicy.c1e9c2e1.pdf',
-  termsService: 'https://peer.inc/static/media/Peer-TermsandConditions.c660affe.e22ec2bb.pdf',
+  privacyPolicy: 'https://community.peerclub.com/hc/en-us/articles/17261918037787-privacy-policy',
+  termsService: 'https://community.peerclub.com/hc/en-us/articles/17262293261979-terms-of-service',
 }
