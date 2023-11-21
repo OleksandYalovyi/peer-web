@@ -1,8 +1,8 @@
 .section {
-  .heroImage {
-    img {
+  .heroWrapper {
+    .heroImage {
       opacity: 0;
-      transition: all .3s;
+      transition: all 0.15s ease;
 
       &.visible {
         opacity: 1;

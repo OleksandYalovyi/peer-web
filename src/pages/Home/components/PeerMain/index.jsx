@@ -10,12 +10,12 @@ const PeerMain = (props) => {
 
   return (
     <section className={styles.section}>
-      <div className={styles.heroImage}>
+      <div className={styles.heroWrapper}>
         <img
           src={BlurredBgGroup}
           alt="Hero"
           onLoad={() => setIsPeerMainLoaded(true)}
-          className={cls({ [styles.visible]: isPeerMainLoaded })}
+          className={cls(styles.heroImage, { [styles.visible]: isPeerMainLoaded })}
         />
         <a href="https://apps.apple.com/us/app/peer/id1669571704" target="_blank" rel="noreferrer">
           <img src={PeerPhone} className={styles.peerPhone} alt="peer phone" />
