@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import React from 'react'
+import React, { useState } from 'react'
 
 import HomeHeader from 'components/HomeHeader/index'
 import useCurrentWidth from 'hooks/useCurrentWidth'
@@ -9,6 +9,7 @@ import PeerServices from './components/PeerServices/index'
 import HomePageMobile from './components/HomePageMobile/index'
 
 const Home = () => {
+  const [isPeerMainLoaded, setIsPeerMainLoaded] = useState(false)
   const width = useCurrentWidth()
   const isMobile = width < 900
 
@@ -17,8 +18,8 @@ const Home = () => {
       {!isMobile ? (
         <>
           <HomeHeader />
-          <PeerMain />
-          <PeerServices />
+          <PeerMain setIsPeerMainLoaded={setIsPeerMainLoaded} isPeerMainLoaded={isPeerMainLoaded} />
+          {isPeerMainLoaded && <PeerServices />}
         </>
       ) : (
         <HomePageMobile />

@@ -1,4 +1,14 @@
 .section {
+  .heroImage {
+    img {
+      opacity: 0;
+      transition: all .3s;
+
+      &.visible {
+        opacity: 1;
+      }
+    }
+  }
   .peerPhone {
     position: absolute;
     top: 75px;
