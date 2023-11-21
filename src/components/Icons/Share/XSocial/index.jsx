@@ -4,7 +4,7 @@ import T from 'prop-types'
 import cls from 'classnames'
 import styles from './xsocial.module.scss'
 
-const XSocial = ({ hovered, width = '26', isLight, size, isGrey }) => {
+const XSocial = ({ hovered, width = '24.89', isLight, size, isGrey }) => {
   const renderColor = () => {
     if (isGrey) return '#4D4D4D'
     if (hovered) return '#00d3f9'
@@ -20,6 +20,7 @@ const XSocial = ({ hovered, width = '26', isLight, size, isGrey }) => {
   return (
     <svg
       width={width}
+      height={22.5}
       viewBox="0 0 26 23"
       xmlns="http://www.w3.org/2000/svg"
       className={cls({ [styles.hovered]: hovered })}

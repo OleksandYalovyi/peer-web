@@ -1,9 +1,9 @@
 import React from 'react'
 import PeerPhone from 'assets/Home/Mobile/peer-mob.png'
-import PeerIcon from 'assets/Home/Mobile/Icons/peer-icon.png'
-import PlayaIcon from 'assets/Home/Mobile/Icons/playa-icon.svg'
-import VineIcon from 'assets/Home/Mobile/Icons/vine-icon.svg'
-import ZenIcon from 'assets/Home/Mobile/Icons/zen-icon.png'
+import PeerIcon from 'assets/Home/Mobile/Icons/svg/peer.svg'
+import PlayaIcon from 'assets/Home/Mobile/Icons/svg/playa.svg'
+import VineIcon from 'assets/Home/Mobile/Icons/svg/vine.svg'
+import ZenIcon from 'assets/Home/Mobile/Icons/svg/zen.svg'
 
 import PlayaGroup from 'assets/Home/Mobile/temp/playa-mobile-group.png'
 import VineZenGroup from 'assets/Home/Mobile/temp/vine-zen-group-1.png'
