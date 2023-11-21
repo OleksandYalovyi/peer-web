@@ -1,0 +1,31 @@
+.section {
+  display: grid;
+  grid-auto-rows: 100px;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 50px;
+  width: 100%;
+  max-width: 1300px;
+  padding: 0 20px 88px 56.5px;
+
+  @media screen and (max-width: 768px) {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    padding: 0 21px 100px 21px;
+  }
+
+  .item {
+    min-width: 200px;
+    color: #939393;
+    font-weight: 400;
+    font-size: 30px;
+    font-family: Gilroy-Regular, sans-serif;
+    font-style: normal;
+    line-height: 40px; /* 133.333% */
+
+    @media screen and (max-width: 768px) {
+      font-size: 24px;
+      line-height: 32px; /* 133.333% */
+    }
+  }
+}

@@ -12,7 +12,8 @@
     "country-flag-icons": "^1.5.5",
     "date-fns": "^2.28.0",
     "history": "4.6.3",
-    "node-sass": "^6.0.1",
+    "i": "^0.3.7",
+    "npm": "^10.0.0",
     "prop-types": "^15.7.2",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
@@ -23,7 +24,9 @@
     "react-scripts": "4.0.3",
     "react-slick": "^0.29.0",
     "react-transition-group": "^4.4.2",
+    "react-visibility-sensor": "^5.1.1",
     "react-youtube": "^10.1.0",
+    "sass": "^1.66.1",
     "slick-carousel": "^1.8.1",
     "splitting": "^1.0.6"
   },
@@ -32,7 +35,8 @@
     "build": "CI=false && REACT_APP_STAGE=production react-scripts build",
     "build-dev": "CI=false && REACT_APP_STAGE=development react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "lint": "eslint src --ext .js,.jsx,.ts,.tsx"
   },
   "eslintConfig": {
     "extends": [

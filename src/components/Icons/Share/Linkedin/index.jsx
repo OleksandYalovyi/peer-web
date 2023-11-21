@@ -4,8 +4,9 @@ import T from 'prop-types'
 import cls from 'classnames'
 import styles from './linkedin.module.scss'
 
-const Linkedin = ({ hovered, width = '22.5', isLight, size }) => {
+const Linkedin = ({ hovered, width = '22.33', isLight, size, isGrey }) => {
   const renderColor = () => {
+    if (isGrey) return '#4D4D4D'
     if (hovered) return '#00d3f9'
     if (isLight) return '#000000'
     return '#ffffff'
@@ -20,6 +21,7 @@ const Linkedin = ({ hovered, width = '22.5', isLight, size }) => {
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 45 45"
       width={width}
+      height={22}
       className={cls({ [styles.hovered]: hovered })}
       style={renderStyle()}
     >
@@ -37,6 +39,7 @@ Linkedin.propTypes = {
   width: T.string,
   isLight: T.bool,
   size: T.string,
+  isGrey: T.bool,
 }
 
 export default Linkedin

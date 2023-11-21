@@ -4,8 +4,9 @@ import T from 'prop-types'
 import cls from 'classnames'
 import styles from './telegram.module.scss'
 
-const Telegram = ({ hovered, width = '23.5', isLight, size }) => {
+const Telegram = ({ hovered, width = '22.24', isLight, size, isGrey }) => {
   const renderColor = () => {
+    if (isGrey) return '#4D4D4D'
     if (hovered) return '#00d3f9'
     if (isLight) return '#000000'
     return '#ffffff'
@@ -21,6 +22,7 @@ const Telegram = ({ hovered, width = '23.5', isLight, size }) => {
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 48 39"
       width={width}
+      height={22.5}
       className={cls({ [styles.hovered]: hovered })}
       style={renderStyle()}
     >
@@ -38,5 +40,6 @@ Telegram.propTypes = {
   width: T.string,
   isLight: T.bool,
   size: T.string,
+  isGrey: T.bool,
 }
 export default Telegram

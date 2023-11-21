@@ -31,9 +31,26 @@ const data = [
     //   { name: 'Labs', to: 'https://labs.peer.inc', logo: 'LABS' },
     // ],
     links: [
-      { name: 'PEER', desc: 'OPEN WORLD', to: 'https://peerclub.com', logo: 'PEER' },
-      { name: 'ZEN', desc: 'WALLET', to: '/placeholder', logo: 'ZEN', withRouter: true },
-      { name: 'OMNI', desc: 'EXPLORER', to: '/placeholder', logo: 'OMNI', withRouter: true },
+      {
+        name: 'PEER',
+        desc: 'OPEN WORLD',
+        to: 'https://peerclub.com',
+        logo: 'PEER',
+      },
+      {
+        name: 'ZEN',
+        desc: 'WALLET',
+        to: '/placeholder',
+        logo: 'ZEN',
+        withRouter: true,
+      },
+      {
+        name: 'OMNI',
+        desc: 'EXPLORER',
+        to: '/placeholder',
+        logo: 'OMNI',
+        withRouter: true,
+      },
       {
         name: 'PM',
         desc: 'MARKETPLACE',
@@ -54,14 +71,14 @@ const data = [
   {
     title: 'About',
     links: [
-      { name: 'Team', to: '/team', isInternal: true },
-      { name: 'Brand Book', to: '/brandbook', isInternal: true },
-      { name: 'White Papers', to: '/whitepapers', isInternal: true },
+      { name: 'About', to: '/about', isInternal: true },
+      { name: 'Brand Book', to: '/placeholder', isInternal: true },
+      { name: 'White Papers', to: '/placeholder', isInternal: true },
     ],
   },
 ]
 
-const Dropdown = ({ list, children, isShow, onClose, burgerRef }) => {
+const Dropdown = ({ children, isShow, onClose, burgerRef }) => {
   const listRef = useRef(null)
   const [expanded, setExpanded] = useState('')
   const [clickedLink, setClickedLink] = useState('')
@@ -119,9 +136,7 @@ const Dropdown = ({ list, children, isShow, onClose, burgerRef }) => {
       transform: 'rotate(180deg)',
       color: 'white',
     },
-    '& .MuiAccordionSummary-content': {
-      //   marginLeft: theme.spacing(1),
-    },
+    '& .MuiAccordionSummary-content': {},
   }))
 
   const AccordionDetails = styled(MuiAccordionDetails)(({ theme }) => ({

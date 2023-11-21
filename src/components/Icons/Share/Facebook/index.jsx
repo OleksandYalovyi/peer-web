@@ -4,8 +4,9 @@ import T from 'prop-types'
 import cls from 'classnames'
 import styles from './fb.module.scss'
 
-const Facebook = ({ hovered, width = '14', isLight, size }) => {
+const Facebook = ({ hovered, width = '24.89', isLight, size, isGrey }) => {
   const renderColor = () => {
+    if (isGrey) return '#4D4D4D'
     if (hovered) return '#00d3f9'
     if (isLight) return '#000000'
     return '#ffffff'
@@ -19,8 +20,9 @@ const Facebook = ({ hovered, width = '14', isLight, size }) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      viewBox="24 15 15 34"
+      viewBox="24 18 14 31"
       width={width}
+      height={22.5}
       className={cls({ [styles.hovered]: hovered })}
       style={renderStyle()}
     >
@@ -38,5 +40,6 @@ Facebook.propTypes = {
   width: T.string,
   isLight: T.bool,
   size: T.string,
+  isGrey: T.bool,
 }
 export default Facebook
