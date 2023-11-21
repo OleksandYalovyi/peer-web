@@ -136,9 +136,7 @@ const Dropdown = ({ children, isShow, onClose, burgerRef }) => {
       transform: 'rotate(180deg)',
       color: 'white',
     },
-    '& .MuiAccordionSummary-content': {
-      //   marginLeft: theme.spacing(1),
-    },
+    '& .MuiAccordionSummary-content': {},
   }))
 
   const AccordionDetails = styled(MuiAccordionDetails)(({ theme }) => ({
