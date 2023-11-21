@@ -20,7 +20,7 @@ const Facebook = ({ hovered, width = '24.89', isLight, size, isGrey }) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      viewBox="24 15 15 34"
+      viewBox="24 18 14 31"
       width={width}
       height={22.5}
       className={cls({ [styles.hovered]: hovered })}
