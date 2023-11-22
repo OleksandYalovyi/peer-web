@@ -1,5 +1,5 @@
 import React from 'react'
-import PeerPhone from 'assets/Home/Mobile/peer-mob.png'
+import PeerPhone from 'assets/Home/Mobile/temp/peer-mob.png'
 import PeerIcon from 'assets/Home/Mobile/Icons/svg/peer.svg'
 import PlayaIcon from 'assets/Home/Mobile/Icons/svg/playa.svg'
 import VineIcon from 'assets/Home/Mobile/Icons/svg/vine.svg'
