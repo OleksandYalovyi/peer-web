@@ -6,7 +6,7 @@ import VineIcon from 'assets/Home/Mobile/Icons/svg/vine.svg'
 import ZenIcon from 'assets/Home/Mobile/Icons/svg/zen.svg'
 
 import PlayaGroup from 'assets/Home/Mobile/temp/playa-mobile-group.png'
-import VineZenGroup from 'assets/Home/Mobile/temp/vine-zen-group-1.png'
+import VineZenGroup from 'assets/Home/Mobile/temp/vine-zen-group.png'
 
 import styles from './homemobile.module.scss'
 

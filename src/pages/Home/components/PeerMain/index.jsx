@@ -1,7 +1,7 @@
 import React from 'react'
 import T from 'prop-types'
 import cls from 'classnames'
-import PeerPhone from 'assets/Home/temp/peerPhone.png'
+import PeerPhone from 'assets/Home/temp/peer-desktop-phone.png'
 import BlurredBgGroup from 'assets/Home/temp/hero-desktop-group.png'
 import styles from './peermain.module.scss'
 
