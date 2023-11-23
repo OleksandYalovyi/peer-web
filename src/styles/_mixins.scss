@@ -1,0 +1,62 @@
+@import './variables';
+
+@mixin screen($point) {
+  @if $point==fullHd {
+    @media only screen and (min-width: $fullHd-screen) {
+      @content;
+    }
+  } @else if $point==maxFullHd {
+    @media only screen and (max-width: ($fullHd-screen - 0.1px)) {
+      @content;
+    }
+  }
+  @if $point==large {
+    @media only screen and (min-width: $large-screen) {
+      @content;
+    }
+  } @else if $point==maxLarge {
+    @media only screen and (max-width: ($large-screen - 0.1px)) {
+      @content;
+    }
+  } @else if $point==xl {
+    @media only screen and (min-width: $laptop) {
+      @content;
+    }
+  } @else if $point==maxXl {
+    @media only screen and (max-width: ($laptop - 0.1px)) {
+      @content;
+    }
+  } @else if $point==lg {
+    @media only screen and (min-width: $tablet-lg) {
+      @content;
+    }
+  } @else if $point==maxLg {
+    @media only screen and (max-width: ($tablet-lg - 0.1px)) {
+      @content;
+    }
+  } @else if $point==md {
+    @media only screen and (min-width: $tablet) {
+      @content;
+    }
+  } @else if $point==maxMd {
+    @media only screen and (max-width: ($tablet - 0.1px)) {
+      @content;
+    }
+  } @else if $point==sm {
+    @media only screen and (min-width: $phone) {
+      @content;
+    }
+  } @else if $point==maxSm {
+    @media only screen and (max-width: ($phone - 0.1px)) {
+      @content;
+    }
+  } @else if $point==hover {
+    @media (hover: hover) and (pointer: fine) {
+      @content;
+    }
+  } @else {
+    @media only screen and (min-width: $point + 'px') {
+      @content;
+    }
+  }
+}
