@@ -1,29 +1,28 @@
 .section {
-  position: relative;
-  width: 100%;
-  margin-bottom: 10px;
-  padding-top: 20px;
-  overflow: hidden;
+  .heroWrapper {
+    .heroImage {
+      opacity: 0;
+      transition: all 0.15s ease;
 
-  .container {
-    display: grid;
-    grid-template-columns: 30% 1fr;
-    justify-content: center;
-    width: 100%;
-    max-width: 2000px;
-    margin: auto;
-    text-align: center;
-    background-color: black;
+      &.visible {
+        opacity: 1;
+      }
+    }
+  }
+  .peerPhone {
+    position: absolute;
+    top: 75px;
+    left: 0;
+    width: 31%;
+    transition: all 0.15s ease;
 
-    @media screen and (max-width: 1600px) {
-      grid-template-columns: 26% 66%;
+    @media screen and (max-width: 1900px) {
+      top: 90px;
+      width: 30%;
     }
 
-    .peerPhone {
-      transition: all 0.15s ease;
-      &:hover {
-        transform: scale(1.2);
-      }
+    &:hover {
+      transform: scale(1.1);
     }
   }
 }

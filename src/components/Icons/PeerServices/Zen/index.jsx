@@ -2,10 +2,9 @@
 import React from 'react'
 import T from 'prop-types'
 
-const Zen = ({ width = '164', height = '54' }) => (
+const Zen = ({ isSmallScreen }) => (
   <svg
-    width={width}
-    height={height}
+    width={isSmallScreen ? 160 : 220}
     viewBox="0 0 164 54"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
@@ -20,8 +19,7 @@ const Zen = ({ width = '164', height = '54' }) => (
 )
 
 Zen.propTypes = {
-  width: T.string,
-  height: T.string,
+  isSmallScreen: T.bool,
 }
 
 export default Zen

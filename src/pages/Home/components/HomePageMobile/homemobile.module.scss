@@ -1,79 +1,75 @@
 .section {
   padding-top: 10px;
   padding-bottom: 10px;
-
-  @media screen and (max-width: 680px) {
-    padding-bottom: 0px;
-  }
 }
 
 .container {
   margin-right: auto;
   margin-left: auto;
-  padding-right: 10px;
-  padding-left: 10px;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .imgGroup {
-  display: flex;
-  flex-direction: column;
+  position: relative;
+  max-width: 460px;
+
+  &:first-child {
+    margin-bottom: 5px;
+  }
+
+  @media screen and (max-width: 430px) {
+    max-width: 380px;
+  }
+
+  @media screen and (max-width: 414px) {
+    max-width: 330px;
+  }
+
+  @media screen and (max-width: 375px) {
+    max-width: 255px;
+  }
+}
+.peerPhone {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 57%;
 }
 
-.imgWrapper {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.peer_icon {
+  position: absolute;
+  bottom: 10px;
+  left: 12%;
+  z-index: 2;
+  width: 23%;
+}
 
-  .imgItem {
-    position: relative;
-  }
+.playa_icon {
+  position: absolute;
+  right: 14%;
+  bottom: 12px;
+  width: 28%;
+}
 
-  .peer {
-    position: relative;
-    left: 25px;
-    z-index: 1;
-  }
+.vine_icon {
+  position: absolute;
+  bottom: 17px;
+  left: 15%;
+  z-index: 2;
+  width: 20%;
+}
 
-  .peer_icon {
-    position: absolute;
-    bottom: 20px;
-    left: 62px;
-    z-index: 2;
-  }
-
-  .playa {
-    position: relative;
-    top: 1px;
-    right: 17px;
-  }
-
-  .playa_icon {
-    position: absolute;
-    right: 77px;
-    bottom: 24px;
-  }
-
-  .vine {
-    position: relative;
-    left: 12px;
-  }
-
-  .vine_icon {
-    position: absolute;
-    bottom: 27px;
-    left: 72px;
-    z-index: 2;
-  }
-
-  .zen {
-    position: relative;
-    right: 20px;
-  }
-
-  .zen_icon {
-    position: absolute;
-    right: 77px;
-    bottom: 20px;
-  }
+.zen_icon {
+  position: absolute;
+  right: 13%;
+  bottom: 10px;
+  width: 26%;
 }
