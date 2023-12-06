@@ -1,4 +1,3 @@
-import QAFulltime from './pdf/qa.pdf'
 import ProductManagerProductDesign from './pdf/ProductManager_ProductDesign.pdf'
 
 export const jobData = [
@@ -16,6 +15,6 @@ export const defaultJobData = [
   {
     title: 'Open Application',
     location: 'Remote',
-    linkFile: QAFulltime,
+    link: 'mailto:jobs@peer.inc',
   },
 ]

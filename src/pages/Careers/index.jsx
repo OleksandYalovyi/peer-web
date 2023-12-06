@@ -1,6 +1,6 @@
 /* eslint-disable react/react-in-jsx-scope */
 import CareersItem from './Item'
-import { jobData } from './mock/index'
+import { defaultJobData, jobData } from './mock/index'
 import styles from './styles.module.scss'
 
 function Careers() {
@@ -17,7 +17,7 @@ function Careers() {
       </div>
 
       <div className={styles.content}>
-        {jobData.map((item) => (
+        {[...jobData, ...defaultJobData].map((item) => (
           <CareersItem {...item} />
         ))}
       </div>
