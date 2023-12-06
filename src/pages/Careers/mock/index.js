@@ -1,41 +1,14 @@
 import QAFulltime from './pdf/qa.pdf'
-import SDFreelance from './pdf/sd-freelance.pdf'
-import SDFullFreelance from './pdf/sd-full-freelance.pdf'
-import SDFull from './pdf/sd-full.pdf'
+import ProductManagerProductDesign from './pdf/ProductManager_ProductDesign.pdf'
 
 export const jobData = [
   {
     id: 1,
-    title: 'QA Engineer',
+    title: 'Product Manager - Product Design',
     location: 'Remote',
     time: 'Full Time',
-    linkFile: QAFulltime,
-  },
-  {
-    id: 2,
-    title: 'Software Developer',
-    location: 'Remote',
-    time: 'Freelancer',
-    linkFile: SDFreelance,
-  },
-  {
-    id: 3,
-    title: 'Software Developer',
-    location: 'Remote',
-    time: 'Full Time / Freelancer',
-    linkFile: SDFullFreelance,
-  },
-  {
-    id: 4,
-    title: 'Software Developer',
-    location: 'Remote',
-    time: 'Full Time',
-    linkFile: SDFull,
-  },
-  {
-    id: 5,
-    title: 'Open Application',
-    location: 'Remote',
+    linkFile: ProductManagerProductDesign,
+    link: 'mailto:jobs@peer.inc',
   },
 ]
 
