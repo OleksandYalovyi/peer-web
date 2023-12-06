@@ -8,8 +8,10 @@ import HomeHeader from 'components/HomeHeader/index'
 import Zen from 'pages/Zen'
 import About from 'pages/About'
 import Placeholder from 'pages/Placeholder'
+import Careers from 'pages/Careers'
 import Press from 'pages/Press'
 
+import routing from './routing/path'
 import './App.css'
 
 function App() {
@@ -28,6 +30,7 @@ function App() {
             <Route exact path="/about" component={About} />
             <Route exact path="/placeholder" component={Placeholder} />
             <Route exact path="/press" component={Press} />
+            <Route exact path={routing.withoutAuth.careers} component={Careers} />
             <Redirect exact from="/*" to="/" />
           </Switch>
         </CSSTransition>
