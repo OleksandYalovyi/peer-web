@@ -2,10 +2,8 @@
 import React, { useState, useEffect, useRef } from 'react'
 import { NavLink, Link } from 'react-router-dom'
 import cls from 'classnames'
-import MobileMenuLogo from 'components/Icons/MobileMenuLogo/index'
 import useScroll from 'hooks/useScroll'
 import peerLogo from 'assets/Home/peerlogo.png'
-import { isEnvDev, isDev } from 'constants/index'
 import styles from './header.module.scss'
 
 const links = [
@@ -128,18 +126,16 @@ const HomeHeader = () => {
           </Link>
         </div>
         <nav className={styles.nav}>
-          {links.map(({ router, name, to, id }) =>
-            (name === 'CAREERS' && (isEnvDev || isDev)) || name !== 'CAREERS' ? (
-              <NavItems
-                key={id}
-                router={router}
-                name={name}
-                link={to}
-                openedMenu={openedMenu}
-                clickHandler={clickHandler}
-              />
-            ) : null,
-          )}
+          {links.map(({ router, name, to, id }) => (
+            <NavItems
+              key={id}
+              router={router}
+              name={name}
+              link={to}
+              openedMenu={openedMenu}
+              clickHandler={clickHandler}
+            />
+          ))}
         </nav>
       </div>
     </header>
@@ -149,5 +145,3 @@ const HomeHeader = () => {
 HomeHeader.propTypes = {}
 
 export default React.memo(HomeHeader)
-
-//
