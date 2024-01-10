@@ -1,18 +1,17 @@
 import React from 'react'
-import ReactDOM from 'react-dom'
-import { ThemeProvider } from 'context/theme'
+import { createRoot } from 'react-dom'
 import { BrowserRouter as Router } from 'react-router-dom'
+import { ThemeProvider } from 'context/theme'
+
 import UseScrollToTop from 'hooks/useScrollToTop'
-// import { setBaseEndpoint } from 'utils/apiClient'
 import App from './App'
 
 import './index.css'
 import './index.scss'
 
-// const url = 'peer.com/api'
-// setBaseEndpoint(url)
+const root = createRoot(document.getElementById('root'))
 
-ReactDOM.render(
+root.render(
   <React.StrictMode>
     <Router>
       <UseScrollToTop>
@@ -22,5 +21,4 @@ ReactDOM.render(
       </UseScrollToTop>
     </Router>
   </React.StrictMode>,
-  document.getElementById('root'),
 )
