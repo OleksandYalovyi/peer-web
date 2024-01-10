@@ -6,7 +6,7 @@ import ZENLogo from 'assets/zenLogo.svg'
 import ZenSlider from '../ZenSlider'
 import styles from './styles.module.scss'
 
-const Main = () => {
+function Main() {
   const sliderRef = useRef(null)
   const width = useCurrentWidth()
   const isMobile = width < 600

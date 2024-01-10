@@ -10,7 +10,7 @@ import Logo from '../Icons/PEERStarLogo'
 
 import styles from './header.module.scss'
 
-const NavItems = ({ name, links }) => {
+function NavItems({ name, links }) {
   const [hovered, setHovered] = useState('')
 
   return (
@@ -53,7 +53,7 @@ const NavItems = ({ name, links }) => {
   )
 }
 
-const LandingHeader = () => {
+function LandingHeader() {
   const width = useCurrentWidth()
   const { scrollDirection } = useScroll()
   // const [isMenu, setIsMenuOpen] = useState(false)

@@ -6,7 +6,7 @@ import Facebook from 'components/Icons/Share/Facebook'
 import links from 'constants/links'
 import styles from './footermobile.module.scss'
 
-const FooterMobile = () => {
+function FooterMobile() {
   const [hovered, setHovered] = useState('')
 
   const items = [

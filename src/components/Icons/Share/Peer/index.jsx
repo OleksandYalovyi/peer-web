@@ -4,7 +4,7 @@ import T from 'prop-types'
 import cls from 'classnames'
 import styles from './peer.module.scss'
 
-const Peer = ({ hovered, width = '25', isLight, size }) => {
+function Peer({ hovered, width = '25', isLight, size }) {
   const renderColor = () => {
     if (hovered) return '#00d3f9'
     if (isLight) return '#000000'

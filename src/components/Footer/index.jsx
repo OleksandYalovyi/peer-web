@@ -37,7 +37,7 @@ const ShareData = [
   },
 ]
 
-const Footer = () => {
+function Footer() {
   const { scrollDirection } = useScroll()
   const [hovered, setHovered] = useState('')
   const { isLight } = useTheme()

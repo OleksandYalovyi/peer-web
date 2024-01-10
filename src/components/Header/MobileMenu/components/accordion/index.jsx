@@ -78,7 +78,7 @@ const data = [
   },
 ]
 
-const Dropdown = ({ children, isShow, onClose, burgerRef }) => {
+function Dropdown({ children, isShow, onClose, burgerRef }) {
   const listRef = useRef(null)
   const [expanded, setExpanded] = useState('')
   const [clickedLink, setClickedLink] = useState('')
@@ -101,8 +101,8 @@ const Dropdown = ({ children, isShow, onClose, burgerRef }) => {
     }
   }, [listRef])
 
-  const Link = ({ to, withRouter, isInternal, ...linkProps }) =>
-    withRouter ? (
+  function Link({ to, withRouter, isInternal, ...linkProps }) {
+    return withRouter ? (
       <NavLink to={to} onClick={onClose} className={styles.link}>
         {linkProps.children}
       </NavLink>
@@ -116,6 +116,7 @@ const Dropdown = ({ children, isShow, onClose, burgerRef }) => {
         {linkProps.children}
       </a>
     )
+  }
 
   const Accordion = styled((props) => (
     <MuiAccordion disableGutters elevation={0} square {...props} />

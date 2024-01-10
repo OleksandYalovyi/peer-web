@@ -8,7 +8,7 @@ import useCurrentWidth from 'hooks/useCurrentWidth'
 import data from './data'
 import styles from './features.module.scss'
 
-const Features = () => {
+function Features() {
   const [slide, setSlide] = useState(0)
   const [hovered, setHovered] = useState(null)
   const width = useCurrentWidth()

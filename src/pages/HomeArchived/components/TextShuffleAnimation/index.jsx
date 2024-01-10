@@ -225,7 +225,7 @@ export class TypeShuffle {
   }
 }
 
-const TextShuffleAnimation = ({ className = null, text = '', onMouseEnterStatus = true }) => {
+function TextShuffleAnimation({ className = null, text = '', onMouseEnterStatus = true }) {
   const contentRef = useRef()
   const { ref, inView } = useInView()
   const [ts, setTs] = useState(undefined)

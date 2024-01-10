@@ -5,7 +5,7 @@ import PeerPhone from 'assets/Home/temp/peer-desktop-phone.png'
 import BlurredBgGroup from 'assets/Home/temp/hero-desktop-group.png'
 import styles from './peermain.module.scss'
 
-const PeerMain = (props) => {
+function PeerMain(props) {
   const { setIsPeerMainLoaded, isPeerMainLoaded } = props
 
   return (

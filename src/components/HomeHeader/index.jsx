@@ -33,7 +33,7 @@ const links = [
   },
 ]
 
-const NavItems = ({ name, link, openedMenu, clickHandler }) => {
+function NavItems({ name, link, openedMenu, clickHandler }) {
   const [hovered, setHovered] = useState('')
 
   return (
@@ -83,7 +83,7 @@ const NavItems = ({ name, link, openedMenu, clickHandler }) => {
   )
 }
 
-const HomeHeader = () => {
+function HomeHeader() {
   const { scrollDirection } = useScroll()
   // const [isMenu, setIsMenuOpen] = useState(false)
   const [openedMenu, setIsOpen] = useState('')

@@ -6,7 +6,7 @@ import { NavLink } from 'react-router-dom'
 import { lerp, getMousePos, getRandomString } from 'utils/utils'
 import styles from './styles.module.scss'
 
-const Card = ({ to, name, children, size }) => {
+function Card({ to, name, children, size }) {
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 })
   const bgRef = useRef(null)
   const decoRef = useRef(null)

@@ -16,15 +16,17 @@ const data = [
   { name: 'Egor Yusov', position: 'Chief Architect' },
 ]
 
-const Creators = () => (
-  <section className={styles.section}>
-    {data.map(({ name, position }) => (
-      <div className={styles.item}>
-        <div>{name}</div>
-        <div>{position}</div>
-      </div>
-    ))}
-  </section>
-)
+function Creators() {
+  return (
+    <section className={styles.section}>
+      {data.map(({ name, position }) => (
+        <div className={styles.item}>
+          <div>{name}</div>
+          <div>{position}</div>
+        </div>
+      ))}
+    </section>
+  )
+}
 
 export default React.memo(Creators)

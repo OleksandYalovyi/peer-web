@@ -4,7 +4,7 @@ import T from 'prop-types'
 import cls from 'classnames'
 import styles from './telegram.module.scss'
 
-const Telegram = ({ hovered, width = '22.24', isLight, size, isGrey }) => {
+function Telegram({ hovered, width = '22.24', isLight, size, isGrey }) {
   const renderColor = () => {
     if (isGrey) return '#4D4D4D'
     if (hovered) return '#00d3f9'

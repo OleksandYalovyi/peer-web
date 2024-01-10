@@ -5,7 +5,7 @@ import PeerLogoGlobal from 'assets/Home/peerlogogloba.png'
 import animatedImage from './nextparticle'
 import styles from './styles.module.scss'
 
-const Global = () => {
+function Global() {
   const width = useCurrentWidth()
   const isMobile = width < 768
 

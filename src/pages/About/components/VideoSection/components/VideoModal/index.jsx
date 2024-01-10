@@ -6,7 +6,7 @@ import useCurrentWidth from 'hooks/useCurrentWidth'
 
 import styles from './styles.module.scss'
 
-const VideoModal = ({ isOpen, onClose }) => {
+function VideoModal({ isOpen, onClose }) {
   const width = useCurrentWidth()
   const videoHeight = width > 1170 ? 1170 / 1.77 : width / 1.77
   const videoOptions = {

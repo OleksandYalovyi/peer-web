@@ -7,7 +7,7 @@ import useCurrentWidth from 'hooks/useCurrentWidth'
 
 import styles from './peerservices.module.scss'
 
-const PeerServices = () => {
+function PeerServices() {
   const width = useCurrentWidth()
   const isSmallScreen = width < 1500
 

@@ -3,7 +3,7 @@ import VideoModal from './components/VideoModal/index'
 import Play from '../../../../assets/play.svg'
 import styles from './styles.module.scss'
 
-const VideoSection = () => {
+function VideoSection() {
   const [isOpen, setOpen] = useState(false)
 
   return (

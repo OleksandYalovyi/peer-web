@@ -6,21 +6,26 @@ import Dropdown from './components/accordion/index'
 
 import styles from './styles.module.scss'
 
-const Burger = ({ onClick, isMenu }) => (
-  <div className={styles.burger_container}>
-    <input
-      className={cls(isMenu ? styles['menu-trigger-open'] : styles['menu-trigger'], styles.hidden)}
-      id="togglenav"
-      type="checkbox"
-      onClick={onClick}
-    />
-    <label className={styles['burger-wrapper']} htmlFor="togglenav">
-      <div className={styles.hamburger} />
-    </label>
-  </div>
-)
+function Burger({ onClick, isMenu }) {
+  return (
+    <div className={styles.burger_container}>
+      <input
+        className={cls(
+          isMenu ? styles['menu-trigger-open'] : styles['menu-trigger'],
+          styles.hidden,
+        )}
+        id="togglenav"
+        type="checkbox"
+        onClick={onClick}
+      />
+      <label className={styles['burger-wrapper']} htmlFor="togglenav">
+        <div className={styles.hamburger} />
+      </label>
+    </div>
+  )
+}
 
-const Header = ({ isMenu, setIsMenuOpen }) => {
+function Header({ isMenu, setIsMenuOpen }) {
   const menuContainerRef = useRef()
 
   const onClick = (e) => {

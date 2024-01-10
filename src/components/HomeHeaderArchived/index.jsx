@@ -5,13 +5,12 @@ import cls from 'classnames'
 import MobileMenuLogo from 'components/Icons/MobileMenuLogo/index'
 import useScroll from 'hooks/useScroll'
 import useCurrentWidth from 'hooks/useCurrentWidth'
-import Logo from 'assets/Home/peerlogo.png'
 
 import PEERStarLogo from 'components/Icons/PEERStarLogo/index'
 import MobileMenu from 'components/Header/MobileMenu/index'
 import styles from './header.module.scss'
 
-const NavItems = ({ name, links, link, openedMenu, clickHandler }) => {
+function NavItems({ name, links, link, openedMenu, clickHandler }) {
   const [hovered, setHovered] = useState('')
 
   return (
@@ -61,7 +60,7 @@ const NavItems = ({ name, links, link, openedMenu, clickHandler }) => {
   )
 }
 
-const HomeHeader = () => {
+function HomeHeader() {
   const width = useCurrentWidth()
   const { scrollDirection } = useScroll()
   const [isMenu, setIsMenuOpen] = useState(false)

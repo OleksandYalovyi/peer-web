@@ -5,7 +5,7 @@ import Pressinquir from '../../../../assets/pressinquir.svg'
 
 import styles from './contacts.module.scss'
 
-const Contacts = () => {
+function Contacts() {
   const [isHovered, setHovered] = useState('')
   const width = useCurrentWidth()
   const isMobile = width < 480

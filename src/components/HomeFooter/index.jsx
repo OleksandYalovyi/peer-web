@@ -7,19 +7,21 @@ import { ExpandMore, ExpandLess } from '@mui/icons-material/index'
 import { FOOTER_LIST_ITEMS, BOTTOM_LINKS } from './constants'
 import styles from './footer.module.scss'
 
-const NavItems = ({ name, to, router }) => (
-  <>
-    {router ? (
-      <NavLink to={to} className={styles.link}>
-        {name}
-      </NavLink>
-    ) : (
-      <a href={to} target="_blank" rel="noreferrer" className={styles.link}>
-        {name}
-      </a>
-    )}
-  </>
-)
+function NavItems({ name, to, router }) {
+  return (
+    <>
+      {router ? (
+        <NavLink to={to} className={styles.link}>
+          {name}
+        </NavLink>
+      ) : (
+        <a href={to} target="_blank" rel="noreferrer" className={styles.link}>
+          {name}
+        </a>
+      )}
+    </>
+  )
+}
 
 function HomeFooter() {
   const width = useCurrentWidth()

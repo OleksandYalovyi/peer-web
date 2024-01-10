@@ -5,7 +5,7 @@ import T from 'prop-types'
 import useCurrentWidth from 'hooks/useCurrentWidth'
 import styles from './dropdown.module.scss'
 
-const CountryIcon = ({ name }) => {
+function CountryIcon({ name }) {
   switch (name) {
     case 'Français':
       return <FR title="Français" className={styles.icon} />
@@ -30,7 +30,7 @@ const CountryIcon = ({ name }) => {
   }
 }
 
-const Dropdown = ({ list, children }) => {
+function Dropdown({ list, children }) {
   const { data, type } = list
 
   const childrenRef = useRef(null)
