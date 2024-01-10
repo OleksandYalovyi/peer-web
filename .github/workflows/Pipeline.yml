@@ -50,12 +50,6 @@ env:
   SOURCE_DIR             : 'build/'
   NODE_VERSION           : '18.x'
   PATH_DISTRIBUTION      : '/*'
-  
-  # Parameters for SonarQube:
-  SONAR_TOKEN            : ${{ secrets.SONAR_TOKEN }}
-  #SONAR_HOST_URL         : 'https://sq.peer.inc'
-  SONAR_HOST_URL         : ${{ secrets.SONAR_HOST_URL }}
-  FETCH_DEPT             : '0'
 
   # Parameters for OpenVPN:
   OPENVPN_CONFIG         : ${{ secrets.OPENVPN_CONFIG }}
