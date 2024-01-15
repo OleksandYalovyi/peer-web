@@ -1,7 +1,11 @@
 {
   "extends": ["airbnb", "prettier"],
   "parser": "@babel/eslint-parser",
+<<<<<<< HEAD
   "plugins": ["prettier", "formatjs"],
+=======
+  "plugins": ["prettier"],
+>>>>>>> 195120a0fcf82f5df4570b43db9e927c37422bf0
   "parserOptions": {
     "requireConfigFile": false,
     "babelOptions": {
