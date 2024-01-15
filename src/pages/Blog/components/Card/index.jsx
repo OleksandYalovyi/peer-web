@@ -1,5 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import { NavLink } from 'react-router-dom/dist/index'
 import cn from 'classnames'
 import styles from './card.module.scss'
 
@@ -28,6 +29,7 @@ function formatTimestamp(timestamp) {
 }
 
 export function Large({
+  id = 0,
   createdAt = 1705297675461,
   title = 'No name',
   text = 'No description',
@@ -35,52 +37,94 @@ export function Large({
 }) {
   return (
     <div className={cn(styles.card, styles.large)}>
-      <div className={styles.image} style={{ backgroundImage: `url(${image})` }} />
+      <NavLink
+        to={`/blog/${id}`}
+        className={styles.image}
+        style={{ backgroundImage: `url(${image})` }}
+      />
 
       <div className={styles.content}>
         <span className={styles.tab}>Product update</span>
 
-        <h2 className={styles.title}>{title}</h2>
+        <NavLink to={`/blog/${id}`} className={styles.title}>
+          {title}
+        </NavLink>
         <p className={styles.text}>{text}</p>
-        <p className={styles.datetime}>{formatTimestamp(createdAt)}</p>
+        <p className={styles.dateTime}>{formatTimestamp(createdAt)}</p>
       </div>
     </div>
   )
 }
 
-export function Big({ createdAt = 1705297675461, title = 'No name', image = '' }) {
+export function Big({ id = 0, createdAt = 1705297675461, title = 'No name', image = '' }) {
   return (
     <div className={cn(styles.card, styles.big)}>
-      <div className={styles.image} style={{ backgroundImage: `url(${image})` }} />
+      <NavLink
+        to={`/blog/${id}`}
+        className={styles.image}
+        style={{ backgroundImage: `url(${image})` }}
+      />
 
       <div className={styles.content}>
-        <h2 className={styles.title}>{title}</h2>
-        <p className={styles.datetime}>{formatTimestamp(createdAt)}</p>
+        <NavLink to={`/blog/${id}`} className={styles.title}>
+          {title}
+        </NavLink>
+        <p className={styles.dateTime}>{formatTimestamp(createdAt)}</p>
       </div>
     </div>
   )
 }
 
 export function Medium({
+  id = 0,
   createdAt = 1705297675461,
   title = 'No name',
   text = 'No description',
   image = '',
+  withImage = true,
 }) {
   return (
-    <div className={cn(styles.card, styles.medium, { [styles.hasImage]: !image })}>
-      {image && <div className={styles.image} style={{ backgroundImage: `url(${image})` }} />}
+    <div className={cn(styles.card, styles.medium, { [styles.hasImage]: !withImage })}>
+      {withImage && (
+        <NavLink
+          to={`/blog/${id}`}
+          className={styles.image}
+          style={{ backgroundImage: `url(${image})` }}
+        />
+      )}
 
       <div className={styles.content}>
-        <h2 className={styles.title}>{title}</h2>
-        <p className={styles.datetime}>{formatTimestamp(createdAt)}</p>
-        {!image && <p className={styles.text}>{text}</p>}
+        <NavLink to={`/blog/${id}`} className={styles.title}>
+          {title}
+        </NavLink>
+        <p className={styles.dateTime}>{formatTimestamp(createdAt)}</p>
+        {!withImage && <p className={styles.text}>{text}</p>}
+      </div>
+    </div>
+  )
+}
+
+export function Small({ id = 0, createdAt = 1705297675461, title = 'No name', image = '' }) {
+  return (
+    <div className={cn(styles.card, styles.small)}>
+      <NavLink
+        to={`/blog/${id}`}
+        className={styles.image}
+        style={{ backgroundImage: `url(${image})` }}
+      />
+
+      <div className={styles.content}>
+        <NavLink to={`/blog/${id}`} className={styles.title}>
+          {title}
+        </NavLink>
+        <p className={styles.dateTime}>{formatTimestamp(createdAt)}</p>
       </div>
     </div>
   )
 }
 
 Large.propTypes = {
+  id: PropTypes.number.isRequired,
   createdAt: PropTypes.number.isRequired,
   title: PropTypes.string.isRequired,
   text: PropTypes.string.isRequired,
@@ -88,14 +132,24 @@ Large.propTypes = {
 }
 
 Big.propTypes = {
+  id: PropTypes.number.isRequired,
   createdAt: PropTypes.number.isRequired,
   title: PropTypes.string.isRequired,
   image: PropTypes.string.isRequired,
 }
 
 Medium.propTypes = {
+  id: PropTypes.number.isRequired,
   createdAt: PropTypes.number.isRequired,
   title: PropTypes.string.isRequired,
   text: PropTypes.string.isRequired,
+  image: PropTypes.string.isRequired,
+  withImage: PropTypes.bool,
+}
+
+Small.propTypes = {
+  id: PropTypes.number.isRequired,
+  createdAt: PropTypes.number.isRequired,
+  title: PropTypes.string.isRequired,
   image: PropTypes.string.isRequired,
 }

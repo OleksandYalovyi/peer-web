@@ -1,0 +1,48 @@
+.share {
+  width: 100%;
+  max-width: 912px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 42px 0 90px 0;
+
+  .text {
+    margin: 0;
+    color: #fff;
+    text-align: center;
+    font-family: IBMPlexMono-SemiBold, sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 18px;
+  }
+
+  .actions {
+    display: flex;
+    gap: 24px;
+
+    .shareItem {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 72px;
+      height: 72px;
+      border-radius: var(--Spacing-3, 12px);
+      border: 1.5px solid rgba(255, 186, 243, 0.19);
+      background: linear-gradient(
+        262deg,
+        rgba(255, 186, 243, 0.1) 11.2%,
+        rgba(255, 241, 212, 0.1) 50.33%,
+        rgba(139, 243, 252, 0.1) 90.29%
+      );
+      backdrop-filter: blur(16.5px);
+
+      img {
+        max-width: 24px;
+        max-height: 24px;
+        width: auto;
+        height: auto;
+      }
+    }
+  }
+}

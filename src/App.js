@@ -10,7 +10,7 @@ import About from 'pages/About'
 import Placeholder from 'pages/Placeholder'
 import Careers from 'pages/Careers'
 import Blog from 'pages/Blog'
-
+import Article from 'pages/Article'
 import routing from './routing/path'
 import './App.css'
 
@@ -30,6 +30,7 @@ function App() {
             <Route path="/about" element={<About />} />
             <Route path="/placeholder" element={<Placeholder />} />
             <Route path="/blog" element={<Blog />} />
+            <Route path="/blog/:id?" element={<Article />} />
             <Route path={routing.withoutAuth.careers} element={<Careers />} />
             <Route path="/*" element={<Navigate to="/" />} />
           </Routes>

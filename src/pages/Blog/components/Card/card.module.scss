@@ -25,16 +25,16 @@
   .text {
     margin: 0;
     color: #7d7d7d;
-    font-family: 'IBMPlexSans-Medium';
+    font-family: IBMPlexSans-Medium, sans-serif;
     font-size: 24px;
     font-weight: 500;
     line-height: 30px;
   }
 
-  .datetime {
+  .dateTime {
     margin: 0;
     color: #7d7d7d;
-    font-family: 'IBMPlexSans-Medium';
+    font-family: IBMPlexSans-Medium, sans-serif;
     font-size: 18px;
     font-weight: 500;
     line-height: 30px;
@@ -52,6 +52,7 @@
     gap: 110px;
 
     .image {
+      min-width: 788.25px;
       width: 788.25px;
       height: 788.25px;
     }
@@ -98,7 +99,7 @@
       padding-bottom: 18px;
     }
 
-    .datetime {
+    .dateTime {
       padding-bottom: 60px;
     }
   }
@@ -131,7 +132,7 @@
       letter-spacing: -1.5px;
     }
 
-    .datetime {
+    .dateTime {
       padding-bottom: 24px;
     }
 
@@ -141,13 +142,41 @@
   }
 
   &.small {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+    padding: 15px;
+
+    .image {
+      width: 100%;
+      height: 277px;
+    }
+
+    .content {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .title {
+      font-size: 24px;
+      line-height: 36px;
+      letter-spacing: -1.5px;
+    }
+
+    .dateTime {
+      font-family: IBMPlexSans-SemiBold, sans-serif;
+      font-size: 15px;
+      font-weight: 600;
+      line-height: 24px;
+    }
   }
 }
 
 .tab {
   text-transform: uppercase;
   color: #fff;
-  font-family: 'IBMPlexMono-SemiBold';
+  font-family: IBMPlexMono-SemiBold, sans-serif;
   font-size: 18px;
   line-height: 18px;
   letter-spacing: -0.54px;
