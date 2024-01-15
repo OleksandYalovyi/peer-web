@@ -17,7 +17,6 @@ function Blog() {
               image="https://img.freepik.com/free-photo/painting-mountain-lake-with-mountain-background_188544-9126.jpg"
             />
           </Col>
-
         </Row>
 
         <Row className={styles.row}>
@@ -31,7 +30,6 @@ function Blog() {
 
           <Col>
             <Medium
-              
               createdAt={1705297675461}
               title="Android v1.0release notes"
               text="peer for android has arrived. it’s still in beta but we’re super thrilled. take a look and drop us a cute comment! (ideally where everyone can see it)"
@@ -48,7 +46,6 @@ function Blog() {
         </Row>
 
         <Row className={styles.row}>
-          
           <Col>
             <Big
               createdAt={1705297675461}
@@ -70,7 +67,9 @@ function Blog() {
       </Space>
 
       <div className={styles.footer}>
-        <button className={styles.primary} type="button">Load More</button>
+        <button className={styles.primary} type="button">
+          Load More
+        </button>
       </div>
     </section>
   )

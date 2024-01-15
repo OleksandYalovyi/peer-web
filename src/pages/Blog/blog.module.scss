@@ -29,7 +29,7 @@
     padding: 114px 0;
 
     .primary {
-      color: var(--Primary-White, #FFF);
+      color: var(--Primary-White, #fff);
       font-family: 'IBMPlexMono-Medium';
       font-size: 18px;
       font-style: normal;
@@ -42,8 +42,8 @@
       align-items: center;
       gap: 6px;
       border-radius: 18px;
-      background: var(--Neutrals-Gray-800, #1C1C1D);   
-      
+      background: var(--Neutrals-Gray-800, #1c1c1d);
+
       &:hover {
         cursor: pointer;
       }
