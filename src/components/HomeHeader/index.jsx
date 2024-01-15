@@ -28,6 +28,12 @@ const links = [
   {
     id: 4,
     router: true,
+    name: 'JOBS',
+    to: '/jobs',
+  },
+  {
+    id: 5,
+    router: true,
     name: 'PRESS',
     to: '/press',
   },

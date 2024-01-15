@@ -5,6 +5,7 @@ const desktop = {
     homeProduct: '/product',
     team: '/team',
     careers: '/careers',
+    jobs: '/jobs',
   },
   withAuth: {},
 }

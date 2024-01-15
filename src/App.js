@@ -9,6 +9,7 @@ import Zen from 'pages/Zen'
 import About from 'pages/About'
 import Placeholder from 'pages/Placeholder'
 import Careers from 'pages/Careers'
+import Jobs from 'pages/Jobs'
 import Press from 'pages/Press'
 
 import routing from './routing/path'
@@ -31,6 +32,7 @@ function App() {
             <Route path="/placeholder" element={<Placeholder />} />
             <Route path="/press" element={<Press />} />
             <Route path={routing.withoutAuth.careers} element={<Careers />} />
+            <Route path={routing.withoutAuth.jobs} element={<Jobs />} />
             <Route path="/*" element={<Navigate to="/" />} />
           </Routes>
         </CSSTransition>
