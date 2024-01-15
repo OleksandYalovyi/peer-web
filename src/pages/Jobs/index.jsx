@@ -46,7 +46,7 @@ function Jobs() {
 						<li key={btn} onClick={() => handleBtnClick(btn)}>{btn}</li>
 					))}
 				</ul>
-				<h2 className={styles.jobs_title}>{selectedItem || `Default Vacancies`}</h2>
+				<h2 className={styles.jobs_title}>{selectedItem || `No positions open`}</h2>
 			
 				<div className={styles.jobs_list}>
 					{[...jobData, ...defaultJobData].map((item) => (
