@@ -9,7 +9,7 @@ import Zen from 'pages/Zen'
 import About from 'pages/About'
 import Placeholder from 'pages/Placeholder'
 import Careers from 'pages/Careers'
-import Press from 'pages/Press'
+import Blog from 'pages/Blog'
 
 import routing from './routing/path'
 import './App.css'
@@ -29,7 +29,7 @@ function App() {
             <Route path="/zen" element={<Zen />} />
             <Route path="/about" element={<About />} />
             <Route path="/placeholder" element={<Placeholder />} />
-            <Route path="/press" element={<Press />} />
+            <Route path="/blog" element={<Blog />} />
             <Route path={routing.withoutAuth.careers} element={<Careers />} />
             <Route path="/*" element={<Navigate to="/" />} />
           </Routes>

@@ -1,0 +1,52 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 144px 0 0 0;
+  max-width: 1500px;
+  margin: 0 auto;
+
+  @media screen and (max-width: 768px) {
+    padding: 158px 0 0 0;
+  }
+
+  .space {
+    gap: 66px;
+  }
+
+  .row {
+    gap: 35px;
+  }
+
+  .col {
+    padding-bottom: 24px;
+  }
+
+  .footer {
+    display: flex;
+    justify-content: center;
+    padding: 114px 0;
+
+    .primary {
+      color: var(--Primary-White, #FFF);
+      font-family: 'IBMPlexMono-Medium';
+      font-size: 18px;
+      font-style: normal;
+      line-height: 18px;
+      letter-spacing: -0.54px;
+      text-transform: uppercase;
+      display: inline-flex;
+      padding: 25.5px 36px;
+      justify-content: center;
+      align-items: center;
+      gap: 6px;
+      border-radius: 18px;
+      background: var(--Neutrals-Gray-800, #1C1C1D);   
+      
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+}
