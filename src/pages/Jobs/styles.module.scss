@@ -1,0 +1,105 @@
+@import 'styles/variables';
+
+.container {
+  max-width: 1290px;
+  margin: 0 auto;
+  padding-top: 144px;
+  padding-right: 15px;
+  padding-bottom: 100px;
+  padding-left: 15px;
+}
+
+.header {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 46px;
+}
+
+.description {
+	max-width: 574px;
+	color: #ffffff;
+}
+
+.title {
+  color: #fff;
+  font-weight: 600;
+  font-size: 50px;
+  font-family: 'MonumentExtended', sans-serif;
+  font-style: normal;
+  line-height: 72px;
+  margin-bottom: 28px;
+
+	background: var(--Gradient-P4, linear-gradient(90deg, #FFBAF3 0.29%, #FFF1D4 49.4%, #8BF3FC 99.54%));
+	background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.text {
+	color: #B2B2B2;
+	font-family: 'Gilroy-Regular';
+	font-size: 24px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: 32px;
+	letter-spacing: -0.72px;
+}
+
+.stars {
+	width: 500px;
+}
+
+.button_group {
+	margin: auto;
+	max-width: fit-content;
+	display: flex;
+	padding: 8px;
+
+	justify-content: center;
+	align-items: center;
+	align-content: center;
+	border-radius: var(--Spacing-4, 16px);
+	border: 2px solid #222;
+	margin-bottom: 56px;
+}
+
+.button_group li {
+	display: flex;
+	gap: 8px;
+	padding: 16px 24px;
+	color: var(--Neutrals-Gray-300, #808080);
+	text-align: center;
+	font-family: 'Gilroy-Regular';
+	font-size: 18px;
+	font-style: normal;
+	font-weight: 600;
+	line-height: 16px;
+	text-transform: lowercase;
+	cursor: pointer;
+
+	&:hover {
+		color: var(--Primary-Black, #000);
+		border-radius: var(--Spacing-2, 8px);
+		background: var(--Gradient-P0, linear-gradient(262deg, #FFBAF3 11.2%, #FFF1D4 50.33%, #8BF3FC 90.29%));
+	}
+}
+
+.jobs_title {
+	color: #FFF;
+	text-align: center;
+	font-family: 'MonumentExtended-Regular';
+	font-size: 32px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 40px;
+	letter-spacing: -0.64px;
+	margin-bottom: 56px;
+}
+
+.jobs_list {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content:flex-start;
+	align-items: center;
+	gap: 48px;
+}
