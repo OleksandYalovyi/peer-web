@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import CareersItem from './Item'
 import Stars from '../../assets/jobs/stars.png'
+import Play from '../../assets/jobs/play.png'
 import styles from './styles.module.scss'
 import { defaultJobData, jobData } from './mock/index'
 
@@ -38,6 +39,9 @@ function Jobs() {
 				</div>
 				<div className={styles.stars}>
 					<img src={Stars} alt="stars" />
+				</div>
+				<div className={styles.play}>
+					<img src={Play} alt="play" />
 				</div>
 			</section>
 			<section>
