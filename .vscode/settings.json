@@ -19,17 +19,16 @@
     "Navlink"
   ],
   "gitlens.views.worktrees.files.layout": "list",
-  "window.zoomLevel": 0,
+  "window.zoomLevel": 1,
   "git.suggestSmartCommit": false,
   "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": "explicit"
+    "source.fixAll.eslint": true
   },
   "eslint.validate": ["javascript"],
   "[scss]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "files.associations": {
-    "*.scss": "scss",
-    "*.js": "javascriptreact"
+    "*.scss": "scss"
   }
 }
