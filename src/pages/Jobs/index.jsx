@@ -1,9 +1,18 @@
 import React, { useState } from 'react'
-import CareersItem from './Item'
+import CareersItem from './components/Item'
+import VideoModal from './components/VideoModal/index'
 import Stars from '../../assets/jobs/stars.png'
 import Play from '../../assets/jobs/play.png'
 import styles from './styles.module.scss'
-import { defaultJobData, jobData } from './mock/index'
+import {
+  allJobs,
+  productAndDesign,
+  hrAndFinancesJobs,
+  dataJobs,
+  marketingJobs,
+  engineeringJobs,
+  otherJobs,
+} from './mock/index'
 
 const buttons = [
   'all',
@@ -16,17 +25,41 @@ const buttons = [
 ]
 
 function Jobs() {
-  const [selectedItem, setSelectedItem] = useState(null)
+  const [selectedItem, setSelectedItem] = useState('All')
+  const [selectedJobs, setSelectedJobs] = useState(allJobs)
+  const [loading, setLoading] = useState(false)
+  const [isOpen, setOpen] = useState(false)
 
   function capitalizeFirstLetter(str) {
     return str.replace(/\b\w/g, (item) => item.toUpperCase())
   }
 
-  const handleBtnClick = (itemName) => {
-    setSelectedItem(capitalizeFirstLetter(itemName))
+  function selectJobsData(jobsData) {
+    const jobDataMapping = {
+      all: allJobs,
+      'product & design': productAndDesign,
+      'hr & finances': hrAndFinancesJobs,
+      data: dataJobs,
+      marketing: marketingJobs,
+      engineering: engineeringJobs,
+    }
+
+    setSelectedJobs(jobDataMapping[jobsData] || otherJobs)
   }
+
+  const handleBtnClick = (itemName) => {
+    setLoading(true)
+    setSelectedItem(capitalizeFirstLetter(itemName))
+
+    setTimeout(() => {
+      selectJobsData(itemName)
+      setLoading(false)
+    }, 1000)
+  }
+
   return (
     <div className={styles.container}>
+      {isOpen && <VideoModal onClose={() => setOpen(false)} />}
       <section className={styles.header}>
         <div className={styles.description}>
           <h1 className={styles.title}>Go Team Go!</h1>
@@ -41,9 +74,9 @@ function Jobs() {
         </div>
         <div className={styles.stars}>
           <img src={Stars} alt="stars" />
-        </div>
-        <div className={styles.play}>
-          <img src={Play} alt="play" />
+          <div className={styles.play} onClick={() => setOpen(true)}>
+            <img src={Play} alt="play" />
+          </div>
         </div>
       </section>
       <section>
@@ -55,12 +88,19 @@ function Jobs() {
           ))}
         </ul>
         <h2 className={styles.jobs_title}>{selectedItem || `No positions open`}</h2>
-
-        <div className={styles.jobs_list}>
-          {[...jobData, ...defaultJobData].map((item) => (
-            <CareersItem {...item} />
-          ))}
-        </div>
+        {loading ? (
+          <div
+            style={{ color: 'white', minHeight: '400px', textAlign: 'center', fontSize: '36px' }}
+          >
+            Loading...
+          </div>
+        ) : (
+          <div className={styles.jobs_list}>
+            {[...selectedJobs].map((item) => (
+              <CareersItem {...item} />
+            ))}
+          </div>
+        )}
       </section>
     </div>
   )
