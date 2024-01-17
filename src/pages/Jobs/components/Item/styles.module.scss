@@ -7,10 +7,23 @@
   border-radius: 24px;
   background: #222;
 
+  @media screen and (max-width: 1245px) {
+    width: 520px;
+  }
+
+  @include screen(maxSm) {
+		width: 100%;
+  }
+
   &__info {
     padding-bottom: 24px;
     margin-bottom: 24px;
     border-bottom: 1px solid rgba(217, 217, 217, 0.10);
+
+    @include screen(maxSm) {
+		  padding-bottom: 20px;
+      margin-bottom: 20px;
+    } 
   }
 
   &__title {
@@ -27,6 +40,10 @@
       line-height: 36px;
       letter-spacing: -0.72px;
     }
+
+    @include screen(maxSm) {
+		  font-size: 28px;
+    } 
   }
 
   &__location {
@@ -48,7 +65,12 @@
     font-family: 'Inter', sans-serif;
     line-height: 24px;
     letter-spacing: -0.6px;
+
+    @include screen(maxSm) {
+		  font-size: 16px;
+    } 
   }
+
   &__time {
     position: relative;
     margin-right: 10px;
@@ -61,6 +83,10 @@
     font-family: 'Inter', sans-serif;
     line-height: 24px;
     letter-spacing: -0.6px;
+
+    @include screen(maxSm) {
+		  font-size: 16px;
+    } 
 
     &::before {
       position: absolute;
@@ -77,6 +103,11 @@
   &__links {
     display: flex;
     justify-content: space-between;
+
+    @include screen(maxSm) {
+		  flex-direction: column;
+      gap: 20px;
+    }
   }
 
   &__link {

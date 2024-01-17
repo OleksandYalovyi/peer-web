@@ -14,11 +14,29 @@
 	display: flex;
 	justify-content: space-between;
 	margin-bottom: 46px;
+
+	@include screen(maxMd) {
+    flex-direction: column-reverse;
+		align-items: center;
+  }
+
+	@include screen(maxSm) {
+		margin-bottom: 32px;
+  }
 }
 
 .description {
+	margin-right: 30px;
 	max-width: 574px;
 	color: #ffffff;
+
+	@include screen(maxXl) {
+    max-width: 45%;
+  }
+
+	@include screen(maxMd) {
+    max-width: none;
+  }
 }
 
 .title {
@@ -34,6 +52,10 @@
 	background-clip: text;
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
+
+	@include screen(maxSm) {
+		margin-bottom: 16px;
+  }
 }
 
 .text {
@@ -54,6 +76,15 @@
 	position: relative;
 	width: 540px;
 	animation: fadeIn 5s;
+
+	@include screen(maxMd) {
+    margin-bottom: 32px;
+		width: fit-content;
+  }
+
+	@include screen(maxSm) {
+    margin-bottom: 44px;
+  }
 }
 
 @keyframes fadeIn {
@@ -66,6 +97,16 @@
 	top: 60%;
 	left: 0;
 	cursor: pointer;
+
+	@include screen(maxMd) {
+    top: 82%;
+		left: 50px;
+  }
+
+	@include screen(maxSm) {
+    width: 70px;
+		left: 25px;
+  }
 }
 
 .button_group {
@@ -80,6 +121,11 @@
 	border-radius: var(--Spacing-4, 16px);
 	border: 2px solid #222;
 	margin-bottom: 56px;
+
+	@include screen(maxMd) {
+    display: flex;
+		flex-wrap: wrap;
+  }
 }
 
 .button_group li {
@@ -95,6 +141,10 @@
 	line-height: 16px;
 	text-transform: lowercase;
 	cursor: pointer;
+
+	@include screen(maxSm) {
+		width: 100%;
+  }
 
 	&:hover {
 		color: var(--Primary-Black, #000);
@@ -113,6 +163,11 @@
 	line-height: 40px;
 	letter-spacing: -0.64px;
 	margin-bottom: 56px;
+
+	@include screen(maxSm) {
+		font-size: 24px;
+		margin-bottom: 24px;
+  }
 }
 
 .jobs_list {
@@ -121,4 +176,9 @@
 	justify-content:flex-start;
 	align-items: center;
 	gap: 48px;
+
+	@include screen(maxXl) {
+    justify-content: center;
+		gap: 16px;
+  }
 }
