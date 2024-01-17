@@ -1,4 +1,5 @@
 @import 'styles/variables';
+@import 'styles/mixins';
 
 .container {
   max-width: 1290px;
@@ -13,7 +14,6 @@
 	display: flex;
 	justify-content: space-between;
 	margin-bottom: 46px;
-	position: relative;
 }
 
 .description {
@@ -44,9 +44,14 @@
 	font-weight: 500;
 	line-height: 32px;
 	letter-spacing: -0.72px;
+
+	@include screen(maxLarge) {
+    font-size: 20px;
+  }
 }
 
 .stars {
+	position: relative;
 	width: 540px;
 	animation: fadeIn 5s;
 }
@@ -58,6 +63,9 @@
 
 .play {
 	position: absolute;
+	top: 60%;
+	left: 0;
+	cursor: pointer;
 }
 
 .button_group {
