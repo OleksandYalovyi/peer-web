@@ -4,8 +4,7 @@ const desktop = {
     notFound: '/notFound',
     homeProduct: '/product',
     team: '/team',
-    careers: '/careers',
-    jobs: '/jobs',
+    jobs: '/careers',
   },
   withAuth: {},
 }

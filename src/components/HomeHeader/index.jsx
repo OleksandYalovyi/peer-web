@@ -22,14 +22,8 @@ const links = [
   {
     id: 3,
     router: true,
-    name: 'CAREERS',
-    to: '/careers',
-  },
-  {
-    id: 4,
-    router: true,
     name: 'JOBS',
-    to: '/jobs',
+    to: '/careers',
   },
   {
     id: 5,
