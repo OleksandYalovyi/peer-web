@@ -5,6 +5,8 @@ import { useTheme } from 'context/theme'
 import Footer from 'components/Footer'
 import Home from 'pages/Home'
 import HomeHeader from 'components/HomeHeader/index'
+import Page404 from 'pages/Page404/index'
+
 import Zen from 'pages/Zen'
 import About from 'pages/About'
 import Placeholder from 'pages/Placeholder'
@@ -31,7 +33,8 @@ function App() {
             <Route path="/placeholder" element={<Placeholder />} />
             <Route path="/press" element={<Press />} />
             <Route path={routing.withoutAuth.careers} element={<Careers />} />
-            <Route path="/*" element={<Navigate to="/" />} />
+            <Route path={routing.withoutAuth.notFound} element={<Page404 />} />
+            <Route path="/*" element={<Navigate to="/notFound" />} />
           </Routes>
         </CSSTransition>
       </TransitionGroup>
