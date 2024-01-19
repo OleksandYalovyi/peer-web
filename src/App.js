@@ -10,6 +10,7 @@ import About from 'pages/About'
 import Placeholder from 'pages/Placeholder'
 import Careers from 'pages/Careers'
 import Press from 'pages/Press'
+import Team from 'pages/Team'
 
 import routing from './routing/path'
 import './App.css'
@@ -30,6 +31,7 @@ function App() {
             <Route path="/about" element={<About />} />
             <Route path="/placeholder" element={<Placeholder />} />
             <Route path="/press" element={<Press />} />
+            <Route path={routing.withoutAuth.team} element={<Team />} />
             <Route path={routing.withoutAuth.careers} element={<Careers />} />
             <Route path="/*" element={<Navigate to="/" />} />
           </Routes>
