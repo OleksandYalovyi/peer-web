@@ -1,0 +1,31 @@
+.item {
+	padding: 17.5px;
+
+	&__avatar {
+		margin-bottom: 17.5px;
+	}
+
+	&__name {
+		color: var(--Primary-White, #FFF);
+		font-family: "MonumentExtended-Regular";
+		font-size: 24.576px;
+		font-style: normal;
+		font-weight: 600;
+		line-height: 35.108px;
+		letter-spacing: -1.755px;
+		margin-bottom: 0;
+	}
+
+	&__position {
+		color: #939393;
+		font-family: 'Gilroy-Regular';
+		font-size: 21.065px;
+		font-style: normal;
+		font-weight: 500;
+		line-height: 35.108px;
+	}
+
+	&__icon {
+		margin-right: 21px;
+	}
+}
