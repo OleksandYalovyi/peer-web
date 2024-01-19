@@ -1,7 +1,6 @@
 /* eslint-disable react/prop-types */
 import React, { useState } from 'react'
 
-import HomeHeader from 'components/HomeHeader/index'
 import useCurrentWidth from 'hooks/useCurrentWidth'
 import styles from './home.module.scss'
 import PeerMain from './components/PeerMain/index'
@@ -17,7 +16,6 @@ function Home() {
     <div className={styles.wrapper}>
       {!isMobile ? (
         <>
-          <HomeHeader />
           <PeerMain setIsPeerMainLoaded={setIsPeerMainLoaded} isPeerMainLoaded={isPeerMainLoaded} />
           {isPeerMainLoaded && <PeerServices />}
         </>
