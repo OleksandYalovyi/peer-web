@@ -10,7 +10,7 @@ function TeamItem({ src, name, position, social }) {
       <p className={styles.item__position}>{position}</p>
       {social.map((item) => (
         <a
-          key={item.icon}
+          key={item.link}
           href={item.link}
           className={styles.item__icon}
           target="_blank"

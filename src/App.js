@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { TransitionGroup, CSSTransition } from 'react-transition-group'
 import { Routes, Route, Navigate, useLocation } from 'react-router-dom'
 import { useTheme } from 'context/theme'
@@ -18,7 +18,10 @@ import './App.css'
 function App() {
   const location = useLocation()
   const { isLight, setIsLight } = useTheme()
-  setIsLight(false)
+
+  useEffect(() => {
+    setIsLight(false)
+  }, [setIsLight])
 
   return (
     <div id="theme" className={isLight ? 'container' : 'container dark'}>
