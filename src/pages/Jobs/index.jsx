@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import CareersItem from './components/Item'
+import JobsItem from './components/Item'
 import VideoModal from './components/VideoModal/index'
 import Stars from '../../assets/jobs/stars.png'
 import Play from '../../assets/jobs/play.png'
@@ -97,7 +97,7 @@ function Jobs() {
         ) : (
           <div className={styles.jobs_list}>
             {[...selectedJobs].map((item) => (
-              <CareersItem {...item} />
+              <JobsItem {...item} />
             ))}
           </div>
         )}

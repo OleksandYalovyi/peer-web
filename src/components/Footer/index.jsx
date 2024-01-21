@@ -75,7 +75,7 @@ function Footer() {
           <>
             <div className={styles.left_container}>
               <Link className={styles.logo_container} to="/">
-                <Logo isLight={isLight} width={width <= 680 ? 43 : 55} />
+                <Logo isLight={isLight} width={width <= 680 ? '43' : '55'} />
               </Link>
               <div className={styles.copyright_container}>
                 <span className={styles.copyright}>© 2023 Peer Inc.</span>
