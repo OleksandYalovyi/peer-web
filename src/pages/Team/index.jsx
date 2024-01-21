@@ -10,7 +10,7 @@ function Team() {
       <p className={styles.subtitle}>We are a team of engineers, builders and makers.</p>
       <div className={styles.card}>
         {teamMembers.map((member) => (
-          <TeamItem {...member} />
+          <TeamItem {...member} key={member.id} />
         ))}
       </div>
     </div>
