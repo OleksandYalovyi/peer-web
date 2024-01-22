@@ -2,7 +2,7 @@ import React from 'react'
 import { TransitionGroup, CSSTransition } from 'react-transition-group'
 import { Routes, Route, Navigate, useLocation } from 'react-router-dom'
 import { useTheme } from 'context/theme'
-import Footer from 'components/HomeFooter'
+import MainFooter from 'components/Footer/MainFooter'
 import Home from 'pages/Home'
 import MainHeader from 'components/MainHeader/index'
 import Zen from 'pages/Zen'
@@ -35,7 +35,7 @@ function App() {
           </Routes>
         </CSSTransition>
       </TransitionGroup>
-      <Footer />
+      <MainFooter />
     </div>
   )
 }

@@ -36,7 +36,6 @@
   .copyright {
     font-family: Gilroy-SemiBold, sans-serif;
     font-size: 13px;
-    color: var(--main-font);
     color: #4D4D4D;
     white-space: nowrap;
     margin-right: 6px;
@@ -55,10 +54,9 @@
       margin-right: 18.5px;
 
       &:last-child {
-        margin-right: 0px;
+        margin-right: 0;
       }
       &:hover {
-        // color: var(--main-link-hover);
         color: var(--main-font);
       }
     }

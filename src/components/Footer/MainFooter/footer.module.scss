@@ -1,0 +1,72 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  padding: 56px 126.75px 100px 0;
+  gap: 1136.25px;
+  width: fit-content;
+  margin: auto;
+  border-top: solid 1px rgba(255, 255, 255, 0.20);
+
+  @media screen and (max-width: 821px) {
+    width: 100%;
+    margin: 0;
+    padding: 25px 45.5px 60px 33.5px;
+  }
+
+  .left_column {
+    display: flex;
+    gap: 28.5px;
+    flex-direction: column;
+
+    &__logo_container {
+      display: flex;
+      align-items: center;
+    }
+
+    &__logo {
+      width: 121.5px;
+
+      @media screen and (max-width: 680px) {
+        width: 100px;
+      }
+    }
+
+    &__links {
+      display: flex;
+      gap: 24px;
+    }
+  }
+
+  .right_column {
+    display: flex;
+    flex-direction: column;
+    gap: 27px;
+
+    &__heading {
+      color: #FFF;
+      font-family: IBMPlexMono-Medium, monospace;
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 18px;
+      letter-spacing: -0.54px;
+      text-transform: uppercase;
+    }
+
+    &__link {
+      display: flex;
+      flex-direction: column;
+
+      color: #B6B6B6;
+      font-family: Monument Extended, sans-serif;
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 43.5px;
+
+      &:hover {
+       text-decoration: none;
+      }
+    }
+  }
+}
