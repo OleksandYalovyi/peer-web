@@ -40,7 +40,6 @@ function HomeFooter() {
               <a
                 key={item.id}
                 href={item.link}
-                className={styles.share_icon}
                 target="_blank"
                 onMouseEnter={() => setHovered(item.name)}
                 onMouseLeave={() => setHovered('')}
