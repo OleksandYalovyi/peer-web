@@ -1,74 +1,103 @@
-/* eslint-disable react/prop-types */
 import React, { useState } from 'react'
-import { NavLink } from 'react-router-dom'
 import cls from 'classnames'
+import { useTheme } from 'context/theme'
 import useCurrentWidth from 'hooks/useCurrentWidth'
-import { ExpandMore, ExpandLess } from '@mui/icons-material/index'
-import { FOOTER_LIST_ITEMS, BOTTOM_LINKS } from './constants'
+import Facebook from 'components/Icons/Share/Facebook'
+import Peer from 'components/Icons/Share/Peer'
+import XSocial from 'components/Icons/Share/XSocial'
+import Telegram from 'components/Icons/Share/Telegram'
+import Linkedin from 'components/Icons/Share/Linkedin'
+import links from 'constants/links'
+import FooterMobile from './FooterMobile/index'
 import styles from './footer.module.scss'
 
-function NavItems({ name, to, router }) {
-  return (
-    <>
-      {router ? (
-        <NavLink to={to} className={styles.link}>
-          {name}
-        </NavLink>
-      ) : (
-        <a href={to} target="_blank" rel="noreferrer" className={styles.link}>
-          {name}
-        </a>
-      )}
-    </>
-  )
-}
+const ShareData = [
+  {
+    id: 1,
+    name: 'Facebook',
+    link: 'https://www.facebook.com/peerniverse',
+  },
+  {
+    id: 2,
+    name: 'Linkedin',
+    link: 'https://www.linkedin.com/company/peerinc/mycompany/verification/',
+  },
+  {
+    id: 3,
+    name: 'Telegram',
+    link: 'https://t.me/peerinc',
+  },
+  {
+    id: 4,
+    name: 'XSocial',
+    link: 'https://twitter.com/peerglobal',
+  },
+]
 
 function HomeFooter() {
+  const [hovered, setHovered] = useState('')
+  const { isLight } = useTheme()
   const width = useCurrentWidth()
-  const isSmallDevice = width < 821
-  const [expandedItemTitle, setexpandedItemTitle] = useState('')
+  const isMobile = width <= 680
 
-  const expandListHandler = (title) => {
-    if (!isSmallDevice) {
-      return
+  const renderIcon = (name) => {
+    if (name.toLowerCase() === 'facebook') {
+      return <Facebook isLight={isLight} hovered={hovered === name} size={width <= 680 && 'sm'} />
     }
-    if (title === expandedItemTitle) {
-      setexpandedItemTitle('')
-      return
+    if (name.toLowerCase() === 'xsocial') {
+      return <XSocial isLight={isLight} hovered={hovered === name} size={width <= 680 && 'sm'} />
     }
-    setexpandedItemTitle(title)
+    if (name.toLowerCase() === 'peer') {
+      return <Peer isLight={isLight} hovered={hovered === name} size={width <= 680 && 'sm'} />
+    }
+    if (name.toLowerCase() === 'telegram') {
+      return <Telegram isLight={isLight} hovered={hovered === name} size={width <= 680 && 'sm'} />
+    }
+    if (name.toLowerCase() === 'linkedin') {
+      return <Linkedin isLight={isLight} hovered={hovered === name} size={width <= 680 && 'sm'} />
+    }
+    return null
   }
-  return (
-    <footer>
-      <div className={styles.container}>
-        <div className={styles.topRow}>
-          {FOOTER_LIST_ITEMS.map((i) => (
-            <div className={styles.listItem} key={i.title}>
-              <h5 className={styles.title} onClick={() => expandListHandler(i.title)}>
-                {i.title}
-                {isSmallDevice && i.title === expandedItemTitle && <ExpandLess />}
-                {isSmallDevice && i.title !== expandedItemTitle && <ExpandMore />}
-              </h5>
-              <ul className={cls({ [styles.active]: i.title === expandedItemTitle })}>
-                {i.content.map((li) => (
-                  <li key={li.title}>
-                    <NavItems name={li.title} to={li.to} router={li.router} />
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
-        </div>
 
-        <div className={styles.bottomRow}>
-          <span>© 2023 Peer Inc.</span>
-          {BOTTOM_LINKS.map((link) => (
-            <NavItems name={link.title} to={link.to} router={link.router} key={link.title} />
-          ))}
-        </div>
+  return (
+    <footer className={cls(styles.container)}>
+      <div className={styles.main_container}>
+        {!isMobile ? (
+          <>
+            <div className={styles.left_container}>
+              <a href={links.privacyPolicy} target="_blank" rel="noreferrer">
+                Privacy
+              </a>
+              <a href={links.termsService} target="_blank" rel="noreferrer">
+                Terms
+              </a>
+              <a href={links.termsService} target="_blank" rel="noreferrer">
+                FAQ
+              </a>
+              {ShareData.map((item) => (
+                <a
+                  key={item.name}
+                  href={item.link}
+                  className={styles.share_icon}
+                  target="_blank"
+                  onMouseEnter={() => setHovered(item.name)}
+                  onMouseLeave={() => setHovered('')}
+                  rel="noreferrer"
+                >
+                  {renderIcon(item.name)}
+                </a>
+              ))}
+            </div>
+            <div className={styles.right_container}>© {new Date().getFullYear()} PEER INC.</div>
+          </>
+        ) : (
+          <FooterMobile />
+        )}
       </div>
     </footer>
   )
 }
 
-export default HomeFooter
+HomeFooter.propTypes = {}
+
+export default React.memo(HomeFooter)
