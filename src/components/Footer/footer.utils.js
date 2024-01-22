@@ -194,24 +194,6 @@ export const FOOTER_LIST_ITEMS = [
   },
 ]
 
-export const BOTTOM_LINKS = [
-  {
-    title: 'Cookies',
-    to: '/placeholder',
-    router: true,
-  },
-  {
-    title: 'Privacy',
-    to: 'https://community.peerclub.com/hc/en-us/articles/17261918037787-privacy-policy',
-    router: false,
-  },
-  {
-    title: 'Terms and conditions',
-    to: 'https://community.peerclub.com/hc/en-us/articles/17262293261979-terms-of-service',
-    router: false,
-  },
-]
-
 export const externalLinks = [
   {
     id: 1,
@@ -235,21 +217,21 @@ export const externalLinks = [
   },
 ]
 
-export const renderIcon = (name, isLight, hovered, width) => {
+export const renderIcon = (name, isLight, hovered, screenW, width) => {
   if (name.toLowerCase() === 'facebook') {
-    return <Facebook isLight={isLight} hovered={hovered === name} size={width <= 680 && 'sm'} />
+    return <Facebook isLight={isLight} hovered={hovered === name} width={width} />
   }
   if (name.toLowerCase() === 'xsocial') {
-    return <XSocial isLight={isLight} hovered={hovered === name} size={width <= 680 && 'sm'} />
+    return <XSocial isLight={isLight} hovered={hovered === name} width={width} />
   }
   if (name.toLowerCase() === 'peer') {
-    return <Peer isLight={isLight} hovered={hovered === name} size={width <= 680 && 'sm'} />
+    return <Peer isLight={isLight} hovered={hovered === name} width={width} />
   }
   if (name.toLowerCase() === 'telegram') {
-    return <Telegram isLight={isLight} hovered={hovered === name} size={width <= 680 && 'sm'} />
+    return <Telegram isLight={isLight} hovered={hovered === name} width={width} />
   }
   if (name.toLowerCase() === 'linkedin') {
-    return <Linkedin isLight={isLight} hovered={hovered === name} size={width <= 680 && 'sm'} />
+    return <Linkedin isLight={isLight} hovered={hovered === name} width={width} />
   }
   return null
 }

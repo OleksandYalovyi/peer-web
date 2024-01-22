@@ -2,10 +2,10 @@
 import React, { useState } from 'react'
 import { Link, NavLink } from 'react-router-dom'
 import useCurrentWidth from 'hooks/useCurrentWidth'
+import { useTheme } from 'context/theme'
+import peerLogo from 'assets/PeerLogo.svg'
 import styles from './footer.module.scss'
 import { externalLinks, renderIcon, RIGHT_LINKS } from '../footer.utils'
-import { useTheme } from '../../../context/theme'
-import peerLogo from '../../../assets/PeerLogo.svg'
 
 function NavItems({ name, to, router }) {
   return (
@@ -25,7 +25,6 @@ function NavItems({ name, to, router }) {
 
 function HomeFooter() {
   const width = useCurrentWidth()
-  const isSmallDevice = width < 821
   const [hovered, setHovered] = useState('')
   const { isLight } = useTheme()
 
@@ -39,7 +38,7 @@ function HomeFooter() {
           <div className={styles.left_column__links}>
             {externalLinks.map((item) => (
               <a
-                key={item.name}
+                key={item.id}
                 href={item.link}
                 className={styles.share_icon}
                 target="_blank"
