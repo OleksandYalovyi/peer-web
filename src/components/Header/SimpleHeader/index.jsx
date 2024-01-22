@@ -3,21 +3,14 @@ import React, { useCallback } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import cls from 'classnames'
 import useScroll from 'hooks/useScroll'
-import { useTheme } from 'context/theme'
-import useCurrentWidth from 'hooks/useCurrentWidth'
 import peerLogo from 'assets/PeerLogo.svg'
 
 import styles from './header.module.scss'
 import BackButton from './components/BackButton'
 
 function SimpleHeader() {
-  const width = useCurrentWidth()
   const { scrollDirection } = useScroll()
   const navigate = useNavigate()
-
-  const { isLight } = useTheme()
-
-  const isMobile = width < 681
 
   const handleBack = useCallback(() => navigate(-1), [])
   return (
@@ -34,9 +27,10 @@ function SimpleHeader() {
       )}
     >
       <BackButton onClick={handleBack} />
-      <Link className={styles.logo_container} to="/">
+      <Link to="/">
         <img src={peerLogo} alt="peer logo" className={styles.peerLogo} />
       </Link>
+      <div />
     </header>
   )
 }
