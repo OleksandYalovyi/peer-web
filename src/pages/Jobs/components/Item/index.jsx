@@ -1,9 +1,9 @@
 import React from 'react'
 import T from 'prop-types'
-import styles from './styles.module.scss'
+import styles from './item.module.scss'
 import { IconDownload, IconLocation } from '../Icons'
 
-function CareersItem({ title, location, time, link, linkFile, id }) {
+function JobsItem({ title, location, time, link, linkFile }) {
   return (
     <div className={styles.item}>
       <div className={styles.item__info}>
@@ -32,13 +32,12 @@ function CareersItem({ title, location, time, link, linkFile, id }) {
   )
 }
 
-export default CareersItem
+export default JobsItem
 
-CareersItem.propTypes = {
+JobsItem.propTypes = {
   title: T.string,
   location: T.string,
   linkFile: T.string,
   time: T.string,
   link: T.string,
-  id: T.number,
 }
