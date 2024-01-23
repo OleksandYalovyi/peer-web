@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { TransitionGroup, CSSTransition } from 'react-transition-group'
 import { Routes, Route, Navigate, useLocation } from 'react-router-dom'
 import { useTheme } from 'context/theme'
@@ -8,8 +8,9 @@ import MainHeader from 'components/Header/SimpleHeader/index'
 import Zen from 'pages/Zen'
 import About from 'pages/About'
 import Placeholder from 'pages/Placeholder'
-import Careers from 'pages/Careers'
+import Jobs from 'pages/Jobs'
 import Press from 'pages/Press'
+import Team from 'pages/Team'
 
 import routing from './routing/path'
 import './App.css'
@@ -17,7 +18,10 @@ import './App.css'
 function App() {
   const location = useLocation()
   const { isLight, setIsLight } = useTheme()
-  setIsLight(false)
+
+  useEffect(() => {
+    setIsLight(false)
+  }, [setIsLight])
 
   return (
     <div id="theme" className={isLight ? 'container' : 'container dark'}>
@@ -30,7 +34,8 @@ function App() {
             <Route path="/about" element={<About />} />
             <Route path="/placeholder" element={<Placeholder />} />
             <Route path="/press" element={<Press />} />
-            <Route path={routing.withoutAuth.careers} element={<Careers />} />
+            <Route path={routing.withoutAuth.team} element={<Team />} />
+            <Route path={routing.withoutAuth.jobs} element={<Jobs />} />
             <Route path="/*" element={<Navigate to="/" />} />
           </Routes>
         </CSSTransition>
