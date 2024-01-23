@@ -25,9 +25,21 @@ function TeamItem({ src, name, position, social }) {
 
 export default TeamItem
 
+const socialItems = {
+  icon: T.node,
+  link: T.string,
+}
+const ItemShape = {
+  id: T.number,
+  src: T.string,
+  name: T.string,
+  position: T.string,
+  social: T.arrayOf(T.shape(socialItems)),
+}
+
 TeamItem.propTypes = {
   src: T.string,
   name: T.string,
   position: T.string,
-  social: T.string,
+  social: T.arrayOf(T.shape(ItemShape)),
 }
