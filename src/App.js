@@ -10,6 +10,7 @@ import About from 'pages/About'
 import Placeholder from 'pages/Placeholder'
 import Jobs from 'pages/Jobs'
 import Press from 'pages/Press'
+import Team from 'pages/Team'
 
 import routing from './routing/path'
 import './App.css'
@@ -31,6 +32,7 @@ function App() {
             <Route path="/placeholder" element={<Placeholder />} />
             <Route path="/press" element={<Press />} />
             <Route path={routing.withoutAuth.jobs} element={<Jobs />} />
+            <Route path={routing.withoutAuth.team} element={<Team />} />
             <Route path="/*" element={<Navigate to="/" />} />
           </Routes>
         </CSSTransition>
