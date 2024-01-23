@@ -1,18 +1,20 @@
 import React from 'react'
 import T from 'prop-types'
 import styles from './styles.module.scss'
-import { IconDownload, IconLocation } from './icons'
+import { IconDownload, IconLocation } from '../Icons'
 
-function CareersItem({ title, location, time, link, linkFile }) {
+function CareersItem({ title, location, time, link, linkFile, id }) {
   return (
     <div className={styles.item}>
       <div className={styles.item__info}>
         <p className={styles.item__title}>{title}</p>
-        <div className={styles.item__location}>
-          <IconLocation />
-          <p className={styles.item__location_name}>{location}</p>
-          {time && <p className={styles.item__time}>{time}</p>}
-        </div>
+        {location && (
+          <div className={styles.item__location}>
+            <IconLocation />
+            <p className={styles.item__location_name}>{location}</p>
+            {time && <p className={styles.item__time}>{time}</p>}
+          </div>
+        )}
       </div>
 
       <div className={styles.item__links}>
@@ -38,4 +40,5 @@ CareersItem.propTypes = {
   linkFile: T.string,
   time: T.string,
   link: T.string,
+  id: T.number,
 }

@@ -1,18 +1,10 @@
 import React, { useState } from 'react'
 import CareersItem from './components/Item'
+import { IconPlay } from './components/Icons'
 import VideoModal from './components/VideoModal/index'
 import Stars from '../../assets/jobs/stars.png'
-import Play from '../../assets/jobs/play.png'
 import styles from './styles.module.scss'
-import {
-  allJobs,
-  productAndDesign,
-  hrAndFinancesJobs,
-  dataJobs,
-  marketingJobs,
-  engineeringJobs,
-  otherJobs,
-} from './mock/index'
+import { allJobs, productAndDesign, applyForPosition } from './mock/index'
 
 const buttons = [
   'all',
@@ -38,13 +30,9 @@ function Jobs() {
     const jobDataMapping = {
       all: allJobs,
       'product & design': productAndDesign,
-      'hr & finances': hrAndFinancesJobs,
-      data: dataJobs,
-      marketing: marketingJobs,
-      engineering: engineeringJobs,
     }
 
-    setSelectedJobs(jobDataMapping[jobsData] || otherJobs)
+    setSelectedJobs(jobDataMapping[jobsData] || applyForPosition)
   }
 
   const handleBtnClick = (itemName) => {
@@ -54,7 +42,7 @@ function Jobs() {
     setTimeout(() => {
       selectJobsData(itemName)
       setLoading(false)
-    }, 1000)
+    }, 0)
   }
 
   return (
@@ -75,7 +63,7 @@ function Jobs() {
         <div className={styles.stars}>
           <img src={Stars} alt="stars" />
           <div className={styles.play} onClick={() => setOpen(true)}>
-            <img src={Play} alt="play" />
+            <IconPlay />
           </div>
         </div>
       </section>
@@ -88,19 +76,20 @@ function Jobs() {
           ))}
         </ul>
         <h2 className={styles.jobs_title}>{selectedItem || `No positions open`}</h2>
-        {loading ? (
+        {/* {loading && (
           <div
             style={{ color: 'white', minHeight: '400px', textAlign: 'center', fontSize: '36px' }}
           >
             Loading...
           </div>
-        ) : (
-          <div className={styles.jobs_list}>
-            {[...selectedJobs].map((item) => (
-              <CareersItem {...item} />
-            ))}
-          </div>
-        )}
+        )} */}
+        (
+        <div className={styles.jobs_list}>
+          {[...selectedJobs].map((item) => (
+            <CareersItem {...item} key={item.id} />
+          ))}
+        </div>
+        )
       </section>
     </div>
   )
