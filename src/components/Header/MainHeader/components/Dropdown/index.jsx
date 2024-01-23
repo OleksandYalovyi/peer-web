@@ -15,7 +15,6 @@ function Select({ label, formatOptionLabel, size, getOptionLabel, isDropdownDisa
       <ReactSelect
         isDisabled={isDropdownDisabled}
         formatOptionLabel={!getOptionLabel ? formatOptionLabel || CustomOption : undefined}
-        // getOptionLabel={getOptionLabel}
         isSearchable={false}
         styles={customStyles}
         maxMenuHeight={size === 'spacious' ? 270 : 245}

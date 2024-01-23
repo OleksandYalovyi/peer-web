@@ -1,61 +1,103 @@
-/* eslint-disable jsx-a11y/label-has-associated-control */
-import React, { useEffect, useRef } from 'react'
+import React, { memo, useRef, useEffect, useCallback, useState } from 'react'
 import cls from 'classnames'
-import T from 'prop-types'
-import Dropdown from './components/accordion/index'
+
+import PropTypes from 'prop-types'
+import BurgerMenu from './components/BurgerMenu'
+import NavItems from './components/NavItems'
 
 import styles from './styles.module.scss'
+import links from '../header.utils'
+import HomeFooter from '../../Footer/HomeFooter'
+import Dropdown from '../MainHeader/components/Dropdown'
 
-function Burger({ onClick, isMenu }) {
-  return (
-    <div className={styles.burger_container}>
-      <input
-        className={cls(
-          isMenu ? styles['menu-trigger-open'] : styles['menu-trigger'],
-          styles.hidden,
-        )}
-        id="togglenav"
-        type="checkbox"
-        onClick={onClick}
-      />
-      <label className={styles['burger-wrapper']} htmlFor="togglenav">
-        <div className={styles.hamburger} />
-      </label>
-    </div>
-  )
-}
+function MobileMenu({ isOpen, setIsOpen, language, setLanguage, languageOptions }) {
+  const dropdownRef = useRef(null)
+  const [linksToShow, setLinksToShow] = useState(links)
+  const [toggleIcon, setToggleIcon] = useState(false)
 
-function Header({ isMenu, setIsMenuOpen }) {
-  const menuContainerRef = useRef()
+  const setCurrentLinks = () => setLinksToShow(links)
+  const closeMenu = () => setIsOpen(false)
+  const navItemClickHandler = () => {
+    closeMenu()
+    setCurrentLinks()
+  }
+
+  useEffect(() => {
+    document.documentElement.style.overflow = isOpen ? 'hidden' : 'auto'
+  }, [isOpen])
+
+  const setLinksCallback = useCallback((items) => setLinksToShow(items), [])
+
+  useEffect(() => {
+    function handleClickOutside(event) {
+      if (event.target.id !== 'togglenav') {
+        if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+          closeMenu()
+          setCurrentLinks()
+        }
+      }
+    }
+
+    document.addEventListener('mousedown', handleClickOutside)
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside)
+    }
+  }, [dropdownRef])
 
   const onClick = (e) => {
     e.stopPropagation()
     if (e.currentTarget.id === 'togglenav') {
-      setIsMenuOpen((s) => !s)
+      setIsOpen((prev) => !prev)
     }
   }
 
-  useEffect(() => {
-    // menuContainerRef.current.scrollTo({ top: 0 })
-  })
+  const mainNavigate = () => {
+    closeMenu()
+    setCurrentLinks()
+  }
+
+  const handleClickSocial = (e) => {
+    const { tagName } = e.target
+
+    if (tagName !== 'DIV') {
+      setToggleIcon(!toggleIcon)
+    }
+  }
 
   return (
-    <Dropdown isShow={isMenu} onClose={() => setIsMenuOpen(false)} burgerRef={menuContainerRef}>
-      <div className={styles.burger} ref={menuContainerRef}>
-        <Burger onClick={onClick} isMenu={isMenu} />
+    <div className={styles.wrapper}>
+      <BurgerMenu isOpen={isOpen} onClick={onClick} />
+
+      <div className={cls(styles.menu, { [styles.menu_open]: isOpen })} ref={dropdownRef}>
+        <div className={styles.menu__content}>
+          <NavItems links={linksToShow} setLinks={setLinksCallback} onClick={navItemClickHandler} />
+          <div className={styles.dropdown_wrapper}>
+            <Dropdown value={language} options={languageOptions} onChange={setLanguage} />
+          </div>
+        </div>
+
+        <HomeFooter />
       </div>
-    </Dropdown>
+    </div>
   )
 }
 
-Burger.propTypes = {
-  isMenu: T.bool,
-  onClick: T.func,
+MobileMenu.propTypes = {
+  isOpen: PropTypes.bool,
+  setIsOpen: PropTypes.func,
+  language: PropTypes.shape({
+    label: PropTypes.string,
+    value: PropTypes.string,
+    icon: PropTypes.element,
+  }),
+  setLanguage: PropTypes.func,
+  languageOptions: PropTypes.arrayOf(
+    PropTypes.shape({
+      label: PropTypes.string,
+      value: PropTypes.string,
+      icon: PropTypes.element,
+    }),
+  ),
 }
 
-Header.propTypes = {
-  isMenu: T.bool,
-  setIsMenuOpen: T.func,
-}
-
-export default React.memo(Header)
+export default memo(MobileMenu)

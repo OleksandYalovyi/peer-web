@@ -9,33 +9,9 @@ import peerLogo from 'assets/PeerLogo.svg'
 import styles from './header.module.scss'
 import Dropdown from './components/Dropdown'
 import GetButton from './components/GetButton'
-
-const links = [
-  {
-    id: 1,
-    router: true,
-    name: 'shop',
-    to: '/home',
-  },
-  {
-    id: 2,
-    router: true,
-    name: 'team',
-    to: '/about',
-  },
-  {
-    id: 3,
-    router: true,
-    name: 'blog',
-    to: '/press',
-  },
-  {
-    id: 4,
-    router: true,
-    name: 'jobs',
-    to: '/careers',
-  },
-]
+import useCurrentWidth from '../../../hooks/useCurrentWidth'
+import MobileMenu from '../MobileMenu'
+import links from '../header.utils'
 
 const languageOptions = [
   {
@@ -61,6 +37,9 @@ function MainHeader() {
   const [openedMenu, setIsOpen] = useState('')
   const ref = useRef('')
   const [language, setLanguage] = useState(languageOptions[0])
+  const width = useCurrentWidth()
+  const [isMobileOpen, setIsMobileOpen] = useState(false)
+  const isMobile = width < 680
 
   const handleClick = (e) => {
     if (ref.current && !ref.current.contains(e.target)) {
@@ -94,27 +73,43 @@ function MainHeader() {
     >
       <div className={styles.main_container}>
         <div className={styles.main_container__left}>
-          <Link className={styles.logo_container} to="/">
+          <Link to="/">
             <img src={peerLogo} alt="peer logo" className={styles.peerLogo} />
           </Link>
         </div>
         <div className={styles.main_container__right}>
-          <nav className={styles.nav}>
-            {links.map(({ router, name, to, id }) => (
-              <NavItems
-                key={id}
-                router={router}
-                name={name}
-                link={to}
-                openedMenu={openedMenu}
-                clickHandler={clickHandler}
+          {!isMobile && (
+            <>
+              <nav className={styles.nav}>
+                {links.map(({ router, name, to, id }) => (
+                  <NavItems
+                    key={id}
+                    router={router}
+                    name={name}
+                    link={to}
+                    openedMenu={openedMenu}
+                    clickHandler={clickHandler}
+                  />
+                ))}
+              </nav>
+
+              <Dropdown value={language} options={languageOptions} onChange={setLanguage} />
+            </>
+          )}
+
+          <div className={styles.get_peer_wrapper}>
+            <GetButton label="get peer" />
+
+            {isMobile && (
+              <MobileMenu
+                isOpen={isMobileOpen}
+                setIsOpen={setIsMobileOpen}
+                language={language}
+                setLanguage={setLanguage}
+                languageOptions={languageOptions}
               />
-            ))}
-          </nav>
-
-          <Dropdown value={language} options={languageOptions} onChange={setLanguage} />
-
-          <GetButton label="get peer" />
+            )}
+          </div>
         </div>
       </div>
     </header>
