@@ -12,22 +12,22 @@
   }
 
   @include screen(maxSm) {
-		width: 100%;
+    width: 100%;
   }
 
   &__info {
     padding-bottom: 24px;
     margin-bottom: 24px;
-    border-bottom: 1px solid rgba(217, 217, 217, 0.10);
+    border-bottom: 1px solid rgba(217, 217, 217, 0.1);
 
     @include screen(maxSm) {
-		  padding-bottom: 20px;
+      padding-bottom: 20px;
       margin-bottom: 20px;
-    } 
+    }
   }
 
   &__title {
-    color: #FFF;
+    color: #fff;
     font-family: 'Gilroy-Regular';
     font-size: 32px;
     font-style: normal;
@@ -42,8 +42,8 @@
     }
 
     @include screen(maxSm) {
-		  font-size: 28px;
-    } 
+      font-size: 28px;
+    }
   }
 
   &__location {
@@ -67,8 +67,8 @@
     letter-spacing: -0.6px;
 
     @include screen(maxSm) {
-		  font-size: 16px;
-    } 
+      font-size: 16px;
+    }
   }
 
   &__time {
@@ -85,8 +85,8 @@
     letter-spacing: -0.6px;
 
     @include screen(maxSm) {
-		  font-size: 16px;
-    } 
+      font-size: 16px;
+    }
 
     &::before {
       position: absolute;
@@ -104,8 +104,8 @@
     display: flex;
     justify-content: space-between;
 
-    @include screen(maxSm) {
-		  flex-direction: column;
+    @media screen and (max-width: 576px) {
+      flex-direction: column;
       gap: 20px;
     }
   }
@@ -130,6 +130,11 @@
 
     @include screen(lg) {
       min-width: 275px;
+    }
+
+    @include screen(maxMd) {
+      padding-right: 70px;
+      padding-left: 70px;
     }
 
     &:hover {

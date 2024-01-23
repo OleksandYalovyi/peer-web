@@ -36,6 +36,7 @@ function App() {
             <Route path="/press" element={<Press />} />
             <Route path={routing.withoutAuth.team} element={<Team />} />
             <Route path={routing.withoutAuth.jobs} element={<Jobs />} />
+            <Route path={routing.withoutAuth.team} element={<Team />} />
             <Route path="/*" element={<Navigate to="/" />} />
           </Routes>
         </CSSTransition>
