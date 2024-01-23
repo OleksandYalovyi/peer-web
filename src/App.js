@@ -9,6 +9,7 @@ import Zen from 'pages/Zen'
 import About from 'pages/About'
 import Placeholder from 'pages/Placeholder'
 import Jobs from 'pages/Jobs'
+import OSDetect from 'pages/OSDetect'
 import Press from 'pages/Press'
 import Team from 'pages/Team'
 
@@ -37,6 +38,7 @@ function App() {
             <Route path={routing.withoutAuth.team} element={<Team />} />
             <Route path={routing.withoutAuth.jobs} element={<Jobs />} />
             <Route path={routing.withoutAuth.team} element={<Team />} />
+            <Route path={routing.withoutAuth.app} element={<OSDetect />} />
             <Route path="/*" element={<Navigate to="/" />} />
           </Routes>
         </CSSTransition>
