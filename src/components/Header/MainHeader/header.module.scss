@@ -22,6 +22,15 @@
     margin: 0 auto;
     padding: 40px 80px 7px;
 
+    @media screen and (max-width: 1560px) {
+      padding: 24.4px 48.8px 7px;
+    }
+
+
+    @media screen and (max-width: 1270px) {
+      padding: 10px 39.7px 7px;
+    }
+
     @media screen and (max-width: 680px) {
       height: 90px;
       padding: 16px 24px;
@@ -48,6 +57,10 @@
       .peerLogo {
         width: 136px;
 
+        @media screen and (max-width: 1270px) {
+          width: 67.5px;
+        }
+
         @media screen and (max-width: 680px) {
           width: 98.3px;
         }
@@ -58,6 +71,10 @@
       display: flex;
       align-items: center;
       gap: 68px;
+
+      @media screen and (max-width: 1270px) {
+        gap: 33.73px;
+      }
 
       .get_peer_wrapper {
         display: flex;
@@ -73,11 +90,11 @@
         max-width: 465px;
         padding: 0 15px;
 
-        .open {
-          .nav_list {
-            display: flex;
-          }
+        @media screen and (max-width: 1270px) {
+          gap: 37.7px;
+        }
 
+        .open {
           &:after {
             width: 100%;
           }
@@ -96,6 +113,10 @@
       text-decoration: none;
       cursor: pointer;
       transition: 0.3s;
+
+      @media screen and (max-width: 1270px) {
+        font-size: 11px;
+      }
 
       @media screen and (max-width: 680px) {
         font-weight: 700;
@@ -131,72 +152,8 @@
       &:hover {
         color: var(--main-font-hover);
 
-        .nav_list {
-          display: flex;
-        }
-
         &:after {
           width: 100%;
-        }
-      }
-
-      .nav_list {
-        position: absolute;
-        top: 100%;
-        left: -33px;
-        display: none;
-        flex-direction: column;
-        min-width: 255px;
-        padding: 9.5px 33px 25.5px 33px;
-        background-color: var(--bg);
-        border: 1px solid var(--main-border);
-        border-radius: 10px;
-
-        @media screen and (max-width: 679px) {
-          left: -150%;
-          padding: 9.5px 24px 25.5px 24px;
-        }
-
-        .link {
-          display: flex;
-          gap: 13px;
-          align-items: center;
-          letter-spacing: 2.8px;
-        }
-
-        .desc {
-          color: #959595;
-          font-size: 14px;
-          letter-spacing: 2.8px;
-
-          @media screen and (max-width: 679px) {
-            font-size: 12px;
-          }
-        }
-
-        a {
-          padding: 22.5px 0 17.5px 0;
-          color: var(--main-font);
-          font-weight: 300;
-          font-size: 14px;
-          font-family: BallingerMono-Light, sans-serif;
-          line-height: 13px;
-          letter-spacing: 0.8px;
-          white-space: nowrap;
-          text-decoration: none;
-
-          @media screen and (max-width: 679px) {
-            padding: 14px 0 17.5px 0;
-            font-size: 12px;
-          }
-
-          &:not(:last-child) {
-            border-bottom: 1px solid var(--main-border);
-          }
-
-          &:hover {
-            color: var(--link);
-          }
         }
       }
     }

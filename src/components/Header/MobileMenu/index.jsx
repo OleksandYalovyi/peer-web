@@ -1,4 +1,4 @@
-import React, { memo, useRef, useEffect, useCallback, useState } from 'react'
+import React, { memo, useRef, useEffect, useCallback } from 'react'
 import cls from 'classnames'
 
 import PropTypes from 'prop-types'
@@ -12,55 +12,17 @@ import Dropdown from '../MainHeader/components/Dropdown'
 
 function MobileMenu({ isOpen, setIsOpen, language, setLanguage, languageOptions }) {
   const dropdownRef = useRef(null)
-  const [linksToShow, setLinksToShow] = useState(links)
-  const [toggleIcon, setToggleIcon] = useState(false)
 
-  const setCurrentLinks = () => setLinksToShow(links)
-  const closeMenu = () => setIsOpen(false)
-  const navItemClickHandler = () => {
-    closeMenu()
-    setCurrentLinks()
-  }
+  const closeMenu = useCallback(() => setIsOpen(false), [setIsOpen])
 
   useEffect(() => {
     document.documentElement.style.overflow = isOpen ? 'hidden' : 'auto'
   }, [isOpen])
 
-  const setLinksCallback = useCallback((items) => setLinksToShow(items), [])
-
-  useEffect(() => {
-    function handleClickOutside(event) {
-      if (event.target.id !== 'togglenav') {
-        if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
-          closeMenu()
-          setCurrentLinks()
-        }
-      }
-    }
-
-    document.addEventListener('mousedown', handleClickOutside)
-    return () => {
-      document.removeEventListener('mousedown', handleClickOutside)
-    }
-  }, [dropdownRef])
-
   const onClick = (e) => {
     e.stopPropagation()
     if (e.currentTarget.id === 'togglenav') {
       setIsOpen((prev) => !prev)
-    }
-  }
-
-  const mainNavigate = () => {
-    closeMenu()
-    setCurrentLinks()
-  }
-
-  const handleClickSocial = (e) => {
-    const { tagName } = e.target
-
-    if (tagName !== 'DIV') {
-      setToggleIcon(!toggleIcon)
     }
   }
 
@@ -70,7 +32,7 @@ function MobileMenu({ isOpen, setIsOpen, language, setLanguage, languageOptions 
 
       <div className={cls(styles.menu, { [styles.menu_open]: isOpen })} ref={dropdownRef}>
         <div className={styles.menu__content}>
-          <NavItems links={linksToShow} setLinks={setLinksCallback} onClick={navItemClickHandler} />
+          <NavItems links={links} onClick={closeMenu} />
           <div className={styles.dropdown_wrapper}>
             <Dropdown value={language} options={languageOptions} onChange={setLanguage} />
           </div>

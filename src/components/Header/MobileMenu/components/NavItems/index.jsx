@@ -1,38 +1,27 @@
 import React from 'react'
-import { NavLink, useNavigate } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 import cls from 'classnames'
 import PropTypes from 'prop-types'
 
 import styles from './nav_items.module.scss'
 
-function NavItems({ links, onClick, setLinks, setIsOpenPopUp }) {
-  const navigate = useNavigate()
-
-  const clickHandler = () => {
-    console.log('clicked')
-  }
-
+function NavItems({ links, onClick }) {
   return (
     <div className={styles.link_wrapper}>
       {links.map((link) =>
         link.router ? (
           <NavLink
-            state={link.title === 'wonka' ? { step: 'mainStep' } : null}
-            key={link.title}
+            state={link.name === 'wonka' ? { step: 'mainStep' } : null}
+            key={link.name}
             to={link?.to}
-            onClick={(e) => clickHandler(e, link)}
+            onClick={onClick}
             className={cls(styles.link)}
           >
-            <span>{link.title}</span>
+            <span>{link.name}</span>
           </NavLink>
         ) : (
-          <a
-            key={link.title}
-            onClick={(e) => clickHandler(e, link)}
-            className={cls(styles.link)}
-            href={link?.to}
-          >
-            {link.title}
+          <a key={link.name} onClick={onClick} className={cls(styles.link)} href={link?.to}>
+            {link.name}
           </a>
         ),
       )}
@@ -49,8 +38,6 @@ NavItems.propTypes = {
     }),
   ),
   onClick: PropTypes.func,
-  setLinks: PropTypes.func,
-  setIsOpenPopUp: PropTypes.func,
 }
 
 export default NavItems
