@@ -1,0 +1,77 @@
+@import 'styles/variables';
+@import 'styles/mixins';
+
+.container {
+	max-width: 1290px;
+	margin: 0 auto;
+	padding-right: 15px;
+	padding-left: 15px;
+	padding-top: 144px;
+	padding-bottom: 100px;
+
+	@media screen and (max-width: 576px) {
+		padding-top: 130px;
+	}
+}
+
+.title {
+	text-align: center;
+	margin-bottom: 8px;
+	font-family: 'MonumentExtended-Regular';
+	font-size: 50px;
+	font-style: normal;
+	font-weight: 600;
+	line-height: 72px;
+	letter-spacing: -1px;
+	background: linear-gradient(90deg, #FFBAF3 0.29%, #FFF1D4 49.4%, #8BF3FC 99.54%);
+	background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+
+	@include screen(maxLarge) {
+		font-size: 37.767px;
+		line-height: 54.385px;
+		letter-spacing: -0.755px;
+	}
+
+	@media screen and (max-width: 576px) {
+		font-size: 25px;
+		font-weight: 700;
+		line-height: 24px;
+		letter-spacing: -0.5px;
+		margin-bottom: 13px;
+  }
+	
+}
+
+.subtitle {
+	text-align: center;
+	color: #FFF;
+	font-family: 'MonumentExtended-Regular';
+	font-size: 25px;
+	font-style: normal;
+	font-weight: 600;
+	line-height: 72px;
+	letter-spacing: -0.5px;
+	margin-bottom: 64px;
+
+	@include screen(maxLarge) {
+		font-size: 18px;
+		line-height: 24px;
+		letter-spacing: -0.36px;
+		margin-bottom: 56px;
+	}
+
+	@media screen and (max-width: 576px) {
+		font-size: 14px;
+		line-height: 20px;
+		letter-spacing: -0.28px;
+		margin-bottom: 24px;
+  }
+}
+
+.card {
+	display: grid;
+	justify-content: center;
+	grid-template-columns: repeat(auto-fill,minmax(276px,420px));
+}

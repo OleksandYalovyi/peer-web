@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from 'react'
 import { US, FR, ES, CN, RU, KR, VN } from 'country-flag-icons/react/3x2'
 import cls from 'classnames'
 import T from 'prop-types'
-import useCurrentWidth from 'hooks/useCurrentWidth'
+import useCurrentSize from 'hooks/useCurrentSize'
 import styles from './dropdown.module.scss'
 
 function CountryIcon({ name }) {
@@ -36,7 +36,7 @@ function Dropdown({ list, children }) {
   const childrenRef = useRef(null)
   const listRef = useRef(null)
   const [isShow, setIsShow] = useState(false)
-  const width = useCurrentWidth()
+  const { width } = useCurrentSize()
 
   const cloneChildren = React.cloneElement(children, {
     ref: childrenRef,

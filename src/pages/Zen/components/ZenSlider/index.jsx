@@ -3,7 +3,7 @@ import React, { useState } from 'react'
 import T from 'prop-types'
 
 import Slider from 'react-slick'
-import useCurrentWidth from 'hooks/useCurrentWidth'
+import useCurrentSize from 'hooks/useCurrentSize'
 import HomeImage from 'assets/HomeProduct/zenHome.png'
 import ChatImage from 'assets/HomeProduct/zenChat.png'
 import MapsImage from 'assets/HomeProduct/zenMaps.png'
@@ -58,7 +58,7 @@ function ZenSlider({ sliderRef, onNextSlide, onPrevSlide }) {
     }
   }
 
-  const width = useCurrentWidth()
+  const { width } = useCurrentSize()
   const isMobile = width < 1000
 
   const settings = {
