@@ -6,7 +6,7 @@ import animatedImage from './nextparticle'
 import styles from './styles.module.scss'
 
 function Global() {
-  const width = useCurrentWidth()
+  const { width } = useCurrentWidth()
   const isMobile = width < 768
 
   useEffect(() => {

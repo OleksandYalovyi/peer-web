@@ -1,29 +1,17 @@
-/* eslint-disable react/prop-types */
-import React, { useState } from 'react'
-
-import HomeHeader from 'components/HomeHeader/index'
-import useCurrentWidth from 'hooks/useCurrentWidth'
+import React from 'react'
+import Main from './components/Main'
+import Map from './components/Map'
+import PeerWithLove from './components/PeerWithLove'
 import styles from './home.module.scss'
-import PeerMain from './components/PeerMain/index'
-import PeerServices from './components/PeerServices/index'
-import HomePageMobile from './components/HomePageMobile/index'
 
 function Home() {
-  const [isPeerMainLoaded, setIsPeerMainLoaded] = useState(false)
-  const width = useCurrentWidth()
-  const isMobile = width < 900
-
   return (
     <div className={styles.wrapper}>
-      {!isMobile ? (
-        <>
-          <HomeHeader />
-          <PeerMain setIsPeerMainLoaded={setIsPeerMainLoaded} isPeerMainLoaded={isPeerMainLoaded} />
-          {isPeerMainLoaded && <PeerServices />}
-        </>
-      ) : (
-        <HomePageMobile />
-      )}
+      <div className={styles.container}>
+        <PeerWithLove />
+        <Main />
+        <Map />
+      </div>
     </div>
   )
 }

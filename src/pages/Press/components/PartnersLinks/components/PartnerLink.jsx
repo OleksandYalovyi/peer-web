@@ -5,7 +5,7 @@ import T from 'prop-types'
 import styles from './styles.module.scss'
 
 function PartnerLink({ link }) {
-  const width = useCurrentWidth()
+  const { width } = useCurrentWidth()
   const isMobile = width < 768
   const [hovered, setHovered] = useState('')
 

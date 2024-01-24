@@ -8,7 +8,7 @@ import styles from './styles.module.scss'
 
 function Main() {
   const sliderRef = useRef(null)
-  const width = useCurrentWidth()
+  const { width } = useCurrentWidth()
   const isMobile = width < 600
 
   const onNextSlide = () => sliderRef.current.slickNext()

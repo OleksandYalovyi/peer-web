@@ -7,7 +7,7 @@ import styles from './contacts.module.scss'
 
 function Contacts() {
   const [isHovered, setHovered] = useState('')
-  const width = useCurrentWidth()
+  const { width } = useCurrentWidth()
   const isMobile = width < 480
 
   return (

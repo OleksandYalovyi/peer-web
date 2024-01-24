@@ -3,14 +3,17 @@ import { useState, useEffect } from 'react'
 const getWidth = () =>
   window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth
 
+const getHeight = () =>
+  window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight
+
 export default function useCurrentWidth() {
-  const [width, setWidth] = useState(getWidth())
+  const [size, setSise] = useState({ width: getWidth(), height: getHeight() })
 
   useEffect(() => {
     let timeoutId = null
     const resizeListener = () => {
       clearTimeout(timeoutId)
-      timeoutId = setTimeout(() => setWidth(getWidth()), 150)
+      timeoutId = setTimeout(() => setSise({ width: getWidth(), height: getHeight() }), 150)
     }
     window.addEventListener('resize', resizeListener)
 
@@ -19,5 +22,5 @@ export default function useCurrentWidth() {
     }
   }, [])
 
-  return width
+  return size
 }

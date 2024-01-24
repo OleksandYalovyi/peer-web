@@ -11,7 +11,7 @@ import styles from './features.module.scss'
 function Features() {
   const [slide, setSlide] = useState(0)
   const [hovered, setHovered] = useState(null)
-  const width = useCurrentWidth()
+  const { width } = useCurrentWidth()
 
   const handleSetSlide = (slideNumber) => {
     setSlide(slideNumber)

@@ -36,7 +36,7 @@ function Dropdown({ list, children }) {
   const childrenRef = useRef(null)
   const listRef = useRef(null)
   const [isShow, setIsShow] = useState(false)
-  const width = useCurrentWidth()
+  const { width } = useCurrentWidth()
 
   const cloneChildren = React.cloneElement(children, {
     ref: childrenRef,

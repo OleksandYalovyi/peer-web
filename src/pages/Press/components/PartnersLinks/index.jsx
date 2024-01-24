@@ -7,7 +7,7 @@ import styles from './partner_links.module.scss'
 const { partners } = utils
 
 function PartnerLinks() {
-  const width = useCurrentWidth()
+  const { width } = useCurrentWidth()
   const isMobile = width < 768
 
   return (

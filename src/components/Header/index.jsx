@@ -54,7 +54,7 @@ function NavItems({ name, links }) {
 }
 
 function LandingHeader() {
-  const width = useCurrentWidth()
+  const { width } = useCurrentWidth()
   const { scrollDirection } = useScroll()
   // const [isMenu, setIsMenuOpen] = useState(false)
 

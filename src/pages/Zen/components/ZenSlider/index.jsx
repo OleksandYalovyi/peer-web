@@ -58,7 +58,7 @@ function ZenSlider({ sliderRef, onNextSlide, onPrevSlide }) {
     }
   }
 
-  const width = useCurrentWidth()
+  const { width } = useCurrentWidth()
   const isMobile = width < 1000
 
   const settings = {

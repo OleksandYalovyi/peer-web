@@ -41,7 +41,7 @@ function Footer() {
   const { scrollDirection } = useScroll()
   const [hovered, setHovered] = useState('')
   const { isLight } = useTheme()
-  const width = useCurrentWidth()
+  const { width } = useCurrentWidth()
   const isMobile = width <= 680
 
   const renderIcon = (name) => {
