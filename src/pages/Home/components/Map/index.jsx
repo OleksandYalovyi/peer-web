@@ -24,7 +24,7 @@ import IceCreamImage from 'assets/Home/Map/IceCream.svg'
 import GamepadImage from 'assets/Home/Map/Gamepad.svg'
 import CellphoneImage from 'assets/Home/Map/Cellphone.svg'
 import ValentinesImage from 'assets/Home/Map/Valentines.svg'
-import useCurrentWidth from 'hooks/useCurrentWidth'
+import useCurrentSize from 'hooks/useCurrentSize'
 import styles from './map.module.scss'
 
 const mapData = [
@@ -841,7 +841,7 @@ const mapData = [
 ]
 
 function Map() {
-  const screenSize = useCurrentWidth()
+  const screenSize = useCurrentSize()
   const screenSizeData = {
     desktop: {
       width: 2560,

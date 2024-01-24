@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import useCurrentWidth from 'hooks/useCurrentWidth'
+import useCurrentSize from 'hooks/useCurrentSize'
 import LongArrow from '../../../../components/Icons/LongArrow'
 import Pressinquir from '../../../../assets/pressinquir.svg'
 
@@ -7,7 +7,7 @@ import styles from './contacts.module.scss'
 
 function Contacts() {
   const [isHovered, setHovered] = useState('')
-  const { width } = useCurrentWidth()
+  const { width } = useCurrentSize()
   const isMobile = width < 480
 
   return (

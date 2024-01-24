@@ -1,5 +1,5 @@
 import React, { useRef } from 'react'
-import useCurrentWidth from 'hooks/useCurrentWidth'
+import useCurrentSize from 'hooks/useCurrentSize'
 import ZEN from 'assets/zenSircle.svg'
 import BackArrow from 'assets/backArrow.svg'
 import ZENLogo from 'assets/zenLogo.svg'
@@ -8,7 +8,7 @@ import styles from './styles.module.scss'
 
 function Main() {
   const sliderRef = useRef(null)
-  const { width } = useCurrentWidth()
+  const { width } = useCurrentSize()
   const isMobile = width < 600
 
   const onNextSlide = () => sliderRef.current.slickNext()

@@ -3,11 +3,11 @@ import FromPeerWithLoveImg from 'assets/Home/fromPeerWithLove.svg'
 import FromPeerWithLoveGradientImg from 'assets/Home/fromPeerWithLoveGradient.svg'
 import FromPeerWithLoveMobileImg from 'assets/Home/fromPeerWithLoveMobile.svg'
 import FromPeerWithLoveGradientMobileImg from 'assets/Home/fromPeerWithLoveGradientMobile.svg'
-import useCurrentWidth from 'hooks/useCurrentWidth'
+import useCurrentSize from 'hooks/useCurrentSize'
 import styles from './peerwithlove.module.scss'
 
 function PeerWithLove() {
-  const { width } = useCurrentWidth()
+  const { width } = useCurrentSize()
   const divRef = useRef(null)
 
   const [scrollHeight, setScrollHeight] = useState(0)

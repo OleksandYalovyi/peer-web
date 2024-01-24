@@ -39,7 +39,7 @@ Telegram.propTypes = {
   hovered: T.bool,
   width: T.string,
   isLight: T.bool,
-  size: T.string,
+  size: T.oneOfType([T.string, T.bool]),
   isGrey: T.bool,
 }
 export default Telegram

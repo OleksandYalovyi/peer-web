@@ -1,61 +1,65 @@
-/* eslint-disable jsx-a11y/label-has-associated-control */
-import React, { useEffect, useRef } from 'react'
+import React, { memo, useRef, useEffect, useCallback } from 'react'
 import cls from 'classnames'
-import T from 'prop-types'
-import Dropdown from './components/accordion/index'
+
+import PropTypes from 'prop-types'
+import BurgerMenu from './components/BurgerMenu'
+import NavItems from './components/NavItems'
 
 import styles from './styles.module.scss'
+import links from '../header.utils'
+import HomeFooter from '../../Footer/HomeFooter'
+import Dropdown from '../MainHeader/components/Dropdown'
 
-function Burger({ onClick, isMenu }) {
-  return (
-    <div className={styles.burger_container}>
-      <input
-        className={cls(
-          isMenu ? styles['menu-trigger-open'] : styles['menu-trigger'],
-          styles.hidden,
-        )}
-        id="togglenav"
-        type="checkbox"
-        onClick={onClick}
-      />
-      <label className={styles['burger-wrapper']} htmlFor="togglenav">
-        <div className={styles.hamburger} />
-      </label>
-    </div>
-  )
-}
+function MobileMenu({ isOpen, setIsOpen, language, setLanguage, languageOptions }) {
+  const dropdownRef = useRef(null)
 
-function Header({ isMenu, setIsMenuOpen }) {
-  const menuContainerRef = useRef()
+  const closeMenu = useCallback(() => setIsOpen(false), [setIsOpen])
+
+  useEffect(() => {
+    document.documentElement.style.overflow = isOpen ? 'hidden' : 'auto'
+  }, [isOpen])
 
   const onClick = (e) => {
     e.stopPropagation()
     if (e.currentTarget.id === 'togglenav') {
-      setIsMenuOpen((s) => !s)
+      setIsOpen((prev) => !prev)
     }
   }
 
-  useEffect(() => {
-    // menuContainerRef.current.scrollTo({ top: 0 })
-  })
-
   return (
-    <Dropdown isShow={isMenu} onClose={() => setIsMenuOpen(false)} burgerRef={menuContainerRef}>
-      <div className={styles.burger} ref={menuContainerRef}>
-        <Burger onClick={onClick} isMenu={isMenu} />
+    <div className={styles.wrapper}>
+      <BurgerMenu isOpen={isOpen} onClick={onClick} />
+
+      <div className={cls(styles.menu, { [styles.menu_open]: isOpen })} ref={dropdownRef}>
+        <div className={styles.menu__content}>
+          <NavItems links={links} onClick={closeMenu} />
+          <div className={styles.dropdown_wrapper}>
+            <Dropdown value={language} options={languageOptions} onChange={setLanguage} />
+          </div>
+        </div>
+
+        <HomeFooter />
       </div>
-    </Dropdown>
+    </div>
   )
 }
 
-Burger.propTypes = {
-  isMenu: T.bool,
-  onClick: T.func,
+MobileMenu.propTypes = {
+  isOpen: PropTypes.bool,
+  setIsOpen: PropTypes.func,
+  language: PropTypes.shape({
+    label: PropTypes.string,
+    value: PropTypes.string,
+    icon: PropTypes.element,
+  }),
+  setLanguage: PropTypes.func,
+  languageOptions: PropTypes.arrayOf(
+    PropTypes.shape({
+      label: PropTypes.string,
+      value: PropTypes.string,
+      icon: PropTypes.element,
+    }),
+  ),
 }
 
-Header.propTypes = {
-  isMenu: T.bool,
-  setIsMenuOpen: T.func,
-}
-
-export default React.memo(Header)
+export default memo(MobileMenu)
