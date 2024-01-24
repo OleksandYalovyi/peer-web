@@ -1,5 +1,5 @@
 import React, { memo } from 'react'
-import useCurrentWidth from 'hooks/useCurrentWidth'
+import useCurrentSize from 'hooks/useCurrentSize'
 import utils from '../utils'
 import PartnerLink from './components/PartnerLink'
 import styles from './partner_links.module.scss'
@@ -7,7 +7,7 @@ import styles from './partner_links.module.scss'
 const { partners } = utils
 
 function PartnerLinks() {
-  const width = useCurrentWidth()
+  const { width } = useCurrentSize()
   const isMobile = width < 768
 
   return (

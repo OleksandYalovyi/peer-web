@@ -1,11 +1,11 @@
 import React, { useState } from 'react'
-import useCurrentWidth from 'hooks/useCurrentWidth'
+import useCurrentSize from 'hooks/useCurrentSize'
 import T from 'prop-types'
 
 import styles from './styles.module.scss'
 
 function PartnerLink({ link }) {
-  const width = useCurrentWidth()
+  const { width } = useCurrentSize()
   const isMobile = width < 768
   const [hovered, setHovered] = useState('')
 

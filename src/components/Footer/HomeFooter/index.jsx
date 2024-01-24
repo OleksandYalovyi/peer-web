@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { useTheme } from 'context/theme'
-import useCurrentWidth from 'hooks/useCurrentWidth'
+import useCurrentSize from 'hooks/useCurrentSize'
 import links from 'constants/links'
 import styles from './footer.module.scss'
 import { externalLinks, renderIcon } from '../footer.utils'
@@ -8,7 +8,7 @@ import { externalLinks, renderIcon } from '../footer.utils'
 function HomeFooter() {
   const [hovered, setHovered] = useState('')
   const { isLight } = useTheme()
-  const width = useCurrentWidth()
+  const { width } = useCurrentSize()
 
   return (
     <footer className={styles.container}>
