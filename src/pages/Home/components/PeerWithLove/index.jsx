@@ -1,8 +1,8 @@
 import React, { useEffect, useMemo, useRef, useState } from 'react'
-import FromPeerWithLoveImg from 'assets/Home/fromPeerWithLove.svg'
-import FromPeerWithLoveGradientImg from 'assets/Home/fromPeerWithLoveGradient.svg'
-import FromPeerWithLoveMobileImg from 'assets/Home/fromPeerWithLoveMobile.svg'
-import FromPeerWithLoveGradientMobileImg from 'assets/Home/fromPeerWithLoveGradientMobile.svg'
+import FromPeerWithLoveImg from 'assets/Home/fromPeerWithLove.png'
+import FromPeerWithLoveGradientImg from 'assets/Home/fromPeerWithLoveGradient.png'
+import FromPeerWithLoveMobileImg from 'assets/Home/fromPeerWithLoveMobile.png'
+import FromPeerWithLoveGradientMobileImg from 'assets/Home/fromPeerWithLoveGradientMobile.png'
 import useCurrentSize from 'hooks/useCurrentSize'
 import styles from './peerwithlove.module.scss'
 
@@ -33,7 +33,6 @@ function PeerWithLove() {
   }, [])
 
   const earthTransformedStyle = useMemo(() => {
-    // Вычислите значение opacity в зависимости от положения скролла
     const opacityValue = Math.max(0, Math.min(1, scrollHeight / window.innerHeight))
 
     return {
