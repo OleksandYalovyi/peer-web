@@ -2,9 +2,9 @@ import React, { useEffect } from 'react'
 import { TransitionGroup, CSSTransition } from 'react-transition-group'
 import { Routes, Route, Navigate, useLocation } from 'react-router-dom'
 import { useTheme } from 'context/theme'
-import Footer from 'components/Footer'
+import MainFooter from 'components/Footer/HomeFooter'
 import Home from 'pages/Home'
-import HomeHeader from 'components/HomeHeader/index'
+import MainHeader from 'components/Header/MainHeader/index'
 import Zen from 'pages/Zen'
 import About from 'pages/About'
 import Placeholder from 'pages/Placeholder'
@@ -26,7 +26,7 @@ function App() {
 
   return (
     <div id="theme" className={isLight ? 'container' : 'container dark'}>
-      <HomeHeader />
+      <MainHeader />
       <TransitionGroup className="transition_group">
         <CSSTransition key={location.key} classNames="fade" timeout={900}>
           <Routes>
@@ -43,7 +43,7 @@ function App() {
           </Routes>
         </CSSTransition>
       </TransitionGroup>
-      <Footer />
+      <MainFooter />
     </div>
   )
 }

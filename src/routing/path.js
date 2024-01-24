@@ -6,6 +6,9 @@ const desktop = {
     homeProduct: '/product',
     team: '/team',
     jobs: '/careers',
+    shop: '/shop',
+    blog: '/blog',
+    press: '/press',
   },
   withAuth: {},
 }
