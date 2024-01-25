@@ -29,12 +29,12 @@ function Blog() {
           </Row>
         ))}
       </Space>
-
+      {/* 
       <div className={styles.footer}>
         <button className={styles.primary} type="button">
           Load More
         </button>
-      </div>
+      </div> */}
     </section>
   )
 }

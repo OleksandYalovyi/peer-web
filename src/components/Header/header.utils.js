@@ -17,7 +17,7 @@ export default [
     id: 3,
     router: true,
     name: 'blog',
-    to: routes.withoutAuth.press,
+    to: routes.withoutAuth.blog,
   },
   {
     id: 4,

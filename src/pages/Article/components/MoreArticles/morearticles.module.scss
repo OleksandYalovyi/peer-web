@@ -15,11 +15,29 @@
     line-height: 30px;
     letter-spacing: -0.75px;
     padding-bottom: 54px;
+
+    @media screen and (max-width: 1440px) {
+      font-size: 31.5px;
+      line-height: 22.5px;
+      letter-spacing: -0.5px;
+      padding-bottom: 40px;
+    }
+
+    @media screen and (max-width: 900px) {
+      font-size: 32px;
+      line-height: 40px;
+      letter-spacing: -1px;
+    }
   }
 
   .moreArticlesBody {
     display: flex;
     width: 100%;
     gap: 36px;
+
+    @media screen and (max-width: 900px) {
+      flex-direction: column;
+      gap: 16px;
+    }
   }
 }

@@ -9,6 +9,19 @@
   padding-bottom: 48px;
   width: 100%;
   max-width: 912px;
+
+  @media screen and (max-width: 1440px) {
+    max-width: 760px;
+    font-size: 18px;
+    line-height: 27px;
+    padding-bottom: 36px;
+  }
+
+  @media screen and (max-width: 900px) {
+    font-size: 20px;
+    line-height: 28px;
+    padding-bottom: 64px;
+  }
 }
 
 .title {
@@ -22,6 +35,19 @@
   padding-bottom: 48px;
   width: 100%;
   max-width: 912px;
+
+  @media screen and (max-width: 1440px) {
+    font-size: 31px;
+    line-height: 27px;
+    padding-bottom: 36px;
+    max-width: 760px;
+  }
+
+  @media screen and (max-width: 900px) {
+    font-size: 40px;
+    line-height: 48px;
+    padding-bottom: 32px;
+  }
 }
 
 .image {
@@ -33,6 +59,16 @@
   background-repeat: no-repeat;
   background-size: cover;
   border-radius: 18px;
+
+  @media screen and (max-width: 1440px) {
+    margin: 24px 0 76px 0;
+    height: 576px;
+  }
+
+  @media screen and (max-width: 900px) {
+    margin: -32px 0 32px 0;
+    height: 163px;
+  }
 }
 
 .list {
@@ -41,7 +77,18 @@
   gap: 36px;
   width: 100%;
   max-width: 912px;
-  padding: 48px 0 48px 34px;
+  padding: 0 0 48px 34px;
+
+  @media screen and (max-width: 1440px) {
+    gap: 27px;
+    padding: 0 0 36px 32px;
+    max-width: 760px;
+  }
+
+  @media screen and (max-width: 900px) {
+    gap: 28px;
+    padding: 0 0 20px 34px;
+  }
 
   .item {
     color: #fff;
@@ -51,5 +98,15 @@
     font-weight: 500;
     line-height: 36px;
     list-style-type: disc;
+
+    @media screen and (max-width: 1440px) {
+      font-size: 18px;
+      line-height: 27px;
+    }
+
+    @media screen and (max-width: 900px) {
+      font-size: 20px;
+      line-height: 28px;
+    }
   }
 }
