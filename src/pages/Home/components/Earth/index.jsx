@@ -5,7 +5,6 @@ import styles from './earth.module.scss'
 
 function Earth() {
   const divRef = useRef(null)
-  const [loaded, setLoaded] = useState(false)
   const [scrollHeight, setScrollHeight] = useState(0)
 
   useEffect(() => {
@@ -14,18 +13,10 @@ function Earth() {
       setScrollHeight(currentScrollHeight)
     }
 
-    const handleLoad = () => {
-      setLoaded(true)
-      setTimeout(() => {
-        window.addEventListener('scroll', handleScroll)
-      }, 50)
-    }
-
-    window.addEventListener('load', handleLoad)
+    window.addEventListener('scroll', handleScroll)
 
     return () => {
       window.removeEventListener('scroll', handleScroll)
-      window.removeEventListener('load', handleLoad)
     }
   }, [])
 
@@ -36,9 +27,9 @@ function Earth() {
 
     return {
       transform: `translateY(${translateYValue}px)`,
-      opacity: loaded ? opacityValue : 0,
+      opacity: opacityValue,
     }
-  }, [scrollHeight, divRef.current, loaded])
+  }, [scrollHeight, divRef.current])
 
   return (
     <>
