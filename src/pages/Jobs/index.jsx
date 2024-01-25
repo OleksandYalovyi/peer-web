@@ -1,10 +1,12 @@
 import React, { useState } from 'react'
+import cn from 'classnames'
 import JobsItem from './components/Item'
 import { IconPlay } from './components/Icons'
 import VideoModal from './components/VideoModal/index'
 import Stars from '../../assets/jobs/stars.png'
 import styles from './styles.module.scss'
-import { allJobs, productAndDesign, applyForPosition } from './mock/index'
+
+import { allJobs, productAndDesign } from './mock/index'
 
 const buttons = [
   'all',
@@ -32,7 +34,7 @@ function Jobs() {
       'product & design': productAndDesign,
     }
 
-    setSelectedJobs(jobDataMapping[jobsData] || applyForPosition)
+    setSelectedJobs(jobDataMapping[jobsData] || [])
   }
 
   const handleBtnClick = (itemName) => {
@@ -44,6 +46,8 @@ function Jobs() {
       setLoading(false)
     }, 0)
   }
+
+  const isJobsAvailable = Boolean(selectedJobs.length)
 
   return (
     <div className={styles.container}>
@@ -75,7 +79,13 @@ function Jobs() {
             </li>
           ))}
         </ul>
-        <h2 className={styles.jobs_title}>{selectedItem || `No positions open`}</h2>
+        <h2
+          className={cn(styles.jobs_title, {
+            [styles.jobs_title__empty]: !isJobsAvailable,
+          })}
+        >
+          {isJobsAvailable ? selectedItem : 'No positions open'}
+        </h2>
         {/* {loading && (
           <div
             style={{ color: 'white', minHeight: '400px', textAlign: 'center', fontSize: '36px' }}
@@ -83,13 +93,29 @@ function Jobs() {
             Loading...
           </div>
         )} */}
-        (
-        <div className={styles.jobs_list}>
-          {[...selectedJobs].map((item) => (
-            <JobsItem {...item} key={item.id} />
-          ))}
+        <div
+          className={cn(styles.jobs_list, {
+            [styles.no_jobs]: !isJobsAvailable,
+          })}
+        >
+          {isJobsAvailable ? (
+            <>
+              {[...selectedJobs].map((item) => (
+                <JobsItem {...item} key={item.id} />
+              ))}
+            </>
+          ) : (
+            <>
+              <div className={styles.subtitle}>
+                <p>Interested in Peer but not looking for a position?</p>
+                <p>We’d love to meet you!</p>
+              </div>
+              <a href="mailto:jobs@peer.inc" className={styles.link}>
+                reach out
+              </a>
+            </>
+          )}
         </div>
-        )
       </section>
     </div>
   )
