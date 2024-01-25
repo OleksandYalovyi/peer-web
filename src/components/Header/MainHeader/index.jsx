@@ -44,7 +44,10 @@ function MainHeader() {
     }
   })
 
-  const clickHandler = (itemName) => (openedMenu === itemName ? setIsOpen('') : setIsOpen(itemName))
+  const logoClickHandler = () => {
+    setIsOpen('')
+    setIsMobileOpen(false)
+  }
 
   return (
     <header
@@ -63,7 +66,12 @@ function MainHeader() {
       <div className={styles.main_container}>
         <div className={styles.main_container__left}>
           <Link to="/">
-            <img src={peerLogo} alt="peer logo" className={styles.peerLogo} />
+            <img
+              src={peerLogo}
+              alt="peer logo"
+              className={styles.peerLogo}
+              onClick={logoClickHandler}
+            />
           </Link>
         </div>
         <div className={styles.main_container__right}>
@@ -76,7 +84,7 @@ function MainHeader() {
                   name={name}
                   link={to}
                   openedMenu={openedMenu}
-                  clickHandler={clickHandler}
+                  clickHandler={setIsOpen}
                 />
               ))}
             </nav>
