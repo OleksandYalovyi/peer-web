@@ -8,8 +8,6 @@ import styles from './peerwithlove.module.scss'
 
 function PeerWithLove() {
   const { width } = useCurrentSize()
-  const divRef = useRef(null)
-
   const [scrollHeight, setScrollHeight] = useState(0)
 
   useEffect(() => {
@@ -18,17 +16,10 @@ function PeerWithLove() {
       setScrollHeight(currentScrollHeight)
     }
 
-    const handleLoad = () => {
-      setTimeout(() => {
-        window.addEventListener('scroll', handleScroll)
-      }, 50)
-    }
-
-    window.addEventListener('load', handleLoad)
+    window.addEventListener('scroll', handleScroll)
 
     return () => {
       window.removeEventListener('scroll', handleScroll)
-      window.removeEventListener('load', handleLoad)
     }
   }, [])
 
@@ -38,7 +29,7 @@ function PeerWithLove() {
     return {
       opacity: opacityValue,
     }
-  }, [scrollHeight, divRef.current])
+  }, [scrollHeight])
 
   return (
     <div className={styles.fromPeerWithLove}>

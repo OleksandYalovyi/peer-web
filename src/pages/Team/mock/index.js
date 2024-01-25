@@ -25,7 +25,7 @@ const teamMembers = [
       },
       {
         icon: <IconLinkedin />,
-        link: 'https://www.linkedin.com/company/peerinc',
+        link: 'https://www.linkedin.com/in/mralfa',
       },
     ],
   },
@@ -41,7 +41,7 @@ const teamMembers = [
       },
       {
         icon: <IconLinkedin />,
-        link: 'https://www.linkedin.com/company/peerinc',
+        link: 'https://www.linkedin.com/in/heath-abbate',
       },
     ],
   },
@@ -57,7 +57,7 @@ const teamMembers = [
       },
       {
         icon: <IconLinkedin />,
-        link: 'https://www.linkedin.com/company/peerinc',
+        link: 'https://www.linkedin.com/in/rsaadi',
       },
     ],
   },
@@ -73,7 +73,7 @@ const teamMembers = [
       },
       {
         icon: <IconLinkedin />,
-        link: 'https://www.linkedin.com/company/peerinc',
+        link: 'https://www.linkedin.com/in/kyle-hay',
       },
     ],
   },
@@ -89,7 +89,7 @@ const teamMembers = [
       },
       {
         icon: <IconLinkedin />,
-        link: 'https://www.linkedin.com/company/peerinc',
+        link: 'https://www.linkedin.com/in/egor-yusov',
       },
     ],
   },
@@ -101,11 +101,11 @@ const teamMembers = [
     social: [
       {
         icon: <IconX />,
-        link: 'https://twitter.com/peerglobal',
+        link: 'https://twitter.com/speedy_milan',
       },
       {
         icon: <IconLinkedin />,
-        link: 'https://www.linkedin.com/company/peerinc',
+        link: 'https://www.linkedin.com/in/milanbulat',
       },
     ],
   },
@@ -121,7 +121,7 @@ const teamMembers = [
       },
       {
         icon: <IconLinkedin />,
-        link: 'https://www.linkedin.com/company/peerinc',
+        link: 'https://www.linkedin.com/in/mattchopin',
       },
     ],
   },
@@ -133,11 +133,11 @@ const teamMembers = [
     social: [
       {
         icon: <IconX />,
-        link: 'https://twitter.com/peerglobal',
+        link: 'https://twitter.com/GinoArdelean',
       },
       {
         icon: <IconLinkedin />,
-        link: 'https://www.linkedin.com/company/peerinc',
+        link: 'https://www.linkedin.com/in/gino-ardelean-a43a8194',
       },
     ],
   },
@@ -149,11 +149,11 @@ const teamMembers = [
     social: [
       {
         icon: <IconX />,
-        link: 'https://twitter.com/peerglobal',
+        link: 'https://twitter.com/santiagomoriv',
       },
       {
         icon: <IconLinkedin />,
-        link: 'https://www.linkedin.com/company/peerinc',
+        link: 'https://www.linkedin.com/in/santiago-moriv-7ba892171',
       },
     ],
   },
@@ -165,11 +165,11 @@ const teamMembers = [
     social: [
       {
         icon: <IconX />,
-        link: 'https://twitter.com/peerglobal',
+        link: 'https://twitter.com/kishankverma',
       },
       {
         icon: <IconLinkedin />,
-        link: 'https://www.linkedin.com/company/peerinc',
+        link: 'https://www.linkedin.com/in/kishanverma',
       },
     ],
   },

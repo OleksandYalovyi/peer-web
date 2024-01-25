@@ -2,11 +2,12 @@ import React, { useEffect } from 'react'
 import { TransitionGroup, CSSTransition } from 'react-transition-group'
 import { Routes, Route, Navigate, useLocation } from 'react-router-dom'
 import { useTheme } from 'context/theme'
-import MainFooter from 'components/Footer/HomeFooter'
+import HomeFooter from 'components/Footer/HomeFooter'
+import MainFooter from 'components/Footer/MainFooter'
 import Home from 'pages/Home'
 import Page404 from 'pages/Page404/index'
-
-import MainHeader from 'components/Header/MainHeader/index'
+import MainHeader from 'components/Header/MainHeader'
+import SimpleHeader from 'components/Header/SimpleHeader'
 import Zen from 'pages/Zen'
 import About from 'pages/About'
 import Placeholder from 'pages/Placeholder'
@@ -20,18 +21,34 @@ import routing from './routing/path'
 import './App.css'
 
 function App() {
-  const location = useLocation()
+  const { key, pathname } = useLocation()
   const { isLight, setIsLight } = useTheme()
 
   useEffect(() => {
     setIsLight(false)
   }, [setIsLight])
 
+  const renderHeader = () => {
+    if (pathname === routing.withoutAuth.blog) {
+      return <SimpleHeader />
+    }
+
+    return <MainHeader />
+  }
+
+  const renderFooter = () => {
+    if (pathname === routing.withoutAuth.home) {
+      return <HomeFooter />
+    }
+
+    return <MainFooter />
+  }
+
   return (
     <div id="theme" className={isLight ? 'container' : 'container dark'}>
-      <MainHeader />
+      {renderHeader()}
       <TransitionGroup className="transition_group">
-        <CSSTransition key={location.key} classNames="fade" timeout={900}>
+        <CSSTransition key={key} classNames="fade" timeout={900}>
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/zen" element={<Zen />} />
@@ -48,7 +65,7 @@ function App() {
           </Routes>
         </CSSTransition>
       </TransitionGroup>
-      <MainFooter />
+      {renderFooter()}
     </div>
   )
 }

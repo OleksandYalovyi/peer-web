@@ -52,7 +52,7 @@ export const RIGHT_LINKS = [
   {
     id: 1,
     name: 'FAQ',
-    link: '/faq',
+    link: links.faq,
   },
   {
     id: 2,
