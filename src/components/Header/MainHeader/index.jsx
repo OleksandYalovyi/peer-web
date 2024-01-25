@@ -9,7 +9,7 @@ import peerLogo from 'assets/PeerLogo.svg'
 import styles from './header.module.scss'
 import Dropdown from './components/Dropdown'
 import GetButton from './components/GetButton'
-import useCurrentWidth from '../../../hooks/useCurrentWidth'
+import useCurrentSize from '../../../hooks/useCurrentSize'
 import MobileMenu from '../MobileMenu'
 import links from '../header.utils'
 
@@ -37,7 +37,7 @@ function MainHeader() {
   const [openedMenu, setIsOpen] = useState('')
   const ref = useRef('')
   const [language, setLanguage] = useState(languageOptions[0])
-  const width = useCurrentWidth()
+  const { width } = useCurrentSize()
   const [isMobileOpen, setIsMobileOpen] = useState(false)
   const isMobile = width < 680
 

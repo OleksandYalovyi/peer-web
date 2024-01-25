@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import React, { useState } from 'react'
 import { Link, NavLink } from 'react-router-dom'
-import useCurrentWidth from 'hooks/useCurrentWidth'
+import useCurrentSize from 'hooks/useCurrentSize'
 import { useTheme } from 'context/theme'
 import peerLogo from 'assets/PeerLogo.svg'
 import styles from './footer.module.scss'
@@ -24,7 +24,7 @@ function NavItems({ name, to, router }) {
 }
 
 function HomeFooter() {
-  const width = useCurrentWidth()
+  const { width } = useCurrentSize()
   const [hovered, setHovered] = useState('')
   const { isLight } = useTheme()
 

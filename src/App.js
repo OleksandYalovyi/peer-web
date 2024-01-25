@@ -11,7 +11,9 @@ import Zen from 'pages/Zen'
 import About from 'pages/About'
 import Placeholder from 'pages/Placeholder'
 import Jobs from 'pages/Jobs'
-import Press from 'pages/Press'
+import OSDetect from 'pages/OSDetect'
+import Blog from 'pages/Blog'
+import Article from 'pages/Article'
 import Team from 'pages/Team'
 
 import routing from './routing/path'
@@ -51,9 +53,12 @@ function App() {
             <Route path="/zen" element={<Zen />} />
             <Route path="/about" element={<About />} />
             <Route path="/placeholder" element={<Placeholder />} />
-            <Route path="/press" element={<Press />} />
+            <Route path="/blog" element={<Blog />} />
+            <Route path="/blog/:id?" element={<Article />} />
             <Route path={routing.withoutAuth.team} element={<Team />} />
             <Route path={routing.withoutAuth.jobs} element={<Jobs />} />
+            <Route path={routing.withoutAuth.team} element={<Team />} />
+            <Route path={routing.withoutAuth.app} element={<OSDetect />} />
             <Route path="/*" element={<Navigate to="/" />} />
           </Routes>
         </CSSTransition>
