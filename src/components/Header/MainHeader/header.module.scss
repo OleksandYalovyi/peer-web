@@ -95,9 +95,10 @@
         }
 
         .open {
-          &:after {
-            width: 100%;
-          }
+          background: var(--gradient-p-0);
+          background-clip: text;
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
         }
       }
     }
@@ -136,25 +137,17 @@
         transition: 0.3s;
 
         &:hover {
-          color: var(--main-font-hover);
+          background: var(--gradient-p-0);
+          background-clip: text;
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
         }
       }
 
-      &::after {
-        display: block;
-        width: 0;
-        height: 2px;
-        background: var(--main-font-hover);
-        transition: width 0.3s;
-        content: '';
-      }
 
       &:hover {
         color: var(--main-font-hover);
 
-        &:after {
-          width: 100%;
-        }
       }
     }
   }

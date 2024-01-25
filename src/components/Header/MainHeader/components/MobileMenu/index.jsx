@@ -6,11 +6,10 @@ import BurgerMenu from './components/BurgerMenu'
 import NavItems from './components/NavItems'
 
 import styles from './styles.module.scss'
-import links from '../header.utils'
-import HomeFooter from '../../Footer/HomeFooter'
-import Dropdown from '../MainHeader/components/Dropdown'
+import links from '../../../header.utils'
+import HomeFooter from '../../../../Footer/HomeFooter'
 
-function MobileMenu({ isOpen, setIsOpen, language, setLanguage, languageOptions }) {
+function MobileMenu({ isOpen, setIsOpen }) {
   const dropdownRef = useRef(null)
 
   const closeMenu = useCallback(() => setIsOpen(false), [setIsOpen])
@@ -31,12 +30,7 @@ function MobileMenu({ isOpen, setIsOpen, language, setLanguage, languageOptions 
       <BurgerMenu isOpen={isOpen} onClick={onClick} />
 
       <div className={cls(styles.menu, { [styles.menu_open]: isOpen })} ref={dropdownRef}>
-        <div className={styles.menu__content}>
-          <NavItems links={links} onClick={closeMenu} />
-          <div className={styles.dropdown_wrapper}>
-            <Dropdown value={language} options={languageOptions} onChange={setLanguage} />
-          </div>
-        </div>
+        <NavItems links={links} onClick={closeMenu} />
 
         <HomeFooter />
       </div>
@@ -47,19 +41,6 @@ function MobileMenu({ isOpen, setIsOpen, language, setLanguage, languageOptions 
 MobileMenu.propTypes = {
   isOpen: PropTypes.bool,
   setIsOpen: PropTypes.func,
-  language: PropTypes.shape({
-    label: PropTypes.string,
-    value: PropTypes.string,
-    icon: PropTypes.element,
-  }),
-  setLanguage: PropTypes.func,
-  languageOptions: PropTypes.arrayOf(
-    PropTypes.shape({
-      label: PropTypes.string,
-      value: PropTypes.string,
-      icon: PropTypes.element,
-    }),
-  ),
 }
 
 export default memo(MobileMenu)
