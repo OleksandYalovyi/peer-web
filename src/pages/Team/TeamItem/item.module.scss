@@ -1,0 +1,56 @@
+@import 'styles/variables';
+@import 'styles/mixins';
+
+.item {
+	padding: 17.5px;
+
+	&__avatar {
+		margin-bottom: 17.5px;
+	}
+
+	&__name {
+		color: var(--Primary-White, #FFF);
+		font-family: "MonumentExtended-Regular";
+		font-size: 24.576px;
+		font-style: normal;
+		font-weight: 600;
+		line-height: 35.108px;
+		letter-spacing: -1.755px;
+		margin-bottom: 0;
+
+		@include screen(maxLarge) {
+			font-size: 17.735px;
+			line-height: 25.336px;
+			letter-spacing: -1.267px;
+		}
+
+		@media screen and (max-width: 576px) {
+			font-size: 24px;
+			line-height: 32px;
+			letter-spacing: -2px;
+		}
+	}
+
+	&__position {
+		color: #939393;
+		font-family: 'Gilroy-Regular';
+		font-size: 21.065px;
+		font-style: normal;
+		font-weight: 500;
+		line-height: 35.108px;
+
+		@include screen(maxLarge) {
+			font-size: 15.202px;
+			line-height: 25.336px;
+		}
+
+		@media screen and (max-width: 576px) {
+			font-size: 24px;
+			line-height: 32px;
+		}
+	}
+
+	&__icon {
+		margin-right: 21px;
+	}
+}

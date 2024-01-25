@@ -60,3 +60,55 @@
     }
   }
 }
+
+@keyframes appPlay {
+  0% {
+    background-position: 10% 0;
+  }
+  50% {
+    background-position: 91% 100%;
+  }
+  100% {
+    background-position: 10% 0;
+  }
+}
+
+@mixin primaryButton {
+  position: relative;
+  text-decoration: none;
+
+  &__text {
+    transition: all 0.15s ease;
+
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    text-decoration: none;
+  }
+
+  &:hover {
+    animation: appPlay 4s ease infinite;
+    text-decoration: none;
+    background: radial-gradient(
+                    135% 117% at 104.31% 94%,
+                    #ffbaf3 11.2%,
+                    #fff1d4 50.33%,
+                    #8bf3fc 90.29%
+    );
+    background-size: 600% 600%;
+
+    &::after {
+      content: '';
+      position: absolute;
+      z-index: 0;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-image: url('../assets/noiseBg.png');
+      background-blend-mode: luminosity;
+      pointer-events: none;
+      filter: brightness(5);
+    }
+  }
+}
