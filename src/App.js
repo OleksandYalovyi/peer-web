@@ -5,6 +5,7 @@ import { useTheme } from 'context/theme'
 import HomeFooter from 'components/Footer/HomeFooter'
 import MainFooter from 'components/Footer/MainFooter'
 import Home from 'pages/Home'
+import Page404 from 'pages/Page404/index'
 import MainHeader from 'components/Header/MainHeader'
 import SimpleHeader from 'components/Header/SimpleHeader'
 import Zen from 'pages/Zen'
@@ -59,7 +60,8 @@ function App() {
             <Route path={routing.withoutAuth.jobs} element={<Jobs />} />
             <Route path={routing.withoutAuth.team} element={<Team />} />
             <Route path={routing.withoutAuth.app} element={<OSDetect />} />
-            <Route path="/*" element={<Navigate to="/" />} />
+            <Route path={routing.withoutAuth.notFound} element={<Page404 />} />
+            <Route path="/*" element={<Navigate to={routing.withoutAuth.notFound} />} />
           </Routes>
         </CSSTransition>
       </TransitionGroup>
