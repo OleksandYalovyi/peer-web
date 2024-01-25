@@ -8,7 +8,6 @@ const desktop = {
     jobs: '/careers',
     shop: '/shop',
     blog: '/blog',
-    press: '/press',
   },
   withAuth: {},
 }
