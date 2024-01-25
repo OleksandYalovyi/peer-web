@@ -2,24 +2,14 @@
 import React, { useState, useEffect, useRef } from 'react'
 import { NavLink, Link } from 'react-router-dom'
 import cls from 'classnames'
-import { US } from 'country-flag-icons/react/3x2'
 import useScroll from 'hooks/useScroll'
 import peerLogo from 'assets/PeerLogo.svg'
 
 import styles from './header.module.scss'
-import Dropdown from './components/Dropdown'
 import GetButton from './components/GetButton'
 import useCurrentSize from '../../../hooks/useCurrentSize'
-import MobileMenu from '../MobileMenu'
+import MobileMenu from './components/MobileMenu'
 import links from '../header.utils'
-
-const languageOptions = [
-  {
-    label: 'EN',
-    value: 'EN',
-    icon: <US width={15} title="United States" />,
-  },
-]
 
 function NavItems({ name, link, openedMenu, clickHandler }) {
   return (
@@ -36,7 +26,6 @@ function MainHeader() {
   const { scrollDirection } = useScroll()
   const [openedMenu, setIsOpen] = useState('')
   const ref = useRef('')
-  const [language, setLanguage] = useState(languageOptions[0])
   const { width } = useCurrentSize()
   const [isMobileOpen, setIsMobileOpen] = useState(false)
   const isMobile = width < 680
@@ -79,36 +68,24 @@ function MainHeader() {
         </div>
         <div className={styles.main_container__right}>
           {!isMobile && (
-            <>
-              <nav className={styles.nav}>
-                {links.map(({ router, name, to, id }) => (
-                  <NavItems
-                    key={id}
-                    router={router}
-                    name={name}
-                    link={to}
-                    openedMenu={openedMenu}
-                    clickHandler={clickHandler}
-                  />
-                ))}
-              </nav>
-
-              <Dropdown value={language} options={languageOptions} onChange={setLanguage} />
-            </>
+            <nav className={styles.nav}>
+              {links.map(({ router, name, to, id }) => (
+                <NavItems
+                  key={id}
+                  router={router}
+                  name={name}
+                  link={to}
+                  openedMenu={openedMenu}
+                  clickHandler={clickHandler}
+                />
+              ))}
+            </nav>
           )}
 
           <div className={styles.get_peer_wrapper}>
             <GetButton label="get peer" />
 
-            {isMobile && (
-              <MobileMenu
-                isOpen={isMobileOpen}
-                setIsOpen={setIsMobileOpen}
-                language={language}
-                setLanguage={setLanguage}
-                languageOptions={languageOptions}
-              />
-            )}
+            {isMobile && <MobileMenu isOpen={isMobileOpen} setIsOpen={setIsMobileOpen} />}
           </div>
         </div>
       </div>
