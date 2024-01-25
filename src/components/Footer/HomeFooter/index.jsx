@@ -20,7 +20,7 @@ function HomeFooter() {
           <a href={links.termsService} target="_blank" rel="noreferrer">
             Terms
           </a>
-          <a href={links.termsService} target="_blank" rel="noreferrer">
+          <a href={links.faq} target="_blank" rel="noreferrer">
             FAQ
           </a>
         </div>
