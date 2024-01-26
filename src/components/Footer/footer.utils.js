@@ -4,26 +4,22 @@ import XSocial from '../Icons/Share/XSocial'
 import Peer from '../Icons/Share/Peer'
 import Telegram from '../Icons/Share/Telegram'
 import Linkedin from '../Icons/Share/Linkedin'
+import Instagram from '../Icons/Share/Instagram'
 import links from '../../constants/links'
 
 export const externalLinks = [
   {
     id: 1,
-    name: 'Facebook',
-    link: 'https://www.facebook.com/peerniverse',
+    name: 'Instagram',
+    link: 'https://www.instagram.com/peernewworld',
   },
   {
     id: 2,
-    name: 'Linkedin',
-    link: 'https://www.linkedin.com/company/peerinc/mycompany/verification/',
-  },
-  {
-    id: 3,
     name: 'Telegram',
     link: 'https://t.me/peerinc',
   },
   {
-    id: 4,
+    id: 3,
     name: 'XSocial',
     link: 'https://twitter.com/peerglobal',
   },
@@ -44,6 +40,9 @@ export const renderIcon = (name, isLight, hovered, screenW, width) => {
   }
   if (name.toLowerCase() === 'linkedin') {
     return <Linkedin isLight={isLight} hovered={hovered === name} width={width} />
+  }
+  if (name.toLowerCase() === 'instagram') {
+    return <Instagram hovered={hovered === name} width={width} />
   }
   return null
 }
