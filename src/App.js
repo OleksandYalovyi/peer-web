@@ -29,7 +29,7 @@ function App() {
   }, [setIsLight])
 
   const renderHeader = () => {
-    if (pathname === routing.withoutAuth.blog) {
+    if (pathname.startsWith(routing.withoutAuth.blog)) {
       return <SimpleHeader />
     }
 
