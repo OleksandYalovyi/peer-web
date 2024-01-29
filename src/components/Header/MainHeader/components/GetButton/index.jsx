@@ -1,18 +1,19 @@
 import React from 'react'
-import PropTypes from 'prop-types'
+import T from 'prop-types'
 
 import styles from './style.module.scss'
 
-function GetButton({ label }) {
+function GetButton({ label, onClick }) {
   return (
-    <div className={styles.gradient_wrapper}>
+    <div className={styles.gradient_wrapper} onClick={onClick}>
       <span className={styles.wrapper}>{label}</span>
     </div>
   )
 }
 
 GetButton.propTypes = {
-  label: PropTypes.string,
+  label: T.string,
+  onClick: T.func,
 }
 
 export default GetButton

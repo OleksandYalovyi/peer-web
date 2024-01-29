@@ -1,4 +1,5 @@
 import React from 'react'
+import T from 'prop-types'
 import GetPeerImage from 'assets/Home/Map/GetPeer.png'
 import ThreeDMapsImage from 'assets/Home/Map/ThreeDMaps.png'
 import LoveCollectionImage from 'assets/Home/Map/LoveCollection.png'
@@ -494,12 +495,7 @@ const mapData = [
     },
   },
   {
-    type: 'node',
-    node: (
-      <button type="button" className={styles.button}>
-        get the app
-      </button>
-    ),
+    type: 'button',
     name: 'get the app',
     styles: {
       desktop: {
@@ -840,7 +836,7 @@ const mapData = [
   },
 ]
 
-function Map() {
+function Map({ onOpenQRCodeModal }) {
   const screenSize = useCurrentSize()
   const screenSizeData = {
     desktop: {
@@ -903,6 +899,11 @@ function Map() {
               {item.type === 'link' && <img src={item.src} alt={item.name} />}
               {item.type === 'image' && <img src={item.src} alt={item.name} />}
               {item.type === 'node' && item.node && item.node}
+              {item.type === 'button' && (
+                <button type="button" className={styles.button} onClick={onOpenQRCodeModal}>
+                  get the app
+                </button>
+              )}
             </div>
           </div>
         )
@@ -912,3 +913,7 @@ function Map() {
 }
 
 export default React.memo(Map)
+
+Map.propTypes = {
+  onOpenQRCodeModal: T.func,
+}
