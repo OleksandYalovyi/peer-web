@@ -1,18 +1,11 @@
 import React, { useEffect, useState } from 'react'
+import { useNavigate } from 'react-router-dom'
+import { detectOS } from 'utils/utils'
 import styles from './os_detect.module.scss'
 
 function OSDetect() {
   const [os, setOs] = useState('')
-
-  const detectOS = () => {
-    const platform = navigator?.userAgent
-
-    if (platform.match(/Android/i)) return 'Android'
-    if (platform.match(/iPhone/i) || platform.match(/iPod/i) || platform.match(/iPad/i))
-      return 'iOS'
-
-    return null
-  }
+  const navigate = useNavigate()
 
   useEffect(() => {
     const detectedOs = detectOS()
@@ -26,6 +19,10 @@ function OSDetect() {
       )
     } else if (os === 'iOS') {
       window.location.replace('https://apps.apple.com/us/app/peer/id1669571704')
+    } else {
+      navigate({
+        pathname: '/',
+      })
     }
   }, [os])
 
