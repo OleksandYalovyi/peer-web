@@ -31,25 +31,21 @@ function QRCodeModal({ open, onClose }) {
   }, [os])
 
   return (
-    <>
-      {os !== 'Android' && os !== 'iOS' && (
-        <Modal open={open} onClose={onClose} className={styles.qr_code_wrapper}>
-          <div className={styles.container}>
-            <button className={styles.close} type="button" onClick={onClose}>
-              <IconCLose />
-            </button>
-            <div className={styles.code_container}>
-              <QRCode
-                style={{ height: 'auto', maxWidth: '100%', width: '100%' }}
-                value={url}
-                viewBox="0 0 256 256"
-              />
-            </div>
-            <div className={styles.description}>Scan to download</div>
-          </div>
-        </Modal>
-      )}
-    </>
+    <Modal open={open} onClose={onClose} className={styles.qr_code_wrapper}>
+      <div className={styles.container}>
+        <button className={styles.close} type="button" onClick={onClose}>
+          <IconCLose />
+        </button>
+        <div className={styles.code_container}>
+          <QRCode
+            style={{ height: 'auto', maxWidth: '100%', width: '100%' }}
+            value={url}
+            viewBox="0 0 256 256"
+          />
+        </div>
+        <div className={styles.description}>Scan to download</div>
+      </div>
+    </Modal>
   )
 }
 
