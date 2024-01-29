@@ -54,7 +54,7 @@ function Jobs() {
       {isOpen && <VideoModal onClose={() => setOpen(false)} />}
       <section className={styles.header}>
         <div className={styles.description}>
-          <h1 className={styles.title}>Go Team Go!</h1>
+          <h1 className={styles.title}>Go team go!</h1>
           <p className={styles.text}>
             Built by a small, scrappy team of experienced builders with a strong background in
             consumer products and a relentless focus on the intersection of culture and community.
