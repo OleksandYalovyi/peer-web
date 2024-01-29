@@ -5,6 +5,7 @@ import cls from 'classnames'
 import useScroll from 'hooks/useScroll'
 import peerLogo from 'assets/PeerLogo.svg'
 
+import QRCodeModal from 'components/Modals/QRCodeModal'
 import styles from './header.module.scss'
 import GetButton from './components/GetButton'
 import useCurrentSize from '../../../hooks/useCurrentSize'
@@ -25,6 +26,7 @@ function NavItems({ name, link, openedMenu, clickHandler }) {
 function MainHeader() {
   const { scrollDirection } = useScroll()
   const [openedMenu, setIsOpen] = useState('')
+  const [isQRCodeModal, setIsQRCodeModal] = useState(false)
   const ref = useRef('')
   const { width } = useCurrentSize()
   const [isMobileOpen, setIsMobileOpen] = useState(false)
@@ -91,12 +93,13 @@ function MainHeader() {
           )}
 
           <div className={styles.get_peer_wrapper}>
-            <GetButton label="get peer" />
+            <GetButton label="get peer" onClick={() => setIsQRCodeModal(true)} />
 
             {isMobile && <MobileMenu isOpen={isMobileOpen} setIsOpen={setIsMobileOpen} />}
           </div>
         </div>
       </div>
+      <QRCodeModal open={isQRCodeModal} onClose={() => setIsQRCodeModal(false)} />
     </header>
   )
 }

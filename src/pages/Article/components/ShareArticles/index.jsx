@@ -9,21 +9,27 @@ function ShareArticles() {
   const shareOnTwitter = () => {
     const urlToShare = window.location.href
     const text = `Peer | Blog`
-    const twitterShareUrl = `https://twitter.com/intent/tweet?url=${encodeURIComponent(urlToShare)}&text=${encodeURIComponent(text)}`
+    const twitterShareUrl = `https://twitter.com/intent/tweet?url=${encodeURIComponent(
+      urlToShare,
+    )}&text=${encodeURIComponent(text)}`
 
     window.open(twitterShareUrl, '_blank')
   }
 
   const shareOnFacebook = () => {
     const urlToShare = window.location.href
-    const facebookShareUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(urlToShare)}`
+    const facebookShareUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(
+      urlToShare,
+    )}`
 
     window.open(facebookShareUrl, '_blank')
   }
 
   const shareOnLinkedIn = () => {
     const urlToShare = window.location.href
-    const linkedInShareUrl = `https://www.linkedin.com/shareArticle?url=${encodeURIComponent(urlToShare)}`
+    const linkedInShareUrl = `https://www.linkedin.com/shareArticle?url=${encodeURIComponent(
+      urlToShare,
+    )}`
 
     window.open(linkedInShareUrl, '_blank')
   }
