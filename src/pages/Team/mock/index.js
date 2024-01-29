@@ -21,7 +21,7 @@ const teamMembers = [
     social: [
       {
         icon: <IconX />,
-        link: 'https://twitter.com/peerglobal',
+        link: 'https://twitter.com/mistaalfa',
       },
       {
         icon: <IconLinkedin />,
