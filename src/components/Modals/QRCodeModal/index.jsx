@@ -23,7 +23,7 @@ function QRCodeModal({ open, onClose }) {
   }, [window.location.origin])
 
   useEffect(() => {
-    if (os === 'Android' || os === 'iOS') {
+    if (open && (os === 'Android' || os === 'iOS')) {
       navigate({
         pathname: '/app',
       })
