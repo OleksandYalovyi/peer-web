@@ -21,7 +21,7 @@ export const externalLinks = [
   {
     id: 3,
     name: 'XSocial',
-    link: 'https://twitter.com/peerglobal',
+    link: 'https://twitter.com/peernewworld',
   },
 ]
 
