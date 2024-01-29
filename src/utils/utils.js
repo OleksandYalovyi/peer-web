@@ -25,4 +25,13 @@ const getRandomChar = () => {
   return possible.charAt(Math.floor(Math.random() * possible.length))
 }
 
-export { lerp, getMousePos, getRandomString, getRandomChar }
+const detectOS = () => {
+  const platform = navigator?.userAgent
+
+  if (platform.match(/Android/i)) return 'Android'
+  if (platform.match(/iPhone/i) || platform.match(/iPod/i) || platform.match(/iPad/i)) return 'iOS'
+
+  return null
+}
+
+export { lerp, getMousePos, getRandomString, getRandomChar, detectOS }
