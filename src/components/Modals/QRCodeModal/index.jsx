@@ -28,7 +28,7 @@ function QRCodeModal({ open, onClose }) {
         pathname: '/app',
       })
     }
-  }, [os])
+  }, [os, open])
 
   return (
     <Modal open={open} onClose={onClose} className={styles.qr_code_wrapper}>
