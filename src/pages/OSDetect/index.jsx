@@ -19,10 +19,6 @@ function OSDetect() {
       )
     } else if (os === 'iOS') {
       window.location.replace('https://apps.apple.com/us/app/peer/id1669571704')
-    } else {
-      navigate({
-        pathname: '/',
-      })
     }
   }, [os])
 
