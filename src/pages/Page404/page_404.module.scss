@@ -17,10 +17,6 @@
   align-items: center;
   position: relative;
   overflow: visible;
-
-  @media screen and (max-width: $tablet) {
-    position: static;
-  }
 }
 
 .title {
