@@ -7,12 +7,18 @@ import styles from './home.module.scss'
 
 function Home() {
   const [isQRCodeModal, setIsQRCodeModal] = useState(false)
+
   return (
     <div className={styles.wrapper}>
       <div className={styles.container}>
         <PeerWithLove />
         <Main />
-        <Map onOpenQRCodeModal={() => setIsQRCodeModal(true)} />
+        <Map
+          onOpenQRCodeModal={(e) => {
+            e.preventDefault()
+            setIsQRCodeModal(true)
+          }}
+        />
       </div>
       <QRCodeModal open={isQRCodeModal} onClose={() => setIsQRCodeModal(false)} />
     </div>
