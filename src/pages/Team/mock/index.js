@@ -35,6 +35,10 @@ const teamMembers = [
     position: 'Chief Operations Officer',
     social: [
       {
+        icon: <IconX />,
+        link: 'https://twitter.com/peerglobal',
+      },
+      {
         icon: <IconLinkedin />,
         link: 'https://www.linkedin.com/in/heath-abbate',
       },
@@ -47,6 +51,10 @@ const teamMembers = [
     position: 'Chief Technology Officer',
     social: [
       {
+        icon: <IconX />,
+        link: 'https://twitter.com/peerglobal',
+      },
+      {
         icon: <IconLinkedin />,
         link: 'https://www.linkedin.com/in/rsaadi',
       },
@@ -58,6 +66,10 @@ const teamMembers = [
     name: 'Kyle Hay',
     position: 'Chief Design Officer',
     social: [
+      {
+        icon: <IconX />,
+        link: 'https://twitter.com/peerglobal',
+      },
       {
         icon: <IconLinkedin />,
         link: 'https://www.linkedin.com/in/kyle-hay',
@@ -86,6 +98,10 @@ const teamMembers = [
     name: 'Matthieu Chopin',
     position: 'Maps Architect',
     social: [
+      {
+        icon: <IconX />,
+        link: 'https://twitter.com/peerglobal',
+      },
       {
         icon: <IconLinkedin />,
         link: 'https://www.linkedin.com/in/mattchopin',
