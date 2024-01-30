@@ -3,7 +3,6 @@ import { TransitionGroup, CSSTransition } from 'react-transition-group'
 import { Routes, Route, Navigate, useLocation } from 'react-router-dom'
 import { useTheme } from 'context/theme'
 import HomeFooter from 'components/Footer/HomeFooter'
-import MainFooter from 'components/Footer/MainFooter'
 import Home from 'pages/Home'
 import Page404 from 'pages/Page404/index'
 import MainHeader from 'components/Header/MainHeader'
@@ -36,14 +35,6 @@ function App() {
     return <MainHeader />
   }
 
-  const renderFooter = () => {
-    if (pathname === routing.withoutAuth.home) {
-      return <HomeFooter />
-    }
-
-    return <MainFooter />
-  }
-
   return (
     <div id="theme" className={isLight ? 'container' : 'container dark'}>
       {renderHeader()}
@@ -65,7 +56,8 @@ function App() {
           </Routes>
         </CSSTransition>
       </TransitionGroup>
-      {renderFooter()}
+
+      <HomeFooter />
     </div>
   )
 }
