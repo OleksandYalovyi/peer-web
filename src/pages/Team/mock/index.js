@@ -3,7 +3,6 @@ import Tony from 'assets/team/tony.png'
 import Heath from 'assets/team/heath.png'
 import Rachid from 'assets/team/rachid.png'
 import Kyle from 'assets/team/kyle.png'
-import Egor from 'assets/team/egor.png'
 import Milan from 'assets/team/milan.png'
 import Matthieu from 'assets/team/matthieu.png'
 import Gino from 'assets/team/gino.png'
@@ -67,18 +66,6 @@ const teamMembers = [
   },
   {
     id: 5,
-    src: Egor,
-    name: 'Dr. Egor Yusov',
-    position: 'Chief Architect',
-    social: [
-      {
-        icon: <IconLinkedin />,
-        link: 'https://www.linkedin.com/in/egor-yusov',
-      },
-    ],
-  },
-  {
-    id: 6,
     src: Milan,
     name: 'Milan Bulat',
     position: 'Head of Maps',
@@ -94,7 +81,7 @@ const teamMembers = [
     ],
   },
   {
-    id: 7,
+    id: 6,
     src: Matthieu,
     name: 'Matthieu Chopin',
     position: 'Maps Architect',
@@ -106,7 +93,7 @@ const teamMembers = [
     ],
   },
   {
-    id: 8,
+    id: 7,
     src: Gino,
     name: 'Gino Ardelean',
     position: 'Technical Creative Director',
@@ -122,7 +109,7 @@ const teamMembers = [
     ],
   },
   {
-    id: 9,
+    id: 8,
     src: Santiago,
     name: 'Santiago Moriv',
     position: 'Sr. Art Director',
@@ -138,7 +125,7 @@ const teamMembers = [
     ],
   },
   {
-    id: 10,
+    id: 9,
     src: Kishan,
     name: 'Kishan Verma',
     position: 'Blockchain Architect',
