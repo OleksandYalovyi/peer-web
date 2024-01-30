@@ -21,11 +21,11 @@ const teamMembers = [
     social: [
       {
         icon: <IconX />,
-        link: 'https://twitter.com/peerglobal',
+        link: 'https://twitter.com/mistaalfa',
       },
       {
         icon: <IconLinkedin />,
-        link: 'https://www.linkedin.com/company/peerinc',
+        link: 'https://www.linkedin.com/in/mralfa',
       },
     ],
   },
@@ -36,12 +36,8 @@ const teamMembers = [
     position: 'Chief Operations Officer',
     social: [
       {
-        icon: <IconX />,
-        link: 'https://twitter.com/peerglobal',
-      },
-      {
         icon: <IconLinkedin />,
-        link: 'https://www.linkedin.com/company/peerinc',
+        link: 'https://www.linkedin.com/in/heath-abbate',
       },
     ],
   },
@@ -52,12 +48,8 @@ const teamMembers = [
     position: 'Chief Technology Officer',
     social: [
       {
-        icon: <IconX />,
-        link: 'https://twitter.com/peerglobal',
-      },
-      {
         icon: <IconLinkedin />,
-        link: 'https://www.linkedin.com/company/peerinc',
+        link: 'https://www.linkedin.com/in/rsaadi',
       },
     ],
   },
@@ -68,12 +60,8 @@ const teamMembers = [
     position: 'Chief Design Officer',
     social: [
       {
-        icon: <IconX />,
-        link: 'https://twitter.com/peerglobal',
-      },
-      {
         icon: <IconLinkedin />,
-        link: 'https://www.linkedin.com/company/peerinc',
+        link: 'https://www.linkedin.com/in/kyle-hay',
       },
     ],
   },
@@ -84,12 +72,8 @@ const teamMembers = [
     position: 'Chief Architect',
     social: [
       {
-        icon: <IconX />,
-        link: 'https://twitter.com/peerglobal',
-      },
-      {
         icon: <IconLinkedin />,
-        link: 'https://www.linkedin.com/company/peerinc',
+        link: 'https://www.linkedin.com/in/egor-yusov',
       },
     ],
   },
@@ -101,11 +85,11 @@ const teamMembers = [
     social: [
       {
         icon: <IconX />,
-        link: 'https://twitter.com/peerglobal',
+        link: 'https://twitter.com/speedy_milan',
       },
       {
         icon: <IconLinkedin />,
-        link: 'https://www.linkedin.com/company/peerinc',
+        link: 'https://www.linkedin.com/in/milanbulat',
       },
     ],
   },
@@ -116,12 +100,8 @@ const teamMembers = [
     position: 'Maps Architect',
     social: [
       {
-        icon: <IconX />,
-        link: 'https://twitter.com/peerglobal',
-      },
-      {
         icon: <IconLinkedin />,
-        link: 'https://www.linkedin.com/company/peerinc',
+        link: 'https://www.linkedin.com/in/mattchopin',
       },
     ],
   },
@@ -133,11 +113,11 @@ const teamMembers = [
     social: [
       {
         icon: <IconX />,
-        link: 'https://twitter.com/peerglobal',
+        link: 'https://twitter.com/GinoArdelean',
       },
       {
         icon: <IconLinkedin />,
-        link: 'https://www.linkedin.com/company/peerinc',
+        link: 'https://www.linkedin.com/in/gino-ardelean-a43a8194',
       },
     ],
   },
@@ -149,11 +129,11 @@ const teamMembers = [
     social: [
       {
         icon: <IconX />,
-        link: 'https://twitter.com/peerglobal',
+        link: 'https://twitter.com/santiagomoriv',
       },
       {
         icon: <IconLinkedin />,
-        link: 'https://www.linkedin.com/company/peerinc',
+        link: 'https://www.linkedin.com/in/santiago-moriv-7ba892171',
       },
     ],
   },
@@ -165,11 +145,11 @@ const teamMembers = [
     social: [
       {
         icon: <IconX />,
-        link: 'https://twitter.com/peerglobal',
+        link: 'https://twitter.com/kishankverma',
       },
       {
         icon: <IconLinkedin />,
-        link: 'https://www.linkedin.com/company/peerinc',
+        link: 'https://www.linkedin.com/in/kishanverma',
       },
     ],
   },

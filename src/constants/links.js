@@ -6,4 +6,5 @@ export default {
   peerClubProfileTrade: `${peerClubUrl}/profile/trade`,
   privacyPolicy: 'https://community.peerclub.com/hc/en-us/articles/17261918037787-privacy-policy',
   termsService: 'https://community.peerclub.com/hc/en-us/articles/17262293261979-terms-of-service',
+  faq: 'https://community.peerclub.com/hc/en-us',
 }

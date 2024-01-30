@@ -25,7 +25,8 @@ export const productAndDesign = [
 export const applyForPosition = [
   {
     id: 1,
-    title: 'Interested in Peer but not looking for a position? We’d love to meet you!',
+    title: 'No positions open',
+    subtitle: 'Interested in Peer but not looking for a position? We’d love to meet you!',
     link: 'mailto:jobs@peer.inc',
   },
 ]

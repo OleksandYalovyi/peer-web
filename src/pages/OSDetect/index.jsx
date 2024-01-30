@@ -1,42 +1,28 @@
 import React, { useEffect, useState } from 'react'
+import { useNavigate } from 'react-router-dom'
+import { detectOS } from 'utils/utils'
 import styles from './os_detect.module.scss'
 
 function OSDetect() {
-  const [system, setSystem] = useState('')
+  const [os, setOs] = useState('')
+  const navigate = useNavigate()
 
-  const getOperatingSystem = () => {
-    let operatingSystem = 'Not known'
-    if (window.navigator.appVersion.indexOf('Win') !== -1) {
-      operatingSystem = 'Windows OS'
-    }
-    if (window.navigator.appVersion.indexOf('Mac') !== -1) {
-      operatingSystem = 'MacOS'
-    }
-    if (window.navigator.appVersion.indexOf('X11') !== -1) {
-      operatingSystem = 'UNIX OS'
-    }
-    if (window.navigator.appVersion.indexOf('Linux') !== -1) {
-      operatingSystem = 'Linux OS'
-    }
-    if (window.navigator.appVersion.indexOf('Android') !== -1) {
-      operatingSystem = 'Linux OS'
-    }
-    if (window.navigator.appVersion.indexOf('iOS') !== -1) {
-      operatingSystem = 'Linux OS'
-    }
-
-    return operatingSystem
-  }
   useEffect(() => {
-    const os = getOperatingSystem()
-    setSystem(os)
+    const detectedOs = detectOS()
+    setOs(detectedOs)
   }, [])
 
-  return (
-    <section className={styles.page_container}>
-      <div>{system}</div>
-    </section>
-  )
+  useEffect(() => {
+    if (os === 'Android') {
+      window.location.replace(
+        'https://play.google.com/store/apps/details?id=inc.peer.app&hl=en&gl=US',
+      )
+    } else if (os === 'iOS') {
+      window.location.replace('https://apps.apple.com/us/app/peer/id1669571704')
+    }
+  }, [os])
+
+  return null
 }
 
 export default React.memo(OSDetect)

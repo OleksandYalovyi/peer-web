@@ -22,7 +22,7 @@
   "window.zoomLevel": 1,
   "git.suggestSmartCommit": false,
   "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": true
+    "source.fixAll.eslint": "explicit"
   },
   "eslint.validate": ["javascript"],
   "[scss]": {

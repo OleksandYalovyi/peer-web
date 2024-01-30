@@ -2,11 +2,11 @@
   z-index: 9;
   width: 100%;
   display: flex;
-  flex-grow: 2;
   align-items: center;
   justify-content: space-between;
   margin: 0 auto;
   padding: 40px 80px;
+  background: var(--bg);
 
   @media screen and (max-width: 1560px) {
     padding: 24.38px 48.75px;
@@ -19,7 +19,7 @@
   @media screen and (max-width: 880px) {
     flex-direction: column;
     gap: 48px;
-    padding: 48px 0 203px;
+    padding: 48px 0;
   }
 
   .left_container {

@@ -1,0 +1,41 @@
+.qr_code_wrapper {
+  width: 100%;
+  max-width: 412px;
+  min-width: 320px;
+  background-color: white;
+}
+.container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  padding: 70px 70px 40px;
+  background-color: white;
+
+  .code_container {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
+
+.close {
+  top: 18px;
+  right: 10px;
+  position: absolute;
+  width: 42px;
+  font-size: 0;
+  line-height: 0;
+  cursor: pointer;
+  opacity: 50%;
+}
+
+.description {
+  color: gray;
+  text-align: center;
+  font-family: IBMPlexMono-SemiBold, sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+}
