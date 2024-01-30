@@ -2,7 +2,7 @@ import React, { useEffect } from 'react'
 import { TransitionGroup, CSSTransition } from 'react-transition-group'
 import { Routes, Route, Navigate, useLocation } from 'react-router-dom'
 import { useTheme } from 'context/theme'
-import HomeFooter from 'components/Footer/HomeFooter'
+import Footer from 'components/Footer/HomeFooter'
 import Home from 'pages/Home'
 import Page404 from 'pages/Page404/index'
 import MainHeader from 'components/Header/MainHeader'
@@ -57,7 +57,7 @@ function App() {
         </CSSTransition>
       </TransitionGroup>
 
-      <HomeFooter />
+      <Footer />
     </div>
   )
 }
