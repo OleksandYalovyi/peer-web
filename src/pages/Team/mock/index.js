@@ -3,7 +3,6 @@ import Tony from 'assets/team/tony.png'
 import Heath from 'assets/team/heath.png'
 import Rachid from 'assets/team/rachid.png'
 import Kyle from 'assets/team/kyle.png'
-import Egor from 'assets/team/egor.png'
 import Milan from 'assets/team/milan.png'
 import Matthieu from 'assets/team/matthieu.png'
 import Gino from 'assets/team/gino.png'
@@ -36,10 +35,6 @@ const teamMembers = [
     position: 'Chief Operations Officer',
     social: [
       {
-        icon: <IconX />,
-        link: 'https://twitter.com/peerglobal',
-      },
-      {
         icon: <IconLinkedin />,
         link: 'https://www.linkedin.com/in/heath-abbate',
       },
@@ -52,10 +47,6 @@ const teamMembers = [
     position: 'Chief Technology Officer',
     social: [
       {
-        icon: <IconX />,
-        link: 'https://twitter.com/peerglobal',
-      },
-      {
         icon: <IconLinkedin />,
         link: 'https://www.linkedin.com/in/rsaadi',
       },
@@ -67,10 +58,6 @@ const teamMembers = [
     name: 'Kyle Hay',
     position: 'Chief Design Officer',
     social: [
-      {
-        icon: <IconX />,
-        link: 'https://twitter.com/peerglobal',
-      },
       {
         icon: <IconLinkedin />,
         link: 'https://www.linkedin.com/in/kyle-hay',
@@ -99,10 +86,6 @@ const teamMembers = [
     name: 'Matthieu Chopin',
     position: 'Maps Architect',
     social: [
-      {
-        icon: <IconX />,
-        link: 'https://twitter.com/peerglobal',
-      },
       {
         icon: <IconLinkedin />,
         link: 'https://www.linkedin.com/in/mattchopin',
