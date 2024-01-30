@@ -1,18 +1,20 @@
 /* eslint-disable react/prop-types */
 import React, { useCallback } from 'react'
-import { Link, useNavigate } from 'react-router-dom'
+import { Link, useLocation, useNavigate } from 'react-router-dom'
 import cls from 'classnames'
 import useScroll from 'hooks/useScroll'
 import peerLogo from 'assets/PeerLogo.svg'
 
 import styles from './header.module.scss'
 import BackButton from './components/BackButton'
+import { getBackButtonUrl } from '../header.utils'
 
 function SimpleHeader() {
   const { scrollDirection } = useScroll()
   const navigate = useNavigate()
+  const { pathname } = useLocation()
 
-  const handleBack = useCallback(() => navigate(-1), [])
+  const handleBack = useCallback(() => navigate(getBackButtonUrl(pathname)), [pathname])
   return (
     <header
       className={cls(
