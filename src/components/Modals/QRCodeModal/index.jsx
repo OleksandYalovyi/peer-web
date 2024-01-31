@@ -31,10 +31,10 @@ function QRCodeModal({ isOpen, onClose }) {
           />
         </div>
         <div className={styles.store_links_container}>
-          <a href={links.appStore} className={styles.store_link}>
+          <a href={links.appStore} className={styles.store_link} target="_blank" rel="noreferrer">
             <img src={appstore} alt="app store" />
           </a>
-          <a href={links.googlePlay} className={styles.store_link}>
+          <a href={links.googlePlay} className={styles.store_link} target="_blank" rel="noreferrer">
             <img src={google} alt="google play" />
           </a>
         </div>
