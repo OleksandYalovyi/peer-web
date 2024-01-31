@@ -1,5 +1,6 @@
 import React, { useMemo } from 'react'
 import T from 'prop-types'
+import { NavLink } from 'react-router-dom'
 import GetPeerImage from 'assets/Home/Map/GetPeer.png'
 import ThreeDMapsImage from 'assets/Home/Map/ThreeDMaps.png'
 import LoveCollectionImage from 'assets/Home/Map/LoveCollection.png'
@@ -26,7 +27,7 @@ import GamepadImage from 'assets/Home/Map/Gamepad.png'
 import CellphoneImage from 'assets/Home/Map/Cellphone.png'
 import ValentinesImage from 'assets/Home/Map/Valentines.png'
 import useCurrentSize from 'hooks/useCurrentSize'
-import { NavLink } from 'react-router-dom/dist/index'
+import routing from '../../../../routing/path'
 import styles from './map.module.scss'
 
 function Map({ onOpenQRCodeModal }) {
@@ -38,7 +39,7 @@ function Map({ onOpenQRCodeModal }) {
         type: 'link',
         name: '3D Maps',
         src: ThreeDMapsImage,
-        to: '/blog/5',
+        to: `${routing.withoutAuth.blog}/5`,
         styles: {
           desktop: {
             width: 500,
@@ -102,7 +103,7 @@ function Map({ onOpenQRCodeModal }) {
         type: 'link',
         name: 'Love Collection',
         src: LoveCollectionImage,
-        to: '/blog/1',
+        to: `${routing.withoutAuth.blog}/1`,
         styles: {
           desktop: {
             width: 664,
@@ -165,7 +166,7 @@ function Map({ onOpenQRCodeModal }) {
         type: 'link',
         name: 'LNY 2024',
         src: LNY2024Image,
-        to: '/blog/4',
+        to: `${routing.withoutAuth.blog}/4`,
         styles: {
           desktop: {
             width: 660,
@@ -197,7 +198,7 @@ function Map({ onOpenQRCodeModal }) {
         type: 'link',
         name: 'LNY 2024',
         src: LNY20241Image,
-        to: '/blog/4',
+        to: `${routing.withoutAuth.blog}/4`,
         styles: {
           desktop: {
             width: 808,
@@ -229,7 +230,7 @@ function Map({ onOpenQRCodeModal }) {
         type: 'link',
         name: 'New Chat',
         src: NewChatImage,
-        to: '/blog/3',
+        to: `${routing.withoutAuth.blog}/3`,
         styles: {
           desktop: {
             width: 487,
@@ -261,7 +262,7 @@ function Map({ onOpenQRCodeModal }) {
         type: 'link',
         name: 'Boom #1',
         src: Boom1Image,
-        to: '/blog/0',
+        to: `${routing.withoutAuth.blog}/0`,
         styles: {
           desktop: {
             width: 696,
@@ -324,7 +325,7 @@ function Map({ onOpenQRCodeModal }) {
         type: 'link',
         name: 'LNY 2024',
         src: LNY20242Image,
-        to: '/blog/4',
+        to: `${routing.withoutAuth.blog}/4`,
         styles: {
           desktop: {
             width: 449,
@@ -386,7 +387,7 @@ function Map({ onOpenQRCodeModal }) {
       {
         type: 'link',
         src: DuckImage,
-        to: '/blog/2',
+        to: `${routing.withoutAuth.blog}/2`,
         name: 'Peer Duck',
         styles: {
           desktop: {

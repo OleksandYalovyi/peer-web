@@ -2,6 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { NavLink } from 'react-router-dom/dist/index'
 import cn from 'classnames'
+import routing from '../../../../routing/path'
 import styles from './card.module.scss'
 
 function formatTimestamp(timestamp) {
@@ -38,7 +39,7 @@ export function Large({
   return (
     <div className={cn(styles.card, styles.large)}>
       <NavLink
-        to={`/blog/${id}`}
+        to={`${routing.withoutAuth.blog}/${id}`}
         className={styles.image}
         style={{ backgroundImage: `url(${image})` }}
       />
@@ -46,7 +47,7 @@ export function Large({
       <div className={styles.content}>
         <span className={styles.tab}>Product update</span>
 
-        <NavLink to={`/blog/${id}`} className={styles.title}>
+        <NavLink to={`${routing.withoutAuth.blog}/${id}`} className={styles.title}>
           {title}
         </NavLink>
         <p className={styles.text}>{text}</p>
@@ -60,13 +61,13 @@ export function Big({ id = 0, createdAt = 1705297675461, title = 'No name', imag
   return (
     <div className={cn(styles.card, styles.big)}>
       <NavLink
-        to={`/blog/${id}`}
+        to={`${routing.withoutAuth.blog}/${id}`}
         className={styles.image}
         style={{ backgroundImage: `url(${image})` }}
       />
 
       <div className={styles.content}>
-        <NavLink to={`/blog/${id}`} className={styles.title}>
+        <NavLink to={`${routing.withoutAuth.blog}/${id}`} className={styles.title}>
           {title}
         </NavLink>
         <p className={styles.dateTime}>{formatTimestamp(createdAt)}</p>
@@ -87,14 +88,14 @@ export function Medium({
     <div className={cn(styles.card, styles.medium, { [styles.hasImage]: !withImage })}>
       {withImage && (
         <NavLink
-          to={`/blog/${id}`}
+          to={`${routing.withoutAuth.blog}/${id}`}
           className={styles.image}
           style={{ backgroundImage: `url(${image})` }}
         />
       )}
 
       <div className={styles.content}>
-        <NavLink to={`/blog/${id}`} className={styles.title}>
+        <NavLink to={`${routing.withoutAuth.blog}/${id}`} className={styles.title}>
           {title}
         </NavLink>
         <p className={styles.dateTime}>{formatTimestamp(createdAt)}</p>
@@ -108,13 +109,13 @@ export function Small({ id = 0, createdAt = 1705297675461, title = 'No name', im
   return (
     <div className={cn(styles.card, styles.small)}>
       <NavLink
-        to={`/blog/${id}`}
+        to={`${routing.withoutAuth.blog}/${id}`}
         className={styles.image}
         style={{ backgroundImage: `url(${image})` }}
       />
 
       <div className={styles.content}>
-        <NavLink to={`/blog/${id}`} className={styles.title}>
+        <NavLink to={`${routing.withoutAuth.blog}/${id}`} className={styles.title}>
           {title}
         </NavLink>
         <p className={styles.dateTime}>{formatTimestamp(createdAt)}</p>
