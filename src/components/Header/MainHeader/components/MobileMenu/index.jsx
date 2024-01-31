@@ -12,10 +12,16 @@ import HomeFooter from '../../../../Footer/HomeFooter'
 function MobileMenu({ isOpen, setIsOpen }) {
   const dropdownRef = useRef(null)
 
-  const closeMenu = useCallback(() => setIsOpen(false), [setIsOpen])
+  const closeMenu = useCallback(() => {
+    setIsOpen(false)
+  }, [setIsOpen])
 
   useEffect(() => {
     document.documentElement.style.overflow = isOpen ? 'hidden' : 'auto'
+
+    return () => {
+      document.documentElement.style.overflow = 'auto'
+    }
   }, [isOpen])
 
   const onClick = (e) => {
