@@ -1,7 +1,14 @@
 @font-face {
+  font-weight: 400;
+  font-family: 'Monument Extended';
+  src: url(./otf/PPMonumentExtended-Regular.otf) format('opentype');
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
   font-weight: 300;
   font-family: 'PPMonumentExtended-Light';
-  font-family: 'Monument Extended';
   font-style: normal;
   src: url(./otf/PPMonumentExtended-Light.otf) format('opentype');
   font-display: swap;
