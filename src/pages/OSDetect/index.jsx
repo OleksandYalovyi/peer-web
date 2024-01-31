@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { detectOS } from 'utils/utils'
-import styles from './os_detect.module.scss'
 
 function OSDetect() {
   const [os, setOs] = useState('')
@@ -21,6 +20,16 @@ function OSDetect() {
       window.location.replace('https://apps.apple.com/us/app/peer/id1669571704')
     }
   }, [os])
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      navigate('/')
+    }, 3000)
+
+    return () => {
+      clearTimeout(timer)
+    }
+  }, [])
 
   return null
 }

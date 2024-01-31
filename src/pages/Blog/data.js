@@ -115,7 +115,7 @@ const data = {
             title: 'Live Location',
             image: LiveLocationImg,
             text: 'it’s you v. the world. are you game (or scared)?',
-            withImage: false,
+            // withImage: false,
             node: (
               <>
                 <Text>
@@ -290,98 +290,98 @@ const data = {
         },
       ],
     },
-    {
-      cols: [
-        {
-          card: {
-            id: 6,
-            type: 'big',
-            createdAt: 1704492000000,
-            title: 'Posting Images',
-            text: 'it’s you v. the world. are you game (or scared)?',
-            image: PostingImagesImg,
-            node: (
-              <>
-                <Text>
-                  Hey moji fam! 🎊✨ Get ready to usher in the Lunar New Year like never before,
-                  'cause we're dropping something special – our Lunar New Year Moji Collection! 🐉🧧
-                  <br />
-                  <br />
-                  As we gear up to celebrate the Year of the Dragon in 2024, it's all about
-                  spreading good vibes, health, and wealth your way. And what better way to do it
-                  than with our auspicious mojis! 🌟💰
-                  <br />
-                  <br />
-                  Whether you're wishing prosperity, sending good cheer, or just vibing with the
-                  festive spirit, our Lunar New Year Moji Collection has got you covered. Send it to
-                  everybody! From dragons dancing in delight to lucky red envelopes bursting with
-                  fortune, these mojis are bringing all the positive energy your chats need! And the
-                  Lunar New Year is celebrated over a long stretch. It’s like 7 days before the
-                  first and sometimes up to 20 days afterwards in Vietnam lol 🧨💚
-                  <br />
-                  <br />
-                  So, as you come together with friends and family to celebrate, let our mojis do
-                  the talking. Share the joy, the laughter, and the wishes for a prosperous and
-                  healthy year ahead. But you don’t have to be celebrating, because these mojis are
-                  super cool. Just send away! It's all about that sweet moji magic! 🌈🎇
-                  <br />
-                  <br />
-                  May your Year of the Dragon be filled with good fortune, abundant health, and
-                  endless wealth! 🐉💖 Gong Xi Fa Cai, Chúc Mừng Năm Mới y'all! 🧧🎉
-                  <br />
-                  <br />
-                  #LunarNewYearMoji #YearOfTheDragon #GoodVibesOnly 🌙🧡
-                </Text>
-              </>
-            ),
-          },
-        },
-        {
-          card: {
-            id: 7,
-            type: 'big',
-            createdAt: 1704492000000,
-            title: 'Freemium Emojis / Unlockables',
-            text: 'it’s you v. the world. are you game (or scared)?',
-            image: FreemiumEmojisImg,
-            node: (
-              <>
-                <Text>
-                  Hey moji fam! 🎊✨ Get ready to usher in the Lunar New Year like never before,
-                  'cause we're dropping something special – our Lunar New Year Moji Collection! 🐉🧧
-                  <br />
-                  <br />
-                  As we gear up to celebrate the Year of the Dragon in 2024, it's all about
-                  spreading good vibes, health, and wealth your way. And what better way to do it
-                  than with our auspicious mojis! 🌟💰
-                  <br />
-                  <br />
-                  Whether you're wishing prosperity, sending good cheer, or just vibing with the
-                  festive spirit, our Lunar New Year Moji Collection has got you covered. Send it to
-                  everybody! From dragons dancing in delight to lucky red envelopes bursting with
-                  fortune, these mojis are bringing all the positive energy your chats need! And the
-                  Lunar New Year is celebrated over a long stretch. It’s like 7 days before the
-                  first and sometimes up to 20 days afterwards in Vietnam lol 🧨💚
-                  <br />
-                  <br />
-                  So, as you come together with friends and family to celebrate, let our mojis do
-                  the talking. Share the joy, the laughter, and the wishes for a prosperous and
-                  healthy year ahead. But you don’t have to be celebrating, because these mojis are
-                  super cool. Just send away! It's all about that sweet moji magic! 🌈🎇
-                  <br />
-                  <br />
-                  May your Year of the Dragon be filled with good fortune, abundant health, and
-                  endless wealth! 🐉💖 Gong Xi Fa Cai, Chúc Mừng Năm Mới y'all! 🧧🎉
-                  <br />
-                  <br />
-                  #LunarNewYearMoji #YearOfTheDragon #GoodVibesOnly 🌙🧡
-                </Text>
-              </>
-            ),
-          },
-        },
-      ],
-    },
+    // {
+    //   cols: [
+    //     {
+    //       card: {
+    //         id: 6,
+    //         type: 'big',
+    //         createdAt: 1704492000000,
+    //         title: 'Posting Images',
+    //         text: 'it’s you v. the world. are you game (or scared)?',
+    //         image: PostingImagesImg,
+    //         node: (
+    //           <>
+    //             <Text>
+    //               Hey moji fam! 🎊✨ Get ready to usher in the Lunar New Year like never before,
+    //               'cause we're dropping something special – our Lunar New Year Moji Collection! 🐉🧧
+    //               <br />
+    //               <br />
+    //               As we gear up to celebrate the Year of the Dragon in 2024, it's all about
+    //               spreading good vibes, health, and wealth your way. And what better way to do it
+    //               than with our auspicious mojis! 🌟💰
+    //               <br />
+    //               <br />
+    //               Whether you're wishing prosperity, sending good cheer, or just vibing with the
+    //               festive spirit, our Lunar New Year Moji Collection has got you covered. Send it to
+    //               everybody! From dragons dancing in delight to lucky red envelopes bursting with
+    //               fortune, these mojis are bringing all the positive energy your chats need! And the
+    //               Lunar New Year is celebrated over a long stretch. It’s like 7 days before the
+    //               first and sometimes up to 20 days afterwards in Vietnam lol 🧨💚
+    //               <br />
+    //               <br />
+    //               So, as you come together with friends and family to celebrate, let our mojis do
+    //               the talking. Share the joy, the laughter, and the wishes for a prosperous and
+    //               healthy year ahead. But you don’t have to be celebrating, because these mojis are
+    //               super cool. Just send away! It's all about that sweet moji magic! 🌈🎇
+    //               <br />
+    //               <br />
+    //               May your Year of the Dragon be filled with good fortune, abundant health, and
+    //               endless wealth! 🐉💖 Gong Xi Fa Cai, Chúc Mừng Năm Mới y'all! 🧧🎉
+    //               <br />
+    //               <br />
+    //               #LunarNewYearMoji #YearOfTheDragon #GoodVibesOnly 🌙🧡
+    //             </Text>
+    //           </>
+    //         ),
+    //       },
+    //     },
+    //     {
+    //       card: {
+    //         id: 7,
+    //         type: 'big',
+    //         createdAt: 1704492000000,
+    //         title: 'Freemium Emojis / Unlockables',
+    //         text: 'it’s you v. the world. are you game (or scared)?',
+    //         image: FreemiumEmojisImg,
+    //         node: (
+    //           <>
+    //             <Text>
+    //               Hey moji fam! 🎊✨ Get ready to usher in the Lunar New Year like never before,
+    //               'cause we're dropping something special – our Lunar New Year Moji Collection! 🐉🧧
+    //               <br />
+    //               <br />
+    //               As we gear up to celebrate the Year of the Dragon in 2024, it's all about
+    //               spreading good vibes, health, and wealth your way. And what better way to do it
+    //               than with our auspicious mojis! 🌟💰
+    //               <br />
+    //               <br />
+    //               Whether you're wishing prosperity, sending good cheer, or just vibing with the
+    //               festive spirit, our Lunar New Year Moji Collection has got you covered. Send it to
+    //               everybody! From dragons dancing in delight to lucky red envelopes bursting with
+    //               fortune, these mojis are bringing all the positive energy your chats need! And the
+    //               Lunar New Year is celebrated over a long stretch. It’s like 7 days before the
+    //               first and sometimes up to 20 days afterwards in Vietnam lol 🧨💚
+    //               <br />
+    //               <br />
+    //               So, as you come together with friends and family to celebrate, let our mojis do
+    //               the talking. Share the joy, the laughter, and the wishes for a prosperous and
+    //               healthy year ahead. But you don’t have to be celebrating, because these mojis are
+    //               super cool. Just send away! It's all about that sweet moji magic! 🌈🎇
+    //               <br />
+    //               <br />
+    //               May your Year of the Dragon be filled with good fortune, abundant health, and
+    //               endless wealth! 🐉💖 Gong Xi Fa Cai, Chúc Mừng Năm Mới y'all! 🧧🎉
+    //               <br />
+    //               <br />
+    //               #LunarNewYearMoji #YearOfTheDragon #GoodVibesOnly 🌙🧡
+    //             </Text>
+    //           </>
+    //         ),
+    //       },
+    //     },
+    //   ],
+    // },
   ],
 }
 
