@@ -21,6 +21,14 @@
     display: flex;
     justify-content: center;
 
+    .scaleAnimation {
+      transition: 0.1s ease-in;
+
+      &:hover {
+        transform: scale(1.05);
+      }
+    }
+
     .content {
       flex: 1;
       display: flex;

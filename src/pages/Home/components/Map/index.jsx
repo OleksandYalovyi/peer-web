@@ -911,7 +911,7 @@ function Map({ onOpenQRCodeModal }) {
           <div className={styles.item} style={{ ...itemStyles, paddingBottom: 0 }}>
             <div className={styles.content}>
               {item.type === 'link' && (
-                <NavLink to={item?.to} onClick={item?.onClick}>
+                <NavLink to={item?.to} onClick={item?.onClick} className={styles.scaleAnimation}>
                   <img src={item.src} alt={item.name} />
                 </NavLink>
               )}
