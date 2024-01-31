@@ -1,23 +1,39 @@
 @font-face {
   font-weight: 300;
+  font-family: 'PPMonumentExtended-Light';
   font-family: 'Monument Extended';
   font-style: normal;
-  src: url(./PPMonumentExtended-Light.otf) format('opentype');
+  src: url(./otf/PPMonumentExtended-Light.otf) format('opentype');
   font-display: swap;
 }
 
 @font-face {
   font-weight: 400;
-  font-family: 'Monument Extended';
+  font-family: 'PPMonumentExtended-Regular';
+  src: url(./otf/PPMonumentExtended-Regular.otf) format('opentype');
   font-style: normal;
-  src: url(./PPMonumentExtended-Regular.otf) format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-weight: 500;
+  font-family: 'PPMonumentExtended-Medium';
+  font-style: normal;
+  src: url(./otf/PPMonumentExtended-Medium.otf) format('opentype');
+  font-display: swap;
+}
+@font-face {
+  font-weight: 600;
+  font-family: 'PPMonumentExtended-Semibold';
+  font-style: normal;
+  src: url(./otf/PPMonumentExtended-Semibold.otf) format('opentype');
   font-display: swap;
 }
 
 @font-face {
   font-weight: 900;
-  font-family: 'Monument Extended';
+  font-family: 'PPMonumentExtended-Black';
   font-style: normal;
-  src: url(./PPMonumentExtended-Black.otf) format('opentype');
+  src: url(./otf/PPMonumentExtended-Black.otf) format('opentype');
   font-display: swap;
 }

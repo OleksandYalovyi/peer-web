@@ -18,10 +18,9 @@
   width: fit-content;
   margin: auto;
   margin-bottom: 8px;
-  font-family: 'Monument Extended';
+  font-family: PPMonumentExtended-Semibold, sans-serif;
   font-size: 50px;
   font-style: normal;
-  font-weight: 600;
   line-height: 72px;
   letter-spacing: -1px;
   background-size: 100%;
@@ -49,18 +48,16 @@
 .subtitle {
   text-align: center;
   color: #fff;
-  font-family: 'MonumentExtended-Regular';
+  font-family: PPMonumentExtended-Regular, sans-serif;
   font-size: 25px;
   font-style: normal;
-  font-weight: 600;
   line-height: 72px;
-  letter-spacing: -0.5px;
+  letter-spacing: -0.48px;
   margin-bottom: 64px;
 
   @include screen(maxLarge) {
     font-size: 18px;
     line-height: 24px;
-    letter-spacing: -0.36px;
     margin-bottom: 56px;
   }
 
