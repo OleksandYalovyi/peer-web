@@ -46,7 +46,7 @@ function App() {
             <Route path="/about" element={<About />} />
             <Route path="/placeholder" element={<Placeholder />} />
             <Route path={routing.withoutAuth.blog} element={<Blog />} />
-            <Route path={`${routing.withoutAuth.blog}/?:id`} element={<Article />} />
+            <Route path={`${routing.withoutAuth.blog}/:id?`} element={<Article />} />
             <Route path={routing.withoutAuth.team} element={<Team />} />
             <Route path={routing.withoutAuth.jobs} element={<Jobs />} />
             <Route path={routing.withoutAuth.team} element={<Team />} />
