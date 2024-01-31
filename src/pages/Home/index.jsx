@@ -1,12 +1,13 @@
 import React, { useState } from 'react'
 import QRCodeModal from 'components/Modals/QRCodeModal'
+import useQRCodeModal from 'components/Modals/QRCodeModal/useQRCodeModal'
 import Main from './components/Main'
 import Map from './components/Map'
 import PeerWithLove from './components/PeerWithLove'
 import styles from './home.module.scss'
 
 function Home() {
-  const [isQRCodeModal, setIsQRCodeModal] = useState(false)
+  const { isQRCodeModalOpen, setIsQRCodeModalOpen, closeQRCodeModal } = useQRCodeModal()
 
   return (
     <div className={styles.wrapper}>
@@ -16,11 +17,11 @@ function Home() {
         <Map
           onOpenQRCodeModal={(e) => {
             e.preventDefault()
-            setIsQRCodeModal(true)
+            setIsQRCodeModalOpen()
           }}
         />
       </div>
-      <QRCodeModal open={isQRCodeModal} onClose={() => setIsQRCodeModal(false)} />
+      <QRCodeModal isOpen={isQRCodeModalOpen} onClose={closeQRCodeModal} />
     </div>
   )
 }

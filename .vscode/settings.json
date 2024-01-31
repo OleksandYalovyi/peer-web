@@ -19,7 +19,7 @@
     "Navlink"
   ],
   "gitlens.views.worktrees.files.layout": "list",
-  "window.zoomLevel": 1,
+  "window.zoomLevel": 0,
   "git.suggestSmartCommit": false,
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": "explicit"

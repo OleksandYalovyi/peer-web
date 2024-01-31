@@ -1,37 +1,19 @@
 import React, { useState, useEffect } from 'react'
 import T from 'prop-types'
-import { useNavigate } from 'react-router-dom'
 import QRCode from 'react-qr-code'
 import Modal from 'components/Modal'
 import { IconCLose } from 'components/Icons/Close'
-import { detectOS } from 'utils/utils'
 import styles from './qr_code_modal.module.scss'
 
-function QRCodeModal({ open, onClose }) {
+function QRCodeModal({ isOpen, onClose }) {
   const [url, setUrl] = useState('')
-  const [os, setOs] = useState('')
-
-  const navigate = useNavigate()
-
-  useEffect(() => {
-    const detectedOs = detectOS()
-    setOs(detectedOs)
-  }, [])
 
   useEffect(() => {
     setUrl(`${window.location.origin}/app`)
   }, [window.location.origin])
 
-  useEffect(() => {
-    if (open && (os === 'Android' || os === 'iOS')) {
-      navigate({
-        pathname: '/app',
-      })
-    }
-  }, [os, open])
-
   return (
-    <Modal open={open} onClose={onClose} className={styles.qr_code_wrapper}>
+    <Modal open={isOpen} onClose={onClose} className={styles.qr_code_wrapper}>
       <div className={styles.container}>
         <button className={styles.close} type="button" onClick={onClose}>
           <IconCLose />
@@ -52,6 +34,6 @@ function QRCodeModal({ open, onClose }) {
 export default React.memo(QRCodeModal)
 
 QRCodeModal.propTypes = {
-  open: T.bool,
+  isOpen: T.bool,
   onClose: T.func,
 }
