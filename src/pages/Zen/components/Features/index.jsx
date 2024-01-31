@@ -4,14 +4,14 @@ import cls from 'classnames'
 import btnArrow from 'assets/btnArrow.svg'
 import zenChevron from 'assets/HomeProduct/zen-chevron.svg'
 import ArrowChevron from 'components/Icons/ArrowChevron'
-import useCurrentWidth from 'hooks/useCurrentWidth'
+import useCurrentSize from 'hooks/useCurrentSize'
 import data from './data'
 import styles from './features.module.scss'
 
-const Features = () => {
+function Features() {
   const [slide, setSlide] = useState(0)
   const [hovered, setHovered] = useState(null)
-  const width = useCurrentWidth()
+  const { width } = useCurrentSize()
 
   const handleSetSlide = (slideNumber) => {
     setSlide(slideNumber)

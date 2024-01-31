@@ -1,29 +1,27 @@
-/* eslint-disable react/prop-types */
 import React, { useState } from 'react'
-
-import HomeHeader from 'components/HomeHeader/index'
-import useCurrentWidth from 'hooks/useCurrentWidth'
+import QRCodeModal from 'components/Modals/QRCodeModal'
+import useQRCodeModal from 'components/Modals/QRCodeModal/useQRCodeModal'
+import Main from './components/Main'
+import Map from './components/Map'
+import PeerWithLove from './components/PeerWithLove'
 import styles from './home.module.scss'
-import PeerMain from './components/PeerMain/index'
-import PeerServices from './components/PeerServices/index'
-import HomePageMobile from './components/HomePageMobile/index'
 
-const Home = () => {
-  const [isPeerMainLoaded, setIsPeerMainLoaded] = useState(false)
-  const width = useCurrentWidth()
-  const isMobile = width < 900
+function Home() {
+  const { isQRCodeModalOpen, setIsQRCodeModalOpen, closeQRCodeModal } = useQRCodeModal()
 
   return (
     <div className={styles.wrapper}>
-      {!isMobile ? (
-        <>
-          <HomeHeader />
-          <PeerMain setIsPeerMainLoaded={setIsPeerMainLoaded} isPeerMainLoaded={isPeerMainLoaded} />
-          {isPeerMainLoaded && <PeerServices />}
-        </>
-      ) : (
-        <HomePageMobile />
-      )}
+      <div className={styles.container}>
+        <PeerWithLove />
+        <Main />
+        <Map
+          onOpenQRCodeModal={(e) => {
+            e.preventDefault()
+            setIsQRCodeModalOpen()
+          }}
+        />
+      </div>
+      <QRCodeModal isOpen={isQRCodeModalOpen} onClose={closeQRCodeModal} />
     </div>
   )
 }

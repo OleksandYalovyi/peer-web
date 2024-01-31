@@ -2,7 +2,7 @@
 import React, { useMemo, useRef } from 'react'
 import styles from './styles.module.scss'
 
-const Date = ({ position }) => {
+function Date({ position }) {
   const ref = useRef()
 
   const content = useMemo(() => {
@@ -16,7 +16,7 @@ const Date = ({ position }) => {
   return <span ref={ref}>{content}</span>
 }
 
-const Dates = ({ userPosition }) => {
+function Dates({ userPosition }) {
   const lightStyles = useMemo(
     () => ({
       '--cx': `${userPosition.x}px`,

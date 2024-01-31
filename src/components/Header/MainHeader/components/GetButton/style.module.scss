@@ -1,0 +1,42 @@
+@import 'src/styles/_mixins.scss';
+
+.gradient_wrapper {
+  background: var(--gradient-p-0);
+  padding: 1px 1px;
+  border-radius: var(--Spacing-4, 16px);
+  display: flex;
+
+  @media screen and (max-width: 680px) {
+    border-radius: 8px;
+  }
+}
+
+.wrapper {
+  color: #FFF;
+  white-space: nowrap;
+  justify-content: center;
+  border-radius: var(--Spacing-4, 16px);
+  background: var(--bg);
+  padding: 32px 40px;
+  font: 700 20px/100% MonumentExtended-Regular, sans-serif;
+
+  @media screen and (max-width: 1270px) {
+    padding: 15.875px 19.844px;
+    font-size: 12px;
+  }
+  
+  @media screen and (max-width: 680px) {
+    padding: 16px;
+    font-size: 12px;
+    font-weight: 600;
+    border-radius: 8px;
+  }
+
+  &:hover {
+    cursor: pointer;
+    color: #000;
+    @include primaryButton;
+  }
+}
+
+

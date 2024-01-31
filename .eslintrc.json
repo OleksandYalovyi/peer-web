@@ -1,7 +1,13 @@
 {
   "extends": ["airbnb", "prettier"],
-  "parser": "babel-eslint",
-  "plugins": ["prettier", "formatjs"],
+  "parser": "@babel/eslint-parser",
+  "plugins": ["prettier", "formatjs", "import"],
+  "parserOptions": {
+    "requireConfigFile": false,
+    "babelOptions": {
+      "presets": ["@babel/preset-env", "@babel/preset-react"]
+    }
+  },
   "settings": {
     "import/resolver": {
       "node": {
@@ -20,6 +26,7 @@
         "idInterpolationPattern": "[sha512:contenthash:base64:6]"
       }
     ],
+    "react/jsx-no-constructed-context-values": "off",
     "prettier/prettier": [
       "error",
       {
@@ -46,6 +53,8 @@
         "assignment": false
       }
     ],
+    "react/no-unstable-nested-components": 0,
+    "react/jsx-no-useless-fragment": 0,
     "react/no-unescaped-entities": 0,
     "react/require-default-props": 0,
     "react/default-props-match-prop-types": 0,

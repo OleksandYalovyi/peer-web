@@ -2,12 +2,12 @@ import React, { useRef, useEffect } from 'react'
 import T from 'prop-types'
 import cls from 'classnames'
 import YouTube from 'react-youtube'
-import useCurrentWidth from 'hooks/useCurrentWidth'
+import useCurrentSize from 'hooks/useCurrentSize'
 
 import styles from './styles.module.scss'
 
-const VideoModal = ({ isOpen, onClose }) => {
-  const width = useCurrentWidth()
+function VideoModal({ isOpen, onClose }) {
+  const { width } = useCurrentSize()
   const videoHeight = width > 1170 ? 1170 / 1.77 : width / 1.77
   const videoOptions = {
     height: videoHeight,

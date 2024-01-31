@@ -1,24 +1,21 @@
-import { useEffect } from 'react'
-import { withRouter } from 'react-router-dom'
+import React, { useEffect } from 'react'
+import { useLocation, Navigate } from 'react-router-dom'
 import PropTypes from 'prop-types'
 
-const ScrollToTop = ({ children, location: { pathname } }) => {
+function ScrollToTop({ children }) {
+  const { pathname } = useLocation()
+
   useEffect(() => {
     window.scrollTo({
       top: 0,
     })
   }, [pathname])
 
-  return children || null
-}
-
-export default withRouter(ScrollToTop)
-
-const locationShape = {
-  pathname: PropTypes.string,
+  return children || <Navigate to="/" />
 }
 
 ScrollToTop.propTypes = {
   children: PropTypes.node,
-  location: PropTypes.shape(locationShape),
 }
+
+export default ScrollToTop

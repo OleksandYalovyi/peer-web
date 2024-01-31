@@ -4,7 +4,7 @@ import T from 'prop-types'
 import cls from 'classnames'
 import styles from './linkedin.module.scss'
 
-const Linkedin = ({ hovered, width = '22.33', isLight, size, isGrey }) => {
+function Linkedin({ hovered, width = '22.33', isLight, size, isGrey }) {
   const renderColor = () => {
     if (isGrey) return '#4D4D4D'
     if (hovered) return '#00d3f9'
@@ -38,7 +38,7 @@ Linkedin.propTypes = {
   hovered: T.bool,
   width: T.string,
   isLight: T.bool,
-  size: T.string,
+  size: T.oneOfType([T.string, T.bool]),
   isGrey: T.bool,
 }
 

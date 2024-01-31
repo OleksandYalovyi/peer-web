@@ -1,0 +1,121 @@
+.container {
+  z-index: 9;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 auto;
+  padding: 40px 80px;
+  background: var(--bg);
+
+  @media screen and (max-width: 1560px) {
+    padding: 24.38px 48.75px;
+  }
+
+  @media screen and (max-width: 1270px) {
+    padding: 24px 36.69px;
+  }
+
+  @media screen and (max-width: 880px) {
+    flex-direction: column;
+    gap: 48px;
+    padding: 48px 0;
+  }
+
+  .left_container {
+    display: flex;
+    gap: 67px;
+    font-size: 16px;
+    align-items: center;
+
+    @media screen and (max-width: 1560px) {
+      gap: 40.83px;
+      font-size: 12px;
+    }
+
+    @media screen and (max-width: 1270px) {
+      padding: 33.24px;
+      font-size: 11px;
+    }
+
+    @media screen and (max-width: 880px) {
+      flex-direction: column;
+      padding: 0;
+      font-size: 16px;
+      gap: 48px;
+    }
+
+    .links {
+      display: flex;
+      gap: 67px;
+
+      @media screen and (max-width: 880px) {
+        flex-direction: column;
+        gap: 16px;
+        align-items: center;
+      }
+    }
+
+    .socials {
+      display: flex;
+      gap: 67px;
+
+      @media screen and (max-width: 880px) {
+        gap: 80px;
+      }
+    }
+
+    .logo_container {
+      display: flex;
+      margin-right: 15px;
+
+      @media screen and (max-width: 680px) {
+        margin-right: 12px;
+      }
+    }
+
+    a {
+      color: #FFF;
+      font-family: IBMPlexMono-Bold, monospace;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 100%;
+      text-transform: uppercase;
+
+      @media screen and (max-width: 880px) {
+        font-family: IBMPlexMono, monospace;
+
+      }
+
+      &:hover {
+        color: var(--main-link-hover);
+      }
+
+      svg {
+        transform: scale(0.8);
+
+        @media screen and (max-width: 1560px) {
+          transform: scale(0.7);
+        }
+
+        @media screen and (max-width: 880px) {
+          transform: scale(1);
+        }
+      }
+    }
+  }
+
+  .right_container {
+    color: #FFF;
+    font-family: IBMPlexMono-Bold, monospace;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 100%;
+    opacity: 0.5;
+
+    @media screen and (max-width: 880px) {
+      font-size: 14px;
+    }
+  }
+}

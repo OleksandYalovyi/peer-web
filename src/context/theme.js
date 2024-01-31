@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 
 const ThemeContext = createContext()
 
-export const ThemeProvider = ({ children }) => {
+export function ThemeProvider({ children }) {
   const [isLight, setIsLight] = useState(true)
   const switchTheme = () => {
     setIsLight(!isLight)

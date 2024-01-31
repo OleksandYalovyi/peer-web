@@ -13,7 +13,7 @@ import Dates from './components/Dates'
 import Vision from './components/Vision/index'
 import Manifesto from './components/Manifesto/index'
 
-const Home = () => {
+function Home() {
   const [userPosition, setUserPosition] = useState({
     x: 0,
     y: 0,

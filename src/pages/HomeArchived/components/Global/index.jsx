@@ -1,12 +1,12 @@
 import { React, useEffect } from 'react'
 import { NavLink } from 'react-router-dom'
-import useCurrentWidth from 'hooks/useCurrentWidth'
+import useCurrentSize from 'hooks/useCurrentSize'
 import PeerLogoGlobal from 'assets/Home/peerlogogloba.png'
 import animatedImage from './nextparticle'
 import styles from './styles.module.scss'
 
-const Global = () => {
-  const width = useCurrentWidth()
+function Global() {
+  const { width } = useCurrentSize()
   const isMobile = width < 768
 
   useEffect(() => {

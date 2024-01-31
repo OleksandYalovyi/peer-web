@@ -1,19 +1,21 @@
+/* eslint-disable max-len */
 import React from 'react'
 import T from 'prop-types'
 import cls from 'classnames'
 import styles from './logoMain.module.scss'
 
-const LogoIcon = ({ hovered, width = '50', isLight }) => (
-  <svg
-    className={cls({ [styles.hovered]: hovered })}
-    xmlns="http://www.w3.org/2000/svg"
-    viewBox="0 0 81 81"
-    width={width}
-  >
-    <path
-      fill={isLight ? '#000000' : '#ffffff'}
-      fillRule="evenodd"
-      d={`M268.106 40.721v22.382h-9.651V18.695h9.651v7.46c2.683-6.039 8.135-8.26 13.764-8.26v10.392c-6.346-.444-13.764 
+function LogoIcon({ hovered, width = '50', isLight }) {
+  return (
+    <svg
+      className={cls({ [styles.hovered]: hovered })}
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 81 81"
+      width={width}
+    >
+      <path
+        fill={isLight ? '#000000' : '#ffffff'}
+        fillRule="evenodd"
+        d={`M268.106 40.721v22.382h-9.651V18.695h9.651v7.46c2.683-6.039 8.135-8.26 13.764-8.26v10.392c-6.346-.444-13.764 
       2.487-13.764 12.434zm-54.068 4.264c1.52 6.928 7.15 10.48 14.3 10.48 5.362 0 9.383-2.398 11.528-5.507l7.955 
       4.62c-4.111 6.038-10.814 9.68-19.573 9.68-14.745 0-24.308-10.036-24.308-23.359 0-13.145 9.563-23.359 
       23.593-23.359 13.316 0 22.433 10.658 22.433 23.448 0 1.333-.179 2.753-.357 3.997h-35.571zm13.407-18.74c-7.24 
@@ -36,9 +38,10 @@ const LogoIcon = ({ hovered, width = '50', isLight }) => (
       18.839-10.296-.638-.335-1.264-.682-1.932-.978zm10.762 7.742-.002.033c-5.968-.464-14.693.646-22.38 8.568-3.955 
       4.076-8.037 7.051-12.211 9.119 3.693-.315 7.728-1.224 12.078-3.077 8.74-3.719 16.607-3.968 23.379-.741 3.046 
       1.451 5.557 3.517 7.605 5.825a32.531 32.531 0 0 0-8.469-19.727z`}
-    />
-  </svg>
-)
+      />
+    </svg>
+  )
+}
 
 LogoIcon.propTypes = {
   hovered: T.bool,

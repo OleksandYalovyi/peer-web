@@ -2,10 +2,10 @@ import React, { useEffect, useRef, useState } from 'react'
 import { US, FR, ES, CN, RU, KR, VN } from 'country-flag-icons/react/3x2'
 import cls from 'classnames'
 import T from 'prop-types'
-import useCurrentWidth from 'hooks/useCurrentWidth'
+import useCurrentSize from 'hooks/useCurrentSize'
 import styles from './dropdown.module.scss'
 
-const CountryIcon = ({ name }) => {
+function CountryIcon({ name }) {
   switch (name) {
     case 'Français':
       return <FR title="Français" className={styles.icon} />
@@ -30,13 +30,13 @@ const CountryIcon = ({ name }) => {
   }
 }
 
-const Dropdown = ({ list, children }) => {
+function Dropdown({ list, children }) {
   const { data, type } = list
 
   const childrenRef = useRef(null)
   const listRef = useRef(null)
   const [isShow, setIsShow] = useState(false)
-  const width = useCurrentWidth()
+  const { width } = useCurrentSize()
 
   const cloneChildren = React.cloneElement(children, {
     ref: childrenRef,

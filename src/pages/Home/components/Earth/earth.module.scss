@@ -1,0 +1,56 @@
+.container {
+  width: 100%;
+  max-width: 1710px;
+  margin: 0 auto;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  height: fit-content;
+
+  @media screen and (max-width: 660px) {
+    scale: 2.5;
+  }
+
+  img {
+    width: 100%;
+
+    &.inEarthImage {
+      position: absolute;
+      top: 27%;
+      left: -5%;
+      max-width: 95%;
+
+      @media screen and (max-width: 660px) {
+        left: -10%;
+      }
+    }
+  }
+}
+
+.image {
+  position: relative;
+  display: flex;
+}
+
+.content {
+  flex: 1 1;
+  display: flex;
+  align-items: flex-end;
+}
+
+.earthTransformed {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 0 80px;
+
+  @media screen and (max-width: 660px) {
+    padding: 0;
+  }
+}
+
+.hiddenImage {
+  opacity: 0;
+}
