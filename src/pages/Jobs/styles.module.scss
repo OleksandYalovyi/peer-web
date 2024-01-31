@@ -117,23 +117,25 @@
 }
 
 .button_group {
+  max-width: 90%;
   margin: auto;
   display: flex;
   padding: 8px;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   align-content: center;
   border-radius: var(--Spacing-4, 16px);
   border: 2px solid #222;
   margin-bottom: 56px;
 
-  @include screen(maxMd) {
-    display: flex;
+  @media screen and (max-width: $tablet-lg) {
     flex-wrap: wrap;
+    justify-content: flex-start;
   }
 
   &__item {
     display: flex;
+    margin-right: 8px;
     gap: 8px;
     padding: 16px 24px;
     color: var(--Neutrals-Gray-300, #808080);
