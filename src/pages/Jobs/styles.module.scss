@@ -118,11 +118,9 @@
 
 .button_group {
   margin: auto;
-  max-width: fit-content;
   display: flex;
   padding: 8px;
-
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   align-content: center;
   border-radius: var(--Spacing-4, 16px);
@@ -133,34 +131,39 @@
     display: flex;
     flex-wrap: wrap;
   }
+
+  &__item {
+    display: flex;
+    gap: 8px;
+    padding: 16px 24px;
+    color: var(--Neutrals-Gray-300, #808080);
+    text-align: center;
+    font-family: 'Gilroy-Regular';
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 16px;
+    text-transform: lowercase;
+    cursor: pointer;
+
+    @include screen(maxSm) {
+      width: 100%;
+    }
+
+    &:hover:not(.selected) {
+      border-radius: 8px;
+      background: var(--Neutrals-Gray-700, #222);
+    }
+  }
 }
 
-.button_group li {
-  display: flex;
-  gap: 8px;
-  padding: 16px 24px;
-  color: var(--Neutrals-Gray-300, #808080);
-  text-align: center;
-  font-family: 'Gilroy-Regular';
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: 16px;
-  text-transform: lowercase;
-  cursor: pointer;
-
-  @include screen(maxSm) {
-    width: 100%;
-  }
-
-  &:hover {
-    color: var(--Primary-Black, #000);
-    border-radius: var(--Spacing-2, 8px);
-    background: var(
-      --Gradient-P0,
-      linear-gradient(262deg, #ffbaf3 11.2%, #fff1d4 50.33%, #8bf3fc 90.29%)
-    );
-  }
+.selected {
+  color: var(--Primary-Black, #000);
+  border-radius: var(--Spacing-2, 8px);
+  background: var(
+    --Gradient-P0,
+    linear-gradient(262deg, #ffbaf3 11.2%, #fff1d4 50.33%, #8bf3fc 90.29%)
+  );
 }
 
 .jobs_title {

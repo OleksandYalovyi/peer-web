@@ -74,7 +74,14 @@ function Jobs() {
       <section>
         <ul className={styles.button_group}>
           {buttons.map((btn) => (
-            <li key={btn} onClick={() => handleBtnClick(btn)}>
+            <li
+              className={cn(
+                styles.button_group__item,
+                selectedItem.toLowerCase() === btn.toLowerCase() ? styles.selected : '',
+              )}
+              key={btn}
+              onClick={() => handleBtnClick(btn)}
+            >
               {btn}
             </li>
           ))}
