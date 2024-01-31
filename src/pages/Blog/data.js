@@ -115,7 +115,7 @@ const data = {
             title: 'Live Location',
             image: LiveLocationImg,
             text: 'it’s you v. the world. are you game (or scared)?',
-            withImage: false,
+            // withImage: false,
             node: (
               <>
                 <Text>
