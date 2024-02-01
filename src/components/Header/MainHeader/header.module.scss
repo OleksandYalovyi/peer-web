@@ -57,6 +57,10 @@
       .peerLogo {
         width: 136px;
 
+        @media screen and (max-width: 1560px) {
+          width: 82.88px;
+        }
+
         @media screen and (max-width: 1270px) {
           width: 67.5px;
         }
@@ -106,11 +110,10 @@
     .nav_item {
       position: relative;
       color: var(--main-font);
-      font-weight: 250;
+      font-weight: 300;
       font-size: 20px;
-      font-family: MonumentExtended-Regular, sans-serif;
+      font-family: MonumentExtended, sans-serif;
       line-height: 100%;
-      letter-spacing: 2.8px;
       text-decoration: none;
       cursor: pointer;
       transition: 0.3s;

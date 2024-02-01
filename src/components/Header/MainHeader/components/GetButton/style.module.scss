@@ -6,6 +6,14 @@
   border-radius: var(--Spacing-4, 16px);
   display: flex;
 
+  @media screen and (max-width: 1560px) {
+    border-radius: 9.75px;
+  }
+
+  @media screen and (max-width: 1270px) {
+    border-radius: 7.94px;
+  }
+
   @media screen and (max-width: 680px) {
     border-radius: 8px;
   }
@@ -22,14 +30,21 @@
     700 20px/100% MonumentExtended,
     sans-serif;
 
+  @media screen and (max-width: 1560px) {
+    padding: 19.5px 24.38px;
+    font-size: 14px;
+    border-radius: 9.75px;
+  }
+
   @media screen and (max-width: 1270px) {
     padding: 15.875px 19.844px;
     font-size: 12px;
+    border-radius: 7.94px;
   }
 
   @media screen and (max-width: 680px) {
     padding: 16px;
-    font-size: 12px;
+    font-size: 11px;
     font-weight: 600;
     border-radius: 8px;
   }
