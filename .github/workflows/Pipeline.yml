@@ -68,13 +68,13 @@ on:
     branches: 
       - develop
       - stage
-      - v5-peer-web
+      - main-peer-web
 
   pull_request:
     branches:
       - develop
       - stage
-      - v5-peer-web
+      - main-peer-web
       
 jobs:
 # Part 1: CI
@@ -114,7 +114,7 @@ jobs:
         aws-region           : ${{ env.STAGE_AWS_REGION }}
  
     - name: Configurate AWS Credentials for prod_account
-      if: ${{ github.ref == 'refs/heads/v5-peer-web' }}
+      if: ${{ github.ref == 'refs/heads/main-peer-web' }}
       uses: aws-actions/configure-aws-credentials@v1
       with:
         aws-access-key-id    : ${{ env.PROD_AWS_ACCESS_KEY_ID }}
@@ -130,7 +130,7 @@ jobs:
       run: aws s3 sync ${{ env.SOURCE_DIR }} s3://${{ env.STAGE_AWS_S3_BUCKET }}
 
     - name: copy to S3 bucket to prod_account        
-      if: ${{ github.ref == 'refs/heads/v5-peer-web' }}
+      if: ${{ github.ref == 'refs/heads/main-peer-web' }}
       run: aws s3 sync ${{ env.SOURCE_DIR }} s3://${{ env.PROD_AWS_S3_BUCKET }}
  
     - name: Invalidate CloudFront in dev_account
@@ -154,7 +154,7 @@ jobs:
         AWS_SECRET_ACCESS_KEY: ${{ env.STAGE_AWS_SECRET_ACCESS_KEY }}
 
     - name: Invalidate CloudFront in prod_account          
-      if: ${{ github.ref == 'refs/heads/v5-peer-web' }}
+      if: ${{ github.ref == 'refs/heads/main-peer-web' }}
       uses: chetan/invalidate-cloudfront-action@v2
       env:
         DISTRIBUTION: ${{ env.PROD_DISTRIBUTION_ID }}
@@ -180,7 +180,7 @@ jobs:
         AWS_DEFAULT_REGION: ${{ env.STAGE_AWS_REGION }}
 
     - name: Sent report for prod
-      if: ${{ github.ref == 'refs/heads/v5-peer-web' }}
+      if: ${{ github.ref == 'refs/heads/main-peer-web' }}
       run:  |
         aws sns publish \
           --topic-arn "arn:aws:sns:us-west-2:770080080051:Deployment" \
