@@ -18,7 +18,8 @@
   width: fit-content;
   margin: auto;
   margin-bottom: 8px;
-  font-family: PPMonumentExtended-Semibold, sans-serif;
+  font-family: MonumentExtended;
+  font-weight: 600;
   font-size: 50px;
   font-style: normal;
   line-height: 72px;
@@ -48,11 +49,11 @@
 .subtitle {
   text-align: center;
   color: #fff;
-  font-family: PPMonumentExtended-Regular, sans-serif;
-  font-size: 25px;
+  font-family: MonumentExtended;
+  font-weight: 500;
   font-style: normal;
+  font-size: 25px;
   line-height: 72px;
-  letter-spacing: -0.48px;
   margin-bottom: 64px;
 
   @include screen(maxLarge) {
@@ -64,7 +65,6 @@
   @media screen and (max-width: 576px) {
     font-size: 14px;
     line-height: 20px;
-    letter-spacing: -0.28px;
     margin-bottom: 24px;
   }
 }

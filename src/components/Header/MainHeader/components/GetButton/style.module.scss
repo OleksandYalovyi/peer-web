@@ -12,19 +12,21 @@
 }
 
 .wrapper {
-  color: #FFF;
+  color: #fff;
   white-space: nowrap;
   justify-content: center;
   border-radius: var(--Spacing-4, 16px);
   background: var(--bg);
   padding: 32px 40px;
-  font: 700 20px/100% MonumentExtended-Regular, sans-serif;
+  font:
+    700 20px/100% MonumentExtended,
+    sans-serif;
 
   @media screen and (max-width: 1270px) {
     padding: 15.875px 19.844px;
     font-size: 12px;
   }
-  
+
   @media screen and (max-width: 680px) {
     padding: 16px;
     font-size: 12px;
@@ -38,5 +40,3 @@
     @include primaryButton;
   }
 }
-
-

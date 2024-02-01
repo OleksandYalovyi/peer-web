@@ -1,5 +1,5 @@
 import React, { useEffect, useMemo, useRef, useState } from 'react'
-import EarhImage from 'assets/Home/earth.png'
+import EarthImage from 'assets/Home/earth_.png'
 import InEarthImage from 'assets/Home/inEarth.png'
 import styles from './earth.module.scss'
 
@@ -37,13 +37,13 @@ function Earth() {
         <div className={styles.container}>
           <img className={styles.inEarthImage} src={InEarthImage} alt="InEarthImage" />
 
-          <img className={styles.hiddenImage} src={EarhImage} alt="Earth" />
+          <img className={styles.hiddenImage} src={EarthImage} alt="Earth" />
         </div>
       </div>
 
       <div className={styles.earthTransformed} ref={divRef} style={{ ...earthTransformedStyle }}>
         <div className={styles.container}>
-          <img src={EarhImage} alt="Earth" />
+          <img src={EarthImage} alt="Earth" />
         </div>
       </div>
     </>

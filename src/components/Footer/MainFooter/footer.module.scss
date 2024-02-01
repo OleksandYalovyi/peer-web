@@ -4,7 +4,7 @@
   padding: 56px 126.75px 100px 0;
   max-width: 1543.5px;
   margin: auto;
-  border-top: solid 1px rgba(255, 255, 255, 0.20);
+  border-top: solid 1px rgba(255, 255, 255, 0.2);
 
   @media screen and (max-width: 1440px) {
     max-width: 1157px;
@@ -36,7 +36,6 @@
       gap: 24px;
       align-items: center;
 
-
       @media screen and (max-width: 480px) {
         gap: 56px;
         margin: auto;
@@ -64,7 +63,7 @@
     }
 
     &__heading {
-      color: #FFF;
+      color: #fff;
       font-family: IBMPlexMono-Medium, monospace;
       font-size: 18px;
       font-style: normal;
@@ -82,8 +81,8 @@
       display: flex;
       flex-direction: column;
 
-      color: #B6B6B6;
-      font-family: Monument Extended, sans-serif;
+      color: #b6b6b6;
+      font-family: MonumentExtended;
       font-size: 18px;
       font-style: normal;
       font-weight: 500;
@@ -94,7 +93,7 @@
       }
 
       &:hover {
-       text-decoration: none;
+        text-decoration: none;
       }
     }
   }
