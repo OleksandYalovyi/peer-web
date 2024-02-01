@@ -106,14 +106,18 @@
     .nav_item {
       position: relative;
       color: var(--main-font);
-      font-weight: 700;
+      font-weight: 250;
       font-size: 20px;
-      font-family: BallingerMono-Light, sans-serif;
-      line-height: 45px;
+      font-family: MonumentExtended-Regular, sans-serif;
+      line-height: 100%;
       letter-spacing: 2.8px;
       text-decoration: none;
       cursor: pointer;
       transition: 0.3s;
+
+      @media screen and (max-width: 1560px) {
+        font-size: 14px;
+      }
 
       @media screen and (max-width: 1270px) {
         font-size: 11px;
