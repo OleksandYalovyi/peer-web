@@ -5,14 +5,15 @@
   padding: 17.5px;
 
   &__avatar {
-    margin-bottom: 17.5px;
+    margin-bottom: 16px;
   }
 
   &__name {
     color: var(--Primary-White, #fff);
-    font-family: PPMonumentExtended-Semibold, sans-serif;
-    font-size: 24px;
+    font-family: MonumentExtended;
     font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
     margin-bottom: 0;
     line-height: 32px;
 
@@ -36,6 +37,7 @@
     font-style: normal;
     font-weight: 500;
     line-height: 35.108px;
+    margin-bottom: 10px;
 
     @include screen(maxLarge) {
       font-size: 15.202px;
