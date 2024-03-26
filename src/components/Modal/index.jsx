@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import React, { useEffect, useState, ReactNode, useRef, useCallback } from 'react'
+import React, { useEffect, useState, useRef, useCallback } from 'react'
 import ReactDOM from 'react-dom'
 import cn from 'classnames'
 import styles from './modal.module.scss'

@@ -3,11 +3,6 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@mui/icons-material": "^5.15.6",
-    "@mui/material": "^5.15.6",
-    "@testing-library/jest-dom": "^5.17.0",
-    "@testing-library/react": "^13.4.0",
-    "@testing-library/user-event": "^13.5.0",
     "axios": "^1.6.5",
     "classnames": "^2.5.1",
     "country-flag-icons": "^1.5.9",
@@ -27,8 +22,7 @@
     "react-youtube": "^10.1.0",
     "sass": "^1.69.7",
     "slick-carousel": "^1.8.1",
-    "splitting": "^1.0.6",
-    "web-vitals": "^2.1.4"
+    "splitting": "^1.0.6"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -36,7 +30,8 @@
     "build-dev": "CI=false && REACT_APP_STAGE=development react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "lint": "eslint src --ext .js,.jsx,.ts,.tsx"
+    "lint": "eslint src --ext .js,.jsx,.ts,.tsx",
+    "run-webpack-bundle-analyzer": "webpack-bundle-analyzer ./build/bundle-stats.json"
   },
   "eslintConfig": {
     "extends": [
@@ -70,6 +65,7 @@
     "eslint-plugin-prettier": "^5.1.2",
     "eslint-plugin-react": "^7.33.2",
     "eslint-plugin-react-hooks": "^4.6.0",
-    "prettier": "^3.1.1"
+    "prettier": "^3.1.1",
+    "webpack-bundle-analyzer": "^4.10.1"
   }
 }
