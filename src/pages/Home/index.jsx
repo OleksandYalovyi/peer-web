@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import QRCodeModal from 'components/Modals/QRCodeModal'
 import useQRCodeModal from 'components/Modals/QRCodeModal/useQRCodeModal'
 import Main from './components/Main'

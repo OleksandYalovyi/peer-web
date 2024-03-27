@@ -21,8 +21,8 @@ const buttons = [
 function Jobs() {
   const [selectedItem, setSelectedItem] = useState('All')
   const [selectedJobs, setSelectedJobs] = useState(allJobs)
-  const [loading, setLoading] = useState(false)
   const [isOpen, setOpen] = useState(false)
+  // const [loading, setLoading] = useState(false)
 
   function capitalizeFirstLetter(str) {
     return str.replace(/\b\w/g, (item) => item.toUpperCase())
@@ -38,12 +38,12 @@ function Jobs() {
   }
 
   const handleBtnClick = (itemName) => {
-    setLoading(true)
+    // setLoading(true)
     setSelectedItem(capitalizeFirstLetter(itemName))
 
     setTimeout(() => {
       selectJobsData(itemName)
-      setLoading(false)
+      // setLoading(false)
     }, 0)
   }
 

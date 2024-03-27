@@ -7,9 +7,10 @@ import LiveLocationImg from 'assets/Articles/liveLocation.png'
 import AllNewChatImg from 'assets/Articles/allNewChat.png'
 import LunarNewYearImg from 'assets/Articles/lunarNewYear.png'
 import ThreeDMapsImg from 'assets/Articles/threeDMaps.png'
-import PostingImagesImg from 'assets/Articles/postingImages.png'
-import FreemiumEmojisImg from 'assets/Articles/freemiumEmojis.png'
-import { Text, Title, Image, List } from 'pages/Article/components/ArticleComponents'
+// import PostingImagesImg from 'assets/Articles/postingImages.png'
+// import FreemiumEmojisImg from 'assets/Articles/freemiumEmojis.png'
+// import { Text, Title, Image, List } from 'pages/Article/components/ArticleComponents'
+import { Text } from 'pages/Article/components/ArticleComponents'
 
 const data = {
   rows: [

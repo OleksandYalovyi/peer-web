@@ -26,7 +26,6 @@
       padding: 24.4px 48.8px 7px;
     }
 
-
     @media screen and (max-width: 1270px) {
       padding: 10px 39.7px 7px;
     }
@@ -112,7 +111,7 @@
       color: var(--main-font);
       font-weight: 300;
       font-size: 20px;
-      font-family: MonumentExtended, sans-serif;
+      font-family: 'PPMonumentExtended-Light', MonumentExtended, sans-serif;
       line-height: 100%;
       text-decoration: none;
       cursor: pointer;
@@ -151,10 +150,8 @@
         }
       }
 
-
       &:hover {
         color: var(--main-font-hover);
-
       }
     }
   }
