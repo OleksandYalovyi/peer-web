@@ -1,124 +1,178 @@
 @font-face {
   font-family: 'Gilroy';
-  src: url('./Gilroy-Black.otf') format('opentype');
+  src: url('./woff/Gilroy-Black.woff');
+  src:
+    url('./woff/Gilroy-Black.woff') format('woff'),
+    url('./otf/Gilroy-Black.otf') format('opentype');
 }
 
 @font-face {
   font-family: 'Gilroy-Italic';
   font-style: normal;
-  src: url('./Gilroy-BlackItalic.otf') format('opentype');
+  src: url('./woff/Gilroy-BlackItalic.woff');
+  src:
+    url('./woff/Gilroy-BlackItalic.woff') format('woff'),
+    url('./otf/Gilroy-BlackItalic.otf') format('opentype');
   font-display: swap;
 }
 
 @font-face {
   font-family: 'Gilroy-Bold';
   font-style: normal;
-  src: url('./Gilroy-Bold.otf') format('opentype');
+  src: url('./woff/Gilroy-Bold.woff');
+  src:
+    url('./woff/Gilroy-Bold.woff') format('woff'),
+    url('./otf/Gilroy-Bold.otf') format('opentype');
   font-display: swap;
 }
 
 @font-face {
   font-family: 'Gilroy-Bold-Italic';
   font-style: normal;
-  src: url('./Gilroy-BoldItalic.otf') format('opentype');
+  src: url('./woff/Gilroy-BoldItalic.woff');
+  src:
+    url('./woff/Gilroy-BoldItalic.woff') format('woff'),
+    url('./otf/Gilroy-BoldItalic.otf') format('opentype');
   font-display: swap;
 }
 
 @font-face {
   font-family: 'Gilroy-ExtraBold';
   font-style: normal;
-  src: url('./Gilroy-ExtraBold.otf') format('opentype');
+  src: url('./woff/Gilroy-ExtraBold.woff');
+  src:
+    url('./woff/Gilroy-ExtraBold.woff') format('woff'),
+    url('./otf/Gilroy-ExtraBold.otf') format('opentype');
   font-display: swap;
 }
 
 @font-face {
   font-family: 'Gilroy-ExtraBoldItalic';
   font-style: normal;
-  src: url('./Gilroy-ExtraBoldItalic.otf') format('opentype');
+  src: url('./woff/Gilroy-ExtraBoldItalic.woff');
+  src:
+    url('./woff/Gilroy-ExtraBoldItalic.woff') format('woff'),
+    url('./otf/Gilroy-ExtraBoldItalic.otf') format('opentype');
   font-display: swap;
 }
 
 @font-face {
   font-family: 'Gilroy-Heavy';
   font-style: normal;
-  src: url('./Gilroy-Heavy.otf') format('opentype');
+  src: url('./woff/Gilroy-Heavy.woff');
+  src:
+    url('./woff/Gilroy-Heavy.woff') format('woff'),
+    url('./otf/Gilroy-Heavy.otf') format('opentype');
   font-display: swap;
 }
 
 @font-face {
   font-family: 'Gilroy-HeavyItalic';
   font-style: normal;
-  src: url('./Gilroy-HeavyItalic.otf') format('opentype');
+  src: url('./woff/Gilroy-HeavyItalic.woff');
+  src:
+    url('./woff/Gilroy-HeavyItalic.woff') format('woff'),
+    url('./otf/Gilroy-HeavyItalic.otf') format('opentype');
   font-display: swap;
 }
 
 @font-face {
   font-family: 'Gilroy-Light';
   font-style: normal;
-  src: url('./Gilroy-Light.otf') format('opentype');
+  src: url('./woff/Gilroy-Light.woff');
+  src:
+    url('./woff/Gilroy-Light.woff') format('woff'),
+    url('./otf/Gilroy-Light.otf') format('opentype');
   font-display: swap;
 }
 
 @font-face {
   font-family: 'Gilroy-LightItalic';
   font-style: normal;
-  src: url('./Gilroy-LightItalic.otf') format('opentype');
+  src: url('./woff/Gilroy-LightItalic.woff');
+  src:
+    url('./woff/Gilroy-LightItalic.woff') format('woff'),
+    url('./otf/Gilroy-LightItalic.otf') format('opentype');
   font-display: swap;
 }
 
 @font-face {
   font-family: 'Gilroy-Medium';
   font-style: normal;
-  src: url('./Gilroy-Medium.otf') format('opentype');
+  src: url('./woff/Gilroy-Medium.woff');
+  src:
+    url('./woff/Gilroy-Medium.woff') format('woff'),
+    url('./otf/Gilroy-Medium.otf') format('opentype');
   font-display: swap;
 }
 
 @font-face {
   font-family: 'Gilroy-MediumItalic';
   font-style: normal;
-  src: url('./Gilroy-MediumItalic.otf') format('opentype');
+  src: url('./woff/Gilroy-MediumItalic.woff');
+  src:
+    url('./woff/Gilroy-MediumItalic.woff') format('woff'),
+    url('./otf/Gilroy-MediumItalic.otf') format('opentype');
   font-display: swap;
 }
 
 @font-face {
   font-family: 'Gilroy-Regular';
   font-style: normal;
-  src: url('./Gilroy-Regular.otf') format('opentype');
+  src: url('./woff/Gilroy-Regular.woff');
+  src:
+    url('./woff/Gilroy-Regular.woff') format('woff'),
+    url('./otf/Gilroy-Regular.otf') format('opentype');
   font-display: swap;
 }
 
 @font-face {
   font-family: 'Gilroy-RegularItalic';
   font-style: normal;
-  src: url('./Gilroy-RegularItalic.otf') format('opentype');
+  src: url('./woff/Gilroy-RegularItalic.woff');
+  src:
+    url('./woff/Gilroy-RegularItalic.woff') format('woff'),
+    url('./otf/Gilroy-RegularItalic.otf') format('opentype');
   font-display: swap;
 }
 
 @font-face {
   font-family: 'Gilroy-SemiBold';
   font-style: normal;
-  src: url('./Gilroy-SemiBold.otf') format('opentype');
+  src: url('./woff/Gilroy-SemiBold.woff');
+  src:
+    url('./woff/Gilroy-SemiBold.woff') format('woff'),
+    url('./otf/Gilroy-SemiBold.otf') format('opentype');
   font-display: swap;
 }
 
 @font-face {
   font-family: 'Gilroy-SemiBoldItalic';
   font-style: normal;
-  src: url('./Gilroy-SemiBoldItalic.otf') format('opentype');
+  src: url('./woff/Gilroy-SemiBoldItalic.woff');
+  src:
+    url('./woff/Gilroy-SemiBoldItalic.woff') format('woff'),
+    url('./otf/Gilroy-SemiBoldItalic.otf') format('opentype');
   font-display: swap;
 }
 
 @font-face {
   font-family: 'Gilroy-Thin';
   font-style: normal;
-  src: url('./Gilroy-Thin.otf') format('opentype');
+  src: url('./woff/Gilroy-Thin.woff');
+  src:
+    url('./woff/Gilroy-Thin.woff') format('woff'),
+    url('./otf/Gilroy-Thin.otf') format('opentype');
   font-display: swap;
 }
 
 @font-face {
   font-family: 'Gilroy-ThinItalic';
   font-style: normal;
-  src: url('./Gilroy-ThinItalic.otf') format('opentype');
+  src: url('./woff/Gilroy-ThinItalic.woff');
+  src:
+    url('./woff/Gilroy-ThinItalic.woff') format('woff'),
+    url('./otf/Gilroy-ThinItalic.otf') format('opentype');
   font-display: swap;
 }
 
@@ -126,7 +180,10 @@
   font-family: 'Gilroy-UltraLight';
   font-style: normal;
   font-style: normal;
-  src: url('./Gilroy-UltraLight.otf') format('opentype');
+  src: url('./woff/Gilroy-UltraLight.woff');
+  src:
+    url('./woff/Gilroy-UltraLight.woff') format('woff'),
+    url('./otf/Gilroy-UltraLight.otf') format('opentype');
   font-display: swap;
   font-display: swap;
 }
@@ -134,6 +191,9 @@
 @font-face {
   font-family: 'Gilroy-UltraLightItalic';
   font-style: normal;
-  src: url('./Gilroy-UltraLightItalic.otf') format('opentype');
+  src: url('./woff/Gilroy-UltraLightItalic.woff');
+  src:
+    url('./woff/Gilroy-UltraLightItalic.woff') format('woff'),
+    url('./otf/Gilroy-UltraLightItalic.otf') format('opentype');
   font-display: swap;
 }

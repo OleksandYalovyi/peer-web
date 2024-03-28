@@ -898,7 +898,7 @@ function Map({ onOpenQRCodeModal }) {
   }
   return (
     <section className={styles.map}>
-      {mapData.map((item) => {
+      {mapData.map((item, i) => {
         const itemStyles = convertToPercentage(
           screenSize.width > 659
             ? item.styles.tablet
@@ -910,7 +910,7 @@ function Map({ onOpenQRCodeModal }) {
         )
 
         return (
-          <div className={styles.item} style={{ ...itemStyles, paddingBottom: 0 }}>
+          <div className={styles.item} key={i} style={{ ...itemStyles, paddingBottom: 0 }}>
             <div className={styles.content}>
               {item.type === 'link' && (
                 <NavLink to={item?.to} onClick={item?.onClick} className={styles.scaleAnimation}>
