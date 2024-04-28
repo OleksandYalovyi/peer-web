@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
@@ -27,6 +27,32 @@
     />
     <link
       rel="preload"
+      href="%PUBLIC_URL%/fonts/Gilroy/woff/Gilroy-Regular.woff"
+      as="font"
+      type="font/woff"
+      onload="this.onload=null;this.rel='stylesheet'"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="%PUBLIC_URL%/fonts/IMBPlexMono/woff/IBMPlexMono-Regular.woff"
+      as="font"
+      type="font/woff"
+      onload="this.onload=null;this.rel='stylesheet'"
+      crossorigin
+    />
+
+    <link
+      rel="preload"
+      href="%PUBLIC_URL%/fonts/Turbine/Turbine-Regular.woff2"
+      as="font"
+      type="font/woff2"
+      onload="this.onload=null;this.rel='stylesheet'"
+      crossorigin
+    />
+
+    <link
+      rel="preload"
       href="%PUBLIC_URL%/fonts/PPMonumentExtended-Bold.woff2"
       as="font"
       type="font/woff2"
@@ -36,7 +62,7 @@
 
     <meta name="title" content="💎 peer" />
     <title id="pageTitle">💎 peer | a new world</title>
-    <meta name="description" content="a new world" />    
+    <meta name="description" content="a new world" />
     <meta property="og:site_name" content="💎 peer | a new world" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="💎 peer | a new world" />
@@ -45,17 +71,14 @@
       content="Peer builds technologies that help people bridge distances, find communities and grow businesses. We’re helping create the next evolution of social technology."
     />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta property="twitter:title" name="twitter:title" content="💎 peer | a new world" /> />
-    <meta 
+    <meta property="twitter:title" name="twitter:title" content="💎 peer | a new world" />
+    />
+    <meta
       property="twitter:description"
       name="twitter:description"
       content="Peer builds technologies that help people bridge distances, find communities and grow businesses. We’re helping create the next evolution of social technology."
     />
-    <meta
-      property="twitter:image"
-      name="twitter:image"
-      content="%PUBLIC_URL%/icons/peer.png"
-    />
+    <meta property="twitter:image" name="twitter:image" content="%PUBLIC_URL%/icons/peer.png" />
 
     <meta property="og:image" content="%PUBLIC_URL%/icons/peer.png" />
     <meta property="og:image:type" name="og:image:type" content="image/png" />
@@ -64,10 +87,12 @@
 
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-BT034T5Y8V"></script>
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-BT034T5Y8V');
+      window.dataLayer = window.dataLayer || []
+      function gtag() {
+        dataLayer.push(arguments)
+      }
+      gtag('js', new Date())
+      gtag('config', 'G-BT034T5Y8V')
     </script>
   </head>
   <body>
