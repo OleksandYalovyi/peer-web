@@ -1,34 +1,33 @@
-import ProductManagerProductDesign from './pdf/ProductManager_ProductDesign.pdf'
-
-export const allJobs = [
-  {
-    id: 1,
-    title: 'Product Manager - Product Design',
-    location: 'Remote',
-    time: 'Full Time',
-    linkFile: ProductManagerProductDesign,
-    link: 'mailto:jobs@peer.inc',
-  },
-]
+import ProductManagerWeb3Crypto from './pdf/Product_Manager_Web3_and_Crypto.pdf'
 
 export const productAndDesign = [
   {
     id: 1,
-    title: 'Product Manager - Product Design',
+    title: 'Product Manager - Web3 & Crypo',
     location: 'Remote',
     time: 'Full Time',
-    linkFile: ProductManagerProductDesign,
+    linkFile: ProductManagerWeb3Crypto,
     link: 'mailto:jobs@peer.inc',
   },
 ]
 
-export const applyForPosition = [
-  {
-    id: 1,
-    title: 'No positions open',
-    subtitle: 'Interested in Peer but not looking for a position? We’d love to meet you!',
-    link: 'mailto:jobs@peer.inc',
-  },
+export const hrAndFinancesJobs = []
+
+export const dataJobs = []
+
+export const marketingJobs = []
+
+export const engineeringJobs = []
+
+export const otherJobs = []
+
+export const allJobs = [
+  ...productAndDesign,
+  ...hrAndFinancesJobs,
+  ...dataJobs,
+  ...marketingJobs,
+  ...engineeringJobs,
+  ...otherJobs,
 ]
 
 // export const allJobs = [
