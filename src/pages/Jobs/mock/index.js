@@ -3,7 +3,7 @@ import ProductManagerWeb3Crypto from './pdf/Product_Manager_Web3_and_Crypto.pdf'
 export const productAndDesign = [
   {
     id: 1,
-    title: 'Product Manager - Web3 & Crypo',
+    title: 'Product Manager - Web3 & Crypto',
     location: 'Remote',
     time: 'Full Time',
     linkFile: ProductManagerWeb3Crypto,
