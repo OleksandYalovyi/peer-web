@@ -898,7 +898,7 @@ function Map({ onOpenQRCodeModal }) {
   }
   return (
     <section className={styles.map}>
-      {mapData.map((item, i) => {
+      {mapData.map((item) => {
         const itemStyles = convertToPercentage(
           screenSize.width > 659
             ? item.styles.tablet
