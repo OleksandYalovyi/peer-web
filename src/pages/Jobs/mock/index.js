@@ -1,8 +1,10 @@
 import ProductManagerWeb3Crypto from './pdf/Product_Manager_Web3_and_Crypto.pdf'
+import HeadOfArt from './pdf/Head_of_Art.pdf'
+import SeniorTechnicalArtistPipelineAndToolsDevelop from './pdf/Senior_Technical_Artist_Pipeline_and_Tools_Develop.pdf'
 
 export const productAndDesign = [
   {
-    id: 1,
+    id: 3,
     title: 'Product Manager - Web3 & Crypto',
     location: 'Remote',
     time: 'Full Time',
@@ -19,7 +21,24 @@ export const marketingJobs = []
 
 export const engineeringJobs = []
 
-export const otherJobs = []
+export const otherJobs = [
+  {
+    id: 1,
+    title: 'Head of Art',
+    location: 'Remote',
+    time: 'Full Time',
+    linkFile: HeadOfArt,
+    link: 'mailto:jobs@peer.inc',
+  },
+  {
+    id: 2,
+    title: 'Senior Technical Artist',
+    location: 'Remote',
+    time: 'Full Time',
+    linkFile: SeniorTechnicalArtistPipelineAndToolsDevelop,
+    link: 'mailto:jobs@peer.inc',
+  },
+]
 
 export const allJobs = [
   ...productAndDesign,
