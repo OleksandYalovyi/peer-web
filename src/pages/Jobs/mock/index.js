@@ -37,7 +37,16 @@ export const dataJobs = []
 
 export const marketingJobs = []
 
-export const engineeringJobs = []
+export const engineeringJobs = [
+  {
+    id: 301,
+    title: 'Senior Backend Engineer',
+    location: 'Remote',
+    time: 'Full Time',
+    linkFile: SeniorBackendEngineer,
+    link: 'mailto:jobs@peer.inc',
+  },
+]
 
 export const otherJobs = [
   {
@@ -54,14 +63,6 @@ export const otherJobs = [
     location: 'Remote',
     time: 'Full Time',
     linkFile: SeniorTechnicalArtistPipelineAndToolsDevelop,
-    link: 'mailto:jobs@peer.inc',
-  },
-  {
-    id: 203,
-    title: 'Senior Backend Engineer',
-    location: 'Remote',
-    time: 'Full Time',
-    linkFile: SeniorBackendEngineer,
     link: 'mailto:jobs@peer.inc',
   },
 ]
