@@ -15,14 +15,6 @@ export const productAndDesign = [
   },
   {
     id: 102,
-    title: 'Product Manager - Web3 & Crypto',
-    location: 'Remote',
-    time: 'Full Time',
-    linkFile: ProductManagerWeb3Crypto,
-    link: 'mailto:jobs@peer.inc',
-  },
-  {
-    id: 103,
     title: 'Senior Product Designer',
     location: 'Remote',
     time: 'Full Time',
