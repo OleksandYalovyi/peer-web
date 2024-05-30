@@ -6,7 +6,7 @@ import VideoModal from './components/VideoModal/index'
 import Stars from '../../assets/jobs/stars.png'
 import styles from './styles.module.scss'
 
-import { allJobs, productAndDesign, otherJobs } from './mock/index'
+import { allJobs, productAndDesign, otherJobs, engineeringJobs } from './mock/index'
 
 const buttons = [
   'all',
@@ -33,6 +33,7 @@ function Jobs() {
       all: allJobs,
       'product & design': productAndDesign,
       other: otherJobs,
+      engineering: engineeringJobs,
     }
 
     setSelectedJobs(jobDataMapping[jobsData] || [])
