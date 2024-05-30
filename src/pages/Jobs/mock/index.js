@@ -1,8 +1,9 @@
 import ProductManagerWeb3Crypto from './pdf/Product_Manager_Web3_and_Crypto.pdf'
 import HeadOfArt from './pdf/Head_of_Art.pdf'
 import SeniorTechnicalArtistPipelineAndToolsDevelop from './pdf/Senior_Technical_Artist_Pipeline_and_Tools_Develop.pdf'
-import SeniorBackendEngineer from './pdf/Senior_Backend_Engineer_Peer.pdf'
-import SeniorProductDesigner from './pdf/Senior_Product_Designer_Peer.pdf'
+import SeniorBackendEngineer from './pdf/Senior_BE_Engineer_Peer.pdf'
+import LeadProductDesigner from './pdf/Lead_Product_Designer_Peer.pdf'
+import GameDesignerPeer from './pdf/Game_Designer_Peer.pdf'
 
 export const productAndDesign = [
   {
@@ -15,10 +16,18 @@ export const productAndDesign = [
   },
   {
     id: 102,
-    title: 'Senior Product Designer',
+    title: 'Lead Product Designer',
     location: 'Remote',
     time: 'Full Time',
-    linkFile: SeniorProductDesigner,
+    linkFile: LeadProductDesigner,
+    link: 'mailto:jobs@peer.inc',
+  },
+  {
+    id: 103,
+    title: 'Game Designer Peer',
+    location: 'Remote',
+    time: 'Full Time',
+    linkFile: GameDesignerPeer,
     link: 'mailto:jobs@peer.inc',
   },
 ]
