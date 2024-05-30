@@ -1,14 +1,32 @@
 import ProductManagerWeb3Crypto from './pdf/Product_Manager_Web3_and_Crypto.pdf'
 import HeadOfArt from './pdf/Head_of_Art.pdf'
 import SeniorTechnicalArtistPipelineAndToolsDevelop from './pdf/Senior_Technical_Artist_Pipeline_and_Tools_Develop.pdf'
+import SeniorBackendEngineer from './pdf/Senior_Backend_Engineer_Peer.pdf'
+import SeniorProductDesigner from './pdf/Senior_Product_Designer_Peer.pdf'
 
 export const productAndDesign = [
   {
-    id: 3,
+    id: 101,
     title: 'Product Manager - Web3 & Crypto',
     location: 'Remote',
     time: 'Full Time',
     linkFile: ProductManagerWeb3Crypto,
+    link: 'mailto:jobs@peer.inc',
+  },
+  {
+    id: 102,
+    title: 'Product Manager - Web3 & Crypto',
+    location: 'Remote',
+    time: 'Full Time',
+    linkFile: ProductManagerWeb3Crypto,
+    link: 'mailto:jobs@peer.inc',
+  },
+  {
+    id: 103,
+    title: 'Senior Product Designer',
+    location: 'Remote',
+    time: 'Full Time',
+    linkFile: SeniorProductDesigner,
     link: 'mailto:jobs@peer.inc',
   },
 ]
@@ -23,7 +41,7 @@ export const engineeringJobs = []
 
 export const otherJobs = [
   {
-    id: 1,
+    id: 201,
     title: 'Head of Art',
     location: 'Remote',
     time: 'Full Time',
@@ -31,11 +49,19 @@ export const otherJobs = [
     link: 'mailto:jobs@peer.inc',
   },
   {
-    id: 2,
+    id: 202,
     title: 'Senior Technical Artist',
     location: 'Remote',
     time: 'Full Time',
     linkFile: SeniorTechnicalArtistPipelineAndToolsDevelop,
+    link: 'mailto:jobs@peer.inc',
+  },
+  {
+    id: 203,
+    title: 'Senior Backend Engineer',
+    location: 'Remote',
+    time: 'Full Time',
+    linkFile: SeniorBackendEngineer,
     link: 'mailto:jobs@peer.inc',
   },
 ]
