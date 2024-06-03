@@ -93,22 +93,6 @@ const teamMembers = [
     ],
   },
   {
-    id: 7,
-    src: Gino,
-    name: 'Gino Ardelean',
-    position: 'Technical Creative Director',
-    social: [
-      {
-        icon: <IconX />,
-        link: 'https://twitter.com/GinoArdelean',
-      },
-      {
-        icon: <IconLinkedin />,
-        link: 'https://www.linkedin.com/in/gino-ardelean-a43a8194',
-      },
-    ],
-  },
-  {
     id: 8,
     src: Santiago,
     name: 'Santiago Moriv',
