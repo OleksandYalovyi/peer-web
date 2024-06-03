@@ -5,7 +5,6 @@ import Rachid from 'assets/team/rachid.png'
 import Kyle from 'assets/team/kyle.png'
 import Milan from 'assets/team/milan.png'
 import Matthieu from 'assets/team/matthieu.png'
-import Gino from 'assets/team/gino.png'
 import Santiago from 'assets/team/santiago.png'
 import Kishan from 'assets/team/kishan.png'
 
