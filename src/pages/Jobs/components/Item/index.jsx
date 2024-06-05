@@ -19,7 +19,7 @@ function JobsItem({ title, location, time, link, linkFile }) {
 
       <div className={styles.item__links}>
         {linkFile && (
-          <a href={linkFile} download className={styles.item__link_load}>
+          <a href={linkFile} target="_blank" className={styles.item__link_load} rel="noreferrer">
             <IconDownload />
             job description
           </a>
