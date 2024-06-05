@@ -8,18 +8,18 @@ import GameDesignerPeer from './pdf/Game_Designer_Peer.pdf'
 export const productAndDesign = [
   {
     id: 101,
-    title: 'Product Manager - Web3 & Crypto',
-    location: 'Remote',
-    time: 'Full Time',
-    linkFile: ProductManagerWeb3Crypto,
-    link: 'mailto:jobs@peer.inc',
-  },
-  {
-    id: 102,
     title: 'Lead Product Designer',
     location: 'Remote',
     time: 'Full Time',
     linkFile: LeadProductDesigner,
+    link: 'mailto:jobs@peer.inc',
+  },
+  {
+    id: 102,
+    title: 'Product Manager - Web3 & Crypto',
+    location: 'Remote',
+    time: 'Full Time',
+    linkFile: ProductManagerWeb3Crypto,
     link: 'mailto:jobs@peer.inc',
   },
   {
@@ -69,11 +69,11 @@ export const otherJobs = [
 ]
 
 export const allJobs = [
+  ...engineeringJobs,
   ...productAndDesign,
   ...hrAndFinancesJobs,
   ...dataJobs,
   ...marketingJobs,
-  ...engineeringJobs,
   ...otherJobs,
 ]
 
