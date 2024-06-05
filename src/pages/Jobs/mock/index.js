@@ -8,7 +8,7 @@ import GameDesignerPeer from './pdf/Game_Designer_Peer.pdf'
 export const productAndDesign = [
   {
     id: 101,
-    title: 'Product Manager - Web3 & Crypto',
+    title: 'Product Manager Web3',
     location: 'Remote',
     time: 'Full Time',
     linkFile: ProductManagerWeb3Crypto,
