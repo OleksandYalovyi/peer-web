@@ -11,7 +11,7 @@ import SimpleHeader from 'components/Header/SimpleHeader'
 // import About from 'pages/About'
 // import Placeholder from 'pages/Placeholder'
 import Jobs from 'pages/Jobs'
-// import OSDetect from 'pages/OSDetect'
+import OSDetect from 'pages/OSDetect'
 import Blog from 'pages/Blog'
 import Article from 'pages/Article'
 import Team from 'pages/Team'
@@ -49,7 +49,7 @@ function App() {
             <Route path={`${routing.withoutAuth.blog}/:id?`} element={<Article />} />
             <Route path={routing.withoutAuth.team} element={<Team />} />
             <Route path={routing.withoutAuth.jobs} element={<Jobs />} />
-            {/* <Route path={routing.withoutAuth.app} element={<OSDetect />} /> */}
+            <Route path={routing.withoutAuth.app} element={<OSDetect />} />
             <Route path={routing.withoutAuth.notFound} element={<Page404 />} />
             <Route path="/*" element={<Navigate to={routing.withoutAuth.notFound} />} />
           </Routes>
