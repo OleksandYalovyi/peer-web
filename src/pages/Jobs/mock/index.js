@@ -1,5 +1,4 @@
 import ProductManagerWeb3Crypto from './pdf/Product_Manager_Web3_and_Crypto.pdf'
-import HeadOfArt from './pdf/Head_of_Art.pdf'
 import SeniorTechnicalArtistPipelineAndToolsDevelop from './pdf/Senior_Technical_Artist_Pipeline_and_Tools_Develop.pdf'
 import SeniorBackendEngineer from './pdf/Senior_BE_Engineer_Peer.pdf'
 import LeadProductDesigner from './pdf/Lead_Product_Designer_Peer_.pdf'
@@ -61,14 +60,6 @@ export const engineeringJobs = [
 export const otherJobs = [
   {
     id: 201,
-    title: 'Head of Art',
-    location: 'Remote',
-    time: 'Full Time',
-    linkFile: HeadOfArt,
-    link: 'mailto:jobs@peer.inc',
-  },
-  {
-    id: 202,
     title: 'Senior Technical Artist',
     location: 'Remote',
     time: 'Full Time',
