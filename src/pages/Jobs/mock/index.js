@@ -59,14 +59,14 @@ export const engineeringJobs = [
 ]
 
 export const otherJobs = [
-  {
-    id: 201,
-    title: 'Head of Art',
-    location: 'Remote',
-    time: 'Full Time',
-    linkFile: HeadOfArt,
-    link: 'mailto:jobs@peer.inc',
-  },
+  // {
+  //   id: 201,
+  //   title: 'Head of Art',
+  //   location: 'Remote',
+  //   time: 'Full Time',
+  //   linkFile: HeadOfArt,
+  //   link: 'mailto:jobs@peer.inc',
+  // },
   {
     id: 202,
     title: 'Senior Technical Artist',
