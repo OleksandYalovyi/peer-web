@@ -1,43 +1,31 @@
 import React from 'react'
 import T from 'prop-types'
-import styles from './item.module.scss'
-import { IconDownload, IconLocation } from '../Icons'
+import { Link } from 'react-router-dom'
 
-function JobsItem({ title, location, time, link, linkFile }) {
+import styles from './item.module.scss'
+import { IconArrow } from '../Icons/index'
+
+function JobsItem({ title, location, position, link }) {
   return (
-    <div className={styles.item}>
+    <Link className={styles.item} to={link}>
       <div className={styles.item__info}>
         <p className={styles.item__title}>{title}</p>
-        {location && (
-          <div className={styles.item__location}>
-            <IconLocation />
-            <p className={styles.item__location_name}>{location}</p>
-            {time && <p className={styles.item__time}>{time}</p>}
-          </div>
-        )}
+        <p className={styles.item__text}>
+          {position} {(location && ` - ${location}`) || ''}
+        </p>
       </div>
-
-      <div className={styles.item__links}>
-        {linkFile && (
-          <a href={linkFile} target="_blank" className={styles.item__link_load} rel="noreferrer">
-            <IconDownload />
-            job description
-          </a>
-        )}
-        <a href={link} className={styles.item__link}>
-          apply now
-        </a>
+      <div className={styles.item__arrow}>
+        <IconArrow />
       </div>
-    </div>
+    </Link>
   )
 }
 
 export default JobsItem
 
 JobsItem.propTypes = {
-  title: T.string,
-  location: T.string,
-  linkFile: T.string,
-  time: T.string,
-  link: T.string,
+  title: T.string.isRequired,
+  location: T.string.isRequired,
+  position: T.string,
+  link: T.string.isRequired,
 }

@@ -6,6 +6,10 @@ const desktop = {
     homeProduct: '/product',
     team: '/team',
     jobs: '/careers',
+    jobsDetails: {
+      path: '/careers/:id',
+      url: (id) => `/careers/${id}`,
+    },
     shop: '/shop',
     blog: '/blog',
   },
