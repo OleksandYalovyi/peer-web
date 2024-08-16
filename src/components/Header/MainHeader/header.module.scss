@@ -7,7 +7,7 @@
   transition: transform 0.3s ease-in;
 
   &.hidden {
-    transform: translateY(-170%);
+    transform: translateY(-270%);
     transition: transform 0.3s ease-in;
   }
   &.bg {
@@ -20,14 +20,14 @@
     justify-content: space-between;
     width: 100%;
     margin: 0 auto;
-    padding: 40px 80px 7px;
+    padding: 17px 17px;
 
     @media screen and (max-width: 1560px) {
-      padding: 24.4px 48.8px 7px;
+      padding: 17px 17px;
     }
 
     @media screen and (max-width: 1270px) {
-      padding: 10px 39.7px 7px;
+      padding: 17px 17px;
     }
 
     @media screen and (max-width: 680px) {
@@ -40,7 +40,7 @@
       top: 95%;
       right: 0;
       left: 0;
-      height: 50px;
+      height: 10px;
       background: linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0) 100%);
       content: '';
 
@@ -68,6 +68,22 @@
           width: 98.3px;
         }
       }
+
+      .peerLogoSmall {
+        width: 20px;
+
+        @media screen and (max-width: 1560px) {
+          width: 20px;
+        }
+
+        @media screen and (max-width: 1270px) {
+          width: 20px;
+        }
+
+        @media screen and (max-width: 680px) {
+          width: 20px;
+        }
+      }
     }
 
     &__right {
@@ -80,7 +96,10 @@
       }
 
       .get_peer_wrapper {
-        display: flex;
+        position: absolute;
+        // display: flex;
+        top: 50px;
+        right: 50px;
         gap: 8px;
         align-items: center;
       }

@@ -12,22 +12,19 @@ function Home() {
       <div className={styles.container}>
         <div className={styles.content}>
           <Title />
-
           <div className={styles.video}>
             <video src={Solar} autoPlay loop muted />
           </div>
-        </div>
-
-        <div className={styles.footer}>
-          <a className={styles.largeLink}>
-            Our journey with Peer
-            <img src={ArrowLeftRounded} alt="Arrow" />
-          </a>
-
-          <a className={styles.gradientLink}>
-            WE’RE HIRING. JOIN OUR TEAM
-            <img src={LittleLeftChevron} alt="Chevron" />
-          </a>
+          <div className={styles.footer}>
+            <a className={styles.largeLink}>
+              Our journey with Peer
+              <img src={ArrowLeftRounded} alt="Arrow" />
+            </a>
+            <a className={styles.gradientLink}>
+              WE’RE HIRING. JOIN OUR TEAM
+              <img src={LittleLeftChevron} alt="Chevron" />
+            </a>
+          </div>
         </div>
       </div>
     </div>

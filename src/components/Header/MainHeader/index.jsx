@@ -4,6 +4,7 @@ import { NavLink, Link } from 'react-router-dom'
 import cls from 'classnames'
 import useScroll from 'hooks/useScroll'
 import peerLogo from 'assets/PeerLogo.svg'
+import peerLogoSmall from 'assets/PeerLogoSmall.svg'
 import QRCodeModal from 'components/Modals/QRCodeModal/index'
 import useQRCodeModal from 'components/Modals/QRCodeModal/useQRCodeModal'
 import styles from './header.module.scss'
@@ -69,34 +70,19 @@ function MainHeader() {
         <div className={styles.main_container__left}>
           <Link to="/">
             <img
-              src={peerLogo}
+              src={peerLogoSmall}
               alt="peer logo"
-              className={styles.peerLogo}
+              className={styles.peerLogoSmall}
               onClick={logoClickHandler}
             />
           </Link>
         </div>
         <div className={styles.main_container__right}>
           {!isMobile && (
-            <nav className={styles.nav}>
-              {links.map(({ router, name, to, id }) => (
-                <NavItems
-                  key={id}
-                  router={router}
-                  name={name}
-                  link={to}
-                  openedMenu={openedMenu}
-                  clickHandler={setIsOpen}
-                />
-              ))}
-            </nav>
+            <div className={styles.get_peer_wrapper}>
+              <GetButton label="I’M READY" onClick={setIsQRCodeModalOpen} />
+            </div>
           )}
-
-          <div className={styles.get_peer_wrapper}>
-            <GetButton label="get peer" onClick={setIsQRCodeModalOpen} />
-
-            {isMobile && <MobileMenu isOpen={isMobileOpen} setIsOpen={setIsMobileOpen} />}
-          </div>
         </div>
       </div>
       <QRCodeModal isOpen={isQRCodeModalOpen} onClose={closeQRCodeModal} />
