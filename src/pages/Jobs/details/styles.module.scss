@@ -1,2 +1,11 @@
 @import 'styles/variables';
 @import 'styles/mixins';
+
+.container {
+    padding-top:200px;
+
+    max-width: 942px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
