@@ -1,0 +1,13 @@
+.name {
+  color: var(--Neutrals-Gray-200, #b2b2b2);
+  margin-right: 13px;
+  font-weight: 600;
+}
+
+.link {
+  &:hover {
+    text-decoration: none;
+    cursor: pointer;
+    color: var(--Neutrals-Gray-200, #b2b2b2);
+  }
+}
