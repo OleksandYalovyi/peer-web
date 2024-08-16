@@ -16,6 +16,7 @@ import OSDetect from 'pages/OSDetect'
 import Blog from 'pages/Blog'
 import Article from 'pages/Article'
 import Team from 'pages/Team'
+import OurStory from 'pages/OurStory'
 
 import routing from './routing/path'
 import './App.css'
@@ -50,6 +51,7 @@ function App() {
             <Route path={`${routing.withoutAuth.blog}/:id?`} element={<Article />} />
             <Route path={routing.withoutAuth.team} element={<Team />} />
             <Route path={routing.withoutAuth.jobs} element={<Jobs />} />
+            <Route path={routing.withoutAuth.ourStory} element={<OurStory />} />
             <Route path={routing.withoutAuth.jobsDetails.path} element={<JobsDetails />} />
             <Route path={routing.withoutAuth.app} element={<OSDetect />} />
             <Route path={routing.withoutAuth.notFound} element={<Page404 />} />
