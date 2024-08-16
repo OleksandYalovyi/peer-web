@@ -6,7 +6,7 @@ import styles from './styles.module.scss'
 function Title({ children }) {
   return (
     <div className={styles.container}>
-      {children}
+      <p className={styles.title}>{children}</p>
       <a href="mailto:jobs@peer.inc" className={styles.apply_btn}>
         apply now
       </a>

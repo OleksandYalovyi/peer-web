@@ -9,4 +9,12 @@
     padding-left: 10px;
 
     list-style: inherit;
+
+    ul, ol {
+        padding-top: 10px;
+    
+        li {
+            margin-bottom: 10px;
+        }
+    }
 }

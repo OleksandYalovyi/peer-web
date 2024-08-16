@@ -3,8 +3,12 @@ import T from 'prop-types'
 
 import styles from './styles.module.scss'
 
-function OL({ children }) {
-  return <ol className={styles.container}>{children}</ol>
+function OL({ children, ...props }) {
+  return (
+    <ol className={styles.container} {...props}>
+      {children}
+    </ol>
+  )
 }
 
 OL.propTypes = {
