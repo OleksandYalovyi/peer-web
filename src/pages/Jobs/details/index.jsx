@@ -14,11 +14,11 @@ function JobsDetails() {
 
   return (
     <div className={styles.container}>
-      {id === '1' && <SeniorBackendEngineer />}
-      {id === '2' && <SeniorIOSEngineer />}
-      {id === '3' && <SeniorWebDeveloper />}
-      {id === '4' && <LeadProductDesigner />}
-      {id === '5' && <JuniorProductManager />}
+      {id === '1' && <LeadProductDesigner />}
+      {id === '2' && <JuniorProductManager />}
+      {id === '3' && <SeniorBackendEngineer />}
+      {id === '4' && <SeniorIOSEngineer />}
+      {id === '5' && <SeniorWebDeveloper />}
       {id === '6' && <GameDesigner />}
       {id === '7' && <SeniorTechnicalArtist />}
     </div>

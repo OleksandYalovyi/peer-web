@@ -41,7 +41,7 @@ export const JOBS_DATA = [
   },
   {
     info: {
-      title: 'Senior Technical Artist',
+      title: 'Game designer Peer',
       position: 'full time',
       location: 'remote',
     },
