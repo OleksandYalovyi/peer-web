@@ -1,6 +1,8 @@
 /* eslint-disable jsx-a11y/media-has-caption */
 import React, { useState } from 'react'
 import SolarPreloadImg from 'assets/Home/SolarPreload.png'
+import { Link } from 'react-router-dom'
+import routing from 'routing/path'
 import ArrowLeftRounded from 'assets/Home/arrowLeftRounded.svg'
 import LittleLeftChevron from 'assets/Home/littleLeftChevron.svg'
 import Solar from 'assets/Home/video/solar.webm'
@@ -34,14 +36,14 @@ function Home() {
           </div>
 
           <div className={styles.footer}>
-            <a className={styles.largeLink}>
+            <Link to={routing.withoutAuth.ourStory} className={styles.largeLink}>
               Our journey with Peer
               <img src={ArrowLeftRounded} alt="Arrow" />
-            </a>
-            <a className={styles.gradientLink}>
+            </Link>
+            <Link to={routing.withoutAuth.jobs} className={styles.gradientLink}>
               WE’RE HIRING. JOIN OUR TEAM
               <img src={LittleLeftChevron} alt="Chevron" />
-            </a>
+            </Link>
           </div>
         </div>
       </div>
