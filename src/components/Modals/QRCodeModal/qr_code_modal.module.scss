@@ -2,17 +2,34 @@
   width: 100%;
   max-width: 516px;
   min-width: 320px;
-  background: #222;
 }
+
 .container {
   position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border-radius: 20px;
   padding: 40px 32px;
-  background: #222;
+  background: #000000;
+
+  $border: 1px;
+  background-clip: padding-box;
+  border: solid $border transparent;
+  border-radius: 46px;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    margin: -$border;
+    border-radius: inherit;
+    background: var(--gradient-p-0);
+  }
 
   .code_container {
     border-radius: 20px;
@@ -25,18 +42,35 @@
 }
 
 .close {
-  top: -110px;
+  top: -98px;
   position: absolute;
   display: flex;
   justify-content: center;
   align-items: center;
   width: 70px;
   height: 60px;
-  background: #4c4c4c;
-  border-radius: 10px;
   font-size: 0;
   line-height: 0;
   cursor: pointer;
+  background: #000000;
+
+  $border: 1px;
+  background-clip: padding-box;
+  border: solid $border transparent;
+  border-radius: 10px;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    margin: -$border;
+    border-radius: inherit;
+    background: var(--gradient-p-0);
+  }
 }
 
 .description {
@@ -55,12 +89,57 @@
   gap: 16px;
 
   .store_link {
+    display: inline-block;
     width: 169px;
     height: auto;
     text-decoration: none;
+    position: relative;
+    box-sizing: border-box;
+    z-index: 0;
+
+    $border: 1px;
+    background-clip: padding-box;
+    border: solid $border transparent;
+    border-radius: 12px;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: -1;
+      margin: -$border;
+      border-radius: inherit;
+      background: var(--gradient-p-0);
+    }
 
     img {
       width: 100%;
+      border-radius: 12px;
+      min-height: 50px;
     }
+  }
+}
+
+.img_placeholder {
+  display: block;
+  width: 169px;
+  height: 52px;
+  background: var(--gradient-p-0);
+  background-size: 400% 400%;
+  animation: gradientAnimation 2s ease infinite;
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
   }
 }
