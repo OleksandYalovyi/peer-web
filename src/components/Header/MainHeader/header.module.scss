@@ -6,6 +6,11 @@
   background-color: #000000;
   transition: transform 0.3s ease-in;
 
+  @media screen and (max-width: 900px) {
+    z-index: 10001;
+    background-color: rgba(0, 0, 0, 0);
+  }
+
   &.hidden {
     transform: translateY(-270%);
     transition: transform 0.3s ease-in;

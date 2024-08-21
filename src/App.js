@@ -17,6 +17,7 @@ import Blog from 'pages/Blog'
 import Article from 'pages/Article'
 import Team from 'pages/Team'
 import OurStory from 'pages/OurStory'
+import GradientAnimation from 'pages/Jobs/components/GradientAnimation'
 
 import routing from './routing/path'
 import './App.css'
@@ -37,8 +38,17 @@ function App() {
     return <MainHeader />
   }
 
+  const renderJobsGradient = () => {
+    if (pathname.startsWith(routing.withoutAuth.jobs)) {
+      return <GradientAnimation />
+    }
+
+    return null
+  }
+
   return (
     <div id="theme" className={isLight ? 'container' : 'container dark'}>
+      {renderJobsGradient()}
       {renderHeader()}
       <TransitionGroup className="transition_group">
         <CSSTransition key={key} classNames="fade" timeout={900}>

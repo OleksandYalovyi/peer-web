@@ -11,7 +11,11 @@ function Jobs() {
 
       <div className={styles.content}>
         {JOBS_DATA.map((item, i) => (
-          <JobsItem {...item.info} link={routing.withoutAuth.jobsDetails.url(i + 1)} />
+          <JobsItem
+            key={item.info.title}
+            link={routing.withoutAuth.jobsDetails.url(i + 1)}
+            {...item.info}
+          />
         ))}
       </div>
     </div>
