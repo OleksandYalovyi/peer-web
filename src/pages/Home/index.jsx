@@ -1,21 +1,44 @@
 /* eslint-disable jsx-a11y/media-has-caption */
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import routing from 'routing/path'
 import useCurrentSize from 'hooks/useCurrentSize'
-import SolarPreloadImg from 'assets/Home/SolarPreload.png'
 import ArrowLeftRounded from 'assets/Home/arrowLeftRounded.svg'
 import LittleLeftChevron from 'assets/Home/littleLeftChevron.svg'
 import Solar from 'assets/Home/video/solar.webm'
+import SolarHigh from 'assets/Home/video/solar1080.webm'
+import SolarPreloadImg from 'assets/Home/SolarPreload.png'
+import SolarPreloadHighImg from 'assets/Home/SolarPreload1080.png'
 import Title from './components/Title'
 import Footer from './components/Footer/HomeFooter'
 import styles from './home.module.scss'
 
 function Home() {
+  const [sources, setSources] = useState({ video: Solar, image: SolarPreloadImg })
   const [isVideoLoaded, setIsVideoLoaded] = useState(false)
 
   const { width } = useCurrentSize()
   const isMobile = width < 680
+
+  useEffect(() => {
+    const updateVideoSource = () => {
+      const screenWidth = window.innerWidth
+
+      if (screenWidth > 768) {
+        setSources({ video: SolarHigh, image: SolarPreloadHighImg })
+      } else {
+        setSources({ video: Solar, image: SolarPreloadImg })
+      }
+    }
+
+    updateVideoSource()
+
+    window.addEventListener('resize', updateVideoSource)
+
+    return () => {
+      window.removeEventListener('resize', updateVideoSource)
+    }
+  }, [])
 
   const handleVideoLoaded = () => {
     setIsVideoLoaded(true)
@@ -29,7 +52,7 @@ function Home() {
 
           <div className={styles.video}>
             <video
-              src={Solar}
+              src={sources.video}
               autoPlay
               loop
               muted
@@ -37,7 +60,7 @@ function Home() {
               style={{ display: isVideoLoaded ? 'block' : 'none' }}
             />
 
-            {!isVideoLoaded && <img src={SolarPreloadImg} alt="Solar preload" />}
+            {!isVideoLoaded && <img src={sources.image} alt="Solar preload" />}
           </div>
 
           <div className={styles.footer}>
