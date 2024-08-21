@@ -1,6 +1,12 @@
+@import 'styles/variables';
+@import 'styles/mixins';
+
 .container {
-    
     margin-bottom: 55px;
+
+    @include screen(maxMd) {
+        margin-bottom: 40px;
+    }
 
     .back_link {
         display: flex;

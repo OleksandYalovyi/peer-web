@@ -1,7 +1,7 @@
 import React from 'react'
 
 import BackButton from '../components/BackButton/index'
-import Title from '../components/Title/index'
+import TitleWithApply from '../components/TitleWithApply/index'
 import Subtitle from '../components/Subtitle/index'
 import Section from '../components/Section/index'
 import Paragraph from '../components/Paragraph/index'
@@ -14,7 +14,7 @@ export default function SeniorWebDeveloper() {
   return (
     <>
       <BackButton />
-      <Title>senior web developer</Title>
+      <TitleWithApply>senior web developer</TitleWithApply>
       <Subtitle>engineering - remote</Subtitle>
       <Section>
         <Paragraph>

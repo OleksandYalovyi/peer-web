@@ -3,7 +3,7 @@ import T from 'prop-types'
 
 import styles from './styles.module.scss'
 
-function Title({ children }) {
+function TitleWithApply({ children }) {
   return (
     <div className={styles.container}>
       <p className={styles.title}>{children}</p>
@@ -14,8 +14,8 @@ function Title({ children }) {
   )
 }
 
-Title.propTypes = {
+TitleWithApply.propTypes = {
   children: T.element,
 }
 
-export default Title
+export default TitleWithApply

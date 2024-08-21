@@ -1,3 +1,10 @@
+@import 'styles/variables';
+@import 'styles/mixins';
+
 .container {
     margin-bottom: 50px;
+
+    @include screen(maxMd) {
+        margin-bottom: 25px; 
+    }
 }

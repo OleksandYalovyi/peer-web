@@ -1,20 +1,19 @@
 import React from 'react'
 
 import BackButton from '../components/BackButton/index'
-import Title from '../components/Title/index'
+import TitleWithApply from '../components/TitleWithApply/index'
 import Subtitle from '../components/Subtitle/index'
 import Section from '../components/Section/index'
 import Paragraph from '../components/Paragraph/index'
 import Heading from '../components/Heading/index'
 import LI from '../components/LI/index'
-import OL from '../components/OL/index'
 import UL from '../components/UL/index'
 
 export default function SeniorTechnicalArtist() {
   return (
     <>
       <BackButton />
-      <Title>senior technical artist/pipeline and tools development</Title>
+      <TitleWithApply>senior technical artist/pipeline and tools development</TitleWithApply>
       <Subtitle>other - remote</Subtitle>
 
       <Section>

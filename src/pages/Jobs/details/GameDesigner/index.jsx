@@ -1,7 +1,7 @@
 import React from 'react'
 
 import BackButton from '../components/BackButton/index'
-import Title from '../components/Title/index'
+import TitleWithApply from '../components/TitleWithApply/index'
 import Subtitle from '../components/Subtitle/index'
 import Section from '../components/Section/index'
 import Paragraph from '../components/Paragraph/index'
@@ -14,7 +14,7 @@ export default function GameDesigner() {
   return (
     <>
       <BackButton />
-      <Title>game designer</Title>
+      <TitleWithApply>game designer</TitleWithApply>
       <Subtitle>product & design - remote</Subtitle>
 
       <Section>

@@ -1,9 +1,16 @@
-@import '../../../../../styles/mixins';
+@import 'styles/variables';
+@import 'styles/mixins';
 
 .container {
     display: flex;
     justify-content: space-between;
     align-items: baseline;
+
+    @include screen(maxSm) {
+        flex-direction: column;
+        align-items: start;
+        margin-bottom: 20px;
+    }
 
     .title {
         color: var(--Primary-White, #FFF);
@@ -33,14 +40,18 @@
         border-radius: 40px;
         cursor: pointer;
         transition: 0.3s;
+        flex-shrink: 0;
     
         @include screen(lg) {
-            min-width: 250px;
+            min-width: 240px;
         }
     
-        @include screen(maxMd) {
-            padding-right: 70px;
-            padding-left: 70px;
+        @include screen(maxSm) {
+            padding-right: 65px;
+            padding-left: 65px;
+            font-size: 20px;
+            min-width: 90%;
+            align-self: center;
         }
     
         &:hover {
