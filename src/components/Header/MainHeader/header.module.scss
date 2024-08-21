@@ -102,6 +102,7 @@
         right: 50px;
         gap: 8px;
         align-items: center;
+        z-index: 10000;
       }
 
       .nav {
@@ -117,7 +118,7 @@
         }
 
         .open {
-          background: var(--gradient-p-0);
+          // background: var(--gradient-p-0);
           background-clip: text;
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;

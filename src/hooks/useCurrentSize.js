@@ -8,6 +8,15 @@ const getHeight = () =>
 
 export default function useCurrentSize() {
   const [size, setSise] = useState({ width: getWidth(), height: getHeight() })
+  const [isMobile, setIsMobile] = useState(true)
+
+  useEffect(() => {
+    if (size < 768 && !isMobile) {
+      setIsMobile(true)
+    } else if (isMobile) {
+      setIsMobile(false)
+    }
+  }, [size])
 
   useEffect(() => {
     let timeoutId = null
