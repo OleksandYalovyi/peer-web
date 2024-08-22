@@ -7,6 +7,9 @@ import { IconCLose } from 'components/Icons/Close'
 import links from 'constants/links'
 import appstore from 'assets/qr/app-store.svg'
 import google from 'assets/qr/google.svg'
+import appStoreImgMin from 'assets/qr/app-store.png'
+import googlePlayImgMin from 'assets/qr/google.png'
+import ProgressiveImage from './ProgressiveImage'
 import styles from './qr_code_modal.module.scss'
 
 function QRCodeModal({ isOpen, onClose }) {
@@ -37,10 +40,18 @@ function QRCodeModal({ isOpen, onClose }) {
         </div>
         <div className={styles.store_links_container}>
           <a href={links.appStore} className={styles.store_link} target="_blank" rel="noreferrer">
-            <img src={appstore} alt="app store" />
+            <ProgressiveImage
+              highResolutionSrc={appstore}
+              lowResolutionSrc={appStoreImgMin}
+              alt="app store"
+            />
           </a>
           <a href={links.googlePlay} className={styles.store_link} target="_blank" rel="noreferrer">
-            <img src={google} alt="google play" />
+            <ProgressiveImage
+              highResolutionSrc={google}
+              lowResolutionSrc={googlePlayImgMin}
+              alt="google play"
+            />
           </a>
         </div>
       </div>
