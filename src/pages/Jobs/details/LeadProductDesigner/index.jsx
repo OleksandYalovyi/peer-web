@@ -14,8 +14,8 @@ export default function LeadProductDesigner() {
   return (
     <>
       <BackButton />
-      <TitleWithApply>lead product designer</TitleWithApply>
-      <Subtitle>product & design - remote</Subtitle>
+      <TitleWithApply>Lead product designer</TitleWithApply>
+      <Subtitle>Product & design - remote</Subtitle>
       <Section>
         <Paragraph>
           We are looking for a Lead Product Designer to design, build, and manage a 3D virtual clone

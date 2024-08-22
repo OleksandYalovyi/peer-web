@@ -14,8 +14,8 @@ export default function GameDesigner() {
   return (
     <>
       <BackButton />
-      <TitleWithApply>game designer</TitleWithApply>
-      <Subtitle>product & design - remote</Subtitle>
+      <TitleWithApply>Game designer</TitleWithApply>
+      <Subtitle>Product & design - remote</Subtitle>
 
       <Section>
         <Heading>About Peer</Heading>

@@ -14,8 +14,8 @@ export default function SeniorIOSEngineer() {
   return (
     <>
       <BackButton />
-      <TitleWithApply>senior ios engineer</TitleWithApply>
-      <Subtitle>engineering - remote</Subtitle>
+      <TitleWithApply>Senior ios engineer</TitleWithApply>
+      <Subtitle>Engineering - remote</Subtitle>
       <Section>
         <Heading>Create UI solutions advancing the digital social space</Heading>
         <Paragraph>

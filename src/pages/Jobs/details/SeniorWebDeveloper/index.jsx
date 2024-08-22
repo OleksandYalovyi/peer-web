@@ -14,8 +14,8 @@ export default function SeniorWebDeveloper() {
   return (
     <>
       <BackButton />
-      <TitleWithApply>senior web developer</TitleWithApply>
-      <Subtitle>engineering - remote</Subtitle>
+      <TitleWithApply>Senior web developer</TitleWithApply>
+      <Subtitle>Engineering - remote</Subtitle>
       <Section>
         <Paragraph>
           Peer builds a gamified social ecosystem on a proprietary, immersive 3D map. It consists of

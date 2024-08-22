@@ -14,8 +14,8 @@ export default function SeniorBackendEngineer() {
   return (
     <>
       <BackButton />
-      <TitleWithApply>senior backend engineer</TitleWithApply>
-      <Subtitle>engineering - remote</Subtitle>
+      <TitleWithApply>Senior backend engineer</TitleWithApply>
+      <Subtitle>Engineering - remote</Subtitle>
       <Section>
         <Paragraph>
           We seek a{' '}

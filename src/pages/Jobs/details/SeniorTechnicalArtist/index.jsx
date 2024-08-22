@@ -13,8 +13,8 @@ export default function SeniorTechnicalArtist() {
   return (
     <>
       <BackButton />
-      <TitleWithApply>senior technical artist/pipeline and tools development</TitleWithApply>
-      <Subtitle>other - remote</Subtitle>
+      <TitleWithApply>Senior technical artist/pipeline and tools development</TitleWithApply>
+      <Subtitle>Other - remote</Subtitle>
 
       <Section>
         <Heading>About Peer</Heading>

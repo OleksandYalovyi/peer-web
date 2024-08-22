@@ -14,8 +14,8 @@ export default function JuniorProductManager() {
   return (
     <>
       <BackButton />
-      <TitleWithApply>junior product manager/web</TitleWithApply>
-      <Subtitle>product & design - remote</Subtitle>
+      <TitleWithApply>Junior product manager/web</TitleWithApply>
+      <Subtitle>Product & design - remote</Subtitle>
       <Section>
         <Heading>About Peer</Heading>
         <Paragraph>
