@@ -43,7 +43,7 @@ export default CloseIcon
 
 export function IconCLose() {
   return (
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" width="40" height="40">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" width="35" height="35">
       <path
         fill="#ffffff"
         fillRule="evenodd"
