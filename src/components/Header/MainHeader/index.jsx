@@ -1,17 +1,16 @@
 /* eslint-disable react/prop-types */
 import React, { useState, useEffect, useRef } from 'react'
-import { NavLink, Link } from 'react-router-dom'
+import { NavLink, Link, useLocation } from 'react-router-dom'
 import cls from 'classnames'
 import useScroll from 'hooks/useScroll'
 import peerLogo from 'assets/PeerLogo.svg'
 import peerLogoSmall from 'assets/PeerLogoSmall.svg'
-import QRCodeModal from 'components/Modals/QRCodeModal/index'
+import QRCodeModal from 'components/Modals/QRCodeModal'
 import useQRCodeModal from 'components/Modals/QRCodeModal/useQRCodeModal'
+import routing from 'routing/path'
+import GetButton from 'components/GetButton'
 import styles from './header.module.scss'
-import GetButton from './components/GetButton'
 import useCurrentSize from '../../../hooks/useCurrentSize'
-import MobileMenu from './components/MobileMenu'
-import links from '../header.utils'
 
 function NavItems({ name, link, openedMenu, clickHandler }) {
   return (
@@ -25,6 +24,7 @@ function NavItems({ name, link, openedMenu, clickHandler }) {
 }
 
 function MainHeader() {
+  const { pathname } = useLocation()
   const { scrollDirection } = useScroll()
   const [openedMenu, setIsOpen] = useState('')
   const { isQRCodeModalOpen, setIsQRCodeModalOpen, closeQRCodeModal } = useQRCodeModal()
@@ -69,12 +69,21 @@ function MainHeader() {
       <div className={styles.main_container}>
         <div className={styles.main_container__left}>
           <Link to="/">
-            <img
-              src={peerLogoSmall}
-              alt="peer logo"
-              className={styles.peerLogoSmall}
-              onClick={logoClickHandler}
-            />
+            {pathname === routing.withoutAuth.home ? (
+              <img
+                src={peerLogoSmall}
+                alt="peer logo"
+                className={styles.peerLogoSmall}
+                onClick={logoClickHandler}
+              />
+            ) : (
+              <img
+                src={peerLogo}
+                alt="peer logo"
+                className={styles.peerLogo}
+                onClick={logoClickHandler}
+              />
+            )}
           </Link>
         </div>
         <div className={styles.main_container__right}>

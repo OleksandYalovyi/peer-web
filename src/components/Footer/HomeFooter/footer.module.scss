@@ -16,12 +16,6 @@
     padding: 24px 36.69px;
   }
 
-  @media screen and (max-width: 880px) {
-    flex-direction: column;
-    gap: 48px;
-    padding: 48px 0;
-  }
-
   .social_container {
     display: flex;
     gap: 67px;
@@ -38,46 +32,9 @@
       font-size: 11px;
     }
 
-    @media screen and (max-width: 880px) {
-      flex-direction: column;
-      padding: 0;
-      font-size: 16px;
-      gap: 48px;
-    }
-
-    .links {
-      display: flex;
-      gap: 67px;
-      color: #FFF;
-      font-family: Gilroy-Regular, sans-serif;
-      font-size: 10px;
-      font-style: normal;
-      font-weight: 400;
-      line-height: 100%;
-
-      @media screen and (max-width: 880px) {
-        flex-direction: column;
-        gap: 16px;
-        align-items: center;
-      }
-    }
-
-    .socials {
-      display: flex;
-      gap: 34px;
-
-      // @media screen and (max-width: 880px) {
-      //   gap: 80px;
-      // }
-    }
-
     .logo_container {
       display: flex;
       margin-right: 15px;
-
-      // @media screen and (max-width: 680px) {
-      //   margin-right: 12px;
-      // }
     }
 
     a {
@@ -122,19 +79,6 @@
 
 .peerLogo {
   width: 49px;
-
-
-  // @media screen and (max-width: 1560px) {
-  //   width: 82.88px;
-  // }
-
-  // @media screen and (max-width: 1270px) {
-  //   width: 67.5px;
-  // }
-
-  // @media screen and (max-width: 680px) {
-  //   width: 98.3px;
-  // }
 }
 
 .copyright_container {
@@ -151,4 +95,50 @@
   @media screen and (max-width: 880px) {
     font-size: 10px;
   }
+}
+
+.copyright {
+  display: flex;
+  align-items: center;
+  color: #FFF;
+  font-family: Gilroy-Regular, sans-serif;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 100%;
+}
+
+.terms {
+  display: flex;
+  gap: 16px;
+  color: #FFF;
+  font-family: Gilroy-Regular, sans-serif;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 100%;
+
+  a {
+    color: #FFF;
+    &:hover {
+      color: var(--main-link-hover);
+    }
+  }
+}
+
+.container_mobile {
+  display: flex;
+  flex-direction: column;
+  padding: 37px 31px 32px;
+  .line_wrapper {
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+    margin-bottom: 90px;
+  }
+}
+
+.socials {
+  display: flex;
+  gap: 34px;
 }

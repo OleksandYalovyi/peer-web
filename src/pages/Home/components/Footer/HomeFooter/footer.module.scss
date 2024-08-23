@@ -5,22 +5,7 @@
   align-items: center;
   justify-content: space-between;
   margin: 0 auto;
-  // padding: 40px 80px;
   background: var(--bg);
-
-  // @media screen and (max-width: 1560px) {
-  //   padding: 24.38px 48.75px;
-  // }
-
-  // @media screen and (max-width: 1270px) {
-  //   padding: 24px 36.69px;
-  // }
-
-  // @media screen and (max-width: 880px) {
-  //   flex-direction: column;
-  //   gap: 48px;
-  //   padding: 48px 0;
-  // }
 
   .left_container {
     display: flex;
@@ -33,12 +18,7 @@
       font-size: 12px;
     }
 
-    @media screen and (max-width: 1270px) {
-      // padding: 33.24px;
-    }
-
     @media screen and (max-width: 880px) {
-      flex-direction: column;
       padding: 0;
       gap: 48px;
     }
@@ -52,30 +32,16 @@
       font-style: normal;
       font-weight: 400;
       line-height: 100%;
-
-      @media screen and (max-width: 880px) {
-        flex-direction: column;
-        gap: 16px;
-        align-items: center;
-      }
     }
 
     .socials {
       display: flex;
       gap: 34px;
-
-      // @media screen and (max-width: 880px) {
-      //   gap: 80px;
-      // }
     }
 
     .logo_container {
       display: flex;
       margin-right: 15px;
-
-      // @media screen and (max-width: 680px) {
-      //   margin-right: 12px;
-      // }
     }
 
     a {
@@ -91,14 +57,6 @@
 
       svg {
         transform: scale(0.8);
-
-        // @media screen and (max-width: 1560px) {
-        //   transform: scale(0.7);
-        // }
-
-        // @media screen and (max-width: 880px) {
-        //   transform: scale(1);
-        // }
       }
     }
   }
@@ -120,19 +78,6 @@
 
 .peerLogo {
   width: 49px;
-
-
-  // @media screen and (max-width: 1560px) {
-  //   width: 82.88px;
-  // }
-
-  // @media screen and (max-width: 1270px) {
-  //   width: 67.5px;
-  // }
-
-  // @media screen and (max-width: 680px) {
-  //   width: 98.3px;
-  // }
 }
 
 .copyright_container {
@@ -145,8 +90,4 @@
   font-weight: 400;
   line-height: 100%;
   gap: 24px;
-
-  @media screen and (max-width: 880px) {
-    font-size: 10px;
-  }
 }

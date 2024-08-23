@@ -69,7 +69,7 @@ function App() {
           </Routes>
         </CSSTransition>
       </TransitionGroup>
-      {pathname !== routing.withoutAuth.home && <Footer />}
+      <Footer />
     </div>
   )
 }

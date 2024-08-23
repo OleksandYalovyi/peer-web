@@ -22,11 +22,11 @@ function HomeFooter() {
       </div>
       <div className={styles.left_container}>
         <div className={styles.links}>
-          <a href={links.privacyPolicy} target="_blank" rel="noreferrer">
-            Privacy
-          </a>
           <a href={links.termsService} target="_blank" rel="noreferrer">
             Terms
+          </a>
+          <a href={links.privacyPolicy} target="_blank" rel="noreferrer">
+            Privacy
           </a>
         </div>
       </div>

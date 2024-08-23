@@ -1,0 +1,35 @@
+@import 'src/styles/_mixins.scss';
+
+.gradient_wrapper {
+  background: var(--gradient-p-0);
+  padding: 1px 1px;
+  border-radius: var(--Spacing-4, 16px);
+  display: flex;
+}
+
+.wrapper {
+  display: flex;
+  color: #fff;
+  white-space: nowrap;
+  justify-content: center;
+  align-items: center;
+  border-radius: var(--Spacing-4, 16px);
+  background: var(--bg);
+  width: 154px;
+  height: 48px;
+
+  font-family: IBMPlexMono-Bold, monospace;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 12px;
+
+  @media screen and (max-width: 680px) {
+    width: 100%;
+  }
+
+  &:hover {
+    cursor: pointer;
+    color: #000;
+    @include primaryButton;
+  }
+}
