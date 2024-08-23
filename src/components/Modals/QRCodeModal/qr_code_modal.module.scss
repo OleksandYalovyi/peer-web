@@ -1,3 +1,6 @@
+@import 'styles/variables';
+@import 'styles/mixins';
+
 .qr_code_wrapper {
   width: 100%;
   max-width: 516px;
@@ -11,7 +14,6 @@
   justify-content: center;
   align-items: center;
   padding: 40px 32px;
-  background: #000000;
 
   .code_container {
     border-radius: 20px;
@@ -24,13 +26,13 @@
 }
 
 .close {
-  top: -90px;
+  top: -60px;
   position: absolute;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 70px;
-  height: 70px;
+  width: 53px;
+  height: 53px;
   font-size: 0;
   line-height: 0;
   cursor: pointer;
@@ -52,6 +54,10 @@
     margin: -$border;
     border-radius: inherit;
     background: var(--gradient-p-0);
+  }
+
+  @include screen(large) {
+    top: -67px;
   }
 }
 

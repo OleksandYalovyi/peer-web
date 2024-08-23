@@ -34,6 +34,7 @@ function QRCodeModal({ isOpen, onClose }) {
             <QRCode
               style={{ height: 'auto', maxWidth: '100%', width: '100%' }}
               value={url}
+              size={203}
               viewBox="0 0 256 256"
               bgColor="rgba(255, 255, 255, 0)"
             />
