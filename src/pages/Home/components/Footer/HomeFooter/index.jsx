@@ -20,7 +20,7 @@ function HomeFooter() {
         </Link>
         <>© {new Date().getFullYear()} Peer</>
       </div>
-      <div className={styles.left_container}>
+      <div className={styles.terms_container}>
         <div className={styles.links}>
           <a href={links.termsService} target="_blank" rel="noreferrer">
             Terms
@@ -30,7 +30,7 @@ function HomeFooter() {
           </a>
         </div>
       </div>
-      <div className={styles.left_container}>
+      <div className={styles.right_container}>
         <div className={styles.socials}>
           {externalLinks.map((item) => (
             <a

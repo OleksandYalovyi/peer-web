@@ -7,6 +7,7 @@ import GetButton from 'components/GetButton'
 import QRCodeModal from 'components/Modals/QRCodeModal/index'
 import links from 'constants/links'
 import peerLogo from 'assets/PeerLogo.svg'
+import peerLogoSmall from 'assets/PeerLogoSmall.svg'
 import routing from 'routing/path'
 import styles from './footer.module.scss'
 import { externalLinks, renderIcon } from '../footer.utils'
@@ -22,7 +23,12 @@ function HomeFooter() {
 
   const renderLogo = () => (
     <Link to="/">
-      <img src={peerLogo} alt="peer logo" className={styles.peerLogo} />
+      {/* <img src={peerLogo} alt="peer logo" className={styles.peerLogo} /> */}
+      {pathname !== routing.withoutAuth.home ? (
+        <img src={peerLogoSmall} alt="peer logo" className={styles.peerLogoSmall} />
+      ) : (
+        <img src={peerLogo} alt="peer logo" className={styles.peerLogo} />
+      )}
     </Link>
   )
 
@@ -83,7 +89,9 @@ function HomeFooter() {
             {renderCopyright()}
             {renderTerms()}
           </div>
-          <GetButton label="I’M READY" onClick={setIsQRCodeModalOpen} />
+          <div className={styles.button}>
+            <GetButton label="I’M READY" onClick={setIsQRCodeModalOpen} />
+          </div>
           <QRCodeModal isOpen={isQRCodeModalOpen} onClose={closeQRCodeModal} />
         </footer>
       )}

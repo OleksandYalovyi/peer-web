@@ -35,11 +35,6 @@
       padding: 17px 17px;
     }
 
-    @media screen and (max-width: 680px) {
-      height: 90px;
-      padding: 16px 24px;
-    }
-
     &:after {
       position: absolute;
       top: 95%;
@@ -70,9 +65,8 @@
 
       .get_peer_wrapper {
         position: absolute;
-        // display: flex;
-        top: 50px;
-        right: 50px;
+        top: 60px;
+        right: 80px;
         gap: 8px;
         align-items: center;
         z-index: 10000;

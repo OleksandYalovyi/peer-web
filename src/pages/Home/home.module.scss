@@ -2,19 +2,12 @@
   min-height: 100vh;
   overflow: hidden;
   display: flex;
-  padding: 133px 40px 32px 40px;
+  padding: 151px 0px;
   background: var(--bg);
 
-  @media screen and (max-width: 1560px) {
-    padding: 86.4px 48.75px 32px 48.75px;
-  }
-
-  @media screen and (max-width: 1270px) {
-    padding: 62.75px 36.69px 32px 36.69px;
-  }
-
   @media screen and (max-width: 680px) {
-    padding: 90px 48px 32px 48px;
+    padding: 100px 0px 0px;
+    min-height: auto;
   }
 
   .container {
@@ -28,34 +21,14 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: center;
       width: 100%;
-      max-width: 920px;
-    }
+      max-width: 940px;
 
-    .video {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      width: 100%;
-      height: 100%;
-      max-width: 420px;
-      max-height: 420px;
-      position: relative;
-
+      @media screen and (max-width: 1020px) {
+        width: 90%;
+      }
       @media screen and (max-width: 680px) {
-        max-width: 310px;
-        max-height: 310px;
-      }
-
-      video {
         width: 100%;
-        height: 100%;
-      }
-
-      img {
-        position: absolute;
-        z-index: 2;
       }
     }
   }
@@ -118,15 +91,19 @@
   width: 100%;
   flex-direction: column;
 
+  @media screen and (max-width: 680px) {
+    max-width: 300px;
+  }
+
   hr {
     height: 1px;
     width: calc(100% + 36px);
     border: 0;
     border-bottom: 1px solid rgb(255, 255, 255, 0.1);
-    margin: 0 -15px 32px -21px;
+    margin: 0 -15px 19px -21px;
 
     @media screen and (max-width: 680px) {
-      margin: 0 0 22px 0;
+      margin: 0 0 14px 0;
       width: 100%;
     }
   }
@@ -136,12 +113,40 @@
   width: 100%;
   display: flex;
   justify-content: space-between;
-  margin-bottom: 22px;
+  margin-bottom: 29px;
 
   @media screen and (max-width: 680px) {
     flex-direction: column;
     align-items: flex-start;
     gap: 34px;
     margin-bottom: 32px;
+  }
+}
+
+.video {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  max-width: 420px;
+  max-height: 420px;
+  position: relative;
+  margin-bottom: 95px;
+
+  @media screen and (max-width: 680px) {
+    margin-bottom: 50px;
+    max-width: 340px;
+    max-height: 340px;
+  }
+
+  video {
+    width: 100%;
+    height: 100%;
+  }
+
+  img {
+    position: absolute;
+    z-index: 2;
   }
 }

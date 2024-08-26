@@ -7,41 +7,21 @@
   margin: 0 auto;
   background: var(--bg);
 
-  .left_container {
+  .terms_container {
     display: flex;
     gap: 67px;
     font-size: 16px;
     align-items: center;
 
-    @media screen and (max-width: 1560px) {
-      gap: 40.83px;
-      font-size: 12px;
-    }
-
-    @media screen and (max-width: 880px) {
-      padding: 0;
-      gap: 48px;
-    }
-
     .links {
       display: flex;
-      gap: 67px;
+      gap: 36px;
       color: #FFF;
       font-family: Gilroy-Regular, sans-serif;
       font-size: 10px;
       font-style: normal;
       font-weight: 400;
       line-height: 100%;
-    }
-
-    .socials {
-      display: flex;
-      gap: 34px;
-    }
-
-    .logo_container {
-      display: flex;
-      margin-right: 15px;
     }
 
     a {
@@ -54,10 +34,6 @@
       &:hover {
         color: var(--main-link-hover);
       }
-
-      svg {
-        transform: scale(0.8);
-      }
     }
   }
 
@@ -68,10 +44,30 @@
     font-style: normal;
     font-weight: 500;
     line-height: 100%;
-    opacity: 0.5;
 
-    @media screen and (max-width: 880px) {
-      font-size: 14px;
+    .socials {
+      transform: translateX(7px);
+      display: flex;
+      gap: 25px;
+    }
+
+    a {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #FFF;
+
+      @media screen and (max-width: 880px) {
+
+      }
+
+      &:hover {
+        color: var(--main-link-hover);
+      }
+
+      svg {
+        transform: scale(0.6);
+      }
     }
   }
 }
