@@ -11,6 +11,8 @@
   z-index: 99999;
 
   .modalContent {
+    position: relative;
+    top: -63px;
     border-radius: 20px;
     padding: 40px var(--spacing-8);
     box-shadow:

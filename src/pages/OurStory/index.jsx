@@ -1,4 +1,5 @@
 import React from 'react'
+import cn from 'classnames'
 
 import PageContainer from 'components/PageContainer/index'
 import Typography from 'components/Typography/index'
@@ -18,7 +19,7 @@ function OurStory() {
   return (
     <PageContainer>
       <div className={styles.story_wrapper}>
-        <PEERStarLogo width="43" height="43" />
+        <PEERStarLogo width="38" height="38" className={styles.peer_logo} />
         <section className={styles.introduction}>
           <Heading size={2} className={styles.title}>
             Hi, we’re Peer.
@@ -29,7 +30,11 @@ function OurStory() {
             </Paragraph>
           ))}
           <div className={styles.links_wrapper}>
-            <ActionLink to={routing.withoutAuth.jobs} name="Job Board" />
+            <ActionLink
+              to={routing.withoutAuth.jobs}
+              name="Job Board"
+              className={styles.link_first}
+            />
             <ActionLink name="Download Peer" onClick={setIsQRCodeModalOpen} />
           </div>
           <span className={styles.email}>
@@ -37,7 +42,7 @@ function OurStory() {
           </span>
         </section>
         <section className={styles.story}>
-          <Heading size={1} className={styles.title}>
+          <Heading size={1} className={cn(styles.title, styles.title_second)}>
             There’s no magic without story
           </Heading>
           {paragraphDataSecond.map((paragraph) => (
