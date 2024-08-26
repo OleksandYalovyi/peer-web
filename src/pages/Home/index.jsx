@@ -75,6 +75,7 @@ function Home() {
                 <img src={LittleLeftChevron} alt="Chevron" />
               </Link>
             </div>
+            <hr />
             {!isMobile && <Footer />}
           </div>
         </div>
