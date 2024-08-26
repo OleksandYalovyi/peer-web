@@ -54,6 +54,7 @@ function Home() {
             <video
               src={sources.video}
               autoPlay
+              playsInline
               loop
               muted
               onLoadedData={handleVideoLoaded}
@@ -74,6 +75,7 @@ function Home() {
                 <img src={LittleLeftChevron} alt="Chevron" />
               </Link>
             </div>
+            <hr />
             {!isMobile && <Footer />}
           </div>
         </div>
