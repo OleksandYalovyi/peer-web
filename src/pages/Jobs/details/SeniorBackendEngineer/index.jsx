@@ -59,7 +59,7 @@ export default function SeniorBackendEngineer() {
             Infrastructure Management: Designing, implementing, and maintaining scalable and highly
             available AWS cloud infrastructure. This will include implementing micro-service base
             architecture (GRPC, RedPanda), storage (MongoDB, NeptuneDB, S3..), and security
-            configuration.
+            configuration
           </LI>
           <LI>
             Architecture, design, and coding using Go to create, implement, and maintain scalable
@@ -70,7 +70,7 @@ export default function SeniorBackendEngineer() {
           <LI>
             Performance and Optimization: Identify performance bottlenecks and optimize system
             components for maximum speed and efficiency. Work closely with the DevOps team to deploy
-            and manage backend services in production environments.
+            and manage backend services in production environments
           </LI>
         </OL>
       </Section>
@@ -78,35 +78,35 @@ export default function SeniorBackendEngineer() {
       <Section>
         <Heading>The candidate profile requirements:</Heading>
         <UL>
-          <LI>A bachelorʼs degree in computer science or a related field.</LI>
+          <LI>A bachelorʼs degree in computer science or a related field</LI>
           <LI>
             7+ years of professional experience in software development, with a focus on backend
-            development.
+            development
           </LI>
           <LI>
-            Strong proficiency in the <b>Go</b> language is essential.
+            Strong proficiency in the <b>Go</b> language is essential
           </LI>
           <LI>
             Solid understanding of cloud technologies and experience deploying applications in cloud
-            environments (e.g., AWS, GCP).
+            environments (e.g., AWS, GCP)
           </LI>
           <LI>
             Experience with <b>containerization</b> and <b>orchestration</b> tools like Docker and
-            Kubernetes.
+            Kubernetes
           </LI>
-          <LI>Experience with Bazel and/or gomobile is a plus.</LI>
-          <LI>Excellent communication and social skills.</LI>
+          <LI>Experience with Bazel and/or gomobile is a plus</LI>
+          <LI>Excellent communication and social skills</LI>
         </UL>
       </Section>
 
       <Section>
         <Heading>Benefits:</Heading>
         <UL>
-          <LI>Competitive salary.</LI>
-          <LI>Opportunity to work on cutting-edge projects and innovative technologies.</LI>
+          <LI>Competitive salary</LI>
+          <LI>Opportunity to work on cutting-edge projects and innovative technologies</LI>
           <LI>Professional development opportunities and continuous learning</LI>
-          <LI>Collaborative and inclusive work culture.</LI>
-          <LI>Full remote work.</LI>
+          <LI>Collaborative and inclusive work culture</LI>
+          <LI>Full remote work</LI>
         </UL>
       </Section>
 

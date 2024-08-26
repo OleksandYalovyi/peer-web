@@ -8,7 +8,7 @@ function Subtitle({ children }) {
 }
 
 Subtitle.propTypes = {
-  children: T.element,
+  children: T.string,
 }
 
 export default Subtitle

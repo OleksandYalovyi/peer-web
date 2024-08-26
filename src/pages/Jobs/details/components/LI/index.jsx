@@ -8,7 +8,7 @@ function LI({ children }) {
 }
 
 LI.propTypes = {
-  children: T.element,
+  children: T.oneOfType([T.string, T.array]),
 }
 
 export default LI

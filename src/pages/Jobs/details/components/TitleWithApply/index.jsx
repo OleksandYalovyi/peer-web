@@ -15,7 +15,7 @@ function TitleWithApply({ children }) {
 }
 
 TitleWithApply.propTypes = {
-  children: T.element,
+  children: T.string,
 }
 
 export default TitleWithApply

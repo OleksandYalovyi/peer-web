@@ -8,7 +8,7 @@ function UL({ children }) {
 }
 
 UL.propTypes = {
-  children: T.element,
+  children: T.arrayOf(T.element),
 }
 
 export default UL

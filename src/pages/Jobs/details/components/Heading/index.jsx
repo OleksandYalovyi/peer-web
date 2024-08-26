@@ -8,7 +8,7 @@ function Heading({ children }) {
 }
 
 Heading.propTypes = {
-  children: T.element,
+  children: T.string,
 }
 
 export default Heading

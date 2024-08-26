@@ -57,24 +57,24 @@ export default function SeniorIOSEngineer() {
         <UL>
           <LI>
             Technical skills: Proficiency in Swift, Objective-C, and the iOS SDK, with a good
-            understanding of mobile app architecture and design patterns.
+            understanding of mobile app architecture and design patterns
           </LI>
           <LI>
             Experience: 7+ years of professional experience in iOS development and a proven track
-            record of delivering high-quality iOS applications.
+            record of delivering high-quality iOS applications
           </LI>
           <LI>A vision for how great UI can enhance digital social experiences</LI>
           <LI>
             Cross-functional collaboration: Work closely with design, engineering, and QA teams to
-            ensure the product is developed according to specifications and meets quality standards.
+            ensure the product is developed according to specifications and meets quality standards
           </LI>
           <LI>
             UI is vital: Champion an exceptional user experience, ensuring the app features are
-            user-friendly, accessible, and meeting design standards.
+            user-friendly, accessible, and meeting design standards
           </LI>
           <LI>
             Communication: Excellent communication skills and the ability to collaborate effectively
-            in an agile team environment.
+            in an agile team environment
           </LI>
           <LI>Startup experience is always a plus</LI>
         </UL>
@@ -85,7 +85,7 @@ export default function SeniorIOSEngineer() {
         <UL>
           <LI>
             Swift & Objective-C. The Objective-C is only used to interface our app with Go Mobile
-            framework.
+            framework
           </LI>
           <LI>UIKit</LI>
           <LI>Combine</LI>
@@ -98,10 +98,10 @@ export default function SeniorIOSEngineer() {
         <Heading>Benefits</Heading>
         <UL>
           <LI>Competitive salary.</LI>
-          <LI>Opportunity to work on cutting-edge projects and innovative technologies.</LI>
-          <LI>Professional development opportunities and continuous learning.</LI>
-          <LI>Collaborative and inclusive work culture.</LI>
-          <LI>Full remote work.</LI>
+          <LI>Opportunity to work on cutting-edge projects and innovative technologies</LI>
+          <LI>Professional development opportunities and continuous learning</LI>
+          <LI>Collaborative and inclusive work culture</LI>
+          <LI>Full remote work</LI>
         </UL>
       </Section>
 

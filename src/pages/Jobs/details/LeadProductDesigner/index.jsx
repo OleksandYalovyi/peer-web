@@ -47,7 +47,7 @@ export default function LeadProductDesigner() {
       <Section>
         <Heading>The Role requires:</Heading>
         <UL>
-          <LI>10+ years of Products designing end-to-end flows for iOS, Android, and the web.</LI>
+          <LI>10+ years of Products designing end-to-end flows for iOS, Android, and the web</LI>
           <LI>
             A portfolio of product design work that includes multiple shipped projects where you
             were the primary contributor
@@ -61,8 +61,8 @@ export default function LeadProductDesigner() {
             big plus)
           </LI>
           <LI>Experience with accessibility, localization, and internationalization</LI>
-          <LI>Experience with planning and managing multidisciplinary design teams.</LI>
-          <LI>Experience collaborating with product, design, marketing, and engineering teams.</LI>
+          <LI>Experience with planning and managing multidisciplinary design teams</LI>
+          <LI>Experience collaborating with product, design, marketing, and engineering teams</LI>
         </UL>
       </Section>
 
@@ -86,17 +86,17 @@ export default function LeadProductDesigner() {
       <Section>
         <Heading>Big pluses:</Heading>
         <UL>
-          <LI>Experience with Map Products is a plus.</LI>
-          <LI>Experience with Web 3 Products is a plus.</LI>
-          <LI>Startup experience is always a plus.</LI>
+          <LI>Experience with Map Products is a plus</LI>
+          <LI>Experience with Web 3 Products is a plus</LI>
+          <LI>Startup experience is always a plus</LI>
         </UL>
       </Section>
 
       <Section>
         <Heading>Recruitment process</Heading>
         <OL>
-          <LI>A 30-minute call with our People and Culture and Senior Product Manager.</LI>
-          <LI>A 30-minute call with our Head of Design.</LI>
+          <LI>A 30-minute call with our People and Culture and Senior Product Manager</LI>
+          <LI>A 30-minute call with our Head of Design</LI>
         </OL>
       </Section>
     </>

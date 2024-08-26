@@ -64,26 +64,26 @@ export default function JuniorProductManager() {
             Define the product vision, strategy, and roadmap with the Senior Product Manager for
             Web2 and Web3 solutions, aligning them with the company's overall business goals and the
             dynamic landscape of the Web3 revolution. Translate the vision to actionable steps for
-            the product or multiple products.
+            the product or multiple products
           </LI>
           <LI>
             Conduct extensive market research, competitive analysis, and user studies to identify
             emerging trends, market opportunities, user needs, and product requirements within the
-            Web3 ecosystem.
+            Web3 ecosystem
           </LI>
           <LI>
             Collaborate closely with design and engineering teams to translate product requirements
             into user stories, wireframes, and technical specifications, leveraging Web3 protocols
-            and frameworks.
+            and frameworks
           </LI>
           <LI>
             Prioritize product features, enhancements, and bug fixes based on user feedback,
             business objectives, technical feasibility, and the unique requirements of the Web3
-            space.
+            space
           </LI>
           <LI>
             Contribute to comprehensive go-to-market strategies, positioning, and compelling
-            messaging for blockchain solutions.
+            messaging for blockchain solutions
           </LI>
         </OL>
       </Section>
@@ -97,21 +97,21 @@ export default function JuniorProductManager() {
           </LI>
           <LI>
             Cross-functional collaboration: Work closely with engineering, design, and QA teams to
-            ensure the product is developed according to specifications and meets quality standards.
+            ensure the product is developed according to specifications and meets quality standards
           </LI>
           <LI>
             User Experience is vital: Champion an exceptional user experience, ensuring the app
-            features are functional, user-friendly, and accessible.
+            features are functional, user-friendly, and accessible
           </LI>
           <LI>
             Excellent communication skills and the ability to collaborate effectively in a team
-            environment.
+            environment
           </LI>
           <LI>
             A technical background is a strong plus; however, a show of relevant experience would be
-            an advantage.
+            an advantage
           </LI>
-          <LI>Your startup experience would be a great plus.</LI>
+          <LI>Your startup experience would be a great plus</LI>
         </OL>
       </Section>
 
@@ -121,11 +121,11 @@ export default function JuniorProductManager() {
           <LI>Competitive salary.</LI>
           <LI>
             Opportunity to work on cutting-edge projects and innovative technologies in shaping the
-            future of social media and gaming.
+            future of social media and gaming
           </LI>
-          <LI>Professional development opportunities and continuous learning.</LI>
-          <LI>Collaborative and inclusive work culture.</LI>
-          <LI>Full remote work.</LI>
+          <LI>Professional development opportunities and continuous learning</LI>
+          <LI>Collaborative and inclusive work culture</LI>
+          <LI>Full remote work</LI>
         </UL>
       </Section>
     </>

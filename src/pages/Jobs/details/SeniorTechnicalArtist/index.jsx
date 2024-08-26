@@ -114,15 +114,15 @@ export default function SeniorTechnicalArtist() {
         <UL>
           <LI>
             Create, improve, and automate art and design pipelines - from 2D to rigging to
-            prototyping and integration in Engine.
+            prototyping and integration in Engine
           </LI>
           <LI>
             Define and upgrade art department standards for production, productivity, quality, and
-            client service.
+            client service
           </LI>
           <LI>
             Ensure the team adheres to current processes, identifies opportunities for improvement,
-            and proposes and creates processes and tools to support design operations.
+            and proposes and creates processes and tools to support design operations
           </LI>
           <LI>Creating quality documentation</LI>
           <LI>Solid communication and presentation skills</LI>

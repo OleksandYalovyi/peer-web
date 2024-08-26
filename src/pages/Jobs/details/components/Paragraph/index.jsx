@@ -8,7 +8,7 @@ function Paragraph({ children }) {
 }
 
 Paragraph.propTypes = {
-  children: T.element,
+  children: T.oneOfType([T.string, T.array]),
 }
 
 export default Paragraph

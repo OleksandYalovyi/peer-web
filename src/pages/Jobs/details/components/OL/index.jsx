@@ -12,7 +12,7 @@ function OL({ children, ...props }) {
 }
 
 OL.propTypes = {
-  children: T.element,
+  children: T.arrayOf(T.element),
 }
 
 export default OL

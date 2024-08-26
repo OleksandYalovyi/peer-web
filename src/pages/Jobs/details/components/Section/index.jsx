@@ -9,5 +9,5 @@ function Section({ children }) {
 export default Section
 
 Section.propTypes = {
-  children: T.element,
+  children: T.oneOfType([T.element, T.arrayOf(T.any)]),
 }
