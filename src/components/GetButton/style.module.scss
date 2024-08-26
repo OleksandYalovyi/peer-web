@@ -3,7 +3,7 @@
 .gradient_wrapper {
   background: var(--gradient-p-0);
   padding: 1px 1px;
-  border-radius: var(--Spacing-4, 16px);
+  border-radius: 8px;
   display: flex;
 }
 
@@ -13,7 +13,7 @@
   white-space: nowrap;
   justify-content: center;
   align-items: center;
-  border-radius: var(--Spacing-4, 16px);
+  border-radius: 8px;
   background: var(--bg);
   width: 154px;
   height: 48px;

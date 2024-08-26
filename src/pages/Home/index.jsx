@@ -54,6 +54,7 @@ function Home() {
             <video
               src={sources.video}
               autoPlay
+              playsInline
               loop
               muted
               onLoadedData={handleVideoLoaded}

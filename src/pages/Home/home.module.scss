@@ -93,16 +93,20 @@
   gap: 6px;
   cursor: pointer;
   text-decoration: none;
+  background: linear-gradient(
+    75deg,
+    #ffffff 43.62%,
+    #fefba1 3%,
+    #eaa6d7 54.29%,
+    #b6aaf6 73.65%,
+    #8ffff1 88.44%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 
   &:hover {
-    background: linear-gradient(
-      75deg,
-      #ffffff 43.62%,
-      #fefba1 3%,
-      #eaa6d7 54.29%,
-      #b6aaf6 73.65%,
-      #8ffff1 88.44%
-    );
+    background: #fff;
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
