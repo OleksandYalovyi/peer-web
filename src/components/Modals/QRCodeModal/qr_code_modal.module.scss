@@ -16,8 +16,8 @@
   padding: 40px 32px;
 
   .code_container {
-    border-radius: 20px;
-    padding: 15px;
+    border-radius: 10px;
+    padding: 11px;
     max-width: 248px;
     width: 100%;
     margin-bottom: 22px;
@@ -26,17 +26,18 @@
 }
 
 .close {
-  top: -60px;
+  top: -36px;
   position: absolute;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 53px;
-  height: 53px;
+  width: 40px;
+  height: 40px;
   font-size: 0;
   line-height: 0;
   cursor: pointer;
-  background: #000000;
+  background-color: #000000;
+  transition: background-color 0.4s;
 
   $border: 1px;
   background-clip: padding-box;
@@ -54,10 +55,26 @@
     margin: -$border;
     border-radius: inherit;
     background: var(--gradient-p-0);
+    background-size: 200% 200%;
+    animation: gradientAnimation 3s ease infinite;
   }
 
-  @include screen(large) {
-    top: -67px;
+  &:hover {
+    background: var(--gradient-p-0);
+  }
+
+  svg {
+    path {
+      fill: #ffffff;
+    }
+  }
+
+  &:hover {
+    svg {
+      path {
+        fill: #000000;
+      }
+    }
   }
 }
 
@@ -103,6 +120,12 @@
       margin: -$border;
       border-radius: inherit;
       background: var(--gradient-p-0);
+      background-size: 200% 200%;
+      animation: gradientAnimation 3s ease infinite;
+    }
+
+    &:hover::before {
+      background-color: red;
     }
 
     img {

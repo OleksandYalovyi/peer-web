@@ -4,11 +4,11 @@ import T from 'prop-types'
 import cls from 'classnames'
 import styles from './logo.module.scss'
 
-function PEERStarLogo({ hovered, width = '36', height = '36', isLight }) {
+function PEERStarLogo({ hovered, width = '36', height = '36', isLight, className }) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      className={cls({ [styles.hovered]: hovered })}
+      className={cls(className, { [styles.hovered]: hovered })}
       viewBox="0 0 70 70"
       width={width}
       height={height}
@@ -27,6 +27,7 @@ PEERStarLogo.propTypes = {
   width: T.string,
   height: T.string,
   isLight: T.bool,
+  className: T.string,
 }
 
 export default PEERStarLogo

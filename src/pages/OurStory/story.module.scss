@@ -3,7 +3,6 @@
 
 .story_wrapper {
   margin: 0 auto;
-  margin-top: 25px;
   max-width: 444px;
   color: var(--Neutrals-Gray-200, #b2b2b2);
   font-family: Gilroy;
@@ -11,23 +10,24 @@
   font-style: normal;
   font-weight: 600;
   line-height: 25px;
+}
 
-  @include screen(large) {
-    margin-top: 80px;
-  }
+.peer_logo {
+  position: relative;
+  left: 2px;
 }
 
 .introduction {
   margin-top: 40px;
-  margin-bottom: 48px;
+  margin-bottom: 69px;
 
   @include screen(sm) {
-    margin-top: 80px;
+    margin-top: 76px;
   }
 }
 
 .text {
-  margin-bottom: 20px;
+  margin-bottom: 25px;
 
   &:last-child {
     margin-bottom: 40px;
@@ -35,7 +35,11 @@
 }
 
 .title {
-  margin-bottom: 46px;
+  margin-bottom: 30px;
+}
+
+.title_second {
+  margin-bottom: 48px;
 }
 
 .links_wrapper {
@@ -43,7 +47,7 @@
   flex-direction: column;
   gap: 25px;
   margin-bottom: 77px;
-  margin-top: 40px;
+  margin-top: 49px;
 }
 
 .email {
