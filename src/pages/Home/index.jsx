@@ -71,7 +71,7 @@ function Home() {
                 <img src={ArrowLeftRounded} alt="Arrow" />
               </Link>
               <Link to={routing.withoutAuth.jobs} className={styles.gradientLink}>
-                WE’RE HIRING. JOIN OUR TEAM
+                WE’RE HIRING. <span>JOIN OUR TEAM</span>
                 <img src={LittleLeftChevron} alt="Chevron" />
               </Link>
             </div>

@@ -1,3 +1,5 @@
+@import 'styles/variables';
+
 .wrapper {
   min-height: 100vh;
   overflow: hidden;
@@ -65,18 +67,16 @@
   text-transform: uppercase;
   gap: 6px;
   cursor: pointer;
-  text-decoration: none;
-  background: linear-gradient(
-    75deg,
-    #ffffff 43.62%,
-    #fefba1 3%,
-    #eaa6d7 54.29%,
-    #b6aaf6 73.65%,
-    #8ffff1 88.44%
-  );
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  
+  span {
+    background: var(--gradient-p-0);
+    background-size: 200% 200%;
+    animation: gradientAnimation 2s ease infinite;
+    text-decoration: none;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
 
   &:hover {
     background: #fff;
@@ -148,5 +148,17 @@
   img {
     position: absolute;
     z-index: 2;
+  }
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
   }
 }
