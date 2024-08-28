@@ -19,7 +19,7 @@ Peer is an AI company that’s aiming to change the way people experience AI.`,
   },
   {
     id: 2,
-    text: `A whirlwind of change is approaching, echoing the excitement and transformative \
+    text: `A sea of change is approaching, echoing the excitement and transformative \
 energy of the early internet boom of the 2000s and the subsequent mobile revolution. \
 AI stands poised to surpass even those remarkable innovations, set to revolutionize how we live, work, \
 and connect in ways we’re only beginning to imagine.`,
@@ -27,7 +27,7 @@ and connect in ways we’re only beginning to imagine.`,
   {
     id: 3,
     text: `When people ask me what we do at Peer, I often say that “we’re bottling magic.” What is \
-magic without a wand? Or a lamp? Or the heroes that wields it? Or simply a bottle of \
+magic without a wand? Or a lamp? Or the hero that wields it? Or simply a bottle of \
 potion? That’s where the magic truly lies—it’s all about the story. AI, in many ways, is \
 like magic—formless, all-powerful, all-encompassing, and full of potential. But for \
 people to truly understand it, to make it a part of their lives, we need to transform it \
