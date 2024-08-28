@@ -1,7 +1,6 @@
 @import 'styles/variables';
 
 .wrapper {
-  min-height: 100vh;
   overflow: hidden;
   display: flex;
   padding: 151px 0px;
@@ -67,7 +66,7 @@
   text-transform: uppercase;
   gap: 6px;
   cursor: pointer;
-  
+
   span {
     background: var(--gradient-p-0);
     background-size: 200% 200%;
