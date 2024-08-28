@@ -19,7 +19,7 @@ Peer is an AI company that’s aiming to change the way people experience AI.`,
   },
   {
     id: 2,
-    text: `A sea of change is approaching, echoing the excitement and transformative \
+    text: `A sea change is approaching, echoing the excitement and transformative \
 energy of the early internet boom of the 2000s and the subsequent mobile revolution. \
 AI stands poised to surpass even those remarkable innovations, set to revolutionize how we live, work, \
 and connect in ways we’re only beginning to imagine.`,
