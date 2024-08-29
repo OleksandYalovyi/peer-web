@@ -58,7 +58,7 @@
   }
 
   &:hover img {
-    transform: translateX(5px);
+    transform: translateX(12px);
   }
 }
 
@@ -92,6 +92,14 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
+
+  img {
+    transition: transform 0.3s ease;
+  }
+
+  &:hover img {
+    transform: translateX(12px);
+  }
 }
 
 .footer {
@@ -108,11 +116,10 @@
     width: calc(100% + 36px);
     border: 0;
     border-bottom: 1px solid rgb(255, 255, 255, 0.1);
-    margin: 0 -15px 19px -21px;
+    margin: 0 -15px 22px -21px;
 
     @media screen and (max-width: 680px) {
-      margin: 0 0 14px 0;
-      width: 100%;
+      display: none;
     }
   }
 }
@@ -121,7 +128,7 @@
   width: 100%;
   display: flex;
   justify-content: space-between;
-  margin-bottom: 29px;
+  margin-bottom: 32px;
 
   @media screen and (max-width: 680px) {
     flex-direction: column;
