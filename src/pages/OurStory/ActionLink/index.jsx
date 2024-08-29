@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 import React from 'react'
-import { Link, NavLink } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import cn from 'classnames'
 
 import ArrowRightThin from 'components/Icons/ArrowRightThin/index'

@@ -11,3 +11,11 @@
     color: var(--Neutrals-Gray-200, #b2b2b2);
   }
 }
+
+.link svg {
+  transition: transform 0.3s ease;
+}
+
+.link:hover svg {
+  transform: translateX(12px);
+}

@@ -71,26 +71,32 @@ function HomeFooter() {
     <>
       {pathname !== routing.withoutAuth.home && !isMobile && (
         <footer className={styles.container}>
-          <div className={styles.copyright_container}>
-            {renderLogo()}
-            {renderCopyright()}
+          <hr />
+          <div className={styles.wrapper}>
+            <div className={styles.copyright_container}>
+              {renderLogo()}
+              {renderCopyright()}
+            </div>
+            {/* <div className={styles.left_container}>{renderTerms()}</div> */}
+            {renderSocial()}
           </div>
-          {/* <div className={styles.left_container}>{renderTerms()}</div> */}
-          {renderSocial()}
         </footer>
       )}
       {isMobile && (
         <footer className={styles.container_mobile}>
-          <div className={styles.line_wrapper}>
-            {renderLogo()}
-            {renderSocial()}
-          </div>
-          <div className={styles.line_wrapper}>
-            {renderCopyright()}
-            {renderTerms()}
-          </div>
-          <div className={styles.button}>
-            <GetButton label="I’M READY" onClick={setIsQRCodeModalOpen} />
+          <hr />
+          <div className={styles.wrapper_mobile}>
+            <div className={styles.line_wrapper}>
+              {renderLogo()}
+              {renderSocial()}
+            </div>
+            <div className={styles.line_wrapper}>
+              {renderCopyright()}
+              {renderTerms()}
+            </div>
+            <div className={styles.button}>
+              <GetButton label="I’M READY" onClick={setIsQRCodeModalOpen} />
+            </div>
           </div>
           <QRCodeModal isOpen={isQRCodeModalOpen} onClose={closeQRCodeModal} />
         </footer>

@@ -1,15 +1,13 @@
 .container {
   z-index: 9;
   width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
   margin: 0 auto;
-  padding: 40px 80px;
+  padding: 40px 20px;
   background: var(--bg);
+  max-width: 980px;
 
   .right_container {
-    color: #FFF;
+    color: #fff;
     font-family: IBMPlexMono-Bold, monospace;
     font-size: 16px;
     font-style: normal;
@@ -21,6 +19,21 @@
       font-size: 14px;
     }
   }
+
+  hr {
+    height: 1px;
+    width: calc(100% + 36px);
+    border: 0;
+    border-bottom: 1px solid rgb(255, 255, 255, 0.1);
+    margin: 0 -15px 20px -21px;
+  }
+}
+
+.wrapper {
+  margin-top: 19px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .peerLogo {
@@ -30,7 +43,7 @@
 .copyright_container {
   display: flex;
   align-items: center;
-  color: #FFF;
+  color: #fff;
   font-family: Gilroy-Regular, sans-serif;
   font-size: 10px;
   font-style: normal;
@@ -46,7 +59,7 @@
 .copyright {
   display: flex;
   align-items: center;
-  color: #FFF;
+  color: #fff;
   font-family: Gilroy-Regular, sans-serif;
   font-size: 10px;
   font-style: normal;
@@ -57,7 +70,7 @@
 .terms {
   display: flex;
   gap: 16px;
-  color: #FFF;
+  color: #fff;
   font-family: Gilroy-Regular, sans-serif;
   font-size: 10px;
   font-style: normal;
@@ -65,7 +78,7 @@
   line-height: 100%;
 
   a {
-    color: #FFF;
+    color: #fff;
     &:hover {
       color: var(--main-link-hover);
     }
@@ -73,13 +86,19 @@
 }
 
 .container_mobile {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   padding: 37px 31px 62px;
 
   @media screen and (max-width: 680px) {
     padding: 0 0 100px;
+  }
+
+  hr {
+    height: 1px;
+    border: 0;
+    border-bottom: 1px solid rgb(255, 255, 255, 0.1);
+    margin-bottom: 20px;
+    margin-right: 35px;
+    margin-left: 35px;
   }
 
   .line_wrapper {
@@ -88,11 +107,16 @@
     align-items: center;
     margin-bottom: 90px;
     width: 100%;
-    
-    @media screen and (max-width: 680px) {
-      max-width: 300px;
-    }
+    padding-right: 12px;
   }
+}
+
+.wrapper_mobile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 100%;
+  padding: 0 35px;
 }
 
 .socials {
@@ -102,17 +126,14 @@
 
 .button {
   position: fixed;
-  margin: 0 auto;
   bottom: 32px;
-  width: 100%;
-  width: 300px;
-  margin: 5% auto;
+  margin: 5% 15px;
   left: 0;
   right: 0;
 }
 
 .social_container {
-  color: #FFF;
+  color: #fff;
 
   .socials {
     transform: translateX(7px);
@@ -124,10 +145,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #FFF;
+    color: #fff;
 
     @media screen and (max-width: 880px) {
-
     }
 
     &:hover {
