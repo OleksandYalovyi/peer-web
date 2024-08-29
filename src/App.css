@@ -3,17 +3,10 @@
 }
 .fade-enter-active {
   opacity: 1;
-  transition: opacity 0.5s ease-out 0.2s;
+  transition: opacity 0.5s ease-out;
 }
 .fade-enter-done {
   opacity: 1;
-}
-.fade-exit {
-  opacity: 1;
-}
-.fade-exit-active {
-  opacity: 0;
-  transition: opacity 0.2s ease-out;
 }
 
 #theme {
@@ -61,44 +54,6 @@
   opacity: 0;
 }
 
-/* 
-.fadeup-enter {
-  opacity: 0;
-  transform: translate(0, 50px);
-}
-.fadeup-enter-active {
-  opacity: 1;
-  transform: translate(0, 0px);
-  transition: all 0.5s ease-out 0.2s;
-}
-.fadeup-enter-done {
-  opacity: 1;
-}
-.fadeup-exit {
-  opacity: 1;
-}
-.fadeup-exit-active {
-  opacity: 0;
-  transform: translate(0, 50px);
-  transition: all 0.2s ease-out;
-}
-*/
 .transition_group {
   flex-grow: 1;
 }
-
-/* @font-face {
-  font-family: 'MonumentExtended';
-  font-weight: 300;
-  src: url('./assets/fonts/PPMonumentExtended/PPMonumentExtended-Light.woff2') format('woff2');
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'MonumentExtended';
-  font-weight: 700;
-  src: url('./assets/fonts/PPMonumentExtended/PPMonumentExtended-Bold.woff2') format('woff2');
-  font-style: normal;
-  font-display: swap;
-} */

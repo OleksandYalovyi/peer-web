@@ -8,12 +8,14 @@ import LeadProductDesigner from './LeadProductDesigner/index'
 import JuniorProductManager from './JuniorProductManager/index'
 import GameDesigner from './GameDesigner/index'
 import SeniorTechnicalArtist from './SeniorTechnicalArtist/index'
+import GradientAnimation from '../components/GradientAnimation'
 
 function JobsDetails() {
   const { id } = useParams()
 
   return (
     <div className={styles.container}>
+      <GradientAnimation />
       {id === '1' && <LeadProductDesigner />}
       {id === '2' && <JuniorProductManager />}
       {id === '3' && <SeniorBackendEngineer />}
