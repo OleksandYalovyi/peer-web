@@ -24,6 +24,13 @@
   @include screen(sm) {
     margin-top: 76px;
   }
+
+  hr {
+    height: 1px;
+    border: 0;
+    border-bottom: 1px solid rgb(255, 255, 255, 0.1);
+    margin: 0;
+  }
 }
 
 .text {
@@ -51,8 +58,20 @@
 }
 
 .email {
+  display: block;
   font-family: 'Gilroy-Regular';
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
+  margin-bottom: 20px;
+}
+
+.email_link {
+  text-decoration: none;
+  color: inherit;
+
+  &:hover {
+    text-decoration: none;
+    cursor: pointer;
+  }
 }

@@ -38,8 +38,12 @@ function OurStory() {
             <ActionLink name="Download Peer" onClick={setIsQRCodeModalOpen} />
           </div>
           <span className={styles.email}>
-            Email the team: <a href="mailto:hello@peer.inc ">hello@peer.inc</a>
+            Email the team:{' '}
+            <a className={styles.email_link} href="mailto:hello@peer.inc ">
+              hello@peer.inc
+            </a>
           </span>
+          <hr />
         </section>
         <section className={styles.story}>
           <Heading size={1} className={cn(styles.title, styles.title_second)}>
