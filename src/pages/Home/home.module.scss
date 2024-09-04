@@ -6,10 +6,12 @@
   display: flex;
   padding: 151px 0px;
   background: var(--bg);
+  height: 100vh;
 
   @media screen and (max-width: 680px) {
     padding: 100px 0px 0px;
     min-height: auto;
+    height: auto;
   }
 
   .container {
