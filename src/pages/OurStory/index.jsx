@@ -1,14 +1,14 @@
 import React from 'react'
-import cn from 'classnames'
 
 import PageContainer from 'components/PageContainer/index'
 import Typography from 'components/Typography/index'
 import PEERStarLogo from 'components/Icons/PEERStarLogo/index'
 import QRCodeModal from 'components/Modals/QRCodeModal/index'
 import useQRCodeModal from 'components/Modals/QRCodeModal/useQRCodeModal'
+import AnimatedSection from './AnimatedSection/index'
 import ActionLink from './ActionLink/index'
 import routing from '../../routing/path'
-import { paragraphDataFirst, paragraphDataSecond } from './paragraphData'
+import { paragraphDataFirst } from './paragraphData'
 
 import styles from './story.module.scss'
 
@@ -16,6 +16,7 @@ const { Heading, Paragraph } = Typography
 
 function OurStory() {
   const { isQRCodeModalOpen, setIsQRCodeModalOpen, closeQRCodeModal } = useQRCodeModal()
+
   return (
     <PageContainer>
       <div className={styles.story_wrapper}>
@@ -46,14 +47,7 @@ function OurStory() {
           <hr />
         </section>
         <section className={styles.story}>
-          <Heading size={1} className={cn(styles.title, styles.title_second)}>
-            There’s no magic without story
-          </Heading>
-          {paragraphDataSecond.map((paragraph) => (
-            <Paragraph key={paragraph.id} size={1} className={styles.text}>
-              {paragraph.text}
-            </Paragraph>
-          ))}
+          <AnimatedSection />
         </section>
       </div>
       <QRCodeModal isOpen={isQRCodeModalOpen} onClose={closeQRCodeModal} />
