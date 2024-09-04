@@ -6,7 +6,8 @@ $tablet-lg: 962px;
 $laptop: 1200px;
 $desktop: 1500px;
 $large-screen: 1500px;
-$fullHd-screen: 1900px;
+$fullHd-screen: 1920px;
+$quadHd-screen: 2560px;
 
 :root {
   --font: #000000;
@@ -21,7 +22,7 @@ $fullHd-screen: 1900px;
   --main-font: #000;
   --main-link-hover: #747474;
   --gradient-p-0: linear-gradient(262deg, #ffbaf3 11.2%, #fff1d4 50.33%, #8bf3fc 90.29%);
-  --Neutrals-Gray-200: #B2B2B2;
+  --Neutrals-Gray-200: #b2b2b2;
 }
 
 .dark {

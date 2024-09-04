@@ -1,7 +1,13 @@
+@import 'styles/_mixins';
+
 .titleContainer {
   position: relative;
   height: 36px;
   width: 100%;
+
+  @include screen(quadHd) {
+    height: 80px;
+  }
 
   @media screen and (max-width: 680px) {
     height: 50px;
@@ -25,6 +31,13 @@
   top: 0;
   left: 0;
   height: 36px;
+
+  @include screen(quadHd) {
+    font-size: 40px;
+    line-height: 40px;
+    letter-spacing: 2px;
+    height: 60px;
+  }
 
   @media screen and (max-width: 680px) {
     line-height: 35px;

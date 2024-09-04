@@ -1,7 +1,15 @@
 @import './variables';
 
 @mixin screen($point) {
-  @if $point==fullHd {
+  @if $point==quadHd {
+    @media only screen and (min-width: $quadHd-screen) {
+      @content;
+    }
+  } @else if $point==maxQuadHd {
+    @media only screen and (max-width: ($quadHd-screen - 0.1px)) {
+      @content;
+    }
+  } @else if $point==fullHd {
     @media only screen and (min-width: $fullHd-screen) {
       @content;
     }
@@ -9,8 +17,7 @@
     @media only screen and (max-width: ($fullHd-screen - 0.1px)) {
       @content;
     }
-  }
-  @if $point==large {
+  } @else if $point==large {
     @media only screen and (min-width: $large-screen) {
       @content;
     }

@@ -26,6 +26,13 @@
   font-size: 14px;
   line-height: 12px;
 
+  @include screen(quadHd) {
+    width: 205px;
+    height: 64px;
+    font-size: 18.667px;
+    line-height: 16px;
+  }
+
   @media screen and (max-width: 679px) {
     width: 100%;
   }

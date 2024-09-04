@@ -1,4 +1,5 @@
 @import 'styles/variables';
+@import 'styles/_mixins';
 
 .wrapper {
   overflow: hidden;
@@ -24,6 +25,10 @@
       align-items: center;
       width: 100%;
       max-width: 940px;
+
+      @include screen(quadHd) {
+        max-width: 1410px;
+      }
 
       @media screen and (max-width: 1020px) {
         width: 90%;
@@ -52,9 +57,18 @@
     text-decoration: none;
   }
 
+  @include screen(quadHd) {
+    font-size: 32px;
+    line-height: 40px;
+  }
+
   img {
     height: 18px;
     transition: transform 0.3s ease;
+
+    @include screen(quadHd) {
+      height: 30px;
+    }
   }
 
   &:hover img {
@@ -76,6 +90,11 @@
   gap: 6px;
   cursor: pointer;
 
+  @include screen(quadHd) {
+    font-size: 16px;
+    letter-spacing: 1.6px;
+  }
+
   span {
     background: var(--gradient-p-0);
     background-size: 200% 200%;
@@ -95,6 +114,10 @@
 
   img {
     transition: transform 0.3s ease;
+
+    @include screen(quadHd) {
+      height: 8px;
+    }
   }
 
   &:hover img {
@@ -118,6 +141,11 @@
     border-bottom: 1px solid rgb(255, 255, 255, 0.1);
     margin: 0 -15px 22px -21px;
 
+    @include screen(quadHd) {
+      height: 2px;
+      margin-bottom: 38px;
+    }
+
     @media screen and (max-width: 680px) {
       display: none;
     }
@@ -130,11 +158,14 @@
   justify-content: space-between;
   margin-bottom: 32px;
 
+  @include screen(quadHd) {
+    margin-bottom: 51px;
+  }
+
   @media screen and (max-width: 680px) {
     flex-direction: column;
     align-items: flex-start;
     gap: 34px;
-    margin-bottom: 32px;
   }
 }
 
@@ -148,6 +179,12 @@
   max-height: 420px;
   position: relative;
   margin-bottom: 95px;
+
+  @include screen(quadHd) {
+    max-width: 675px;
+    max-height: 675px;
+    margin-bottom: 90px;
+  }
 
   @media screen and (max-width: 680px) {
     margin-bottom: 50px;
