@@ -1,0 +1,34 @@
+.title {
+  margin: 0;
+  font-family: 'Gilroy-Regular';
+  color: var(--Neutrals-Gray-200, #b2b2b2);
+  font-style: normal;
+  white-space: break-spaces;
+  margin-bottom: 40px;
+  font-size: 40px;
+  line-height: 45px;
+  font-weight: 600;
+}
+
+.text {
+  margin-bottom: 25px;
+
+  &:last-child {
+    margin-bottom: 40px;
+  }
+}
+
+.heading-span {
+  font-size: 2em;
+  font-weight: bold;
+}
+
+.wrapper {
+  margin: 0;
+  font-family: 'Gilroy-Regular';
+  color: #b2b2b2;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 25px;
+  font-weight: 400;
+}

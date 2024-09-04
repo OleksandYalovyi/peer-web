@@ -6,3 +6,25 @@ body {
 iframe {
   display: none;
 }
+
+.animated_title {
+  margin: 0;
+  font-family: 'Gilroy-Regular';
+  color: #b2b2b2;
+  font-style: normal;
+  white-space: break-spaces;
+  margin-bottom: 40px;
+  font-size: 40px;
+  line-height: 45px;
+  font-weight: 600;
+}
+
+.spaced_title {
+  display: block;
+  margin-bottom: 35px;
+}
+
+.spaced_text {
+  display: block;
+  margin-bottom: 25px;
+}
