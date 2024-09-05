@@ -60,8 +60,8 @@ function AnimatedSectionExample() {
       }
     })
 
-    if (scrollPos > 520) {
-      const ratio = (scrollPos - 520) / (window.innerHeight - 520)
+    if (scrollPos > 100) {
+      const ratio = (scrollPos - 100) / (window.innerHeight - 100)
       const ratioIndex = Math.floor(ratio * totalLetters)
 
       spans.forEach((span, index) => {

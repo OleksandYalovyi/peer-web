@@ -1,12 +1,15 @@
 /* eslint-disable no-return-assign */
 /* eslint-disable no-param-reassign */
 import React, { useRef, useState, useEffect } from 'react'
+import useCurrentSize from 'hooks/useCurrentSize'
 import styles from './animated.module.scss'
 
 function AnimatedSection() {
   const textRef = useRef(null)
   const [scrollPos, setScrollPos] = useState(0)
   const [animationFrameId, setAnimationFrameId] = useState(null)
+
+  const { width } = useCurrentSize()
 
   useEffect(() => {
     const handleScroll = () => {
@@ -17,8 +20,17 @@ function AnimatedSection() {
       const id = requestAnimationFrame(() => {
         const elementTop = textRef.current.getBoundingClientRect().top
         const scrollTop = window.scrollY
-        const docHeight =
-          document.documentElement.scrollHeight - document.documentElement.clientHeight + elementTop
+        const { scrollHeight } = document.documentElement
+        const { clientHeight } = document.documentElement
+
+        let docHeight
+        if (width >= 2500) {
+          docHeight = scrollHeight - clientHeight + elementTop - 300
+        } else if (width >= 1400) {
+          docHeight = scrollHeight - clientHeight + elementTop
+        } else {
+          docHeight = scrollHeight - clientHeight + elementTop
+        }
         const scrollPercent = scrollTop / docHeight
         setScrollPos(scrollPercent)
       })
