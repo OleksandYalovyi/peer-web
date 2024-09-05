@@ -7,7 +7,7 @@ import peerLogo from 'assets/PeerLogo.svg'
 
 import styles from './header.module.scss'
 import BackButton from './components/BackButton'
-import { getBackButtonUrl } from '../header.utils'
+import { getBackButtonUrl } from './header.utils'
 
 function SimpleHeader() {
   const { scrollDirection } = useScroll()
