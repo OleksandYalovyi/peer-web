@@ -21,30 +21,26 @@ function HomeFooter() {
         <>© {new Date().getFullYear()} Peer</>
       </div>
       <div className={styles.terms_container}>
-        <div className={styles.links}>
-          <a href={links.termsService} target="_blank" rel="noreferrer">
-            Terms
-          </a>
-          <a href={links.privacyPolicy} target="_blank" rel="noreferrer">
-            Privacy
-          </a>
-        </div>
+        <a href={links.termsService} target="_blank" rel="noreferrer">
+          Terms
+        </a>
+        <a href={links.privacyPolicy} target="_blank" rel="noreferrer">
+          Privacy
+        </a>
       </div>
-      <div className={styles.right_container}>
-        <div className={styles.socials}>
-          {externalLinks.map((item) => (
-            <a
-              key={item.name}
-              href={item.link}
-              target="_blank"
-              onMouseEnter={() => setHovered(item.name)}
-              onMouseLeave={() => setHovered('')}
-              rel="noreferrer"
-            >
-              {renderIcon(item.name, isLight, hovered, width)}
-            </a>
-          ))}
-        </div>
+      <div className={styles.socials}>
+        {externalLinks.map((item) => (
+          <a
+            key={item.name}
+            href={item.link}
+            target="_blank"
+            onMouseEnter={() => setHovered(item.name)}
+            onMouseLeave={() => setHovered('')}
+            rel="noreferrer"
+          >
+            {renderIcon(item.name, isLight, hovered, width)}
+          </a>
+        ))}
       </div>
     </footer>
   )

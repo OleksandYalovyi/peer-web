@@ -1,3 +1,5 @@
+@import 'styles/_mixins';
+
 .container {
   z-index: 9;
   width: 100%;
@@ -9,27 +11,21 @@
 
   .terms_container {
     display: flex;
-    gap: 67px;
-    font-size: 16px;
-    align-items: center;
+    gap: 36px;
+    color: #fff;
+    font-family: Gilroy-Regular, sans-serif;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%;
 
-    .links {
-      display: flex;
-      gap: 36px;
-      color: #FFF;
-      font-family: Gilroy-Regular, sans-serif;
-      font-size: 10px;
-      font-style: normal;
-      font-weight: 400;
-      line-height: 100%;
+    @include screen(quadHd) {
+      gap: 58px;
+      font-size: 16px;
     }
 
     a {
-      color: #FFF;
-
-      @media screen and (max-width: 880px) {
-
-      }
+      color: #fff;
 
       &:hover {
         color: var(--main-link-hover);
@@ -37,29 +33,20 @@
     }
   }
 
-  .right_container {
-    color: #FFF;
-    font-family: IBMPlexMono-Bold, monospace;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 100%;
+  .socials {
+    transform: translateX(7px);
+    display: flex;
+    gap: 25px;
 
-    .socials {
-      transform: translateX(7px);
-      display: flex;
-      gap: 25px;
+    @include screen(quadHd) {
+      gap: 54.4px;
     }
 
     a {
       display: flex;
       justify-content: center;
       align-items: center;
-      color: #FFF;
-
-      @media screen and (max-width: 880px) {
-
-      }
+      color: #fff;
 
       &:hover {
         color: var(--main-link-hover);
@@ -67,23 +54,36 @@
 
       svg {
         transform: scale(0.6);
+
+        @include screen(quadHd) {
+          transform: none;
+        }
       }
     }
   }
 }
 
-.peerLogo {
-  width: 49px;
-}
-
 .copyright_container {
   display: flex;
   align-items: center;
-  color: #FFF;
+  color: #fff;
   font-family: Gilroy-Regular, sans-serif;
   font-size: 10px;
   font-style: normal;
   font-weight: 400;
   line-height: 100%;
   gap: 24px;
+
+  .peerLogo {
+    width: 49px;
+
+    @include screen(quadHd) {
+      width: 78px;
+    }
+  }
+
+  @include screen(quadHd) {
+    font-size: 16px;
+    gap: 38px;
+  }
 }

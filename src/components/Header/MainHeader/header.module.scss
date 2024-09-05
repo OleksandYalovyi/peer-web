@@ -1,3 +1,5 @@
+@import 'styles/_mixins';
+
 .container {
   position: fixed;
   top: 0;
@@ -27,12 +29,8 @@
     margin: 0 auto;
     padding: 17px 17px;
 
-    @media screen and (max-width: 1560px) {
-      padding: 17px 17px;
-    }
-
-    @media screen and (max-width: 1270px) {
-      padding: 17px 17px;
+    @include screen(quadHd) {
+      padding: 22.6px;
     }
 
     &:after {
@@ -49,96 +47,17 @@
       }
     }
 
-    &__left {
-      display: flex;
+    .get_peer_wrapper {
+      position: absolute;
+      top: 60px;
+      right: 80px;
+      gap: 8px;
       align-items: center;
-    }
+      z-index: 10000;
 
-    &__right {
-      display: flex;
-      align-items: center;
-      gap: 68px;
-
-      @media screen and (max-width: 1270px) {
-        gap: 33.73px;
-      }
-
-      .get_peer_wrapper {
-        position: absolute;
-        top: 60px;
-        right: 80px;
-        gap: 8px;
-        align-items: center;
-        z-index: 10000;
-      }
-
-      .nav {
-        display: flex;
-        gap: 76px;
-        justify-content: space-between;
-        width: 100%;
-        max-width: 465px;
-        padding: 0 15px;
-
-        @media screen and (max-width: 1270px) {
-          gap: 37.7px;
-        }
-
-        .open {
-          // background: var(--gradient-p-0);
-          background-clip: text;
-          -webkit-background-clip: text;
-          -webkit-text-fill-color: transparent;
-        }
-      }
-    }
-
-    .nav_item {
-      position: relative;
-      color: var(--main-font);
-      font-weight: 300;
-      font-size: 20px;
-      font-family: MonumentExtended, sans-serif;
-      line-height: 100%;
-      text-decoration: none;
-      cursor: pointer;
-      transition: 0.3s;
-
-      @media screen and (max-width: 1560px) {
-        font-size: 14px;
-      }
-
-      @media screen and (max-width: 1270px) {
-        font-size: 11px;
-      }
-
-      @media screen and (max-width: 680px) {
-        font-weight: 700;
-        font-size: 13.5px;
-        line-height: 20px;
-        letter-spacing: 1.892px;
-      }
-
-      @media screen and (max-width: 360px) {
-        font-size: 12px;
-        line-height: 16px;
-      }
-
-      a {
-        color: var(--main-font);
-        text-decoration: none;
-        transition: 0.3s;
-
-        &:hover {
-          background: var(--gradient-p-0);
-          background-clip: text;
-          -webkit-background-clip: text;
-          -webkit-text-fill-color: transparent;
-        }
-      }
-
-      &:hover {
-        color: var(--main-font-hover);
+      @include screen(quadHd) {
+        top: 80px;
+        right: 108px;
       }
     }
   }
@@ -147,17 +66,21 @@
 .peerLogoSmall {
   width: 20px;
   opacity: 0.5;
-  transition: opacity .3s;
+  transition: opacity 0.3s;
 
   &:hover {
     opacity: 1;
+  }
+
+  @include screen(quadHd) {
+    width: 26.6px;
   }
 }
 
 .peerLogo {
   width: 49px;
   opacity: 0.5;
-  transition: opacity .3s;
+  transition: opacity 0.3s;
 
   &:hover {
     opacity: 1;
