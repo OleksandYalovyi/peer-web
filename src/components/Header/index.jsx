@@ -21,7 +21,7 @@ function MainHeader() {
   const ref = useRef('')
   const { width } = useCurrentSize()
   const isMobile = width < 680
-  const shouldRenderJobsLink = !pathname.startsWith(routing.withoutAuth.jobs)
+  const shouldRenderJobsLink = !pathname.startsWith(routing.withoutAuth.jobs) && !isMobile
   const shouldShowSmallIcon = pathname === routing.withoutAuth.home
 
   return (

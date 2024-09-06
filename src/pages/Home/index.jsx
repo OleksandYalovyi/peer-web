@@ -10,7 +10,6 @@ import SolarHigh from 'assets/Home/video/solar1080.webm'
 import SolarPreloadImg from 'assets/Home/SolarPreload.png'
 import SolarPreloadHighImg from 'assets/Home/SolarPreload1080.png'
 import Title from './components/Title'
-import Footer from './components/Footer/HomeFooter'
 import styles from './home.module.scss'
 
 function Home() {
@@ -46,40 +45,34 @@ function Home() {
 
   return (
     <div className={styles.wrapper}>
-      <div className={styles.container}>
-        <div className={styles.content}>
-          <Title />
+      <Title />
 
-          <div className={styles.video}>
-            <video
-              src={sources.video}
-              autoPlay
-              playsInline
-              loop
-              muted
-              onLoadedData={handleVideoLoaded}
-              style={{ display: isVideoLoaded ? 'block' : 'none' }}
-            />
+      <div className={styles.video}>
+        <video
+          src={sources.video}
+          autoPlay
+          playsInline
+          loop
+          muted
+          onLoadedData={handleVideoLoaded}
+          style={{ display: isVideoLoaded ? 'block' : 'none' }}
+        />
 
-            {!isVideoLoaded && <img src={sources.image} alt="Solar preload" />}
-          </div>
-
-          <div className={styles.footer}>
-            <div className={styles.links_container}>
-              <Link to={routing.withoutAuth.ourStory} className={styles.largeLink}>
-                Our journey with Peer
-                <img src={ArrowLeftRounded} alt="Arrow" />
-              </Link>
-              <Link to={routing.withoutAuth.jobs} className={styles.gradientLink}>
-                WE’RE HIRING. <span>JOIN OUR TEAM</span>
-                <img src={LittleLeftChevron} alt="Chevron" />
-              </Link>
-            </div>
-            <hr />
-            {!isMobile && <Footer />}
-          </div>
-        </div>
+        {!isVideoLoaded && <img src={sources.image} alt="Solar preload" />}
       </div>
+
+      {isMobile && (
+        <div className={styles.links_container}>
+          <Link to={routing.withoutAuth.ourStory} className={styles.largeLink}>
+            Our Vision
+            <img src={ArrowLeftRounded} alt="Arrow" />
+          </Link>
+          <Link to={routing.withoutAuth.jobs} className={styles.gradientLink}>
+            WE’RE HIRING. <span>JOIN OUR TEAM</span>
+            <img src={LittleLeftChevron} alt="Chevron" />
+          </Link>
+        </div>
+      )}
     </div>
   )
 }

@@ -1,14 +1,12 @@
 import React, { useState } from 'react'
-import { Link, useLocation } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import { useTheme } from 'context/theme'
 import useCurrentSize from 'hooks/useCurrentSize'
-import useQRCodeModal from 'components/Modals/QRCodeModal/useQRCodeModal'
-import GetButton from 'components/GetButton'
-import QRCodeModal from 'components/Modals/QRCodeModal/index'
 import links from 'constants/links'
 import peerLogo from 'assets/PeerLogo.svg'
-import peerLogoSmall from 'assets/PeerLogoSmall.svg'
 import routing from 'routing/path'
+import ArrowLeftRounded from 'assets/Home/arrowLeftRounded.svg'
+
 import styles from './footer.module.scss'
 import { externalLinks, renderIcon } from '../footer.utils'
 
@@ -16,92 +14,49 @@ function HomeFooter() {
   const [hovered, setHovered] = useState('')
   const { isLight } = useTheme()
   const { width } = useCurrentSize()
-  const { pathname } = useLocation()
-  const { isQRCodeModalOpen, setIsQRCodeModalOpen, closeQRCodeModal } = useQRCodeModal()
-
-  const isMobile = width < 680
-
-  const renderLogo = () => (
-    <Link to="/">
-      {/* <img src={peerLogo} alt="peer logo" className={styles.peerLogo} /> */}
-      {pathname !== routing.withoutAuth.home ? (
-        <img src={peerLogoSmall} alt="peer logo" className={styles.peerLogoSmall} />
-      ) : (
-        <img src={peerLogo} alt="peer logo" className={styles.peerLogo} />
-      )}
-    </Link>
-  )
-
-  const renderCopyright = () => (
-    <div className={styles.copyright}>© {new Date().getFullYear()} Peer</div>
-  )
-
-  const renderTerms = () => (
-    <div className={styles.terms}>
-      <a href={links.termsService} target="_blank" rel="noreferrer">
-        Terms
-      </a>
-      <span>|</span>
-      <a href={links.privacyPolicy} target="_blank" rel="noreferrer">
-        Privacy
-      </a>
-    </div>
-  )
-
-  const renderSocial = () => (
-    <div className={styles.social_container}>
-      <div className={styles.socials}>
-        {externalLinks.map((item) => (
-          <a
-            key={item.name}
-            href={item.link}
-            target="_blank"
-            onMouseEnter={() => setHovered(item.name)}
-            onMouseLeave={() => setHovered('')}
-            rel="noreferrer"
-          >
-            {renderIcon(item.name, isLight, hovered, width)}
-          </a>
-        ))}
-      </div>
-    </div>
-  )
 
   return (
-    <>
-      {pathname !== routing.withoutAuth.home && !isMobile && (
-        <footer className={styles.container}>
-          <hr />
-          <div className={styles.wrapper}>
-            <div className={styles.copyright_container}>
-              {renderLogo()}
-              {renderCopyright()}
-            </div>
-            {/* <div className={styles.left_container}>{renderTerms()}</div> */}
-            {renderSocial()}
-          </div>
-        </footer>
-      )}
-      {isMobile && (
-        <footer className={styles.container_mobile}>
-          <hr />
-          <div className={styles.wrapper_mobile}>
-            <div className={styles.line_wrapper}>
-              {renderLogo()}
-              {renderSocial()}
-            </div>
-            <div className={styles.line_wrapper}>
-              {renderCopyright()}
-              {renderTerms()}
-            </div>
-            <div className={styles.button}>
-              <GetButton label="I’M READY" onClick={setIsQRCodeModalOpen} />
-            </div>
-          </div>
-          <QRCodeModal isOpen={isQRCodeModalOpen} onClose={closeQRCodeModal} />
-        </footer>
-      )}
-    </>
+    <footer className={styles.footer}>
+      <div className={styles.links_container}>
+        <Link to={routing.withoutAuth.ourStory} className={styles.largeLink}>
+          Our Vision
+          <img src={ArrowLeftRounded} alt="Arrow" />
+        </Link>
+      </div>
+
+      <hr />
+
+      <div className={styles.container}>
+        <div className={styles.copyright_container}>
+          <Link to="/">
+            <img src={peerLogo} alt="peer logo" className={styles.peerLogo} />
+          </Link>
+          <>© {new Date().getFullYear()} Peer</>
+        </div>
+        <div className={styles.terms_container}>
+          <a href={links.termsService} target="_blank" rel="noreferrer">
+            Terms
+          </a>
+          <a href={links.privacyPolicy} target="_blank" rel="noreferrer">
+            Privacy
+          </a>
+        </div>
+        <div className={styles.socials}>
+          {externalLinks.map((item) => (
+            <a
+              key={item.name}
+              href={item.link}
+              target="_blank"
+              onMouseEnter={() => setHovered(item.name)}
+              onMouseLeave={() => setHovered('')}
+              rel="noreferrer"
+            >
+              {renderIcon(item.name, isLight, hovered, width)}
+            </a>
+          ))}
+        </div>
+      </div>
+    </footer>
   )
 }
 
