@@ -21,6 +21,17 @@
   overflow: hidden;
 }
 
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.content {
+  flex: 1;
+  display: flex;
+}
+
 .fadeInOut-appear {
   z-index: 1;
   opacity: 0;

@@ -1,0 +1,63 @@
+.container_mobile {
+  padding: 37px 31px 62px;
+
+  @media screen and (max-width: 680px) {
+    padding: 0 0 100px;
+  }
+
+  hr {
+    height: 1px;
+    border: 0;
+    border-bottom: 1px solid rgb(255, 255, 255, 0.1);
+    margin-bottom: 20px;
+    margin-right: 35px;
+    margin-left: 35px;
+  }
+
+  .line_wrapper {
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+    margin-bottom: 90px;
+    width: 100%;
+    padding-right: 2px;
+  }
+}
+
+.wrapper_mobile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 100%;
+  padding: 0 35px;
+}
+
+.button {
+  position: fixed;
+  bottom: 32px;
+  margin: 5% 36px;
+  left: 0;
+  right: 0;
+}
+
+.peerLogo {
+  width: 49px;
+}
+
+.terms {
+  display: flex;
+  gap: 16px;
+  color: #fff;
+  font-family: Gilroy-Regular, sans-serif;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 100%;
+
+  a {
+    color: #fff;
+    &:hover {
+      color: var(--main-link-hover);
+    }
+  }
+}

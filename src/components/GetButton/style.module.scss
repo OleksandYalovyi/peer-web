@@ -21,9 +21,10 @@
   width: 154px;
   height: 48px;
 
-  font-family: IBMPlexMono-Bold, monospace;
+  font-family: Gilroy-Regular, sans-serif;
+  font-size: 16px;
+  font-style: normal;
   font-weight: 700;
-  font-size: 14px;
   line-height: 12px;
 
   @include screen(quadHd) {

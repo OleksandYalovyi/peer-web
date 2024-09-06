@@ -1,0 +1,24 @@
+.social_container {
+  color: #fff;
+
+  .socials {
+    transform: translateX(7px);
+    display: flex;
+    gap: 25px;
+  }
+
+  a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+
+    &:hover {
+      color: var(--main-link-hover);
+    }
+
+    svg {
+      transform: scale(0.6);
+    }
+  }
+}
