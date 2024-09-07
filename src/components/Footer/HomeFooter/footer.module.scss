@@ -7,7 +7,6 @@
 
   @include screen(quadHd) {
     padding: 0 60px 60px;
-    margin-top: -50px; // to compensate big video size
   }
 
   @media screen and (max-width: 680px) {
@@ -95,6 +94,16 @@
   margin: 0 auto;
   background: var(--bg);
 
+  // NOTE: to fix terms & privacy at center
+  .item {
+    flex: 1;
+  }
+
+  .item:nth-child(2) {
+    text-align: center;
+    flex: 0;
+  }
+
   .terms_container {
     display: flex;
     gap: 65px;
@@ -124,6 +133,7 @@
     transform: translateX(7px);
     display: flex;
     gap: 34px;
+    justify-content: flex-end;
 
     @include screen(quadHd) {
       gap: 45px;

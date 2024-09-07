@@ -4,6 +4,9 @@ import { BrowserRouter as Router } from 'react-router-dom'
 import { ThemeProvider } from 'context/theme'
 
 import UseScrollToTop from 'hooks/useScrollToTop'
+
+import SolarPreloadImg from 'assets/Home/SolarPreload.png'
+import SolarPreloadHighImg from 'assets/Home/SolarPreload1080.png'
 import App from './App'
 
 import './index.css'
@@ -16,6 +19,12 @@ root.render(
     <Router>
       <UseScrollToTop>
         <ThemeProvider>
+          {/* content to preload */}
+          <div style={{ display: 'none' }}>
+            <img src={SolarPreloadImg} alt="" />
+            <img src={SolarPreloadHighImg} alt="" />
+          </div>
+
           <App />
         </ThemeProvider>
       </UseScrollToTop>

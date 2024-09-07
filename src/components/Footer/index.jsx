@@ -4,7 +4,6 @@ import useCurrentSize from 'hooks/useCurrentSize'
 
 import routing from 'routing/path'
 import MobileFooter from './MobileFooter/index'
-import MainFooter from './MainFooter/index'
 import HomeFooter from './HomeFooter/index'
 
 function Footer() {
@@ -13,11 +12,13 @@ function Footer() {
 
   const isMobile = width < 680
 
+  const showVision = pathname === routing.withoutAuth.home
+  const showPeerLogo = pathname === routing.withoutAuth.home
+
   return (
     <>
-      {pathname !== routing.withoutAuth.home && !isMobile && <MainFooter />}
-      {pathname === routing.withoutAuth.home && !isMobile && <HomeFooter />}
-      {isMobile && <MobileFooter />}
+      {!isMobile && <HomeFooter showVision={showVision} />}
+      {isMobile && <MobileFooter showPeerLogo={showPeerLogo} />}
     </>
   )
 }

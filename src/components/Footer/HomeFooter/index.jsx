@@ -1,5 +1,8 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
+import cls from 'classnames'
+import T from 'prop-types'
+
 import { useTheme } from 'context/theme'
 import useCurrentSize from 'hooks/useCurrentSize'
 import links from 'constants/links'
@@ -10,30 +13,32 @@ import ArrowLeftRounded from 'assets/Home/arrowLeftRounded.svg'
 import styles from './footer.module.scss'
 import { externalLinks, renderIcon } from '../footer.utils'
 
-function HomeFooter() {
+function HomeFooter({ showVision }) {
   const [hovered, setHovered] = useState('')
   const { isLight } = useTheme()
   const { width } = useCurrentSize()
 
   return (
     <footer className={styles.footer}>
-      <div className={styles.links_container}>
-        <Link to={routing.withoutAuth.ourStory} className={styles.largeLink}>
-          Our Vision
-          <img src={ArrowLeftRounded} alt="Arrow" />
-        </Link>
-      </div>
+      {showVision && (
+        <div className={styles.links_container}>
+          <Link to={routing.withoutAuth.ourStory} className={styles.largeLink}>
+            Our Vision
+            <img src={ArrowLeftRounded} alt="Arrow" />
+          </Link>
+        </div>
+      )}
 
       <hr />
 
       <div className={styles.container}>
-        <div className={styles.copyright_container}>
+        <div className={cls(styles.copyright_container, styles.item)}>
           <Link to="/">
             <img src={peerLogo} alt="peer logo" className={styles.peerLogo} />
           </Link>
           <>© {new Date().getFullYear()} Peer</>
         </div>
-        <div className={styles.terms_container}>
+        <div className={cls(styles.terms_container, styles.item)}>
           <a href={links.termsService} target="_blank" rel="noreferrer">
             Terms
           </a>
@@ -41,7 +46,7 @@ function HomeFooter() {
             Privacy
           </a>
         </div>
-        <div className={styles.socials}>
+        <div className={cls(styles.socials, styles.item)}>
           {externalLinks.map((item) => (
             <a
               key={item.name}
@@ -60,6 +65,8 @@ function HomeFooter() {
   )
 }
 
-HomeFooter.propTypes = {}
+HomeFooter.propTypes = {
+  showVision: T.bool.isRequired,
+}
 
 export default HomeFooter

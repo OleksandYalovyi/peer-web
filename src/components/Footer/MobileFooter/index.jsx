@@ -1,6 +1,7 @@
 import React from 'react'
-import { Link, useLocation } from 'react-router-dom'
-import routing from 'routing/path'
+import { Link } from 'react-router-dom'
+import T from 'prop-types'
+
 import links from 'constants/links'
 import peerLogo from 'assets/PeerLogo.svg'
 import peerLogoSmall from 'assets/PeerLogoSmall.svg'
@@ -12,16 +13,15 @@ import styles from './styles.module.scss'
 import Copyright from '../components/Copyright/index'
 import Socials from '../components/Socials/index'
 
-function MobileFooter() {
-  const { pathname } = useLocation()
+function MobileFooter({ showPeerLogo }) {
   const { isQRCodeModalOpen, setIsQRCodeModalOpen, closeQRCodeModal } = useQRCodeModal()
 
   const renderLogo = () => (
     <Link to="/">
-      {pathname !== routing.withoutAuth.home ? (
-        <img src={peerLogoSmall} alt="peer logo" className={styles.peerLogoSmall} />
-      ) : (
+      {showPeerLogo ? (
         <img src={peerLogo} alt="peer logo" className={styles.peerLogo} />
+      ) : (
+        <img src={peerLogoSmall} alt="peer logo" className={styles.peerLogoSmall} />
       )}
     </Link>
   )
@@ -59,6 +59,8 @@ function MobileFooter() {
   )
 }
 
-MobileFooter.propTypes = {}
+MobileFooter.propTypes = {
+  showPeerLogo: T.bool.isRequired,
+}
 
 export default MobileFooter
