@@ -12,7 +12,7 @@ const desktop = {
     },
     shop: '/shop',
     blog: '/blog',
-    ourStory: '/our-story',
+    ourVision: '/our-vision',
   },
   withAuth: {},
 }

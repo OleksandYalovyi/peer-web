@@ -10,7 +10,7 @@ import Jobs from 'pages/Jobs'
 import JobsDetails from 'pages/Jobs/details'
 import OSDetect from 'pages/OSDetect'
 import Team from 'pages/Team'
-import OurStory from 'pages/OurStory'
+import OurVision from 'pages/OurVision'
 
 import routing from './routing/path'
 import './App.css'
@@ -37,7 +37,7 @@ function App() {
                 {/* <Route path="/placeholder" element={<Placeholder />} /> */}
                 <Route path={routing.withoutAuth.team} element={<Team />} />
                 <Route path={routing.withoutAuth.jobs} element={<Jobs />} />
-                <Route path={routing.withoutAuth.ourStory} element={<OurStory />} />
+                <Route path={routing.withoutAuth.ourVision} element={<OurVision />} />
                 <Route path={routing.withoutAuth.jobsDetails.path} element={<JobsDetails />} />
                 <Route path={routing.withoutAuth.app} element={<OSDetect />} />
                 <Route path={routing.withoutAuth.notFound} element={<Page404 />} />

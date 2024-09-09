@@ -63,7 +63,7 @@ function Home() {
 
       {isMobile && (
         <div className={styles.links_container}>
-          <Link to={routing.withoutAuth.ourStory} className={styles.largeLink}>
+          <Link to={routing.withoutAuth.ourVision} className={styles.largeLink}>
             Our Vision
             <img src={ArrowLeftRounded} alt="Arrow" />
           </Link>

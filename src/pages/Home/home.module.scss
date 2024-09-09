@@ -44,6 +44,7 @@
   @media screen and (max-width: 680px) {
     width: 340px;
     height: 340px;
+    margin-bottom: 0;
   }
 
   video {
@@ -161,5 +162,17 @@
 
   &:hover img {
     transform: translateX(12px);
+  }
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
   }
 }

@@ -14,7 +14,7 @@ import styles from './story.module.scss'
 
 const { Heading, Paragraph } = Typography
 
-function OurStory() {
+function OurVision() {
   const { isQRCodeModalOpen, setIsQRCodeModalOpen, closeQRCodeModal } = useQRCodeModal()
 
   return (
@@ -56,4 +56,4 @@ function OurStory() {
   )
 }
 
-export default OurStory
+export default OurVision
