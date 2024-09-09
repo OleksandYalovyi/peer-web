@@ -39,10 +39,21 @@ function HomeFooter({ showVision }) {
           <>© {new Date().getFullYear()} Peer</>
         </div>
         <div className={cls(styles.terms_container, styles.item)}>
-          <a href={links.termsService} target="_blank" rel="noreferrer">
+          <a
+            href={links.termsService}
+            className={styles.terms_element}
+            target="_blank"
+            rel="noreferrer"
+          >
             Terms
           </a>
-          <a href={links.privacyPolicy} target="_blank" rel="noreferrer">
+          <div className={styles.terms_element} />
+          <a
+            href={links.privacyPolicy}
+            className={styles.terms_element}
+            target="_blank"
+            rel="noreferrer"
+          >
             Privacy
           </a>
         </div>

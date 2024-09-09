@@ -106,7 +106,6 @@
 
   .terms_container {
     display: flex;
-    gap: 65px;
     color: #fff;
     font-family: MonumentExtended, sans-serif;
     font-size: 10px;
@@ -118,6 +117,11 @@
     @include screen(quadHd) {
       gap: 83px;
       font-size: 14px;
+    }
+
+    .terms_element {
+      width: 60px;
+      text-align: right;
     }
 
     a {
