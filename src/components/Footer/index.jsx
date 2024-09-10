@@ -4,7 +4,7 @@ import useCurrentSize from 'hooks/useCurrentSize'
 
 import routing from 'routing/path'
 import MobileFooter from './MobileFooter/index'
-import HomeFooter from './HomeFooter/index'
+import MainFooter from './MainFooter/index'
 
 function Footer() {
   const { width } = useCurrentSize()
@@ -17,7 +17,7 @@ function Footer() {
 
   return (
     <>
-      {!isMobile && <HomeFooter showVision={showVision} />}
+      {!isMobile && <MainFooter showVision={showVision} />}
       {isMobile && <MobileFooter showPeerLogo={showPeerLogo} />}
     </>
   )

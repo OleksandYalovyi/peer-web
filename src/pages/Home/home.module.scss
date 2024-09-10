@@ -60,23 +60,16 @@
 
 .links_container {
   width: 100%;
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 32px;
+  margin-bottom: 57px;
   flex-direction: column;
 
   @media screen and (max-width: 680px) {
     max-width: 300px;
+    margin-bottom: 28px;
   }
 
   @include screen(quadHd) {
-    margin-bottom: 51px;
-  }
-
-  @media screen and (max-width: 680px) {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 34px;
+    margin-bottom: 75px;
   }
 }
 

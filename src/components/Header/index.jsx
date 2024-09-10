@@ -1,4 +1,3 @@
-/* eslint-disable react/prop-types */
 import React, { useRef } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import cls from 'classnames'
@@ -20,9 +19,11 @@ function MainHeader() {
   const { isQRCodeModalOpen, setIsQRCodeModalOpen, closeQRCodeModal } = useQRCodeModal()
   const ref = useRef('')
   const { width } = useCurrentSize()
+
   const isMobile = width < 680
-  const shouldRenderJobsLink = !pathname.startsWith(routing.withoutAuth.jobs) && !isMobile
-  const shouldShowSmallIcon = pathname === routing.withoutAuth.home
+  const shouldRenderJobsLink = pathname === routing.withoutAuth.home
+  const shouldRenderSmallIcon = pathname === routing.withoutAuth.home
+  const shouldRenderReadyBtn = !isMobile
 
   return (
     <header
@@ -40,7 +41,7 @@ function MainHeader() {
     >
       <div className={styles.main_container}>
         <Link to="/">
-          {shouldShowSmallIcon ? (
+          {shouldRenderSmallIcon ? (
             <img src={peerLogoSmall} alt="peer logo" className={styles.peerLogoSmall} />
           ) : (
             <img src={peerLogo} alt="peer logo" className={styles.peerLogo} />
@@ -59,7 +60,7 @@ function MainHeader() {
           </Link>
         )}
 
-        {!isMobile && (
+        {shouldRenderReadyBtn && (
           <div className={styles.get_peer_wrapper}>
             <GetButton label="i'm ready" onClick={setIsQRCodeModalOpen} />
           </div>

@@ -30,6 +30,10 @@
     margin: 0 auto;
     padding: 17px 17px;
 
+    @include screen(maxMd) {
+      gap: 30px;
+    }
+
     @include screen(quadHd) {
       padding: 22.6px;
       gap: 54.67px;

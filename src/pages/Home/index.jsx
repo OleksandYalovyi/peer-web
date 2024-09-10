@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom'
 import routing from 'routing/path'
 import useCurrentSize from 'hooks/useCurrentSize'
 import ArrowLeftRounded from 'assets/Home/arrowLeftRounded.svg'
-import LittleLeftChevron from 'assets/Home/littleLeftChevron.svg'
 import Solar from 'assets/Home/video/solar.webm'
 import SolarHigh from 'assets/Home/video/solar1080.webm'
 import SolarPreloadImg from 'assets/Home/SolarPreload.png'
@@ -66,10 +65,6 @@ function Home() {
           <Link to={routing.withoutAuth.ourVision} className={styles.largeLink}>
             Our Vision
             <img src={ArrowLeftRounded} alt="Arrow" />
-          </Link>
-          <Link to={routing.withoutAuth.jobs} className={styles.gradientLink}>
-            WE’RE HIRING. <span>JOIN OUR TEAM</span>
-            <img src={LittleLeftChevron} alt="Chevron" />
           </Link>
         </div>
       )}
