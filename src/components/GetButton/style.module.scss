@@ -21,7 +21,7 @@
   width: 154px;
   height: 48px;
 
-  font-family: Gilroy-Regular, sans-serif;
+  font-family: Gilroy, sans-serif;
   font-size: 16px;
   font-style: normal;
   font-weight: 700;
@@ -30,12 +30,14 @@
   @include screen(quadHd) {
     width: 205px;
     height: 64px;
-    font-size: 18.667px;
+    font-size: 22px;
     line-height: 16px;
   }
 
-  @media screen and (max-width: 679px) {
+  @media screen and (max-width: 680px) {
     width: 100%;
+    font-size: 14px;
+    font-family: IBMPlexMono, monospace;
   }
 
   &:hover {

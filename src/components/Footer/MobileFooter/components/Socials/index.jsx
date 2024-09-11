@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { useTheme } from 'context/theme'
 import useCurrentSize from 'hooks/useCurrentSize'
 
-import { externalLinks, renderIcon } from '../../footer.utils'
+import { externalLinks, renderIcon } from '../../../footer.utils'
 import styles from './styles.module.scss'
 
 function Socials() {

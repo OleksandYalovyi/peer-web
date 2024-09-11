@@ -5,7 +5,6 @@ import Peer from '../Icons/Share/Peer'
 import Telegram from '../Icons/Share/Telegram'
 import Linkedin from '../Icons/Share/Linkedin'
 import Instagram from '../Icons/Share/Instagram'
-import links from '../../constants/links'
 
 export const externalLinks = [
   {
@@ -46,26 +45,3 @@ export const renderIcon = (name, isLight, hovered, screenW, width) => {
   }
   return null
 }
-
-export const RIGHT_LINKS = [
-  {
-    id: 1,
-    name: 'FAQ',
-    link: links.faq,
-  },
-  {
-    id: 2,
-    name: 'Privacy',
-    link: links.privacyPolicy,
-  },
-  {
-    id: 3,
-    name: 'Term',
-    link: links.termsService,
-  },
-  {
-    id: 4,
-    name: 'Get the app',
-    link: '/',
-  },
-]

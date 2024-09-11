@@ -1,0 +1,12 @@
+@import 'styles/_mixins';
+
+.copyright {
+  display: flex;
+  align-items: center;
+  color: #fff;
+  font-family: Gilroy-Regular, sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 100%;
+}
