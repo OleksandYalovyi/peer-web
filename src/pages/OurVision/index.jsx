@@ -48,7 +48,6 @@ function OurVision() {
         </section>
         <section className={styles.story}>
           <AnimatedSection />
-          {/* <AnimatedSectionExample /> */}
         </section>
       </div>
       <QRCodeModal isOpen={isQRCodeModalOpen} onClose={closeQRCodeModal} />

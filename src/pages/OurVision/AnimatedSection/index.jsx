@@ -18,23 +18,21 @@ function AnimatedSection() {
       }
 
       const id = requestAnimationFrame(() => {
-        const elementTop = textRef.current.getBoundingClientRect().top
-        const scrollTop = window.scrollY
-        const { scrollHeight } = document.documentElement
-        const { clientHeight } = document.documentElement
+        if (textRef.current) {
+          const elementTop = textRef.current.getBoundingClientRect().top
+          const scrollTop = window.scrollY
+          const { scrollHeight, clientHeight } = document.documentElement
 
-        let docHeight
-        if (width >= 2500) {
-          docHeight = scrollHeight - clientHeight + elementTop - 300
-        } else if (width >= 1400) {
-          docHeight = scrollHeight - clientHeight + elementTop
-        } else {
-          docHeight = scrollHeight - clientHeight + elementTop
+          let docHeight = scrollHeight - clientHeight + elementTop
+
+          if (width >= 2500) {
+            docHeight -= 300
+          }
+
+          const scrollPercent = scrollTop / docHeight
+          setScrollPos(scrollPercent)
         }
-        const scrollPercent = scrollTop / docHeight
-        setScrollPos(scrollPercent)
       })
-
       setAnimationFrameId(id)
     }
 
