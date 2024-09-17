@@ -6,8 +6,10 @@ import useCurrentSize from 'hooks/useCurrentSize'
 import ArrowLeftRounded from 'assets/Home/arrowLeftRounded.svg'
 import Solar from 'assets/Home/video/solar.webm'
 import SolarHigh from 'assets/Home/video/solar1080.webm'
+import SolarQuad from 'assets/Home/video/solar2048.webm'
 import SolarPreloadImg from 'assets/Home/SolarPreload.png'
-import SolarPreloadHighImg from 'assets/Home/SolarPreload1080.png'
+import BREAKPOINTS from 'constants/breakpoints'
+
 import Title from './components/Title'
 import styles from './home.module.scss'
 
@@ -16,14 +18,16 @@ function Home() {
   const [isVideoLoaded, setIsVideoLoaded] = useState(false)
 
   const { width } = useCurrentSize()
-  const isMobile = width < 680
+  const isMobile = width < BREAKPOINTS.md
 
   useEffect(() => {
     const updateVideoSource = () => {
       const screenWidth = window.innerWidth
 
-      if (screenWidth > 768) {
-        setSources({ video: SolarHigh, image: SolarPreloadHighImg })
+      if (screenWidth > BREAKPOINTS.xl) {
+        setSources({ video: SolarQuad, image: SolarPreloadImg })
+      } else if (screenWidth > BREAKPOINTS.md) {
+        setSources({ video: SolarHigh, image: SolarPreloadImg })
       } else {
         setSources({ video: Solar, image: SolarPreloadImg })
       }
@@ -53,7 +57,7 @@ function Home() {
           playsInline
           loop
           muted
-          onLoadedData={handleVideoLoaded}
+          onCanPlayThrough={handleVideoLoaded}
           style={{ display: isVideoLoaded ? 'block' : 'none' }}
         />
 
